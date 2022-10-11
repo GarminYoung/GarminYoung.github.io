@@ -4,25 +4,6 @@
   
   
   <entry>
-    <title>微信推送-商业化方案</title>
-    <link href="/2022/10/11/Project%E9%A1%B9%E7%9B%AE-%E5%BE%AE%E4%BF%A1%E6%8E%A8%E9%80%81-%E5%95%86%E4%B8%9A%E5%8C%96%E6%96%B9%E6%A1%88/"/>
-    <url>/2022/10/11/Project%E9%A1%B9%E7%9B%AE-%E5%BE%AE%E4%BF%A1%E6%8E%A8%E9%80%81-%E5%95%86%E4%B8%9A%E5%8C%96%E6%96%B9%E6%A1%88/</url>
-    
-    <content type="html"><![CDATA[<h1 id="微信推送-商业化方案"><a href="#微信推送-商业化方案" class="headerlink" title="微信推送-商业化方案"></a>微信推送-商业化方案</h1><p>本页面用于博主快速赚米使用</p><h2 id="网站索引"><a href="#网站索引" class="headerlink" title="网站索引"></a>网站索引</h2><p><a href="https://work.weixin.qq.com/">企业微信</a></p><p><a href="https://work.weixin.qq.com/wework_admin/loginpage_wx?from=myhome">企业微信管理后台</a></p><p><a href="https://console.cloud.tencent.com/scf">腾讯云Serverless控制台</a></p><h2 id="话术"><a href="#话术" class="headerlink" title="话术"></a>话术</h2><p>你好，我是你的专属技术员</p><p>由于微信测试号的方案有以下缺点<br>不能更改名称和头像<br>不能单独显示在消息列表（信息提示不明显）<br>定时推送有延时<br>我们采用的方案是 企业微信+服务器<br>可以自定义名称和头像<br>能够单独显示在消息列表<br>推送服务一年，有限期至2023.08.30</p><p>登入<a href="https://work.weixin.qq.com/">企业微信</a>官网，注册企业</p><p>扫码登入企业微信管理后台，我帮您进行相关配置</p><p>提供企业名称和企业头像，显示效果如图</p><p>提供应用名称和应用头像，显示效果如图</p><p>提供信息标题，显示效果如图</p><p>提供在一起的日子，以及两人的昵称和生日，显示效果如图</p><p>提供地区信息，显示效果如图，用于推送天气预报</p><p>模板内容如图，您可自行删改，由于微信限制，消息太长会截断部分影响效果，保留内容应适当</p><p>扫码关注插件，加入企业</p><p>已经发送secret给您，请打开企业微信查收并复制给我</p><p>您需要定时几点推送？</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>Project项目</category>
-      
-    </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>入门渠道</title>
     <link href="/2022/10/11/Premiere-%E5%85%A5%E9%97%A8%E6%B8%A0%E9%81%93/"/>
     <url>/2022/10/11/Premiere-%E5%85%A5%E9%97%A8%E6%B8%A0%E9%81%93/</url>
@@ -33,6 +14,25 @@
     <categories>
       
       <category>Premiere</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>微信推送-商业化方案</title>
+    <link href="/2022/10/11/Project%E9%A1%B9%E7%9B%AE-%E5%BE%AE%E4%BF%A1%E6%8E%A8%E9%80%81-%E5%95%86%E4%B8%9A%E5%8C%96%E6%96%B9%E6%A1%88/"/>
+    <url>/2022/10/11/Project%E9%A1%B9%E7%9B%AE-%E5%BE%AE%E4%BF%A1%E6%8E%A8%E9%80%81-%E5%95%86%E4%B8%9A%E5%8C%96%E6%96%B9%E6%A1%88/</url>
+    
+    <content type="html"><![CDATA[<h1 id="微信推送-商业化方案"><a href="#微信推送-商业化方案" class="headerlink" title="微信推送-商业化方案"></a>微信推送-商业化方案</h1><p>本页面用于博主快速赚米使用</p><h2 id="网站索引"><a href="#网站索引" class="headerlink" title="网站索引"></a>网站索引</h2><p><a href="https://work.weixin.qq.com/">企业微信</a></p><p><a href="https://work.weixin.qq.com/wework_admin/loginpage_wx?from=myhome">企业微信管理后台</a></p><p><a href="https://console.cloud.tencent.com/scf">腾讯云Serverless控制台</a></p><h2 id="话术"><a href="#话术" class="headerlink" title="话术"></a>话术</h2><p>你好，我是你的专属技术员</p><p>由于微信测试号的方案有以下缺点<br>不能更改名称和头像<br>不能单独显示在消息列表（信息提示不明显）<br>定时推送有延时<br>我们采用的方案是 企业微信+服务器<br>可以自定义名称和头像<br>能够单独显示在消息列表<br>推送服务一年，有限期至2023.08.30</p><p>登入<a href="https://work.weixin.qq.com/">企业微信</a>官网，注册企业</p><p>扫码登入企业微信管理后台，我帮您进行相关配置</p><p>提供企业名称和企业头像，显示效果如图</p><p>提供应用名称和应用头像，显示效果如图</p><p>提供信息标题，显示效果如图</p><p>提供在一起的日子，以及两人的昵称和生日，显示效果如图</p><p>提供地区信息，显示效果如图，用于推送天气预报</p><p>模板内容如图，您可自行删改，由于微信限制，消息太长会截断部分影响效果，保留内容应适当</p><p>扫码关注插件，加入企业</p><p>已经发送secret给您，请打开企业微信查收并复制给我</p><p>您需要定时几点推送？</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Project项目</category>
       
     </categories>
     
@@ -669,11 +669,11 @@
   
   
   <entry>
-    <title>入门渠道</title>
-    <link href="/2022/10/11/Arduino-%E5%85%A5%E9%97%A8%E6%B8%A0%E9%81%93/"/>
-    <url>/2022/10/11/Arduino-%E5%85%A5%E9%97%A8%E6%B8%A0%E9%81%93/</url>
+    <title>LCD1602模块（带PCF8574T转接板）</title>
+    <link href="/2022/10/11/Arduino-LCD1602%E6%A8%A1%E5%9D%97%EF%BC%88%E5%B8%A6PCF8574T%E8%BD%AC%E6%8E%A5%E6%9D%BF%EF%BC%89/"/>
+    <url>/2022/10/11/Arduino-LCD1602%E6%A8%A1%E5%9D%97%EF%BC%88%E5%B8%A6PCF8574T%E8%BD%AC%E6%8E%A5%E6%9D%BF%EF%BC%89/</url>
     
-    <content type="html"><![CDATA[<h1 id="入门渠道"><a href="#入门渠道" class="headerlink" title="入门渠道"></a>入门渠道</h1><p><a href="https://www.arduino.cc/">Arduino官网</a></p><p><a href="https://www.arduino.cn/">Arduino中文社区</a></p><p><a href="https://www.dfrobot.com.cn/">DFRobot官网</a></p><p><a href="https://mbb.eet-china.com/">面包板社区</a></p><p><a href="https://www.arduino.cn/thread-1066-1-1.html">Arduino教程-Arduino中文社区</a></p><p><a href="https://wiki.arduino.cn/?file=home-%E9%A6%96%E9%A1%B5">Arduino常用函数参考</a></p><p><a href="https://mc.dfrobot.com.cn/thread-273351-1-1.html">Arduino教程-DF创客社区</a></p><p><a href="https://wiki.dfrobot.com.cn/Arduino%E7%BC%96%E7%A8%8B%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C">Arduino编程参考手册-DFRobot</a></p><p><a href="http://www.taichi-maker.com/homepage/arduino-basic-tutorial-index/">Arduino 教程-太极创客</a></p><p><a href="https://www.w3cschool.cn/arduino/">Arduino 教程-w3cschool</a></p><p><a href="http://mixly.org/">Mixly官网</a></p><p><a href="https://mixly.readthedocs.io/zh_CN/latest/contents.html#">Mixly Wiki</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="LCD1602模块（带PCF8574T转接板）"><a href="#LCD1602模块（带PCF8574T转接板）" class="headerlink" title="LCD1602模块（带PCF8574T转接板）"></a>LCD1602模块（带PCF8574T转接板）</h1><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><p>显示容量为16 * 2个字符<br>VCC 模块供电5V<br>GND 接地<br>SDA 数据接口<br>SCL 控制接口</p><h2 id="接线"><a href="#接线" class="headerlink" title="接线"></a>接线</h2><p>SDA–A4<br>SCL–A5</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;Wire.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;LiquidCrystal_I2C.h&gt;</span> <span class="hljs-comment">//引用I2C库</span></span><br><br>LiquidCrystal_I2C <span class="hljs-title function_">mylcd</span><span class="hljs-params">(<span class="hljs-number">0x3f</span>,<span class="hljs-number">16</span>,<span class="hljs-number">2</span>)</span>; <span class="hljs-comment">//创捷液晶对象，设备地址为0x3f(一般为0x27或0x3f），16列2行</span><br><br><span class="hljs-type">void</span> <span class="hljs-title function_">setup</span><span class="hljs-params">()</span>&#123;<br>  mylcd.init(); <span class="hljs-comment">//初始化液晶屏</span><br>  mylcd.backlight(); <span class="hljs-comment">//打开液晶屏背光</span><br>&#125;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">loop</span><span class="hljs-params">()</span>&#123;<br>  mylcd.setCursor(<span class="hljs-number">5</span><span class="hljs-number">-1</span>, <span class="hljs-number">2</span><span class="hljs-number">-1</span>); <span class="hljs-comment">//设置光标位置为第2行第5列</span><br>  mylcd.print(<span class="hljs-string">&quot;1&quot;</span>); <span class="hljs-comment">//输出字符 1</span><br>  delay(<span class="hljs-number">1000</span>); <span class="hljs-comment">//延时1秒</span><br>  mylcd.clear(); <span class="hljs-comment">//清屏</span><br>  mylcd.setCursor(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>); <span class="hljs-comment">//设置光标位置为第1行</span><br>  mylcd.print(<span class="hljs-string">&quot;2&quot;</span>); <span class="hljs-comment">//输出字符 2</span><br>  mylcd.setCursor(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">//设置光标位置为第2行</span><br>  mylcd.print(<span class="hljs-string">&quot;3&quot;</span>); <span class="hljs-comment">//输出字符 3</span><br>  delay(<span class="hljs-number">2000</span>); <span class="hljs-comment">//延时2秒</span><br>  mylcd.clear(); <span class="hljs-comment">//清屏</span><br><br>&#125;<br></code></pre></td></tr></table></figure><h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>LCD1602液晶屏在第二行第五列显示“1”，1秒后清屏并在第一行显示”2”，在第二行显示”3”，2秒后清屏.</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1] </p>]]></content>
     
     
     <categories>
@@ -707,11 +707,11 @@
   
   
   <entry>
-    <title>LCD1602模块（带PCF8574T转接板）</title>
-    <link href="/2022/10/11/Arduino-LCD1602%E6%A8%A1%E5%9D%97%EF%BC%88%E5%B8%A6PCF8574T%E8%BD%AC%E6%8E%A5%E6%9D%BF%EF%BC%89/"/>
-    <url>/2022/10/11/Arduino-LCD1602%E6%A8%A1%E5%9D%97%EF%BC%88%E5%B8%A6PCF8574T%E8%BD%AC%E6%8E%A5%E6%9D%BF%EF%BC%89/</url>
+    <title>入门渠道</title>
+    <link href="/2022/10/11/Arduino-%E5%85%A5%E9%97%A8%E6%B8%A0%E9%81%93/"/>
+    <url>/2022/10/11/Arduino-%E5%85%A5%E9%97%A8%E6%B8%A0%E9%81%93/</url>
     
-    <content type="html"><![CDATA[<h1 id="LCD1602模块（带PCF8574T转接板）"><a href="#LCD1602模块（带PCF8574T转接板）" class="headerlink" title="LCD1602模块（带PCF8574T转接板）"></a>LCD1602模块（带PCF8574T转接板）</h1><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><p>显示容量为16 * 2个字符<br>VCC 模块供电5V<br>GND 接地<br>SDA 数据接口<br>SCL 控制接口</p><h2 id="接线"><a href="#接线" class="headerlink" title="接线"></a>接线</h2><p>SDA–A4<br>SCL–A5</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;Wire.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;LiquidCrystal_I2C.h&gt;</span> <span class="hljs-comment">//引用I2C库</span></span><br><br>LiquidCrystal_I2C <span class="hljs-title function_">mylcd</span><span class="hljs-params">(<span class="hljs-number">0x3f</span>,<span class="hljs-number">16</span>,<span class="hljs-number">2</span>)</span>; <span class="hljs-comment">//创捷液晶对象，设备地址为0x3f(一般为0x27或0x3f），16列2行</span><br><br><span class="hljs-type">void</span> <span class="hljs-title function_">setup</span><span class="hljs-params">()</span>&#123;<br>  mylcd.init(); <span class="hljs-comment">//初始化液晶屏</span><br>  mylcd.backlight(); <span class="hljs-comment">//打开液晶屏背光</span><br>&#125;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">loop</span><span class="hljs-params">()</span>&#123;<br>  mylcd.setCursor(<span class="hljs-number">5</span><span class="hljs-number">-1</span>, <span class="hljs-number">2</span><span class="hljs-number">-1</span>); <span class="hljs-comment">//设置光标位置为第2行第5列</span><br>  mylcd.print(<span class="hljs-string">&quot;1&quot;</span>); <span class="hljs-comment">//输出字符 1</span><br>  delay(<span class="hljs-number">1000</span>); <span class="hljs-comment">//延时1秒</span><br>  mylcd.clear(); <span class="hljs-comment">//清屏</span><br>  mylcd.setCursor(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>); <span class="hljs-comment">//设置光标位置为第1行</span><br>  mylcd.print(<span class="hljs-string">&quot;2&quot;</span>); <span class="hljs-comment">//输出字符 2</span><br>  mylcd.setCursor(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">//设置光标位置为第2行</span><br>  mylcd.print(<span class="hljs-string">&quot;3&quot;</span>); <span class="hljs-comment">//输出字符 3</span><br>  delay(<span class="hljs-number">2000</span>); <span class="hljs-comment">//延时2秒</span><br>  mylcd.clear(); <span class="hljs-comment">//清屏</span><br><br>&#125;<br></code></pre></td></tr></table></figure><h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>LCD1602液晶屏在第二行第五列显示“1”，1秒后清屏并在第一行显示”2”，在第二行显示”3”，2秒后清屏.</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1] </p>]]></content>
+    <content type="html"><![CDATA[<h1 id="入门渠道"><a href="#入门渠道" class="headerlink" title="入门渠道"></a>入门渠道</h1><p><a href="https://www.arduino.cc/">Arduino官网</a></p><p><a href="https://www.arduino.cn/">Arduino中文社区</a></p><p><a href="https://www.dfrobot.com.cn/">DFRobot官网</a></p><p><a href="https://mbb.eet-china.com/">面包板社区</a></p><p><a href="https://www.arduino.cn/thread-1066-1-1.html">Arduino教程-Arduino中文社区</a></p><p><a href="https://wiki.arduino.cn/?file=home-%E9%A6%96%E9%A1%B5">Arduino常用函数参考</a></p><p><a href="https://mc.dfrobot.com.cn/thread-273351-1-1.html">Arduino教程-DF创客社区</a></p><p><a href="https://wiki.dfrobot.com.cn/Arduino%E7%BC%96%E7%A8%8B%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C">Arduino编程参考手册-DFRobot</a></p><p><a href="http://www.taichi-maker.com/homepage/arduino-basic-tutorial-index/">Arduino 教程-太极创客</a></p><p><a href="https://www.w3cschool.cn/arduino/">Arduino 教程-w3cschool</a></p><p><a href="http://mixly.org/">Mixly官网</a></p><p><a href="https://mixly.readthedocs.io/zh_CN/latest/contents.html#">Mixly Wiki</a></p>]]></content>
     
     
     <categories>
