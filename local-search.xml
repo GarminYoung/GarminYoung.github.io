@@ -23,25 +23,6 @@
   
   
   <entry>
-    <title>大学计算机基础</title>
-    <link href="/2022/10/20/Exam%E8%80%83%E8%AF%95-%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%20/"/>
-    <url>/2022/10/20/Exam%E8%80%83%E8%AF%95-%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%20/</url>
-    
-    <content type="html"><![CDATA[<h1 id="大学计算机基础"><a href="#大学计算机基础" class="headerlink" title="大学计算机基础"></a>大学计算机基础</h1><h2 id="0-学习链接"><a href="#0-学习链接" class="headerlink" title="0 学习链接"></a>0 学习链接</h2><p><a href="http://i.chaoxing.com/">超星学习通</a></p><p><a href="https://zhuanlan.zhihu.com/p/520650001">大学计算机基础考试题库(含答案)-知乎</a></p><p><a href="https://zhuanlan.zhihu.com/p/105128872">大学计算机基础考试大纲-知乎</a></p><h2 id="1-计算机基础"><a href="#1-计算机基础" class="headerlink" title="1 计算机基础"></a>1 计算机基础</h2><h3 id="1-1-计算机基础知识"><a href="#1-1-计算机基础知识" class="headerlink" title="1.1 计算机基础知识"></a>1.1 计算机基础知识</h3><p>计算机是一种能对各种信息进行高速处理的工具或电子机器，是20世纪人类最伟大的科技发明之一。<br>算盘被认为是最早的计算机，并一直沿用至今。<br>17世纪，计算机设备有了第二次重要进步，法国人帕斯卡发明了自动进位加法器。<br>1694年德国数学家戈特弗里德对其改进，使之可以计算乘法。<br>后来法国人哥伦比亚发明了可以进行四则运算的计算器。<br>现代计算机真正起源于英国数学教授查尔斯·巴贝奇。<br>巴贝奇的蒸汽动力计算机虽然没有完成，却勾画出了现代通用计算机的基本功能部分。</p><p><strong>第一代电子管计算机</strong><br>1946年2月15日，世界上<strong>第一台数字电子计算机ENIAC</strong>在美国的<strong>宾夕法尼亚大学</strong>诞生。ENIAC代表了计算机发展史上的里程碑，它的问世标志着计算机时代的到来。<br>操作指令为特定任务而编制，每种机器有各自不同的机器语言，功能受到限制，速度也慢。<br>使用真空电子管和磁鼓储存数据。</p><p><strong>第二代晶体管计算机</strong><br>晶体管和磁芯存储器的发明导致了第二代计算机的产生，其主要特点是体积小、速度快、功耗低、性能更稳定。1955年贝尔实验室研制出世界上<strong>第一台全晶体管计算机TRADIC</strong>，装有800只晶体管，仅100瓦功率，占地也只有3立方英尺。计算机中存储的程序使得计算机有了很好的适应性，可以更有效地用于商业用途。</p><p><strong>第三代集成电路计算机</strong><br>1959年基尔比与诺伊斯同时发明了<strong>集成电路</strong>(IC)，将三种电子元件结合到一片小小的硅片上。<br>1961年德州仪器公司仅用不到9个月时间，便研制出第一台用集成电路组装的计算机，标志着电脑从此进入它的第三代历史。该机共有587块集成电路，重不过300克，体积不到100立方厘米，功率只有16瓦。<br>这一时期的发展还包括使用了<strong>操作系统</strong>，使得计算机在中心程序的控制协调下可以同时运行许多不同的程序。</p><p><strong>第四代大规模集成电路计算机</strong></p><p>根据计算机分类的演变过程和近期可能的发展趋势，通常将计算机分为<strong>巨型机、小巨型机、大型主机、小型机、工作站、个人计算机和特种计算机</strong>共7大类。</p><p>Q&amp;A<br>世界上第一台计算机诞生于<strong>1946</strong>年。<br>第4代电子计算机使用的电子元件是<strong>大规模和超大规模集成电路</strong>。<br>第一台电子计算机是在美国研制的，该机的英文缩写名是<strong>ENIAC</strong>。<br>从第一台计算机诞生到现在的50多年中，按计算机采用的电子器件来划分，计算机的发展经历<strong>4</strong>个阶段。</p><h3 id="1-2-数据编码"><a href="#1-2-数据编码" class="headerlink" title="1.2 数据编码"></a>1.2 数据编码</h3><p>Q&amp;A<br>下列字符中，其ASCII码值最小的是 A<br>A、A        B、a        C、k        D、M</p><p>微型计算机中，普遍使用的字符编码是 C<br>A、补码    B、原码    C、ASCII码    D、汉字编码</p><h3 id="1-3-计算机系统"><a href="#1-3-计算机系统" class="headerlink" title="1.3 计算机系统"></a>1.3 计算机系统</h3><p>c<br>【单选题】以下属于输入设备的是 A<br>A、扫描仪    B、显示屏    C、打印机</p><p>【单选题】以下属于输出设备的是 A<br>A、绘图仪    B、照相机    C、鼠标    D、摄像头</p><h2 id="2-计算机操作基础"><a href="#2-计算机操作基础" class="headerlink" title="2 计算机操作基础"></a>2 计算机操作基础</h2><h3 id="2-1-操作系统认知"><a href="#2-1-操作系统认知" class="headerlink" title="2.1 操作系统认知"></a>2.1 操作系统认知</h3><p>Q&amp;A</p><h3 id="2-1-操作系统认知-1"><a href="#2-1-操作系统认知-1" class="headerlink" title="2.1 操作系统认知"></a>2.1 操作系统认知</h3><p>Q&amp;A</p><p>启动 Windows 系统，最确切的说法是 C<br>A、让硬盘中的 Windows 系统处于工作状态<br>B、把软盘中的 Windows 系统自动装入C 盘<br>C、把硬盘中的 Windows 系统装入内存储器的指定区域中<br>D、给计算机接通电源</p><p>退出 Windows 时，直接关闭计算机电源可能产生的后果是 D<br>A、可能破坏尚未存盘的文件<br>B、可能破坏临时设置<br>C、可能破坏某些程序的数据<br>D、以上都对</p><p>Windows系统安装完毕并启动后，由系统安排在桌面上的图标是 B<br>A、资源管理器   B、回收站   C、记事本   D、控制面板</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>Exam考试</category>
-      
-    </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>高级程序设计语言</title>
     <link href="/2022/10/18/Exam%E8%80%83%E8%AF%95-%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/"/>
     <url>/2022/10/18/Exam%E8%80%83%E8%AF%95-%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/</url>
@@ -141,7 +122,7 @@
     <link href="/2022/10/13/Exam%E8%80%83%E8%AF%95-%E5%85%AC%E5%AE%89%E5%B7%A5%E4%BD%9C%E6%A6%82%E8%AE%BA/"/>
     <url>/2022/10/13/Exam%E8%80%83%E8%AF%95-%E5%85%AC%E5%AE%89%E5%B7%A5%E4%BD%9C%E6%A6%82%E8%AE%BA/</url>
     
-    <content type="html"><![CDATA[<h1 id="公安工作概论"><a href="#公安工作概论" class="headerlink" title="公安工作概论"></a>公安工作概论</h1><h2 id="授课老师"><a href="#授课老师" class="headerlink" title="授课老师"></a>授课老师</h2><p>黄新伟<br>13926031615<br><a href="mailto:&#50;&#x34;&#52;&#52;&#x39;&#x33;&#52;&#52;&#64;&#113;&#x71;&#x2e;&#x63;&#111;&#109;">&#50;&#x34;&#52;&#52;&#x39;&#x33;&#52;&#52;&#64;&#113;&#x71;&#x2e;&#x63;&#111;&#109;</a></p><h2 id="第一章-警察制度概述"><a href="#第一章-警察制度概述" class="headerlink" title="第一章 警察制度概述"></a>第一章 警察制度概述</h2><h3 id="警察与公安的区别"><a href="#警察与公安的区别" class="headerlink" title="警察与公安的区别"></a>警察与公安的区别</h3><p>警察<br>一种职业，人民警察分为刑事警察、交通警察、国安警察、缉毒警察、网络警察、监狱警察等等。<br>公安<br>1.一种职能，或者可以具化为一个部门，从上而下有公安部、公安厅、公安局、公安分局、派出所等机构；<br>2.在中国，我们也把在公安系统里工作的警察叫做“公安”。<br>警察包含公安</p><h3 id="警察词义"><a href="#警察词义" class="headerlink" title="警察词义"></a>警察词义</h3><p>中国  警，“从敬从言，戒之以言谓之警”。 察，察看，观察，辨别。<br>西方<br>14世纪 良好秩序<br>16-18世纪 国家的一切行政行为，警察国<br>18世纪后 国家内务中的警察行政</p><h3 id="警察定义"><a href="#警察定义" class="headerlink" title="警察定义"></a>警察定义</h3><p>社会力量角度:警察机关(组织)或警察人员<br>社会功能角度:警察作用（秩序、安全、利益）<br>社会行为角度:警察行为（按照国家意志运用武装的、行政的、司法的手段维护国家安全和社会治安秩序的行为 ）</p><h3 id="什么是警察？"><a href="#什么是警察？" class="headerlink" title="什么是警察？"></a>什么是警察？</h3><p><strong>警察</strong>是具有武装性质的维护社会秩序、保卫国家安全的行政力量。</p><h3 id="警察特征"><a href="#警察特征" class="headerlink" title="警察特征"></a>警察特征</h3><p>鲜明的阶级性（最本质的特征） 警察是国家机器中的重要政治工具<br>手段特殊性 警察是具有武装性质的一种力量，是暴力机关<br>广泛的社会性 警察是维护国家安全和社会秩序的武装行政力量</p><h3 id="警察学"><a href="#警察学" class="headerlink" title="警察学"></a>警察学</h3><p>police science 警察科学        policeology 警察学<br>从世界范围看，凡属关于警察行为的科学，可以统称为警察学。</p><h3 id="警察职能"><a href="#警察职能" class="headerlink" title="警察职能"></a>警察职能</h3><p>警察应发挥的功能，它是由国家的职能所决定的</p><p>政治镇压职能<br>是指警察使用暴力，对威胁统治阶级的政治统治与国家安全的政治势力实行镇压。<br>体现了警察阶级性的本质特征</p><p>社会管理职能<br>是指警察运用行政管理手段，维护一定社会制度下的社会秩序。<br>体现警察社会性特征</p><p>相互依存，缺一不可。政治镇压职能是社会管理职能的前提，社会管理职能是政治镇压职能的基础。政治镇压职能处于首要位置。</p><h3 id="警察起源"><a href="#警察起源" class="headerlink" title="警察起源"></a>警察起源</h3><p>马克思主义<br>警察是一个历史范畴，它是人类社会发展到一定阶段，在一定社会历史条件下产生的。<br>警察学随着国家的产生而起源的，“警察总和国家一样古老的”<br>没有警察的国家和没有国家的警察都是不可思议的。</p><p>西方警察起源论<br>暴力论 契约论 自然起源论</p><h3 id="警察产生的历史条件"><a href="#警察产生的历史条件" class="headerlink" title="警察产生的历史条件"></a>警察产生的历史条件</h3><p>经济条件 生产力的发展，私有制的产生。<br>阶级条件 阶级斗争和统治阶级内部的斗争。<br>社会条件 维护统治秩序，惩治犯罪的需要。<br>政治条件 国家机器的产生。</p><h3 id="警察发展"><a href="#警察发展" class="headerlink" title="警察发展"></a>警察发展</h3><p>萌芽时期<br>”牢” 氏族武装 调解专员</p><p>古代警察<br>古代警察是对奴隶制和封建制社会中执行警察职能的机构及官吏的通称。<br>西方警察，一般认为最先出现于古罗马，古希腊。<br>我国古代警察的萌芽，始于夏王朝。 </p><p>古代警察的特点<br>军警不分，警政合一<br>警察行为的行使极不严格<br>法外行刑，私刑普遍存在</p><p>近代警察<br>近代意义的警察指的是专职警察的出现。 </p><p>近代警察产生的原因<br>经济原因：是资本主义发展的产物，是社会生产力迅速发展和社会分工日益细密的结果。<br>阶级原因：是资产阶级为维护其统治，强化警察职能的必然。<br>社会原因：维护社会秩序，打击犯罪的社会需要。<br>思想原因：资产阶级启蒙思想家的政治主张为专职警察的出现也作了理论上的准备。</p><p>中西近代警察的产生<br>近代警察发端于西欧，一般认为最早建立近代警察制度的是英国和法国。主要标志是1790年法国市政警察和1829年英国伦敦警察厅的建立。<br>形成两种不同的警政体制：以英国为代表的地方自治制和以法国为代表的中央集权制。</p><p>中国近代警察始于19世纪末20世纪初。<br>1898年，清政府创办湖南保卫局，是中国历史上最早的专职警察机构。黄遵宪为中国近代警察制度奠基人。<br>1905年，清政府根据日本人提供的建警方案，建立了“巡警部”，这是中国历史上第一个全国性的专职警察机构。标志着中国警察行政制度的开始。<br>1912，巡警改警察。</p><p>在湖南巡抚<strong>陈宝箴</strong>支持下，于1898年6月，在长沙建立了<strong>湖南保卫局</strong>，这是中国历史上最早的专职警察机构。</p><p><strong>巡警部</strong>是清政府的中央警察机关，也是中国历史上第一个全国性的专职警察结构。</p><p>近代警察的特点<br>职能独立，警察职能彻底从军队、审判机关和一般行政机关中分离出来，并且在职务上有了明显界限；<br>警察组织从中央到地方都有专门工作系统；<br>强调法制，警察机关的建立和行使职权都依据法律；<br>警察有统一的制服。</p><p>现代警察<br>1919年以后</p><h3 id="五次警务革命"><a href="#五次警务革命" class="headerlink" title="五次警务革命"></a>五次警务革命</h3><p>一次为1829英国伦敦大都市警察的建立；<br>二次为20世纪初美国，“警察专业化”；<br>三次为20世纪30-70年代欧美“警察现代化运动”；<br>四次为20世纪70年代欧美社区警务改革；<br>五次为新时期警务改革新专业化。</p><p>现代警察鼻祖-<strong>罗伯特·皮尔</strong></p><p>特点<br>加强现代化建设和集中统一指挥；<br>设置不同机构，治安和情报分开；<br>建立防爆警察组织；<br>注重社区警务；<br>全面提高警务人员素质；<br>进行全方位的科学研究；<br>国际交流与执法合作不断加强。ICPO国际刑事警察组织</p><h2 id="第二章-公安机关的建立和发展"><a href="#第二章-公安机关的建立和发展" class="headerlink" title="第二章 公安机关的建立和发展"></a>第二章 公安机关的建立和发展</h2><h2 id="第三章-公安机关的性质、职能和宗旨"><a href="#第三章-公安机关的性质、职能和宗旨" class="headerlink" title="第三章 公安机关的性质、职能和宗旨"></a>第三章 公安机关的性质、职能和宗旨</h2><h3 id="公安与民主的关系？"><a href="#公安与民主的关系？" class="headerlink" title="公安与民主的关系？"></a>公安与民主的关系？</h3><p>等待作答……</p><h3 id="公安机关的性质"><a href="#公安机关的性质" class="headerlink" title="公安机关的性质"></a>公安机关的性质</h3><p>公安机关是我国人民民主专政政权中具有武装性质的治安行政力量和刑事司法力量。具有阶级性、武装性、行政管理、刑事司法四属性。</p><h4 id="阶级性"><a href="#阶级性" class="headerlink" title="阶级性"></a>阶级性</h4><p>公安机关是人民民主专政的工具<br>公安机关具有鲜明的阶级性 中立论的错误<br>公安机关在国家政权中占据重要地位 军队和警察是国家政权最重要支柱；国家安危，公安系于一半。<br>公安机关是国家意志的忠实执行者。</p><h4 id="武装性"><a href="#武装性" class="headerlink" title="武装性"></a>武装性</h4><p>公安机关是国家的治安行政和刑事执法机关（组织属性）<br>公安机关具有武装性质<br>第一，警察暴力通过武装体现，暴力作用来自于武装。<br>第二，公安机关的组织机构实行军事化管理。<br>第三，公安机关担负武装性质的战斗任务</p><h4 id="行政管理"><a href="#行政管理" class="headerlink" title="行政管理"></a>行政管理</h4><p>公安机关是国家的治安行政力量</p><h4 id="刑事司法"><a href="#刑事司法" class="headerlink" title="刑事司法"></a>刑事司法</h4><p>公安机关刑事是国家刑事司法力量<br>第一，公安机关处在与各种刑事犯罪做斗争的第一线：<br>公安机关办案质量的好坏直接影响整个刑事诉讼活动<br>与犯罪活动做斗争具有艰巨性和尖锐性<br>第二，公安机关为其他刑事司法部门的工作创造良好条件和提供有力保障。<br>采取强制措施前，查明事实，执行检察院的决定，进行逮捕<br>对未审的嫌疑人进行羁押、看守<br>判决后，执行部分刑罚</p><h3 id="公安机关与部队组织的关系？"><a href="#公安机关与部队组织的关系？" class="headerlink" title="公安机关与部队组织的关系？"></a>公安机关与部队组织的关系？</h3><p>同属国家武装力量但有如下区别<br>性质范畴不同：军事与行政<br>职责不同：反侵略反革命与反颠覆反违法<br>手段不同：战争与管理行政司法</p><h3 id="公安机关的基本职能"><a href="#公安机关的基本职能" class="headerlink" title="公安机关的基本职能"></a>公安机关的基本职能</h3><p>从最基本的国家政治关系的作用来看，有专政和民主职能。 </p><p>专政职能<br>即公安机关依法对蓄意破坏和推翻社会主义制度、严重危害人民利益的敌对势力和敌对分子实行镇压、制裁、控制和改造，以巩固人民民主专政，保卫人民的权利。实质上就是代表国家和人民对敌人的政治统治。</p><p>专政对象<br>危害国家安全和社会主义制度的敌对分子；<br>严重危害社会治安和人民利益的严重刑事犯罪分子；<br>对我国进行渗透、颠覆的各种敌对势力和敌对分子。如东突势力，法轮功等</p><p>专政手段<br>打击、制裁、监督和改造</p><p>民主职能<br>指公安机关服从人民的意志，依法保护人民的民主权利和其他合法权益的社会作用与效能。<br>包括管理社会治安的公安行政职能和服务公众的服务职能。</p><p>保护人民，使人民享有法定的民主权利和其他合法权益；<br>保障人民依法参与国家事务管理，享受正常生活；<br>依靠人民群众搞好公安工作；<br>用民主的方法，说服教育的方法调整人民内部矛盾；<br>为民服务，做好为民、便民、利民的服务工作；</p><p>两者关系<br>区别<br>对象不同：敌人与人民<br>方法不同：专政与民主<br>联系<br>民主是基础，专政是保障。二者是辨证统一的，相互依存，相互渗透和相互促进的。专政职能在现今仍需加强。</p><h3 id="公安机关的宗旨"><a href="#公安机关的宗旨" class="headerlink" title="公安机关的宗旨"></a>公安机关的宗旨</h3><p>全心全意为人民服务是公安机关的宗旨<br>以人民为中心 执法为民<br>警察法第3条规定：人民警察必须依靠人民的支持，保持同人民的密切联系，倾听人民的意见和建议，接受人民的监督，维护人民的利益，全心全意为人民服务。</p><p>公安机关宗旨是公安机关性质的必然要求<br>把人民群众满意不满意、赞成不赞成、答应不答应作为衡量公安工作的最高标准。</p><p>公安工作必须坚持全心全意为人民服务的宗旨<br>为人民服务要坚持一切从人民群众的利益出发<br>为人民服务要立足本职工作<br>为人民服务要有过硬本领<br>接受监督，服从司法权威<br>推进警务公开，“让权力在阳光下运行” </p><h3 id="假如你是一名社区警察，你认为该怎么做才能体现为人民服务的宗旨？"><a href="#假如你是一名社区警察，你认为该怎么做才能体现为人民服务的宗旨？" class="headerlink" title="假如你是一名社区警察，你认为该怎么做才能体现为人民服务的宗旨？"></a>假如你是一名社区警察，你认为该怎么做才能体现为人民服务的宗旨？</h3><p>等待作答……</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="公安工作概论"><a href="#公安工作概论" class="headerlink" title="公安工作概论"></a>公安工作概论</h1><h2 id="授课老师"><a href="#授课老师" class="headerlink" title="授课老师"></a>授课老师</h2><p>黄新伟<br>13926031615<br><a href="mailto:&#x32;&#x34;&#52;&#x34;&#57;&#51;&#x34;&#52;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#x6d;">&#x32;&#x34;&#52;&#x34;&#57;&#51;&#x34;&#52;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#x6d;</a></p><h2 id="第一章-警察制度概述"><a href="#第一章-警察制度概述" class="headerlink" title="第一章 警察制度概述"></a>第一章 警察制度概述</h2><h3 id="警察与公安的区别"><a href="#警察与公安的区别" class="headerlink" title="警察与公安的区别"></a>警察与公安的区别</h3><p>警察<br>一种职业，人民警察分为刑事警察、交通警察、国安警察、缉毒警察、网络警察、监狱警察等等。<br>公安<br>1.一种职能，或者可以具化为一个部门，从上而下有公安部、公安厅、公安局、公安分局、派出所等机构；<br>2.在中国，我们也把在公安系统里工作的警察叫做“公安”。<br>警察包含公安</p><h3 id="警察词义"><a href="#警察词义" class="headerlink" title="警察词义"></a>警察词义</h3><p>中国  警，“从敬从言，戒之以言谓之警”。 察，察看，观察，辨别。<br>西方<br>14世纪 良好秩序<br>16-18世纪 国家的一切行政行为，警察国<br>18世纪后 国家内务中的警察行政</p><h3 id="警察定义"><a href="#警察定义" class="headerlink" title="警察定义"></a>警察定义</h3><p>社会力量角度:警察机关(组织)或警察人员<br>社会功能角度:警察作用（秩序、安全、利益）<br>社会行为角度:警察行为（按照国家意志运用武装的、行政的、司法的手段维护国家安全和社会治安秩序的行为 ）</p><h3 id="什么是警察？"><a href="#什么是警察？" class="headerlink" title="什么是警察？"></a>什么是警察？</h3><p><strong>警察</strong>是具有武装性质的维护社会秩序、保卫国家安全的行政力量。</p><h3 id="警察特征"><a href="#警察特征" class="headerlink" title="警察特征"></a>警察特征</h3><p>鲜明的阶级性（最本质的特征） 警察是国家机器中的重要政治工具<br>手段特殊性 警察是具有武装性质的一种力量，是暴力机关<br>广泛的社会性 警察是维护国家安全和社会秩序的武装行政力量</p><h3 id="警察学"><a href="#警察学" class="headerlink" title="警察学"></a>警察学</h3><p>police science 警察科学        policeology 警察学<br>从世界范围看，凡属关于警察行为的科学，可以统称为警察学。</p><h3 id="警察职能"><a href="#警察职能" class="headerlink" title="警察职能"></a>警察职能</h3><p>警察应发挥的功能，它是由国家的职能所决定的</p><p>政治镇压职能<br>是指警察使用暴力，对威胁统治阶级的政治统治与国家安全的政治势力实行镇压。<br>体现了警察阶级性的本质特征</p><p>社会管理职能<br>是指警察运用行政管理手段，维护一定社会制度下的社会秩序。<br>体现警察社会性特征</p><p>相互依存，缺一不可。政治镇压职能是社会管理职能的前提，社会管理职能是政治镇压职能的基础。政治镇压职能处于首要位置。</p><h3 id="警察起源"><a href="#警察起源" class="headerlink" title="警察起源"></a>警察起源</h3><p>马克思主义<br>警察是一个历史范畴，它是人类社会发展到一定阶段，在一定社会历史条件下产生的。<br>警察学随着国家的产生而起源的，“警察总和国家一样古老的”<br>没有警察的国家和没有国家的警察都是不可思议的。</p><p>西方警察起源论<br>暴力论 契约论 自然起源论</p><h3 id="警察产生的历史条件"><a href="#警察产生的历史条件" class="headerlink" title="警察产生的历史条件"></a>警察产生的历史条件</h3><p>经济条件 生产力的发展，私有制的产生。<br>阶级条件 阶级斗争和统治阶级内部的斗争。<br>社会条件 维护统治秩序，惩治犯罪的需要。<br>政治条件 国家机器的产生。</p><h3 id="警察发展"><a href="#警察发展" class="headerlink" title="警察发展"></a>警察发展</h3><p>萌芽时期<br>”牢” 氏族武装 调解专员</p><p>古代警察<br>古代警察是对奴隶制和封建制社会中执行警察职能的机构及官吏的通称。<br>西方警察，一般认为最先出现于古罗马，古希腊。<br>我国古代警察的萌芽，始于夏王朝。 </p><p>古代警察的特点<br>军警不分，警政合一<br>警察行为的行使极不严格<br>法外行刑，私刑普遍存在</p><p>近代警察<br>近代意义的警察指的是专职警察的出现。 </p><p>近代警察产生的原因<br>经济原因：是资本主义发展的产物，是社会生产力迅速发展和社会分工日益细密的结果。<br>阶级原因：是资产阶级为维护其统治，强化警察职能的必然。<br>社会原因：维护社会秩序，打击犯罪的社会需要。<br>思想原因：资产阶级启蒙思想家的政治主张为专职警察的出现也作了理论上的准备。</p><p>中西近代警察的产生<br>近代警察发端于西欧，一般认为最早建立近代警察制度的是英国和法国。主要标志是1790年法国市政警察和1829年英国伦敦警察厅的建立。<br>形成两种不同的警政体制：以英国为代表的地方自治制和以法国为代表的中央集权制。</p><p>中国近代警察始于19世纪末20世纪初。<br>1898年，清政府创办湖南保卫局，是中国历史上最早的专职警察机构。黄遵宪为中国近代警察制度奠基人。<br>1905年，清政府根据日本人提供的建警方案，建立了“巡警部”，这是中国历史上第一个全国性的专职警察机构。标志着中国警察行政制度的开始。<br>1912，巡警改警察。</p><p>在湖南巡抚<strong>陈宝箴</strong>支持下，于1898年6月，在长沙建立了<strong>湖南保卫局</strong>，这是中国历史上最早的专职警察机构。</p><p><strong>巡警部</strong>是清政府的中央警察机关，也是中国历史上第一个全国性的专职警察结构。</p><p>近代警察的特点<br>职能独立，警察职能彻底从军队、审判机关和一般行政机关中分离出来，并且在职务上有了明显界限；<br>警察组织从中央到地方都有专门工作系统；<br>强调法制，警察机关的建立和行使职权都依据法律；<br>警察有统一的制服。</p><p>现代警察<br>1919年以后</p><h3 id="五次警务革命"><a href="#五次警务革命" class="headerlink" title="五次警务革命"></a>五次警务革命</h3><p>一次为1829英国伦敦大都市警察的建立；<br>二次为20世纪初美国，“警察专业化”；<br>三次为20世纪30-70年代欧美“警察现代化运动”；<br>四次为20世纪70年代欧美社区警务改革；<br>五次为新时期警务改革新专业化。</p><p>现代警察鼻祖-<strong>罗伯特·皮尔</strong></p><p>特点<br>加强现代化建设和集中统一指挥；<br>设置不同机构，治安和情报分开；<br>建立防爆警察组织；<br>注重社区警务；<br>全面提高警务人员素质；<br>进行全方位的科学研究；<br>国际交流与执法合作不断加强。ICPO国际刑事警察组织</p><h2 id="第二章-公安机关的建立和发展"><a href="#第二章-公安机关的建立和发展" class="headerlink" title="第二章 公安机关的建立和发展"></a>第二章 公安机关的建立和发展</h2><h2 id="第三章-公安机关的性质、职能和宗旨"><a href="#第三章-公安机关的性质、职能和宗旨" class="headerlink" title="第三章 公安机关的性质、职能和宗旨"></a>第三章 公安机关的性质、职能和宗旨</h2><h3 id="公安与民主的关系？"><a href="#公安与民主的关系？" class="headerlink" title="公安与民主的关系？"></a>公安与民主的关系？</h3><p>等待作答……</p><h3 id="公安机关的性质"><a href="#公安机关的性质" class="headerlink" title="公安机关的性质"></a>公安机关的性质</h3><p>公安机关是我国人民民主专政政权中具有武装性质的治安行政力量和刑事司法力量。具有阶级性、武装性、行政管理、刑事司法四属性。</p><h4 id="阶级性"><a href="#阶级性" class="headerlink" title="阶级性"></a>阶级性</h4><p>公安机关是人民民主专政的工具<br>公安机关具有鲜明的阶级性 中立论的错误<br>公安机关在国家政权中占据重要地位 军队和警察是国家政权最重要支柱；国家安危，公安系于一半。<br>公安机关是国家意志的忠实执行者。</p><h4 id="武装性"><a href="#武装性" class="headerlink" title="武装性"></a>武装性</h4><p>公安机关是国家的治安行政和刑事执法机关（组织属性）<br>公安机关具有武装性质<br>第一，警察暴力通过武装体现，暴力作用来自于武装。<br>第二，公安机关的组织机构实行军事化管理。<br>第三，公安机关担负武装性质的战斗任务</p><h4 id="行政管理"><a href="#行政管理" class="headerlink" title="行政管理"></a>行政管理</h4><p>公安机关是国家的治安行政力量</p><h4 id="刑事司法"><a href="#刑事司法" class="headerlink" title="刑事司法"></a>刑事司法</h4><p>公安机关刑事是国家刑事司法力量<br>第一，公安机关处在与各种刑事犯罪做斗争的第一线：<br>公安机关办案质量的好坏直接影响整个刑事诉讼活动<br>与犯罪活动做斗争具有艰巨性和尖锐性<br>第二，公安机关为其他刑事司法部门的工作创造良好条件和提供有力保障。<br>采取强制措施前，查明事实，执行检察院的决定，进行逮捕<br>对未审的嫌疑人进行羁押、看守<br>判决后，执行部分刑罚</p><h3 id="公安机关与部队组织的关系？"><a href="#公安机关与部队组织的关系？" class="headerlink" title="公安机关与部队组织的关系？"></a>公安机关与部队组织的关系？</h3><p>同属国家武装力量但有如下区别<br>性质范畴不同：军事与行政<br>职责不同：反侵略反革命与反颠覆反违法<br>手段不同：战争与管理行政司法</p><h3 id="公安机关的基本职能"><a href="#公安机关的基本职能" class="headerlink" title="公安机关的基本职能"></a>公安机关的基本职能</h3><p>从最基本的国家政治关系的作用来看，有专政和民主职能。 </p><p>专政职能<br>即公安机关依法对蓄意破坏和推翻社会主义制度、严重危害人民利益的敌对势力和敌对分子实行镇压、制裁、控制和改造，以巩固人民民主专政，保卫人民的权利。实质上就是代表国家和人民对敌人的政治统治。</p><p>专政对象<br>危害国家安全和社会主义制度的敌对分子；<br>严重危害社会治安和人民利益的严重刑事犯罪分子；<br>对我国进行渗透、颠覆的各种敌对势力和敌对分子。如东突势力，法轮功等</p><p>专政手段<br>打击、制裁、监督和改造</p><p>民主职能<br>指公安机关服从人民的意志，依法保护人民的民主权利和其他合法权益的社会作用与效能。<br>包括管理社会治安的公安行政职能和服务公众的服务职能。</p><p>保护人民，使人民享有法定的民主权利和其他合法权益；<br>保障人民依法参与国家事务管理，享受正常生活；<br>依靠人民群众搞好公安工作；<br>用民主的方法，说服教育的方法调整人民内部矛盾；<br>为民服务，做好为民、便民、利民的服务工作；</p><p>两者关系<br>区别<br>对象不同：敌人与人民<br>方法不同：专政与民主<br>联系<br>民主是基础，专政是保障。二者是辨证统一的，相互依存，相互渗透和相互促进的。专政职能在现今仍需加强。</p><h3 id="公安机关的宗旨"><a href="#公安机关的宗旨" class="headerlink" title="公安机关的宗旨"></a>公安机关的宗旨</h3><p>全心全意为人民服务是公安机关的宗旨<br>以人民为中心 执法为民<br>警察法第3条规定：人民警察必须依靠人民的支持，保持同人民的密切联系，倾听人民的意见和建议，接受人民的监督，维护人民的利益，全心全意为人民服务。</p><p>公安机关宗旨是公安机关性质的必然要求<br>把人民群众满意不满意、赞成不赞成、答应不答应作为衡量公安工作的最高标准。</p><p>公安工作必须坚持全心全意为人民服务的宗旨<br>为人民服务要坚持一切从人民群众的利益出发<br>为人民服务要立足本职工作<br>为人民服务要有过硬本领<br>接受监督，服从司法权威<br>推进警务公开，“让权力在阳光下运行” </p><h3 id="假如你是一名社区警察，你认为该怎么做才能体现为人民服务的宗旨？"><a href="#假如你是一名社区警察，你认为该怎么做才能体现为人民服务的宗旨？" class="headerlink" title="假如你是一名社区警察，你认为该怎么做才能体现为人民服务的宗旨？"></a>假如你是一名社区警察，你认为该怎么做才能体现为人民服务的宗旨？</h3><p>等待作答……</p>]]></content>
     
     
     <categories>
@@ -498,25 +479,6 @@
   
   
   <entry>
-    <title>更新主板BIOS</title>
-    <link href="/2022/10/11/Other%E5%85%B6%E5%AE%83-%E6%9B%B4%E6%96%B0%E4%B8%BB%E6%9D%BFBIOS/"/>
-    <url>/2022/10/11/Other%E5%85%B6%E5%AE%83-%E6%9B%B4%E6%96%B0%E4%B8%BB%E6%9D%BFBIOS/</url>
-    
-    <content type="html"><![CDATA[<h1 id="更新主板BIOS"><a href="#更新主板BIOS" class="headerlink" title="更新主板BIOS"></a>更新主板BIOS</h1><p>去主板的品牌官网下载需要的BIOS版本<br>从低到高的版本，刷BIOS时最好不要跳级，以免坠机<br>将下载好的文件解压后拷进U盘（FAT32格式）<br>重启后点击相应按键进入BIOS<br>按照指引点击升级BIOS</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>Other其它</category>
-      
-    </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>入门渠道</title>
     <link href="/2022/10/11/Photography%E6%91%84%E5%BD%B1-%E5%85%A5%E9%97%A8%E6%B8%A0%E9%81%93/"/>
     <url>/2022/10/11/Photography%E6%91%84%E5%BD%B1-%E5%85%A5%E9%97%A8%E6%B8%A0%E9%81%93/</url>
@@ -536,6 +498,25 @@
   
   
   <entry>
+    <title>更新主板BIOS</title>
+    <link href="/2022/10/11/Other%E5%85%B6%E5%AE%83-%E6%9B%B4%E6%96%B0%E4%B8%BB%E6%9D%BFBIOS/"/>
+    <url>/2022/10/11/Other%E5%85%B6%E5%AE%83-%E6%9B%B4%E6%96%B0%E4%B8%BB%E6%9D%BFBIOS/</url>
+    
+    <content type="html"><![CDATA[<h1 id="更新主板BIOS"><a href="#更新主板BIOS" class="headerlink" title="更新主板BIOS"></a>更新主板BIOS</h1><p>去主板的品牌官网下载需要的BIOS版本<br>从低到高的版本，刷BIOS时最好不要跳级，以免坠机<br>将下载好的文件解压后拷进U盘（FAT32格式）<br>重启后点击相应按键进入BIOS<br>按照指引点击升级BIOS</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Other其它</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>《C程序设计（第五版）》</title>
     <link href="/2022/10/11/C%E8%AF%AD%E8%A8%80-%E3%80%8AC%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%AC%AC%E4%BA%94%E7%89%88%EF%BC%89%E3%80%8B/"/>
     <url>/2022/10/11/C%E8%AF%AD%E8%A8%80-%E3%80%8AC%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%AC%AC%E4%BA%94%E7%89%88%EF%BC%89%E3%80%8B/</url>
@@ -546,25 +527,6 @@
     <categories>
       
       <category>C语言</category>
-      
-    </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>2022届高三7班团支部</title>
-    <link href="/2022/10/11/Other%E5%85%B6%E5%AE%83-2022%E5%B1%8A%E9%AB%98%E4%B8%897%E7%8F%AD%E5%9B%A2%E6%94%AF%E9%83%A8/"/>
-    <url>/2022/10/11/Other%E5%85%B6%E5%AE%83-2022%E5%B1%8A%E9%AB%98%E4%B8%897%E7%8F%AD%E5%9B%A2%E6%94%AF%E9%83%A8/</url>
-    
-    <content type="html"><![CDATA[<h1 id="2022届高三7班团支部"><a href="#2022届高三7班团支部" class="headerlink" title="2022届高三7班团支部"></a>2022届高三7班团支部</h1><h2 id="团支书"><a href="#团支书" class="headerlink" title="团支书"></a>团支书</h2><p>杨嘉铭 苏婷钰</p><h2 id="团员"><a href="#团员" class="headerlink" title="团员"></a>团员</h2><p>邓助峰 李铭健 王奚浩博 钟瑜</p><p>陈凯欣 陈诗莹 黄诗惠 黄雨欣</p><p>林咏晴 庞焕慧 谭婉滢 冼德昕</p><p>冼桂晴 毛少婷 陆飞翔 郑淳宣</p><p><strong>共18人</strong></p><h2 id="广东智慧团建"><a href="#广东智慧团建" class="headerlink" title="广东智慧团建"></a><a href="https://tuan.12355.net/bg/index.html">广东智慧团建</a></h2>]]></content>
-    
-    
-    <categories>
-      
-      <category>Other其它</category>
       
     </categories>
     
@@ -617,6 +579,25 @@
     <url>/2022/10/11/Other%E5%85%B6%E5%AE%83-%E5%A5%BD%E6%96%87%E6%94%B6%E7%BA%B3&amp;%E5%AE%9E%E7%94%A8%E7%BD%91%E7%AB%99/</url>
     
     <content type="html"><![CDATA[<h1 id="好文收纳"><a href="#好文收纳" class="headerlink" title="好文收纳"></a>好文收纳</h1><p>如何处理旧笔记本电脑？ - 知乎<br><a href="https://www.zhihu.com/question/20801407">https://www.zhihu.com/question/20801407</a></p><p>Hexo主题底部默认信息修改 -CSDN<br><a href="https://blog.csdn.net/zhouguofengnb/article/details/102824102">https://blog.csdn.net/zhouguofengnb/article/details/102824102</a></p><p>如何在bilibili中查找弹幕发送者 -CSDN<br><a href="https://blog.csdn.net/dlpu_fan/article/details/106387156">https://blog.csdn.net/dlpu_fan/article/details/106387156</a></p><p>【高级篇】（一）三阶魔方CFOP高级玩法之CFOP漫谈 -知乎<br><a href="https://zhuanlan.zhihu.com/p/57288620">https://zhuanlan.zhihu.com/p/57288620</a></p><p>一台电脑部署两个或多个 Hexo 博客（一台电脑使用两个或多个 GitHub 账号） -CSDN<br><a href="https://blog.csdn.net/qq_36759224/article/details/86546729">https://blog.csdn.net/qq_36759224/article/details/86546729</a></p><p>Intel的CPU与AMD的CPU架构简介以及名称规则-CSDN<br><a href="https://blog.csdn.net/qq_27825451/article/details/89225571">https://blog.csdn.net/qq_27825451/article/details/89225571</a></p><p>图床搭建方案<br><a href="https://www.myql.xyz/post/92e90c46/">Coding 图床方案 - 暮雨千泷</a></p><p>github wiki页面制作<br><a href="http://amwiki.org/doc/?file=home-%E9%A6%96%E9%A1%B5">amWiki 文档中心</a></p><p><a href="https://runninggump.github.io/2018/12/05/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3%E5%9C%A8hexo%E4%B8%AD%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E7%9A%84%E9%97%AE%E9%A2%98/#:~:text=%E8%A7%A3%E5%86%B3%E6%AD%A5%E9%AA%A4%E6%9B%B4%E6%8D%A2He,%E5%91%BD%E4%BB%A4%E6%98%AF%E5%AE%89%E8%A3%85hex">成功解决在hexo中无法显示数学公式的问题 | 初心 (runninggump.github.io)</a></p><p><a href="https://cloud.tencent.com/developer/article/1662792">Hexo进阶教程（四）| 部署Hexo到自己的服务器 - 腾讯云开发者社区-腾讯云 (tencent.com)</a></p><p>页面播放器<br><a href="https://dplayer.diygod.dev/zh/guide.html#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B">指南 | DPlayer (diygod.dev)</a></p><p><a href="http://cn.emoticonfun.com/">颜文字表情 字符表情 符号表情 日本颜文字下载 颜文字大全 ʕ·ᴥ·ʔ (emoticonfun.com)</a></p><p><a href="https://blog.csdn.net/fddnihao/article/details/121065301">利用闲置笔记本电脑搭建linux服务器并布置自己的网站_凡人叶枫的博客-CSDN博客_笔记本做服务器</a></p><p><a href="https://blog.csdn.net/makebuaa/article/details/7913835"> 几十种计算机语言简介 你知道几种？_makebuaa的博客-CSDN博客_计算机语言有哪些</a></p><p><a href="https://zhuanlan.zhihu.com/p/338456849">CS/CE/EE/SE/IT有什么区别？- 知乎</a></p><p><a href="https://zhuanlan.zhihu.com/p/343212233">GitBook 入门指南 - 知乎 </a></p><p>钢笔工具练习网站<br><a href="https://bezier.method.ac/">The Bézier Game (method.ac)</a></p><p>上海交通大学生存手册<br><a href="https://survivesjtu.gitbook.io/survivesjtumanual/">README - SurviveSJTUManual (gitbook.io)</a></p><p><a href="https://zhuanlan.zhihu.com/p/26223969">社工库杂谈 - 知乎 (zhihu.com)</a></p><p><a href="https://zhuanlan.zhihu.com/p/406365237">ACM算法竞赛入门和进阶指南 - 知乎 (zhihu.com)</a></p><h1 id="实用网站"><a href="#实用网站" class="headerlink" title="实用网站"></a>实用网站</h1><p>pexels图片素材<br><a href="https://www.pexels.com/zh-cn/">https://www.pexels.com/zh-cn/</a></p><p>b站历史数据统计分析<br><a href="https://www.biliob233.com/">https://www.biliob233.com/</a></p><p>懒石模型<br><a href="http://www.lazystones.com/web/index.aspx">http://www.lazystones.com/web/index.aspx</a></p><p>迪威模型<br><a href="http://www.3dwhere.com/index.html">http://www.3dwhere.com/index.html</a></p><p><a href="https://app.xunjiepdf.com/">迅捷pdf转换器</a></p><p>中国色<br><a href="http://zhongguose.com/">http://zhongguose.com/</a></p><p><a href="https://topbook.cc/overview">Topbook</a></p><p><a href="https://www.52pojie.cn/">吾爱破解</a></p><p><a href="http://doyoudo.com/">doyoudo</a></p><p><a href="https://knowsex.net/">知性</a></p><p><a href="https://www.netlifycms.org/">Netlify CMS</a></p><p><a href="https://qwerty.kaiyi.cool/">Qwerty Learner</a></p><p><a href="https://www.discuz.net/">Discuz免费开源建站系统</a></p><p><a href="https://imgloc.com/">imgloc图床</a></p><p><a href="https://up.woozooo.com/">蓝奏云存储</a></p><p><a href="https://10minutemail.org/">10分钟邮箱</a></p><p><a href="https://cli.im/">草料二维码生成器</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Other其它</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>2022届高三7班团支部</title>
+    <link href="/2022/10/11/Other%E5%85%B6%E5%AE%83-2022%E5%B1%8A%E9%AB%98%E4%B8%897%E7%8F%AD%E5%9B%A2%E6%94%AF%E9%83%A8/"/>
+    <url>/2022/10/11/Other%E5%85%B6%E5%AE%83-2022%E5%B1%8A%E9%AB%98%E4%B8%897%E7%8F%AD%E5%9B%A2%E6%94%AF%E9%83%A8/</url>
+    
+    <content type="html"><![CDATA[<h1 id="2022届高三7班团支部"><a href="#2022届高三7班团支部" class="headerlink" title="2022届高三7班团支部"></a>2022届高三7班团支部</h1><h2 id="团支书"><a href="#团支书" class="headerlink" title="团支书"></a>团支书</h2><p>杨嘉铭 苏婷钰</p><h2 id="团员"><a href="#团员" class="headerlink" title="团员"></a>团员</h2><p>邓助峰 李铭健 王奚浩博 钟瑜</p><p>陈凯欣 陈诗莹 黄诗惠 黄雨欣</p><p>林咏晴 庞焕慧 谭婉滢 冼德昕</p><p>冼桂晴 毛少婷 陆飞翔 郑淳宣</p><p><strong>共18人</strong></p><h2 id="广东智慧团建"><a href="#广东智慧团建" class="headerlink" title="广东智慧团建"></a><a href="https://tuan.12355.net/bg/index.html">广东智慧团建</a></h2>]]></content>
     
     
     <categories>
@@ -707,11 +688,11 @@
   
   
   <entry>
-    <title>6）主题应用</title>
-    <link href="/2022/10/11/Blog%E5%8D%9A%E5%AE%A2-6)%E4%B8%BB%E9%A2%98%E5%BA%94%E7%94%A8/"/>
-    <url>/2022/10/11/Blog%E5%8D%9A%E5%AE%A2-6)%E4%B8%BB%E9%A2%98%E5%BA%94%E7%94%A8/</url>
+    <title>7）Netlify加速部署</title>
+    <link href="/2022/10/11/Blog%E5%8D%9A%E5%AE%A2-7)Netlify%E5%8A%A0%E9%80%9F%E9%83%A8%E7%BD%B2/"/>
+    <url>/2022/10/11/Blog%E5%8D%9A%E5%AE%A2-7)Netlify%E5%8A%A0%E9%80%9F%E9%83%A8%E7%BD%B2/</url>
     
-    <content type="html"><![CDATA[<h1 id="6）主题应用"><a href="#6）主题应用" class="headerlink" title="6）主题应用"></a>6）主题应用</h1><h2 id="选择主题"><a href="#选择主题" class="headerlink" title="选择主题"></a>选择主题</h2><p><a href="https://hexo.io/themes/">https://hexo.io/themes/</a></p><h2 id="Git安装"><a href="#Git安装" class="headerlink" title="Git安装"></a>Git安装</h2><p>在此以yilia-plus主题为例</p><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git <span class="hljs-keyword">clone</span> <span class="hljs-title">-b</span> <span class="hljs-keyword">master</span> <span class="hljs-title">https</span>://github.com/JoeyBling/hexo-theme-yilia-plus.git themes/yilia-plus<br></code></pre></td></tr></table></figure><p>fluid主题</p><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git <span class="hljs-keyword">clone</span> <span class="hljs-title">-b</span> <span class="hljs-keyword">master</span> <span class="hljs-title">https</span>://github.com/fluid-dev/hexo-theme-fluid.git themes/fluid<br></code></pre></td></tr></table></figure><h2 id="应用主题"><a href="#应用主题" class="headerlink" title="应用主题"></a>应用主题</h2><p>修改站点配置文件_config.yml，把主题改为yilia-plus.</p><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">theme:</span> yilia-plus<br></code></pre></td></tr></table></figure><h2 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h2><p>找对应主题的官方文档查看即可.</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="7）Netlify加速部署"><a href="#7）Netlify加速部署" class="headerlink" title="7）Netlify加速部署"></a>7）Netlify加速部署</h1><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://blog.csdn.net/huiruwei1020/article/details/107728435">利用CDN加速GithubPage访问速度-CSDN</a></p><p><a href="https://blog.csdn.net/mqdxiaoxiao/article/details/96365253">Netlify搭建个人博客设置域名-CSDN</a></p><h2 id="部署仓库"><a href="#部署仓库" class="headerlink" title="部署仓库"></a>部署仓库</h2><p>进入<a href="https://www.netlify.com/">Netlify</a>官网，点击Sign up进行注册<br>关联GitHub账号，并进入后台管理页面<br>依次点击Sites-New site from Git-GitHub-Authorize Netlify by Netlify<br>选择好对应的仓库后进行授权<br>配置好相关信息后点击Deploy site完成部署<br>部署完成后，Netlify会自动生成一个随机的二级域名<br>你可以通过这个域名访问你的博客，也可以在Site Settings进行修改</p><h2 id="配置域名"><a href="#配置域名" class="headerlink" title="配置域名"></a>配置域名</h2><p>在Netlify控制台进入对应的项目<br>点击Set up a custom domain添加域名<a href="http://www.xxxxx.xxx/">www.xxxxx.xxx</a><br>添加好后点击Verify完成验证<br>在自己购买的域名后台设置域名解析，添加两条CNAME记录<br>第一条 @ 随机的二级域名<br>第二条 www 随机的二级域名<br>至此配置完成</p>]]></content>
     
     
     <categories>
@@ -726,11 +707,11 @@
   
   
   <entry>
-    <title>7）Netlify加速部署</title>
-    <link href="/2022/10/11/Blog%E5%8D%9A%E5%AE%A2-7)Netlify%E5%8A%A0%E9%80%9F%E9%83%A8%E7%BD%B2/"/>
-    <url>/2022/10/11/Blog%E5%8D%9A%E5%AE%A2-7)Netlify%E5%8A%A0%E9%80%9F%E9%83%A8%E7%BD%B2/</url>
+    <title>6）主题应用</title>
+    <link href="/2022/10/11/Blog%E5%8D%9A%E5%AE%A2-6)%E4%B8%BB%E9%A2%98%E5%BA%94%E7%94%A8/"/>
+    <url>/2022/10/11/Blog%E5%8D%9A%E5%AE%A2-6)%E4%B8%BB%E9%A2%98%E5%BA%94%E7%94%A8/</url>
     
-    <content type="html"><![CDATA[<h1 id="7）Netlify加速部署"><a href="#7）Netlify加速部署" class="headerlink" title="7）Netlify加速部署"></a>7）Netlify加速部署</h1><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://blog.csdn.net/huiruwei1020/article/details/107728435">利用CDN加速GithubPage访问速度-CSDN</a></p><p><a href="https://blog.csdn.net/mqdxiaoxiao/article/details/96365253">Netlify搭建个人博客设置域名-CSDN</a></p><h2 id="部署仓库"><a href="#部署仓库" class="headerlink" title="部署仓库"></a>部署仓库</h2><p>进入<a href="https://www.netlify.com/">Netlify</a>官网，点击Sign up进行注册<br>关联GitHub账号，并进入后台管理页面<br>依次点击Sites-New site from Git-GitHub-Authorize Netlify by Netlify<br>选择好对应的仓库后进行授权<br>配置好相关信息后点击Deploy site完成部署<br>部署完成后，Netlify会自动生成一个随机的二级域名<br>你可以通过这个域名访问你的博客，也可以在Site Settings进行修改</p><h2 id="配置域名"><a href="#配置域名" class="headerlink" title="配置域名"></a>配置域名</h2><p>在Netlify控制台进入对应的项目<br>点击Set up a custom domain添加域名<a href="http://www.xxxxx.xxx/">www.xxxxx.xxx</a><br>添加好后点击Verify完成验证<br>在自己购买的域名后台设置域名解析，添加两条CNAME记录<br>第一条 @ 随机的二级域名<br>第二条 www 随机的二级域名<br>至此配置完成</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="6）主题应用"><a href="#6）主题应用" class="headerlink" title="6）主题应用"></a>6）主题应用</h1><h2 id="选择主题"><a href="#选择主题" class="headerlink" title="选择主题"></a>选择主题</h2><p><a href="https://hexo.io/themes/">https://hexo.io/themes/</a></p><h2 id="Git安装"><a href="#Git安装" class="headerlink" title="Git安装"></a>Git安装</h2><p>在此以yilia-plus主题为例</p><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git <span class="hljs-keyword">clone</span> <span class="hljs-title">-b</span> <span class="hljs-keyword">master</span> <span class="hljs-title">https</span>://github.com/JoeyBling/hexo-theme-yilia-plus.git themes/yilia-plus<br></code></pre></td></tr></table></figure><p>fluid主题</p><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git <span class="hljs-keyword">clone</span> <span class="hljs-title">-b</span> <span class="hljs-keyword">master</span> <span class="hljs-title">https</span>://github.com/fluid-dev/hexo-theme-fluid.git themes/fluid<br></code></pre></td></tr></table></figure><h2 id="应用主题"><a href="#应用主题" class="headerlink" title="应用主题"></a>应用主题</h2><p>修改站点配置文件_config.yml，把主题改为yilia-plus.</p><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">theme:</span> yilia-plus<br></code></pre></td></tr></table></figure><h2 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h2><p>找对应主题的官方文档查看即可.</p>]]></content>
     
     
     <categories>
@@ -878,25 +859,6 @@
   
   
   <entry>
-    <title>LCD1602模块（带PCF8574T转接板）</title>
-    <link href="/2022/10/11/Arduino-LCD1602%E6%A8%A1%E5%9D%97%EF%BC%88%E5%B8%A6PCF8574T%E8%BD%AC%E6%8E%A5%E6%9D%BF%EF%BC%89/"/>
-    <url>/2022/10/11/Arduino-LCD1602%E6%A8%A1%E5%9D%97%EF%BC%88%E5%B8%A6PCF8574T%E8%BD%AC%E6%8E%A5%E6%9D%BF%EF%BC%89/</url>
-    
-    <content type="html"><![CDATA[<h1 id="LCD1602模块（带PCF8574T转接板）"><a href="#LCD1602模块（带PCF8574T转接板）" class="headerlink" title="LCD1602模块（带PCF8574T转接板）"></a>LCD1602模块（带PCF8574T转接板）</h1><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><p>显示容量为16 * 2个字符<br>VCC 模块供电5V<br>GND 接地<br>SDA 数据接口<br>SCL 控制接口</p><h2 id="接线"><a href="#接线" class="headerlink" title="接线"></a>接线</h2><p>SDA–A4<br>SCL–A5</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;Wire.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;LiquidCrystal_I2C.h&gt;</span> <span class="hljs-comment">//引用I2C库</span></span><br><br>LiquidCrystal_I2C <span class="hljs-title function_">mylcd</span><span class="hljs-params">(<span class="hljs-number">0x3f</span>,<span class="hljs-number">16</span>,<span class="hljs-number">2</span>)</span>; <span class="hljs-comment">//创捷液晶对象，设备地址为0x3f(一般为0x27或0x3f），16列2行</span><br><br><span class="hljs-type">void</span> <span class="hljs-title function_">setup</span><span class="hljs-params">()</span>&#123;<br>  mylcd.init(); <span class="hljs-comment">//初始化液晶屏</span><br>  mylcd.backlight(); <span class="hljs-comment">//打开液晶屏背光</span><br>&#125;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">loop</span><span class="hljs-params">()</span>&#123;<br>  mylcd.setCursor(<span class="hljs-number">5</span><span class="hljs-number">-1</span>, <span class="hljs-number">2</span><span class="hljs-number">-1</span>); <span class="hljs-comment">//设置光标位置为第2行第5列</span><br>  mylcd.print(<span class="hljs-string">&quot;1&quot;</span>); <span class="hljs-comment">//输出字符 1</span><br>  delay(<span class="hljs-number">1000</span>); <span class="hljs-comment">//延时1秒</span><br>  mylcd.clear(); <span class="hljs-comment">//清屏</span><br>  mylcd.setCursor(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>); <span class="hljs-comment">//设置光标位置为第1行</span><br>  mylcd.print(<span class="hljs-string">&quot;2&quot;</span>); <span class="hljs-comment">//输出字符 2</span><br>  mylcd.setCursor(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">//设置光标位置为第2行</span><br>  mylcd.print(<span class="hljs-string">&quot;3&quot;</span>); <span class="hljs-comment">//输出字符 3</span><br>  delay(<span class="hljs-number">2000</span>); <span class="hljs-comment">//延时2秒</span><br>  mylcd.clear(); <span class="hljs-comment">//清屏</span><br><br>&#125;<br></code></pre></td></tr></table></figure><h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>LCD1602液晶屏在第二行第五列显示“1”，1秒后清屏并在第一行显示”2”，在第二行显示”3”，2秒后清屏.</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1] </p>]]></content>
-    
-    
-    <categories>
-      
-      <category>Arduino</category>
-      
-    </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>ULN2003电机驱动模块</title>
     <link href="/2022/10/11/Arduino-ULN2003%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97/"/>
     <url>/2022/10/11/Arduino-ULN2003%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97/</url>
@@ -921,6 +883,25 @@
     <url>/2022/10/11/Arduino-%E5%85%A5%E9%97%A8%E6%B8%A0%E9%81%93/</url>
     
     <content type="html"><![CDATA[<h1 id="入门渠道"><a href="#入门渠道" class="headerlink" title="入门渠道"></a>入门渠道</h1><p><a href="https://www.arduino.cc/">Arduino官网</a></p><p><a href="https://www.arduino.cn/">Arduino中文社区</a></p><p><a href="https://www.dfrobot.com.cn/">DFRobot官网</a></p><p><a href="https://mbb.eet-china.com/">面包板社区</a></p><p><a href="https://www.arduino.cn/thread-1066-1-1.html">Arduino教程-Arduino中文社区</a></p><p><a href="https://wiki.arduino.cn/?file=home-%E9%A6%96%E9%A1%B5">Arduino常用函数参考</a></p><p><a href="https://mc.dfrobot.com.cn/thread-273351-1-1.html">Arduino教程-DF创客社区</a></p><p><a href="https://wiki.dfrobot.com.cn/Arduino%E7%BC%96%E7%A8%8B%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C">Arduino编程参考手册-DFRobot</a></p><p><a href="http://www.taichi-maker.com/homepage/arduino-basic-tutorial-index/">Arduino 教程-太极创客</a></p><p><a href="https://www.w3cschool.cn/arduino/">Arduino 教程-w3cschool</a></p><p><a href="http://mixly.org/">Mixly官网</a></p><p><a href="https://mixly.readthedocs.io/zh_CN/latest/contents.html#">Mixly Wiki</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Arduino</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>LCD1602模块（带PCF8574T转接板）</title>
+    <link href="/2022/10/11/Arduino-LCD1602%E6%A8%A1%E5%9D%97%EF%BC%88%E5%B8%A6PCF8574T%E8%BD%AC%E6%8E%A5%E6%9D%BF%EF%BC%89/"/>
+    <url>/2022/10/11/Arduino-LCD1602%E6%A8%A1%E5%9D%97%EF%BC%88%E5%B8%A6PCF8574T%E8%BD%AC%E6%8E%A5%E6%9D%BF%EF%BC%89/</url>
+    
+    <content type="html"><![CDATA[<h1 id="LCD1602模块（带PCF8574T转接板）"><a href="#LCD1602模块（带PCF8574T转接板）" class="headerlink" title="LCD1602模块（带PCF8574T转接板）"></a>LCD1602模块（带PCF8574T转接板）</h1><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><p>显示容量为16 * 2个字符<br>VCC 模块供电5V<br>GND 接地<br>SDA 数据接口<br>SCL 控制接口</p><h2 id="接线"><a href="#接线" class="headerlink" title="接线"></a>接线</h2><p>SDA–A4<br>SCL–A5</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;Wire.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;LiquidCrystal_I2C.h&gt;</span> <span class="hljs-comment">//引用I2C库</span></span><br><br>LiquidCrystal_I2C <span class="hljs-title function_">mylcd</span><span class="hljs-params">(<span class="hljs-number">0x3f</span>,<span class="hljs-number">16</span>,<span class="hljs-number">2</span>)</span>; <span class="hljs-comment">//创捷液晶对象，设备地址为0x3f(一般为0x27或0x3f），16列2行</span><br><br><span class="hljs-type">void</span> <span class="hljs-title function_">setup</span><span class="hljs-params">()</span>&#123;<br>  mylcd.init(); <span class="hljs-comment">//初始化液晶屏</span><br>  mylcd.backlight(); <span class="hljs-comment">//打开液晶屏背光</span><br>&#125;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">loop</span><span class="hljs-params">()</span>&#123;<br>  mylcd.setCursor(<span class="hljs-number">5</span><span class="hljs-number">-1</span>, <span class="hljs-number">2</span><span class="hljs-number">-1</span>); <span class="hljs-comment">//设置光标位置为第2行第5列</span><br>  mylcd.print(<span class="hljs-string">&quot;1&quot;</span>); <span class="hljs-comment">//输出字符 1</span><br>  delay(<span class="hljs-number">1000</span>); <span class="hljs-comment">//延时1秒</span><br>  mylcd.clear(); <span class="hljs-comment">//清屏</span><br>  mylcd.setCursor(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>); <span class="hljs-comment">//设置光标位置为第1行</span><br>  mylcd.print(<span class="hljs-string">&quot;2&quot;</span>); <span class="hljs-comment">//输出字符 2</span><br>  mylcd.setCursor(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">//设置光标位置为第2行</span><br>  mylcd.print(<span class="hljs-string">&quot;3&quot;</span>); <span class="hljs-comment">//输出字符 3</span><br>  delay(<span class="hljs-number">2000</span>); <span class="hljs-comment">//延时2秒</span><br>  mylcd.clear(); <span class="hljs-comment">//清屏</span><br><br>&#125;<br></code></pre></td></tr></table></figure><h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>LCD1602液晶屏在第二行第五列显示“1”，1秒后清屏并在第一行显示”2”，在第二行显示”3”，2秒后清屏.</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1] </p>]]></content>
     
     
     <categories>
