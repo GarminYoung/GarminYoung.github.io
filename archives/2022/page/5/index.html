@@ -149,7 +149,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">归档</span>
+            
           
         </div>
 
@@ -203,15 +203,15 @@
     </a>
   
     
-    <a href="/2022/10/11/Blog%E5%8D%9A%E5%AE%A2-1)Hexo%E6%90%AD%E5%BB%BA%E6%A1%86%E6%9E%B6/" class="list-group-item list-group-item-action">
-      <time>10-11</time>
-      <div class="list-group-item-title">1）使用Hexo搭建框架</div>
-    </a>
-  
-    
     <a href="/2022/10/11/Blog%E5%8D%9A%E5%AE%A2-2)GitHub%E8%BF%9C%E7%AB%AF%E9%83%A8%E7%BD%B2/" class="list-group-item list-group-item-action">
       <time>10-11</time>
       <div class="list-group-item-title">2）使用GitHub远端部署</div>
+    </a>
+  
+    
+    <a href="/2022/10/11/Blog%E5%8D%9A%E5%AE%A2-1)Hexo%E6%90%AD%E5%BB%BA%E6%A1%86%E6%9E%B6/" class="list-group-item list-group-item-action">
+      <time>10-11</time>
+      <div class="list-group-item-title">1）使用Hexo搭建框架</div>
     </a>
   
     
@@ -227,21 +227,21 @@
     </a>
   
     
-    <a href="/2022/10/11/Arduino-L298N%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97/" class="list-group-item list-group-item-action">
-      <time>10-11</time>
-      <div class="list-group-item-title">L298N电机驱动模块</div>
-    </a>
-  
-    
     <a href="/2022/10/11/Arduino-HX711%E6%A8%A1%E5%9D%97/" class="list-group-item list-group-item-action">
       <time>10-11</time>
       <div class="list-group-item-title">HX711模块</div>
     </a>
   
     
-    <a href="/2022/10/11/Arduino-ULN2003%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97/" class="list-group-item list-group-item-action">
+    <a href="/2022/10/11/Arduino-L298N%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97/" class="list-group-item list-group-item-action">
       <time>10-11</time>
-      <div class="list-group-item-title">ULN2003电机驱动模块</div>
+      <div class="list-group-item-title">L298N电机驱动模块</div>
+    </a>
+  
+    
+    <a href="/2022/10/11/Arduino-LCD1602%E6%A8%A1%E5%9D%97%EF%BC%88%E5%B8%A6PCF8574T%E8%BD%AC%E6%8E%A5%E6%9D%BF%EF%BC%89/" class="list-group-item list-group-item-action">
+      <time>10-11</time>
+      <div class="list-group-item-title">LCD1602模块（带PCF8574T转接板）</div>
     </a>
   
 </div>
@@ -303,6 +303,24 @@
   
   
   
+
+ <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+ <script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("01/01/2021 00:00:00");//在此处修改你的建站时间
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已危险运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+ setInterval("createtime()",250);
+ </script>
 </div>
 
   </footer>

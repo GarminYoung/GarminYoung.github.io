@@ -149,7 +149,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">分类 - Photography</span>
+            
           
         </div>
 
@@ -185,6 +185,12 @@
       
       <p class="h5">2022</p>
     
+    <a href="/2022/10/11/Photography%E6%91%84%E5%BD%B1-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="list-group-item list-group-item-action">
+      <time>10-11</time>
+      <div class="list-group-item-title">基础知识</div>
+    </a>
+  
+    
     <a href="/2022/10/11/Photography%E6%91%84%E5%BD%B1-%E6%9E%84%E5%9B%BE/" class="list-group-item list-group-item-action">
       <time>10-11</time>
       <div class="list-group-item-title">构图</div>
@@ -200,12 +206,6 @@
     <a href="/2022/10/11/Photography%E6%91%84%E5%BD%B1-%E9%80%89%E8%B4%AD%E9%95%9C%E5%A4%B4/" class="list-group-item list-group-item-action">
       <time>10-11</time>
       <div class="list-group-item-title">选购镜头</div>
-    </a>
-  
-    
-    <a href="/2022/10/11/Photography%E6%91%84%E5%BD%B1-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="list-group-item list-group-item-action">
-      <time>10-11</time>
-      <div class="list-group-item-title">基础知识</div>
     </a>
   
     
@@ -267,6 +267,24 @@
   
   
   
+
+ <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+ <script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("01/01/2021 00:00:00");//在此处修改你的建站时间
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已危险运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+ setInterval("createtime()",250);
+ </script>
 </div>
 
   </footer>

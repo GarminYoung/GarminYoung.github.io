@@ -149,7 +149,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle"></span>
+            
           
         </div>
 
@@ -187,15 +187,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2022/10/11/Arduino-LCD1602%E6%A8%A1%E5%9D%97%EF%BC%88%E5%B8%A6PCF8574T%E8%BD%AC%E6%8E%A5%E6%9D%BF%EF%BC%89/" target="_self">
-          LCD1602模块（带PCF8574T转接板）
+        <a href="/2022/10/11/Arduino-ULN2003%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97/" target="_self">
+          ULN2003电机驱动模块
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2022/10/11/Arduino-LCD1602%E6%A8%A1%E5%9D%97%EF%BC%88%E5%B8%A6PCF8574T%E8%BD%AC%E6%8E%A5%E6%9D%BF%EF%BC%89/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2022/10/11/Arduino-ULN2003%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97/" target="_self">
         <div>
-          LCD1602模块（带PCF8574T转接板）参数显示容量为16 * 2个字符VCC 模块供电5VGND 接地SDA 数据接口SCL 控制接口 接线SDA–A4SCL–A5 代码1234567891011121314151617181920212223#include &lt;Wire.h&gt;#include &lt;LiquidCrystal_I2C.h&gt; //引用I2C库Liquid
+          ULN2003电机驱动模块参数28BYJ-48步进电机 外径28毫米四相八拍式永磁减速型步进电机VCC 模块供电5VGND 接地 接线IN–8IN2–9IN3–10IN4–11VCC–VCCIGBD–GND 代码12345678910111213141516171819202122232425//使用arduino IDE自带的Stepper.h库文件#include &lt;Stepper.h&
         </div>
       </a>
 
@@ -292,6 +292,24 @@
   
   
   
+
+ <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+ <script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("01/01/2021 00:00:00");//在此处修改你的建站时间
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已危险运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+ setInterval("createtime()",250);
+ </script>
 </div>
 
   </footer>

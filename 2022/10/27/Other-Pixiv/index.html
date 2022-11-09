@@ -24,7 +24,7 @@
 <meta property="og:description" content="Pixivpixiv是一个以插图、漫画和小说、艺术为中心的社交网络服务里的虚拟社区网站。于2007年9月10日推出第一个测试版。公司总部位于日本东京都涩谷区千驮谷。pixiv创办初衷是为全球艺术家提供一个能发表他们的作品，并透过评级系统反应其他用户意见的地方。网站以用户投稿的原创图画为中心，辅以标签、书签、作品回应、排行榜等功能形成具有其特色的社交网络。pixiv官方网站P站镜像网站_vilipi">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-10-26T23:50:10.826Z">
-<meta property="article:modified_time" content="2022-11-02T08:35:00.194Z">
+<meta property="article:modified_time" content="2022-11-08T07:39:40.795Z">
 <meta property="article:author" content="Garmin Young">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -159,7 +159,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Pixiv</span>
+            
           
         </div>
 
@@ -215,7 +215,6 @@
                 
                 <h1 id="Pixiv"><a href="#Pixiv" class="headerlink" title="Pixiv"></a>Pixiv</h1><p><strong>pixiv</strong>是一个以插图、漫画和小说、艺术为中心的社交网络服务里的虚拟社区网站。<br>于2007年9月10日推出第一个测试版。公司总部位于日本东京都涩谷区千驮谷。<br>pixiv创办初衷是为全球艺术家提供一个能发表他们的作品，并透过评级系统反应其他用户意见的地方。<br>网站以用户投稿的原创图画为中心，辅以标签、书签、作品回应、排行榜等功能形成具有其特色的社交网络。<br><a target="_blank" rel="noopener" href="https://www.pixiv.net/">pixiv官方网站</a><br><a target="_blank" rel="noopener" href="https://www.vilipix.com/">P站镜像网站_vilipix</a></p>
 <p>由于某些因素，我们在国内并不能很好的访问p站，可以通过Watt Toolkit（原名Steam++）加速p站的访问。<br>下载渠道如下<br>1 <a target="_blank" rel="noopener" href="https://steampp.net/">Watt Toolkit官网</a><br>2 <a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/aUkcC32JDxG">Steam++_win_x64_阿里云</a><br>3 Microsoft应用商店</p>
-<p><strong>pinterest</strong>是以瀑布流图片为形式的社区。<br><a href="www.pinterest.com">pinterest官方网站</a></p>
 
                 
               </div>
@@ -396,6 +395,24 @@
   
   
   
+
+ <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+ <script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("01/01/2021 00:00:00");//在此处修改你的建站时间
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已危险运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+ setInterval("createtime()",250);
+ </script>
 </div>
 
   </footer>

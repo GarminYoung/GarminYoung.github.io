@@ -149,7 +149,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle"></span>
+            
           
         </div>
 
@@ -187,15 +187,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2022/10/11/Blog%E5%8D%9A%E5%AE%A2-2)GitHub%E8%BF%9C%E7%AB%AF%E9%83%A8%E7%BD%B2/" target="_self">
-          2）使用GitHub远端部署
+        <a href="/2022/10/11/Blog%E5%8D%9A%E5%AE%A2-1)Hexo%E6%90%AD%E5%BB%BA%E6%A1%86%E6%9E%B6/" target="_self">
+          1）使用Hexo搭建框架
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2022/10/11/Blog%E5%8D%9A%E5%AE%A2-2)GitHub%E8%BF%9C%E7%AB%AF%E9%83%A8%E7%BD%B2/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2022/10/11/Blog%E5%8D%9A%E5%AE%A2-1)Hexo%E6%90%AD%E5%BB%BA%E6%A1%86%E6%9E%B6/" target="_self">
         <div>
-          2）GitHub远端部署使用GitHub远端部署在GitHub建立个人仓库在Repository name一栏中填写仓库名YourGithubName.github.io（YourGithubName为你的GitHub名称）点击Create repository创建个人仓库 安装部署插件在blog目录下打开Git Bush（右击文件夹）进行安装 cnpm install --save hexo-d
+          1)使用Hexo搭建框架安装Node.jsNode.js中文网安装完成后Win+R，在运行中输入cmd打开命令面板 查看node.js版本node -v 查看npm版本npm -v 安装cnpmnpm install -g cnpm --registry=http://registry.npm.taobao.org 查看cnpm版本cnpm -v 安装GitGit中文网 安装Hexo框架新建Blo
         </div>
       </a>
 
@@ -292,6 +292,24 @@
   
   
   
+
+ <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+ <script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("01/01/2021 00:00:00");//在此处修改你的建站时间
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已危险运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+ setInterval("createtime()",250);
+ </script>
 </div>
 
   </footer>
