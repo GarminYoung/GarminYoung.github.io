@@ -24,7 +24,7 @@
 <meta property="og:description" content="CS:GO《反恐精英:全球攻势》CS:GO是一款热门的第一人称射击游戏。 竞技平台完美世界竞技平台|5EPlay|B5对战平台官网 适当优化修改设置,画质全面降低Steam–右键csgo–属性–通用–取消勾选”在游戏中启用Steam界面”Steam–右键csgo–打开文件位置–右键csgo.exe–属性–兼容性–禁用全屏优化游戏内设置–各项异性优化–三线性 启动项Steam–右键csgo–属性–通">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-11-15T05:46:50.072Z">
-<meta property="article:modified_time" content="2022-11-17T05:37:37.703Z">
+<meta property="article:modified_time" content="2022-12-18T08:40:34.856Z">
 <meta property="article:author" content="Garmin Young">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -221,9 +221,11 @@
 <h2 id="控制台命令"><a href="#控制台命令" class="headerlink" title="控制台命令"></a>控制台命令</h2><p>net_graph 1/0   开启/关闭查看你的fps、ping、loss、choke、tick等主要参数<br>net_graphpos 0/1/2   参数显示位置左/中/右<br>net_graphheight n   显示位置高度n<br>net_graphproportionalfont 1/0.9   显示字体大/小</p>
 <p>cl_righthand 0/1   左/右手持枪<br>fps_max n   锁定帧数(n为需要锁定的帧数)<br>fps_max 0   解除锁帧</p>
 <p>bot_add_ct/t   增加ct/t<br>bot_kick   踢出所有机器人<br>mp_autoteambalance 1   自动平衡<br>mp_limitteams 0   关闭双方人数差异值<br>bot_difficulty 0/1/2/3   BOT 难度，0最难，3最简单 (默认最难)</p>
-<p>sv_cheats 0/1   关闭/开启作弊模式<br>sv_showimpacts 1   显示弹痕<br>nocli   穿墙模式<br>bind v “noclip”   绑定按键，按v键开启穿墙模式<br>sv_infinite_ammo 1   无限武器弹药<br>sv_grenade_trajectory 1   手雷轨迹</p>
-<p>give weapon_smokegrenade   获取烟雾弹<br>give weapon_hegrenade   获取手雷<br>give weapon_flashbang   获取闪光弹</p>
+<p>sv_cheats 0/1   关闭/开启作弊模式<br>sv_showimpacts 1   显示弹痕<br>nocli   穿墙模式<br>bind v “noclip”   绑定按键，按v键开启穿墙模式<br>sv_infinite_ammo 1   无限武器弹药<br>sv_grenade_trajectory 1   手雷轨迹<br>weapon_accuracy_nospread 1 跑打不扩散<br>后座力 weapon_accuracy_nospread 1;weapon_recoil_scale 0-1<br>枪口抖动 weapon_recoil_view_punch_extra 0-1<br>模型透视 r_drawothermodels 0/1/2 隐身/正常/网格<br>骨骼透视 cl_countbones 1<br>穿墙透视 mat_fillrate 1<br>锁头<br>mp_damage_scale_t/ct_body<br>ent_fire !picker addoutput “ModelScale 0”<br>移速 ent_fire player_speedmod ModifySpeed 3<br>无敌<br>healthshot_healthboost_damage_multiplier 0<br>healthshot_healthboost_time 10000<br>重型装甲快速切枪<br>mp_heavyassaultsuit_speed 360<br>mp_heavyassaultsuit_deploy_timescale 100<br>修改重力 ent_fire !self addoutput “gravity X”<br>武器发光<br>glow_outline_effect_enable 1<br>mp_weapons_glow_on_ground 1<br>方框 r_drawrenderboxes 1<br>关闭光影 mat_fullbright 1<br>隐藏烟雾 r_drawparticles 0</p>
+<p>give weapon_smokegrenade   获取烟雾弹<br>give weapon_hegrenade   获取手雷<br>give weapon_flashbang   获取闪光弹<br>获得治疗剂 give weapon_healthshot</p>
 <p>mp_roundtime_defuse 60   每回合时长为60min</p>
+<p>viewmodel_fov 60<br>viewmodel_offset_x -2.5<del>2.5<br>viewmodel_offset_y -2</del>2<br>viewmodel_offset_z -2~2</p>
+<p><a target="_blank" rel="noopener" href="https://mbsifu.com/library/game/csgo/command/">CS:GO控制台指令</a></p>
 <h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>y 全局聊天<br>u 队伍聊天<br>k 开麦</p>
 <h2 id="局域网联机"><a href="#局域网联机" class="headerlink" title="局域网联机"></a>局域网联机</h2><p>多台电脑连接同一局域网并打开CS:GO<br>都输入控制台指令 sv_lan 1 打开局域网联机模式<br>其中主机开好房间输入控制台指令 status 配置主机<br>其他机器输入控制台指令 connect IP 连接主机(其中的IP在主机status时可以看到,例connect 192.168.0.xxx:27015/192.168.0.xxx)</p>
 <p>disconnect   退出正在连接中的服务器<br>retry   重连最近一次进过的服务器<br>exit/quit   退出游戏</p>
