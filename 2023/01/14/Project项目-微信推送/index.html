@@ -1,0 +1,635 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=light>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Garmin Young">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="微信推送参考[1] 小红书博主 @猪咪不是猪 的原创文章 [2] 给女朋友的微信专属推送-bilibili [3] DailyInfo——基于企业微信的每日图文推送 本地推送获取文件关注微信公众号 lin小林发送“微信公众号推送”获取相关文件发送“模板”获取模板 注册账号在微信公众平台接口测试账号申请平台扫码登录记录下appID和appsecret在测试号二维码中扫码关注测试公众号并记录下需要推送">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信推送">
+<meta property="og:url" content="http://example.com/2023/01/14/Project%E9%A1%B9%E7%9B%AE-%E5%BE%AE%E4%BF%A1%E6%8E%A8%E9%80%81/index.html">
+<meta property="og:site_name" content="Garmin">
+<meta property="og:description" content="微信推送参考[1] 小红书博主 @猪咪不是猪 的原创文章 [2] 给女朋友的微信专属推送-bilibili [3] DailyInfo——基于企业微信的每日图文推送 本地推送获取文件关注微信公众号 lin小林发送“微信公众号推送”获取相关文件发送“模板”获取模板 注册账号在微信公众平台接口测试账号申请平台扫码登录记录下appID和appsecret在测试号二维码中扫码关注测试公众号并记录下需要推送">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-01-14T08:30:27.827Z">
+<meta property="article:modified_time" content="2022-10-26T10:12:53.065Z">
+<meta property="article:author" content="Garmin Young">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>微信推送 - Garmin</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 40vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Garmin_Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-books"></i>
+                doc
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                me
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/doc.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.01)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+  </div>
+
+  <div class="mt-1">
+    
+
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">微信推送</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="微信推送"><a href="#微信推送" class="headerlink" title="微信推送"></a>微信推送</h1><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1] 小红书博主 @猪咪不是猪 的原创文章</p>
+<p>[2] <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1mG4y1a7u7?spm_id_from=333.1007.top_right_bar_window_default_collection.content.click&vd_source=dde32bebfaef8d434caff0e95a159459">给女朋友的微信专属推送-bilibili</a></p>
+<p>[3] <a target="_blank" rel="noopener" href="https://www.kdocs.cn/l/csn6eqw93kQZ">DailyInfo——基于企业微信的每日图文推送</a></p>
+<h2 id="本地推送"><a href="#本地推送" class="headerlink" title="本地推送"></a>本地推送</h2><h3 id="获取文件"><a href="#获取文件" class="headerlink" title="获取文件"></a>获取文件</h3><p>关注微信公众号 lin小林<br>发送“微信公众号推送”获取相关文件<br>发送“模板”获取模板</p>
+<h3 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h3><p>在<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login&token=297391496&lang=zh_CN">微信公众平台接口测试账号申请平台</a>扫码登录<br>记录下appID和appsecret<br>在测试号二维码中扫码关注测试公众号并记录下需要推送消息的微信号</p>
+<h3 id="新增模板"><a href="#新增模板" class="headerlink" title="新增模板"></a>新增模板</h3><p>在模板消息接口中新增测试模板，将标题和修改好的模板粘贴进去，完成后记录下模板ID</p>
+<h3 id="进行配置"><a href="#进行配置" class="headerlink" title="进行配置"></a>进行配置</h3><p>将前面记录下的信息填充到config.txt中，并补充其他数据<br>以下两个api需要自行到其他平台注册使用</p>
+<h4 id="和风天气apikey"><a href="#和风天气apikey" class="headerlink" title="和风天气apikey"></a>和风天气apikey</h4><p>登入<a target="_blank" rel="noopener" href="https://dev.qweather.com/">和风天气开发平台</a><br>进入控制台-应用管理-创建应用 即可获得key</p>
+<h4 id="天行数据apikey"><a href="#天行数据apikey" class="headerlink" title="天行数据apikey"></a>天行数据apikey</h4><p>登入<a target="_blank" rel="noopener" href="https://www.tianapi.com/">天行数据TianAPI</a><br>娱乐类接口-彩虹屁-申请接口后点击在线测试 即可获得key</p>
+<h3 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h3><p>将weixin.exe和config.txt放在同一文件夹<br>双击weixin.exe完成信息推送</p>
+<h2 id="GitHub定时推送"><a href="#GitHub定时推送" class="headerlink" title="GitHub定时推送"></a>GitHub定时推送</h2><p>在此使用无Git的方法</p>
+<h3 id="获取文件-1"><a href="#获取文件-1" class="headerlink" title="获取文件"></a>获取文件</h3><p>关注微信公众号 lin小林<br>发送“微信公众号推送源码”获取相关文件</p>
+<h3 id="进行配置-1"><a href="#进行配置-1" class="headerlink" title="进行配置"></a>进行配置</h3><p>在获取到的文件夹中找到config.txt进行配置</p>
+<h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><p>登入<a target="_blank" rel="noopener" href="https://github.com/">GitHub</a><br>点击右上角+号-new repository-Private<br>完善号信息后点击Create repository<br>添加文件Add file-上传文件Upload files-选择所获取文件夹中除.github文件夹的所有文件</p>
+<h3 id="添加工作流"><a href="#添加工作流" class="headerlink" title="添加工作流"></a>添加工作流</h3><p>Actions-New workflows-Set up a workflow<br>将weixin.yml的内容替换掉新建的main.yml中的内容<br>并将<code>cron: &#39;0 0 * * *&#39;</code>修改成自己想要的推送时间<br>完成后Start commit-Commit new file添加成功</p>
+<h2 id="云服务器推送"><a href="#云服务器推送" class="headerlink" title="云服务器推送"></a>云服务器推送</h2><p>别看了，这个我不会，我也没有服务器。</p>
+<h2 id="企业微信-腾讯云函数推送"><a href="#企业微信-腾讯云函数推送" class="headerlink" title="企业微信+腾讯云函数推送"></a>企业微信+腾讯云函数推送</h2><h3 id="获取文件-2"><a href="#获取文件-2" class="headerlink" title="获取文件"></a>获取文件</h3><p>关注微信公众号 lin小林<br>发送“企业微信-腾讯云”获取相关文件</p>
+<h3 id="注册账号-1"><a href="#注册账号-1" class="headerlink" title="注册账号"></a>注册账号</h3><p>登入<a target="_blank" rel="noopener" href="https://work.weixin.qq.com/">企业微信</a>官网，注册企业</p>
+<h3 id="配置企业微信"><a href="#配置企业微信" class="headerlink" title="配置企业微信"></a>配置企业微信</h3><p>点开我的企业-企业信息，将企业ID记录下来<br>点开我的企业-微信插件-详情<br>添加微信插件logo，用微信扫描邀请关注的二维码关注该插件以接受消息<br>在设置一栏取消勾选“成员使用微信插件时需要使用企业微信客户端”<br>点开应用管理-应用-自建-创建应用<br>自定义应用LOGO和应用名称<br>可见范围选择企业条目，表示企业内所有人可见<br>创建应用后记录下AgentId和Secret（需要点击查看，并在企微app端接收）</p>
+<h3 id="部署腾讯云函数"><a href="#部署腾讯云函数" class="headerlink" title="部署腾讯云函数"></a>部署腾讯云函数</h3><p>进入<a target="_blank" rel="noopener" href="https://cloud.tencent.com/">腾讯云</a>官网，扫码登录，完成身份认证<br>购买腾讯云函数服务 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/act/campus?utm_source=qcloud&utm_medium=navigation&utm_campaign=campus">云+校园特惠套餐-腾讯云</a><br>登入云函数<a target="_blank" rel="noopener" href="https://console.cloud.tencent.com/scf">控制台</a><br>函数服务-新建-从头开始-事件函数-自定义名称-自定义地域-Python 3.7-本地上传文件夹<br>将前面下载的文件夹上传进去，记得配置文件夹中的config.py和template.py<br>template.py中有unicode字符串，可以自行更改配置图标<a target="_blank" rel="noopener" href="https://emojigraph.org/zh-hans/">Emojigraph-表情符号宇宙</a><br>点开高级设置,内存改为64MB,执行超过时间改为30,勾选固定出口IP,点击完成创建函数<br>点击函数名进入函数详情页面,函数管理-函数配置-网络配置,记录下公网固定IP<br>回到企业微信-应用管理-自创建应用-企业可信IP-配置,将刚记录下的IP粘贴进去<br><em>此处企业可信IP配置不可行了，方案失效，需要寻求其他解决方法</em><br>点击函数名进入函数详情页面,触发管理-创建触发器-定时触发-自定义触发周期-填入<a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/583/9708#cron-.E8.A1.A8.E8.BE.BE.E5.BC.8F">Cron表达式</a>-完成</p>
+<h2 id="企业微信-阿里云函数推送"><a href="#企业微信-阿里云函数推送" class="headerlink" title="企业微信+阿里云函数推送"></a>企业微信+阿里云函数推送</h2><p>阿里云-云服务-函数计算 FC?不想写了!</p>
+<h1 id="商业化方案"><a href="#商业化方案" class="headerlink" title="商业化方案"></a>商业化方案</h1><h2 id="网站索引"><a href="#网站索引" class="headerlink" title="网站索引"></a>网站索引</h2><p><a target="_blank" rel="noopener" href="https://work.weixin.qq.com/">企业微信</a></p>
+<p><a target="_blank" rel="noopener" href="https://work.weixin.qq.com/wework_admin/loginpage_wx?from=myhome">企业微信管理后台</a></p>
+<p><a target="_blank" rel="noopener" href="https://console.cloud.tencent.com/scf">腾讯云Serverless控制台</a></p>
+<h2 id="话术"><a href="#话术" class="headerlink" title="话术"></a>话术</h2><p>你好，我是你的专属技术员</p>
+<p>由于微信测试号的方案有以下缺点<br>不能更改名称和头像<br>不能单独显示在消息列表（信息提示不明显）<br>定时推送有延时<br>我们采用的方案是 企业微信+服务器<br>可以自定义名称和头像<br>能够单独显示在消息列表<br>推送服务一年，有限期至2023.08.30</p>
+<p>登入<a target="_blank" rel="noopener" href="https://work.weixin.qq.com/">企业微信</a>官网，注册企业</p>
+<p>扫码登入企业微信管理后台，我帮您进行相关配置</p>
+<p>提供企业名称和企业头像，显示效果如图</p>
+<p>提供应用名称和应用头像，显示效果如图</p>
+<p>提供信息标题，显示效果如图</p>
+<p>提供在一起的日子，以及两人的昵称和生日，显示效果如图</p>
+<p>提供地区信息，显示效果如图，用于推送天气预报</p>
+<p>模板内容如图，您可自行删改，由于微信限制，消息太长会截断部分影响效果，保留内容应适当</p>
+<p>扫码关注插件，加入企业</p>
+<p>已经发送secret给您，请打开企业微信查收并复制给我</p>
+<p>您需要定时几点推送？</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Project/" class="category-chain-item">Project</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>微信推送</div>
+      <div>http://example.com/2023/01/14/Project项目-微信推送/</div>
+    </div>
+    <div class="license-meta">
+      
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
+                    <i class="iconfont icon-sa"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> & <a href="https://hexo.fluid-dev.com/docs/" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>Rowe</span> <i class="iconfont icon-love"></i> <a href="https://www.silentwolf.top/" target="_blank" rel="nofollow noopener"><span>Young</span></a> 
+    </div>
+  
+  
+  
+  
+
+ <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+ <script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("01/01/2021 00:00:00");//在此处修改你的建站时间
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已危险运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+ setInterval("createtime()",250);
+ </script>
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
