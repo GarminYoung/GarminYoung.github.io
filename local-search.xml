@@ -42,6 +42,25 @@
   
   
   <entry>
+    <title>图片识别</title>
+    <link href="/2023/10/10/Other-%E5%9B%BE%E7%89%87%E8%AF%86%E5%88%AB/"/>
+    <url>/2023/10/10/Other-%E5%9B%BE%E7%89%87%E8%AF%86%E5%88%AB/</url>
+    
+    <content type="html"><![CDATA[<h1 id="图片识别"><a href="#图片识别" class="headerlink" title="图片识别"></a>图片识别</h1><p><a href="https://www.google.com/imghp">谷歌识图</a><br>需科学上网</p><p><a href="https://graph.baidu.com/pcpage/index?tpl_from=pc">百度识图搜索结果 (baidu.com)</a></p><p><a href="https://pic.sogou.com/">搜狗图片搜索 - 上网从搜狗开始 (sogou.com)</a></p><p><a href="https://cn.bing.com/visualsearch">可见即可搜 | 必应可视化搜索 (bing.com)</a></p><p><a href="https://yandex.com/images/">Yandex Images: search for images online, image search</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Other</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>科学上网</title>
     <link href="/2023/09/23/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
     <url>/2023/09/23/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</url>
@@ -689,11 +708,11 @@
   
   
   <entry>
-    <title>速成</title>
-    <link href="/2023/01/14/Photoshop-%E9%80%9F%E6%88%90/"/>
-    <url>/2023/01/14/Photoshop-%E9%80%9F%E6%88%90/</url>
+    <title>调色</title>
+    <link href="/2023/01/14/Photoshop-%E8%B0%83%E8%89%B2/"/>
+    <url>/2023/01/14/Photoshop-%E8%B0%83%E8%89%B2/</url>
     
-    <content type="html"><![CDATA[<h1 id="速成"><a href="#速成" class="headerlink" title="速成"></a>速成</h1><h2 id="去朦胧-去除薄雾"><a href="#去朦胧-去除薄雾" class="headerlink" title="去朦胧/去除薄雾"></a>去朦胧/去除薄雾</h2><p>滤镜-Camera Raw滤镜-fx</p><h2 id="证件照换底色"><a href="#证件照换底色" class="headerlink" title="证件照换底色"></a>证件照换底色</h2><p>选择-选择并遮住<br>右上角的视图模式中，将视图切换为 洋葱皮<br>左侧的画笔中，选择 快速选择工具，粗略选择人像范围<br>再次切换其他明显的视图，以便观察更多细节<br>使用 调整画笔边缘工具，涂抹人物与背景的交界处，抠出更多的细节<br>在右侧的 全局调整 中进行微调（平滑|5 对比度|20% 移动边缘-|12%）<br>最后在 输出设置 里勾选 净化颜色，输出到 新建带有图层蒙版的图层</p><p><a href="https://www.bilibili.com/video/BV1iq4y1W7Sb/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click&vd_source=dde32bebfaef8d434caff0e95a159459">参考-哔哩哔哩</a></p><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2>]]></content>
+    <content type="html"><![CDATA[<h1 id="调色"><a href="#调色" class="headerlink" title="调色"></a>调色</h1><p>HSL<br>RGB</p><p>分离色调<br>曲线工具</p><h2 id="相关教程"><a href="#相关教程" class="headerlink" title="相关教程"></a>相关教程</h2><p>摄影师泰罗<br><a href="https://www.bilibili.com/video/BV1R7411N7uM/?spm_id_from=333.788&vd_source=dde32bebfaef8d434caff0e95a159459">LR系统教程 - bilibili</a></p><p><a href="https://www.bilibili.com/video/BV1YT411v7WE/?spm_id_from=333.999.0.0&vd_source=dde32bebfaef8d434caff0e95a159459">透彻理解PS调色的底层原理与框架（上） - bilibili</a></p><p><a href="https://www.bilibili.com/video/BV1MM411s7Ab/?spm_id_from=333.788&vd_source=dde32bebfaef8d434caff0e95a159459">透彻理解PS调色的底层原理与框架（下 ） - bilibili</a></p><p>其他<br><a href="https://www.bilibili.com/video/BV1544y137e6/?spm_id_from=333.999.0.0&vd_source=dde32bebfaef8d434caff0e95a159459">全网最易懂的PS调色教程！ - bilibili</a></p>]]></content>
     
     
     <categories>
@@ -708,11 +727,11 @@
   
   
   <entry>
-    <title>调色</title>
-    <link href="/2023/01/14/Photoshop-%E8%B0%83%E8%89%B2/"/>
-    <url>/2023/01/14/Photoshop-%E8%B0%83%E8%89%B2/</url>
+    <title>速成</title>
+    <link href="/2023/01/14/Photoshop-%E9%80%9F%E6%88%90/"/>
+    <url>/2023/01/14/Photoshop-%E9%80%9F%E6%88%90/</url>
     
-    <content type="html"><![CDATA[<h1 id="调色"><a href="#调色" class="headerlink" title="调色"></a>调色</h1><p>HSL<br>RGB</p><p>分离色调<br>曲线工具</p><h2 id="相关教程"><a href="#相关教程" class="headerlink" title="相关教程"></a>相关教程</h2><p>摄影师泰罗<br><a href="https://www.bilibili.com/video/BV1R7411N7uM/?spm_id_from=333.788&vd_source=dde32bebfaef8d434caff0e95a159459">LR系统教程 - bilibili</a></p><p><a href="https://www.bilibili.com/video/BV1YT411v7WE/?spm_id_from=333.999.0.0&vd_source=dde32bebfaef8d434caff0e95a159459">透彻理解PS调色的底层原理与框架（上） - bilibili</a></p><p><a href="https://www.bilibili.com/video/BV1MM411s7Ab/?spm_id_from=333.788&vd_source=dde32bebfaef8d434caff0e95a159459">透彻理解PS调色的底层原理与框架（下 ） - bilibili</a></p><p>其他<br><a href="https://www.bilibili.com/video/BV1544y137e6/?spm_id_from=333.999.0.0&vd_source=dde32bebfaef8d434caff0e95a159459">全网最易懂的PS调色教程！ - bilibili</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="速成"><a href="#速成" class="headerlink" title="速成"></a>速成</h1><h2 id="去朦胧-去除薄雾"><a href="#去朦胧-去除薄雾" class="headerlink" title="去朦胧/去除薄雾"></a>去朦胧/去除薄雾</h2><p>滤镜-Camera Raw滤镜-fx</p><h2 id="证件照换底色"><a href="#证件照换底色" class="headerlink" title="证件照换底色"></a>证件照换底色</h2><p>选择-选择并遮住<br>右上角的视图模式中，将视图切换为 洋葱皮<br>左侧的画笔中，选择 快速选择工具，粗略选择人像范围<br>再次切换其他明显的视图，以便观察更多细节<br>使用 调整画笔边缘工具，涂抹人物与背景的交界处，抠出更多的细节<br>在右侧的 全局调整 中进行微调（平滑|5 对比度|20% 移动边缘-|12%）<br>最后在 输出设置 里勾选 净化颜色，输出到 新建带有图层蒙版的图层</p><p><a href="https://www.bilibili.com/video/BV1iq4y1W7Sb/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click&vd_source=dde32bebfaef8d434caff0e95a159459">参考-哔哩哔哩</a></p><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2>]]></content>
     
     
     <categories>
@@ -803,11 +822,11 @@
   
   
   <entry>
-    <title>选购相机</title>
-    <link href="/2023/01/14/Photography%E6%91%84%E5%BD%B1-%E9%80%89%E8%B4%AD%E7%9B%B8%E6%9C%BA/"/>
-    <url>/2023/01/14/Photography%E6%91%84%E5%BD%B1-%E9%80%89%E8%B4%AD%E7%9B%B8%E6%9C%BA/</url>
+    <title>构图</title>
+    <link href="/2023/01/14/Photography%E6%91%84%E5%BD%B1-%E6%9E%84%E5%9B%BE/"/>
+    <url>/2023/01/14/Photography%E6%91%84%E5%BD%B1-%E6%9E%84%E5%9B%BE/</url>
     
-    <content type="html"><![CDATA[<h1 id="选购相机"><a href="#选购相机" class="headerlink" title="选购相机"></a>选购相机</h1><h2 id="相机种类"><a href="#相机种类" class="headerlink" title="相机种类"></a>相机种类</h2><p>单反 微单 卡片</p><h2 id="相机参数"><a href="#相机参数" class="headerlink" title="相机参数"></a>相机参数</h2><h3 id="画质"><a href="#画质" class="headerlink" title="画质"></a>画质</h3><h4 id="画幅尺寸"><a href="#画幅尺寸" class="headerlink" title="画幅尺寸"></a>画幅尺寸</h4><p>一英寸 M43 APS-C半画幅 全画幅 中画幅</p><p><a href="https://www.dxomark.cn/">DXOMARK 官方网站</a></p><h4 id="宽容度"><a href="#宽容度" class="headerlink" title="宽容度"></a>宽容度</h4><p>亮度信息</p><h4 id="信噪比"><a href="#信噪比" class="headerlink" title="信噪比"></a>信噪比</h4><h4 id="像素"><a href="#像素" class="headerlink" title="像素"></a>像素</h4><h3 id="便携程度"><a href="#便携程度" class="headerlink" title="便携程度"></a>便携程度</h3><h4 id="屏幕"><a href="#屏幕" class="headerlink" title="屏幕"></a>屏幕</h4><h4 id="直出效果"><a href="#直出效果" class="headerlink" title="直出效果"></a>直出效果</h4><p>JPG RAW</p><h4 id="对焦"><a href="#对焦" class="headerlink" title="对焦"></a>对焦</h4><h4 id="防抖"><a href="#防抖" class="headerlink" title="防抖"></a>防抖</h4><h4 id="连拍"><a href="#连拍" class="headerlink" title="连拍"></a>连拍</h4><h4 id="续航"><a href="#续航" class="headerlink" title="续航"></a>续航</h4><h3 id="拓展延伸"><a href="#拓展延伸" class="headerlink" title="拓展延伸"></a>拓展延伸</h3><h4 id="镜头群"><a href="#镜头群" class="headerlink" title="镜头群"></a>镜头群</h4><h4 id="手柄"><a href="#手柄" class="headerlink" title="手柄"></a>手柄</h4>]]></content>
+    <content type="html"><![CDATA[<h1 id="构图"><a href="#构图" class="headerlink" title="构图"></a>构图</h1>]]></content>
     
     
     <categories>
@@ -822,11 +841,11 @@
   
   
   <entry>
-    <title>构图</title>
-    <link href="/2023/01/14/Photography%E6%91%84%E5%BD%B1-%E6%9E%84%E5%9B%BE/"/>
-    <url>/2023/01/14/Photography%E6%91%84%E5%BD%B1-%E6%9E%84%E5%9B%BE/</url>
+    <title>选购相机</title>
+    <link href="/2023/01/14/Photography%E6%91%84%E5%BD%B1-%E9%80%89%E8%B4%AD%E7%9B%B8%E6%9C%BA/"/>
+    <url>/2023/01/14/Photography%E6%91%84%E5%BD%B1-%E9%80%89%E8%B4%AD%E7%9B%B8%E6%9C%BA/</url>
     
-    <content type="html"><![CDATA[<h1 id="构图"><a href="#构图" class="headerlink" title="构图"></a>构图</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="选购相机"><a href="#选购相机" class="headerlink" title="选购相机"></a>选购相机</h1><h2 id="相机种类"><a href="#相机种类" class="headerlink" title="相机种类"></a>相机种类</h2><p>单反 微单 卡片</p><h2 id="相机参数"><a href="#相机参数" class="headerlink" title="相机参数"></a>相机参数</h2><h3 id="画质"><a href="#画质" class="headerlink" title="画质"></a>画质</h3><h4 id="画幅尺寸"><a href="#画幅尺寸" class="headerlink" title="画幅尺寸"></a>画幅尺寸</h4><p>一英寸 M43 APS-C半画幅 全画幅 中画幅</p><p><a href="https://www.dxomark.cn/">DXOMARK 官方网站</a></p><h4 id="宽容度"><a href="#宽容度" class="headerlink" title="宽容度"></a>宽容度</h4><p>亮度信息</p><h4 id="信噪比"><a href="#信噪比" class="headerlink" title="信噪比"></a>信噪比</h4><h4 id="像素"><a href="#像素" class="headerlink" title="像素"></a>像素</h4><h3 id="便携程度"><a href="#便携程度" class="headerlink" title="便携程度"></a>便携程度</h3><h4 id="屏幕"><a href="#屏幕" class="headerlink" title="屏幕"></a>屏幕</h4><h4 id="直出效果"><a href="#直出效果" class="headerlink" title="直出效果"></a>直出效果</h4><p>JPG RAW</p><h4 id="对焦"><a href="#对焦" class="headerlink" title="对焦"></a>对焦</h4><h4 id="防抖"><a href="#防抖" class="headerlink" title="防抖"></a>防抖</h4><h4 id="连拍"><a href="#连拍" class="headerlink" title="连拍"></a>连拍</h4><h4 id="续航"><a href="#续航" class="headerlink" title="续航"></a>续航</h4><h3 id="拓展延伸"><a href="#拓展延伸" class="headerlink" title="拓展延伸"></a>拓展延伸</h3><h4 id="镜头群"><a href="#镜头群" class="headerlink" title="镜头群"></a>镜头群</h4><h4 id="手柄"><a href="#手柄" class="headerlink" title="手柄"></a>手柄</h4>]]></content>
     
     
     <categories>
@@ -1240,11 +1259,11 @@
   
   
   <entry>
-    <title>4）分线器-网口分身 多人使用</title>
-    <link href="/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-4)%E5%88%86%E7%BA%BF%E5%99%A8-%E7%BD%91%E5%8F%A3%E5%88%86%E8%BA%AB%20%E5%A4%9A%E4%BA%BA%E4%BD%BF%E7%94%A8/"/>
-    <url>/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-4)%E5%88%86%E7%BA%BF%E5%99%A8-%E7%BD%91%E5%8F%A3%E5%88%86%E8%BA%AB%20%E5%A4%9A%E4%BA%BA%E4%BD%BF%E7%94%A8/</url>
+    <title>6）共享文件夹-局域网内 传输无阻</title>
+    <link href="/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-6)%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9-%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%20%E4%BC%A0%E8%BE%93%E6%97%A0%E9%98%BB/"/>
+    <url>/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-6)%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9-%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%20%E4%BC%A0%E8%BE%93%E6%97%A0%E9%98%BB/</url>
     
-    <content type="html"><![CDATA[<h1 id="4）分线器-网口分身-多人使用"><a href="#4）分线器-网口分身-多人使用" class="headerlink" title="4）分线器-网口分身 多人使用"></a>4）分线器-网口分身 多人使用</h1><p>内容待更新……</p><p>分线器 交换机</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="6）共享文件夹-局域网内-传输无阻"><a href="#6）共享文件夹-局域网内-传输无阻" class="headerlink" title="6）共享文件夹-局域网内 传输无阻"></a>6）共享文件夹-局域网内 传输无阻</h1><p>内容待更新……</p><p>win11<br>设置-网络和internet-高级网络设置-高级共享设置<br>把”网络发现”和”文件和打印机和共享”的两个开关打开<br>右击需要共享的文件夹，进行相关配置，完成文件共享</p><p>博主自己没搞定</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://jingyan.baidu.com/article/4ae03de3ab22183eff9e6b88.html">在局域网内，两台电脑怎样共享文件-百度经验</a></p><p><a href="https://jingyan.baidu.com/article/358570f6633ba4ce4624fc48.html">Win10怎么设置共享文件夹-百度经验</a></p><p><a href="https://new.qq.com/rain/a/20211210A083QM00">Win11怎么设置共享文件夹-腾讯新闻</a></p><p><a href="https://zhuanlan.zhihu.com/p/489484743">Win11找不到本地用户组解决方法-知乎</a></p>]]></content>
     
     
     <categories>
@@ -1278,30 +1297,11 @@
   
   
   <entry>
-    <title>6）共享文件夹-局域网内 传输无阻</title>
-    <link href="/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-6)%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9-%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%20%E4%BC%A0%E8%BE%93%E6%97%A0%E9%98%BB/"/>
-    <url>/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-6)%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9-%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%20%E4%BC%A0%E8%BE%93%E6%97%A0%E9%98%BB/</url>
+    <title>4）分线器-网口分身 多人使用</title>
+    <link href="/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-4)%E5%88%86%E7%BA%BF%E5%99%A8-%E7%BD%91%E5%8F%A3%E5%88%86%E8%BA%AB%20%E5%A4%9A%E4%BA%BA%E4%BD%BF%E7%94%A8/"/>
+    <url>/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-4)%E5%88%86%E7%BA%BF%E5%99%A8-%E7%BD%91%E5%8F%A3%E5%88%86%E8%BA%AB%20%E5%A4%9A%E4%BA%BA%E4%BD%BF%E7%94%A8/</url>
     
-    <content type="html"><![CDATA[<h1 id="6）共享文件夹-局域网内-传输无阻"><a href="#6）共享文件夹-局域网内-传输无阻" class="headerlink" title="6）共享文件夹-局域网内 传输无阻"></a>6）共享文件夹-局域网内 传输无阻</h1><p>内容待更新……</p><p>win11<br>设置-网络和internet-高级网络设置-高级共享设置<br>把”网络发现”和”文件和打印机和共享”的两个开关打开<br>右击需要共享的文件夹，进行相关配置，完成文件共享</p><p>博主自己没搞定</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://jingyan.baidu.com/article/4ae03de3ab22183eff9e6b88.html">在局域网内，两台电脑怎样共享文件-百度经验</a></p><p><a href="https://jingyan.baidu.com/article/358570f6633ba4ce4624fc48.html">Win10怎么设置共享文件夹-百度经验</a></p><p><a href="https://new.qq.com/rain/a/20211210A083QM00">Win11怎么设置共享文件夹-腾讯新闻</a></p><p><a href="https://zhuanlan.zhihu.com/p/489484743">Win11找不到本地用户组解决方法-知乎</a></p>]]></content>
-    
-    
-    <categories>
-      
-      <category>Campus Network</category>
-      
-    </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>3）共享WiFi-电脑也是路由器</title>
-    <link href="/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-3)%E5%85%B1%E4%BA%ABWiFi-%E7%94%B5%E8%84%91%E4%B9%9F%E6%98%AF%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
-    <url>/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-3)%E5%85%B1%E4%BA%ABWiFi-%E7%94%B5%E8%84%91%E4%B9%9F%E6%98%AF%E8%B7%AF%E7%94%B1%E5%99%A8/</url>
-    
-    <content type="html"><![CDATA[<h1 id="3）共享WiFi-电脑也是路由器"><a href="#3）共享WiFi-电脑也是路由器" class="headerlink" title="3）共享WiFi-电脑也是路由器"></a>3）共享WiFi-电脑也是路由器</h1><p>当你的电脑连接上有线网络之后，便可以愉快地进行网上冲浪了，可你的手机并不方便和网络进行有线的连接，此时，你的电脑也可以发挥路由器的作用，发射WiFi信号，让你的手机能够无线上网，愉快冲浪。</p><p>不同的操作系统步骤有所差异。</p><p><strong>Win7</strong><br><a href="https://blog.csdn.net/chicken_h/article/details/127259037">Win7通过无线网卡共享本地网络-CSDN</a></p><p><strong>win10</strong><br><a href="https://jingyan.baidu.com/article/4853e1e5b2d8a51908f72654.html">win10如何开启热点共享网络-百度经验</a></p><p><strong>win11</strong><br>设置-网络和Internet-移动热点</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="4）分线器-网口分身-多人使用"><a href="#4）分线器-网口分身-多人使用" class="headerlink" title="4）分线器-网口分身 多人使用"></a>4）分线器-网口分身 多人使用</h1><p>内容待更新……</p><p>分线器 交换机</p>]]></content>
     
     
     <categories>
@@ -1321,6 +1321,25 @@
     <url>/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-2)USB%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB-%E6%89%8B%E6%9C%BA%E6%88%90%E4%B8%BA%E4%B8%8A%E7%BD%91%E5%8D%A1/</url>
     
     <content type="html"><![CDATA[<h1 id="2）USB网络共享-手机成为上网卡"><a href="#2）USB网络共享-手机成为上网卡" class="headerlink" title="2）USB网络共享-手机成为上网卡"></a>2）USB网络共享-手机成为上网卡</h1><p>我们使用电脑连接上手机开放的热点时，你的手机相当于是移动WiFi（随身WiFi）。</p><p><strong>移动WiFi</strong><br>提供电源即可发射WiFi信号，与SIM卡搭配使用，不需要线的连接。</p><p>没有线的连接，你的网速会受到一定的限制，我们可以通过数据线连接电脑和手机，打开手机中的USB网络共享功能，让手机成为无线上网卡，提升网速。</p><p><strong>无线上网卡</strong><br>相当于移动WIFI，但需要与电脑连接（一般是通过USB口），连接无线广域网，与SIM卡搭配使用，当然也有免插卡的版本。</p><p>不同品牌的手机设置有所差异。<br><strong>小米</strong> 设置-个人热点-USB网络共享<br><strong>华为</strong> </p><p>无线上网卡和无线网卡又有所区别。<br><strong>无线网卡</strong><br>帮助电脑收发信号，连接无线局域网，是电脑与无线网络连接的介质。有内置网卡也有外置网卡（一般通过USB口连接）</p><p><strong>广域网WAN(Wide Area Network)</strong><br>是连接不同地区局域网或城域网计算机通信的远程网。</p><p><strong>局域网LAN(Local Area Network)</strong><br>是局部地区形成的一个区域网络，分布地区范围有限。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Campus Network</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>3）共享WiFi-电脑也是路由器</title>
+    <link href="/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-3)%E5%85%B1%E4%BA%ABWiFi-%E7%94%B5%E8%84%91%E4%B9%9F%E6%98%AF%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
+    <url>/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-3)%E5%85%B1%E4%BA%ABWiFi-%E7%94%B5%E8%84%91%E4%B9%9F%E6%98%AF%E8%B7%AF%E7%94%B1%E5%99%A8/</url>
+    
+    <content type="html"><![CDATA[<h1 id="3）共享WiFi-电脑也是路由器"><a href="#3）共享WiFi-电脑也是路由器" class="headerlink" title="3）共享WiFi-电脑也是路由器"></a>3）共享WiFi-电脑也是路由器</h1><p>当你的电脑连接上有线网络之后，便可以愉快地进行网上冲浪了，可你的手机并不方便和网络进行有线的连接，此时，你的电脑也可以发挥路由器的作用，发射WiFi信号，让你的手机能够无线上网，愉快冲浪。</p><p>不同的操作系统步骤有所差异。</p><p><strong>Win7</strong><br><a href="https://blog.csdn.net/chicken_h/article/details/127259037">Win7通过无线网卡共享本地网络-CSDN</a></p><p><strong>win10</strong><br><a href="https://jingyan.baidu.com/article/4853e1e5b2d8a51908f72654.html">win10如何开启热点共享网络-百度经验</a></p><p><strong>win11</strong><br>设置-网络和Internet-移动热点</p>]]></content>
     
     
     <categories>
@@ -1677,11 +1696,11 @@
   
   
   <entry>
-    <title>L298N电机驱动模块</title>
-    <link href="/2023/01/14/Arduino-L298N%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97/"/>
-    <url>/2023/01/14/Arduino-L298N%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97/</url>
+    <title>HX711模块</title>
+    <link href="/2023/01/14/Arduino-HX711%E6%A8%A1%E5%9D%97/"/>
+    <url>/2023/01/14/Arduino-HX711%E6%A8%A1%E5%9D%97/</url>
     
-    <content type="html"><![CDATA[<h1 id="L298N电机驱动模块"><a href="#L298N电机驱动模块" class="headerlink" title="L298N电机驱动模块"></a>L298N电机驱动模块</h1><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><p>VCC 模块供电12V<br>GND 接地<br>5V 模块对外输出5V，当板载5V使能端断开时为模块输入<br>ENA1 ENA2 使能端 控制电机输出<br>IN1 IN2 IN3 IN4 逻辑输入<br>OUT1 OUT2电机输出</p><p>此处仅讨论控制单个电机</p><table><thead><tr><th>ENA</th><th>IN1</th><th>IN2</th><th>直流电机状态</th></tr></thead><tbody><tr><td>0</td><td>0</td><td>0</td><td>停止</td></tr><tr><td>1</td><td>0</td><td>0</td><td>制动</td></tr><tr><td>1</td><td>0</td><td>1</td><td>正转</td></tr><tr><td>1</td><td>1</td><td>0</td><td>反转</td></tr><tr><td>1</td><td>1</td><td>1</td><td>制动</td></tr></tbody></table><h2 id="接线"><a href="#接线" class="headerlink" title="接线"></a>接线</h2><h3 id="全速输出"><a href="#全速输出" class="headerlink" title="全速输出"></a>全速输出</h3><p>IN1–2<br>IN2–3</p><h3 id="PWN调速输出"><a href="#PWN调速输出" class="headerlink" title="PWN调速输出"></a>PWN调速输出</h3><p>IN1–2<br>IN2–3<br>ENA1–5</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h3 id="直流电机"><a href="#直流电机" class="headerlink" title="直流电机"></a>直流电机</h3><h4 id="全速输出-1"><a href="#全速输出-1" class="headerlink" title="全速输出"></a>全速输出</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">//定义IO</span><br><span class="hljs-type">int</span> input1 = <span class="hljs-number">2</span>;<br><span class="hljs-type">int</span> input2 = <span class="hljs-number">3</span>;<br> <br><span class="hljs-type">void</span> <span class="hljs-title function_">setup</span><span class="hljs-params">()</span> &#123;<br><br><span class="hljs-comment">//初始化各IO</span><br>pinMode(input1,OUTPUT);<br>pinMode(input2,OUTPUT);<br>&#125;<br><span class="hljs-type">void</span> <span class="hljs-title function_">loop</span><span class="hljs-params">()</span> &#123;<br>  <span class="hljs-comment">//forward 前进 </span><br>  digitalWrite(input1,HIGH);<br>  digitalWrite(input2,LOW);<br>  delay(<span class="hljs-number">1000</span>);<br> <br> <span class="hljs-comment">//stop 停止</span><br> digitalWrite(input1,LOW);<br> digitalWrite(input2,LOW);   <br> delay(<span class="hljs-number">500</span>);<br> <br>  <br>  <span class="hljs-comment">//back 后退</span><br>  digitalWrite(input1,LOW);<br>  digitalWrite(input2,HIGH);  <br>  delay(<span class="hljs-number">1000</span>);    <br>&#125;<br></code></pre></td></tr></table></figure><h4 id="PWN调速输出-1"><a href="#PWN调速输出-1" class="headerlink" title="PWN调速输出"></a>PWN调速输出</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> IN1 = <span class="hljs-number">2</span>;<br><span class="hljs-type">int</span> IN2 = <span class="hljs-number">3</span>; <br><span class="hljs-type">int</span> ENA = <span class="hljs-number">5</span>; <br><br><span class="hljs-type">unsigned</span> <span class="hljs-type">long</span> time = <span class="hljs-number">1200</span>;<br><span class="hljs-comment">//PWM调速 0-255</span><br><span class="hljs-type">int</span> value = <span class="hljs-number">128</span>;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">setup</span><span class="hljs-params">()</span>&#123;<br>    <span class="hljs-comment">//初始化各IO</span><br>    pinMode(IN1, OUTPUT);<br>    pinMode(IN2, OUTPUT);<br><br>    <span class="hljs-comment">//电机方向 逻辑输入</span><br>    digitalWrite(IN1, HIGH);<br>    digitalWrite(IN2, LOW);<br>&#125;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">loop</span><span class="hljs-params">()</span>&#123;<br>    analogWrite(ENA, value);<br>    delay(<span class="hljs-number">500</span>);<br>&#125;<br></code></pre></td></tr></table></figure><h3 id="步进电机"><a href="#步进电机" class="headerlink" title="步进电机"></a>步进电机</h3><p>博主手上没有，所以没试。。。</p><h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>驱动直流电机和步进电机</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1] </p>]]></content>
+    <content type="html"><![CDATA[<h1 id="HX711模块"><a href="#HX711模块" class="headerlink" title="HX711模块"></a>HX711模块</h1><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><p>VCC 模块供电5V<br>GND 接地<br>DT<br>SCK<br>E+<br>E-<br>A+<br>A-<br>B+<br>B-</p><h2 id="接线"><a href="#接线" class="headerlink" title="接线"></a>接线</h2><p>DT–3<br>SCK–2</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;Q2HX711.h&gt;</span> <span class="hljs-comment">//引用HX711库</span></span><br><br><span class="hljs-type">const</span> byte hx711_data_pin = <span class="hljs-number">3</span>; <span class="hljs-comment">//data管脚3</span><br><span class="hljs-type">const</span> byte hx711_clock_pin = <span class="hljs-number">2</span>; <span class="hljs-comment">//时钟管脚2</span><br><br>Q2HX711 <span class="hljs-title function_">hx711</span><span class="hljs-params">(hx711_data_pin, hx711_clock_pin)</span>;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">setup</span><span class="hljs-params">()</span> &#123;<br> <br>  Serial.begin(<span class="hljs-number">9600</span>); <span class="hljs-comment">//串口波特率设置为9600</span><br>&#125;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">loop</span><span class="hljs-params">()</span> &#123;<br> <br>  Serial.println(String((hx711.read()/<span class="hljs-number">1000.00</span><span class="hljs-number">-8280.22</span>)*<span class="hljs-number">2.5</span>)+String(<span class="hljs-string">&quot;g&quot;</span>)); <span class="hljs-comment">//输出读取数据，参数请自行调整</span><br>  delay(<span class="hljs-number">500</span>);<br>&#125;<br></code></pre></td></tr></table></figure><h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>输出应变片所受压力（单位为g）</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1] </p>]]></content>
     
     
     <categories>
@@ -1715,11 +1734,11 @@
   
   
   <entry>
-    <title>HX711模块</title>
-    <link href="/2023/01/14/Arduino-HX711%E6%A8%A1%E5%9D%97/"/>
-    <url>/2023/01/14/Arduino-HX711%E6%A8%A1%E5%9D%97/</url>
+    <title>L298N电机驱动模块</title>
+    <link href="/2023/01/14/Arduino-L298N%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97/"/>
+    <url>/2023/01/14/Arduino-L298N%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97/</url>
     
-    <content type="html"><![CDATA[<h1 id="HX711模块"><a href="#HX711模块" class="headerlink" title="HX711模块"></a>HX711模块</h1><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><p>VCC 模块供电5V<br>GND 接地<br>DT<br>SCK<br>E+<br>E-<br>A+<br>A-<br>B+<br>B-</p><h2 id="接线"><a href="#接线" class="headerlink" title="接线"></a>接线</h2><p>DT–3<br>SCK–2</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;Q2HX711.h&gt;</span> <span class="hljs-comment">//引用HX711库</span></span><br><br><span class="hljs-type">const</span> byte hx711_data_pin = <span class="hljs-number">3</span>; <span class="hljs-comment">//data管脚3</span><br><span class="hljs-type">const</span> byte hx711_clock_pin = <span class="hljs-number">2</span>; <span class="hljs-comment">//时钟管脚2</span><br><br>Q2HX711 <span class="hljs-title function_">hx711</span><span class="hljs-params">(hx711_data_pin, hx711_clock_pin)</span>;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">setup</span><span class="hljs-params">()</span> &#123;<br> <br>  Serial.begin(<span class="hljs-number">9600</span>); <span class="hljs-comment">//串口波特率设置为9600</span><br>&#125;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">loop</span><span class="hljs-params">()</span> &#123;<br> <br>  Serial.println(String((hx711.read()/<span class="hljs-number">1000.00</span><span class="hljs-number">-8280.22</span>)*<span class="hljs-number">2.5</span>)+String(<span class="hljs-string">&quot;g&quot;</span>)); <span class="hljs-comment">//输出读取数据，参数请自行调整</span><br>  delay(<span class="hljs-number">500</span>);<br>&#125;<br></code></pre></td></tr></table></figure><h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>输出应变片所受压力（单位为g）</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1] </p>]]></content>
+    <content type="html"><![CDATA[<h1 id="L298N电机驱动模块"><a href="#L298N电机驱动模块" class="headerlink" title="L298N电机驱动模块"></a>L298N电机驱动模块</h1><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><p>VCC 模块供电12V<br>GND 接地<br>5V 模块对外输出5V，当板载5V使能端断开时为模块输入<br>ENA1 ENA2 使能端 控制电机输出<br>IN1 IN2 IN3 IN4 逻辑输入<br>OUT1 OUT2电机输出</p><p>此处仅讨论控制单个电机</p><table><thead><tr><th>ENA</th><th>IN1</th><th>IN2</th><th>直流电机状态</th></tr></thead><tbody><tr><td>0</td><td>0</td><td>0</td><td>停止</td></tr><tr><td>1</td><td>0</td><td>0</td><td>制动</td></tr><tr><td>1</td><td>0</td><td>1</td><td>正转</td></tr><tr><td>1</td><td>1</td><td>0</td><td>反转</td></tr><tr><td>1</td><td>1</td><td>1</td><td>制动</td></tr></tbody></table><h2 id="接线"><a href="#接线" class="headerlink" title="接线"></a>接线</h2><h3 id="全速输出"><a href="#全速输出" class="headerlink" title="全速输出"></a>全速输出</h3><p>IN1–2<br>IN2–3</p><h3 id="PWN调速输出"><a href="#PWN调速输出" class="headerlink" title="PWN调速输出"></a>PWN调速输出</h3><p>IN1–2<br>IN2–3<br>ENA1–5</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h3 id="直流电机"><a href="#直流电机" class="headerlink" title="直流电机"></a>直流电机</h3><h4 id="全速输出-1"><a href="#全速输出-1" class="headerlink" title="全速输出"></a>全速输出</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">//定义IO</span><br><span class="hljs-type">int</span> input1 = <span class="hljs-number">2</span>;<br><span class="hljs-type">int</span> input2 = <span class="hljs-number">3</span>;<br> <br><span class="hljs-type">void</span> <span class="hljs-title function_">setup</span><span class="hljs-params">()</span> &#123;<br><br><span class="hljs-comment">//初始化各IO</span><br>pinMode(input1,OUTPUT);<br>pinMode(input2,OUTPUT);<br>&#125;<br><span class="hljs-type">void</span> <span class="hljs-title function_">loop</span><span class="hljs-params">()</span> &#123;<br>  <span class="hljs-comment">//forward 前进 </span><br>  digitalWrite(input1,HIGH);<br>  digitalWrite(input2,LOW);<br>  delay(<span class="hljs-number">1000</span>);<br> <br> <span class="hljs-comment">//stop 停止</span><br> digitalWrite(input1,LOW);<br> digitalWrite(input2,LOW);   <br> delay(<span class="hljs-number">500</span>);<br> <br>  <br>  <span class="hljs-comment">//back 后退</span><br>  digitalWrite(input1,LOW);<br>  digitalWrite(input2,HIGH);  <br>  delay(<span class="hljs-number">1000</span>);    <br>&#125;<br></code></pre></td></tr></table></figure><h4 id="PWN调速输出-1"><a href="#PWN调速输出-1" class="headerlink" title="PWN调速输出"></a>PWN调速输出</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> IN1 = <span class="hljs-number">2</span>;<br><span class="hljs-type">int</span> IN2 = <span class="hljs-number">3</span>; <br><span class="hljs-type">int</span> ENA = <span class="hljs-number">5</span>; <br><br><span class="hljs-type">unsigned</span> <span class="hljs-type">long</span> time = <span class="hljs-number">1200</span>;<br><span class="hljs-comment">//PWM调速 0-255</span><br><span class="hljs-type">int</span> value = <span class="hljs-number">128</span>;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">setup</span><span class="hljs-params">()</span>&#123;<br>    <span class="hljs-comment">//初始化各IO</span><br>    pinMode(IN1, OUTPUT);<br>    pinMode(IN2, OUTPUT);<br><br>    <span class="hljs-comment">//电机方向 逻辑输入</span><br>    digitalWrite(IN1, HIGH);<br>    digitalWrite(IN2, LOW);<br>&#125;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">loop</span><span class="hljs-params">()</span>&#123;<br>    analogWrite(ENA, value);<br>    delay(<span class="hljs-number">500</span>);<br>&#125;<br></code></pre></td></tr></table></figure><h3 id="步进电机"><a href="#步进电机" class="headerlink" title="步进电机"></a>步进电机</h3><p>博主手上没有，所以没试。。。</p><h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>驱动直流电机和步进电机</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1] </p>]]></content>
     
     
     <categories>
