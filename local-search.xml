@@ -4,6 +4,63 @@
   
   
   <entry>
+    <title>Django</title>
+    <link href="/2023/12/04/Python-Django/"/>
+    <url>/2023/12/04/Python-Django/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Django"><a href="#Django" class="headerlink" title="Django"></a>Django</h1><p><a href="https://www.djangoproject.com/">The web framework for perfectionists with deadlines | Django</a></p><p><a href="https://www.runoob.com/django/django-tutorial.html">Django 教程 | 菜鸟教程</a></p><h2 id="虚拟环境"><a href="#虚拟环境" class="headerlink" title="虚拟环境"></a>虚拟环境</h2><p>创建虚拟环境<br>python -m venv 环境名</p><p>激活虚拟环境<br>环境名\Scripts\activate</p><p>停用虚拟环境<br>deactivate</p><h2 id="安装Django"><a href="#安装Django" class="headerlink" title="安装Django"></a>安装Django</h2><p>更新pip（在虚拟环境中）<br>pip install –update pip</p><p>查看pip版本<br>pip -V</p><p>使用pip安装Django（在虚拟环境中）<br>pip install django</p><p>进入python环境<br>python</p><p>在python环境下查看Django版本号<br>import django<br>django.get_version()</p><p>退出python环境（三种方法）<br>exit() + 回车<br>quit() + 回车<br>Ctrl + Z + 回车</p><h2 id="使用Django"><a href="#使用Django" class="headerlink" title="使用Django"></a>使用Django</h2><p>在Django中创建项目<br>django-admin startproject 项目名 .</p><p>迁移数据库/修改数据库<br>python manage.py migrate<br>第一次执行会创建数据库</p><p>启动服务器（要在manage.py所在路径使用）<br>python manage.py runserver</p><p>停用服务器<br>Ctrl + C</p><p>创建应用程序<br>python manage.py startapp 应用程序名</p><p>创建迁移文件/确定如何修改数据库<br>python manage.py makemigrations 应用程序名</p><p>Django shell<br>python manage.py shell</p><p>退出 shell<br>Ctrl + Z + 回车</p><p>安装django-bootstrap5<br>pip install django-bootstrap5</p><h2 id="超级用户"><a href="#超级用户" class="headerlink" title="超级用户"></a>超级用户</h2><p>创建超级用户<br>python manage.py createsuperuser</p><h2 id="要点"><a href="#要点" class="headerlink" title="要点"></a>要点</h2><p>修改项目数据三部曲<br>修改models.py<br>调用makemigrations创建迁移<br>调用migrate执行迁移</p><p>创建模型步骤<br>创建模型models.py<br>调用makemigrations创建迁移<br>调用migrate执行迁移<br>注册模型admin.py</p><p>在应用程序中添加一个新主题需要以下操作<br>修改form.py，添加主题的表单<br>修改urls.py，添加子链接<br>修改views.py<br>创建新模板<br>链接到指定页面</p><p>在应用程序中添加一个新条目需要以下操作<br>修改form.py，添加一个新的类<br>修改urls.py，添加子链接<br>修改views.py</p><h2 id="小记"><a href="#小记" class="headerlink" title="小记"></a>小记</h2><p>Django使用MTV模型（<a href="https://www.runoob.com/django/django-intro.html%EF%BC%89">https://www.runoob.com/django/django-intro.html）</a><br>M 表示模型（Model）：编写程序应有的功能，负责业务对象与数据库的映射(ORM)。<br>T 表示模板 (Template)：负责如何把页面(html)展示给用户。<br>V 表示视图（View）：负责业务逻辑，并在适当时候调用 Model和 Template。</p><p>解析：<br>用户通过浏览器向我们的服务器发起一个请求(request)，这个请求会去访问视图函数：<br>a.如果不涉及到数据调用，那么这个时候视图函数直接返回一个模板也就是一个网页给用户。<br>b.如果涉及到数据调用，那么视图函数调用模型，模型去数据库查找数据，然后逐级返回。<br>视图函数把返回的数据填充到模板中空格，最后返回网页给用户。</p><p>在应用程序文件夹新建urls.py文件，继承项目文件夹中的urls.py</p><p>a.不涉及到数据调用<br>①根据用户的请求链接去urls.py中匹配对应的views.py中的视图函数<br>②视图函数根据其render函数中的参数去模板template文件夹中查找相应的html文件并返回网页给用户</p><p>Django 规定，如果要使用模型，必须要创建一个app应用程序。</p><p>b.涉及到数据调用<br>①根据用户的请求链接去urls.py中匹配对应的views.py中的视图函数<br>②视图函数调用models.py中对应的模型<br>③模型取数据库查找数据，逐级返回<br>④视图函数把返回的数据填充到模板template中对应html文件中的变量位置，最后返回网页给用户。</p><p>创建基于表单的页面的方法几乎与前面创建网页一样：定义一个URL，编写一个视图函数并编写一个模板。一个主要差别是，需要导入包含表单的模块forms.py。</p><p>在Django中，创建表单的最简单方式是使用ModelForm，它根据我们之前在models.py中定义的模型中的信息自动创建表单。</p><p>c.处理表单数据<br>①根据用户的请求链接去urls.py中匹配对应的views.py中的视图函数<br>②新建表单数据：视图函数显示空表单，提交的表单数据进行处理，并将用户重定向到其他网页<br>③修改表单数据：视图函数根据其render函数查找相应html文件显示原有表单，提交的表单数据进行处理，并将用户重定向到其他网页</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Python</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>运行窗口</title>
+    <link href="/2023/12/03/Windows-%E8%BF%90%E8%A1%8C%E7%AA%97%E5%8F%A3/"/>
+    <url>/2023/12/03/Windows-%E8%BF%90%E8%A1%8C%E7%AA%97%E5%8F%A3/</url>
+    
+    <content type="html"><![CDATA[<h1 id="运行窗口"><a href="#运行窗口" class="headerlink" title="运行窗口"></a>运行窗口</h1><p>​    运行是Windows的必要组成部分，可以简单理解为一个应用程序快速调用的组件。通过“运行”窗口，可以调用Windows中任何应用程序甚至DOS命令。</p><h2 id="常用命令符"><a href="#常用命令符" class="headerlink" title="常用命令符"></a>常用命令符</h2><p>cmd<br>CMD命令提示符</p><p>devmgmt.msc：设备管理器</p><p>diskmgmt.msc：磁盘管理</p><p>explorer：打开资源管理器</p><p>Firewall.cpl：Windows防火墙</p><p>fsmgmt.msc：共享文件夹管理器</p><p>hdwwiz.cpl：设备管理器</p><p>mmc：打开控制台</p><p>msinfo32：系统信息</p><p>mstsc：远程桌面连接</p><p>osk：打开屏幕键盘</p><p>regedit.exe：注册表</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1] <a href="https://blog.csdn.net/m0_57284405/article/details/131722616">Windows 运行窗口(win+r)常用命令_win运行窗口命令大全-CSDN博客</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Windows</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>常用CMD命令</title>
+    <link href="/2023/12/03/Windows-%E5%B8%B8%E7%94%A8CMD%E5%91%BD%E4%BB%A4/"/>
+    <url>/2023/12/03/Windows-%E5%B8%B8%E7%94%A8CMD%E5%91%BD%E4%BB%A4/</url>
+    
+    <content type="html"><![CDATA[<h1 id="常用CMD命令"><a href="#常用CMD命令" class="headerlink" title="常用CMD命令"></a>常用CMD命令</h1><p><a href="https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/windows-commands">Windows 命令 | Microsoft Learn</a></p><p><a href="https://zhuanlan.zhihu.com/p/67513308">Windows 用户需要知道的 CMD 常用命令总结 - 知乎 (zhihu.com)</a></p><p>[Windows CMD常用命令大全（值得收藏）_cmd命令-CSDN博客](<a href="https://blog.csdn.net/qq_46092061/article/details/119849648#:~:text=Windows">https://blog.csdn.net/qq_46092061/article/details/119849648#:~:text=Windows</a> CMD常用命令大全 1 1.1 cd命令 2 1.2 查看目录文件,复制文件 7 1.7 移动文件 8 1.8 删除文件 更多项目)</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Windows</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>手动存档</title>
     <link href="/2023/10/30/The%20Forest-%E6%89%8B%E5%8A%A8%E5%AD%98%E6%A1%A3/"/>
     <url>/2023/10/30/The%20Forest-%E6%89%8B%E5%8A%A8%E5%AD%98%E6%A1%A3/</url>
@@ -642,7 +699,7 @@
     <link href="/2023/01/14/Python-%E5%85%A5%E9%97%A8%E6%B8%A0%E9%81%93/"/>
     <url>/2023/01/14/Python-%E5%85%A5%E9%97%A8%E6%B8%A0%E9%81%93/</url>
     
-    <content type="html"><![CDATA[<h1 id="入门渠道"><a href="#入门渠道" class="headerlink" title="入门渠道"></a>入门渠道</h1><p>林粒粒<br><a href="https://www.bilibili.com/video/BV1944y1x7SW?p=1&vd_source=dde32bebfaef8d434caff0e95a159459">超基础Python课程-bilibili</a></p><p>廖雪峰<br><a href="https://www.liaoxuefeng.com/wiki/1016959663602400">Python教程</a></p><p>菜鸟教程<br><a href="https://www.runoob.com/python3/python3-tutorial.html">Python3 教程</a></p><p>帮助工具<br><a href="https://www.anaconda.com/">Anaconda | The World’s Most Popular Data Science Platform</a></p><p><a href="https://blog.csdn.net/weixin_56197703/article/details/124630222">还是搞不懂Anaconda是什么?读这一篇文章就够了-CSDN博客</a></p><p>网站开发</p><p><a href="https://www.runoob.com/django/django-tutorial.html">Django 教程 | 菜鸟教程 (runoob.com)</a></p><p><a href="https://docs.djangoproject.com/zh-hans/4.2/">Django 文档 | Django 文档 | Django (djangoproject.com)</a></p><p><a href="https://v5.bootcss.com/">Bootstrap v5 中文文档 · Bootstrap 是全球最受欢迎的 HTML、CSS 和 JS 前端工具库。 | Bootstrap 中文网 (bootcss.com)</a></p><p><a href="https://developer.mozilla.org/zh-CN/">MDN Web Docs (mozilla.org)</a></p><p><a href="https://geek-docs.com/django/django-questions/135_django_django_error_you_dont_have_permission_to_access_that_port.html">Django：错误：您没有权限访问该端口|极客教程 (geek-docs.com)</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="入门渠道"><a href="#入门渠道" class="headerlink" title="入门渠道"></a>入门渠道</h1><p>林粒粒<br><a href="https://www.bilibili.com/video/BV1944y1x7SW?p=1&vd_source=dde32bebfaef8d434caff0e95a159459">超基础Python课程-bilibili</a></p><p>廖雪峰<br><a href="https://www.liaoxuefeng.com/wiki/1016959663602400">Python教程</a></p><p>菜鸟教程<br><a href="https://www.runoob.com/python3/python3-tutorial.html">Python3 教程</a></p><p><a href="https://github.com/jackfrued/Python-100-Days">Python - 100天从新手到大师_GitHub</a></p><p>帮助工具<br><a href="https://www.anaconda.com/">Anaconda | The World’s Most Popular Data Science Platform</a></p><p><a href="https://blog.csdn.net/weixin_56197703/article/details/124630222">还是搞不懂Anaconda是什么?读这一篇文章就够了-CSDN博客</a></p><p>网站开发</p><p><a href="https://www.runoob.com/django/django-tutorial.html">Django 教程 | 菜鸟教程 (runoob.com)</a></p><p><a href="https://docs.djangoproject.com/zh-hans/4.2/">Django 文档 | Django 文档 | Django (djangoproject.com)</a></p><p><a href="https://v5.bootcss.com/">Bootstrap v5 中文文档 · Bootstrap 是全球最受欢迎的 HTML、CSS 和 JS 前端工具库。 | Bootstrap 中文网 (bootcss.com)</a></p><p><a href="https://developer.mozilla.org/zh-CN/">MDN Web Docs (mozilla.org)</a></p><p><a href="https://geek-docs.com/django/django-questions/135_django_django_error_you_dont_have_permission_to_access_that_port.html">Django：错误：您没有权限访问该端口|极客教程 (geek-docs.com)</a></p>]]></content>
     
     
     <categories>
@@ -714,11 +771,11 @@
   
   
   <entry>
-    <title>调色</title>
-    <link href="/2023/01/14/Photoshop-%E8%B0%83%E8%89%B2/"/>
-    <url>/2023/01/14/Photoshop-%E8%B0%83%E8%89%B2/</url>
+    <title>速成</title>
+    <link href="/2023/01/14/Photoshop-%E9%80%9F%E6%88%90/"/>
+    <url>/2023/01/14/Photoshop-%E9%80%9F%E6%88%90/</url>
     
-    <content type="html"><![CDATA[<h1 id="调色"><a href="#调色" class="headerlink" title="调色"></a>调色</h1><p>HSL<br>RGB</p><p>分离色调<br>曲线工具</p><h2 id="相关教程"><a href="#相关教程" class="headerlink" title="相关教程"></a>相关教程</h2><p>摄影师泰罗<br><a href="https://www.bilibili.com/video/BV1R7411N7uM/?spm_id_from=333.788&vd_source=dde32bebfaef8d434caff0e95a159459">LR系统教程 - bilibili</a></p><p><a href="https://www.bilibili.com/video/BV1YT411v7WE/?spm_id_from=333.999.0.0&vd_source=dde32bebfaef8d434caff0e95a159459">透彻理解PS调色的底层原理与框架（上） - bilibili</a></p><p><a href="https://www.bilibili.com/video/BV1MM411s7Ab/?spm_id_from=333.788&vd_source=dde32bebfaef8d434caff0e95a159459">透彻理解PS调色的底层原理与框架（下 ） - bilibili</a></p><p>其他<br><a href="https://www.bilibili.com/video/BV1544y137e6/?spm_id_from=333.999.0.0&vd_source=dde32bebfaef8d434caff0e95a159459">全网最易懂的PS调色教程！ - bilibili</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="速成"><a href="#速成" class="headerlink" title="速成"></a>速成</h1><h2 id="去朦胧-去除薄雾"><a href="#去朦胧-去除薄雾" class="headerlink" title="去朦胧/去除薄雾"></a>去朦胧/去除薄雾</h2><p>滤镜-Camera Raw滤镜-fx</p><h2 id="证件照换底色"><a href="#证件照换底色" class="headerlink" title="证件照换底色"></a>证件照换底色</h2><p>选择-选择并遮住<br>右上角的视图模式中，将视图切换为 洋葱皮<br>左侧的画笔中，选择 快速选择工具，粗略选择人像范围<br>再次切换其他明显的视图，以便观察更多细节<br>使用 调整画笔边缘工具，涂抹人物与背景的交界处，抠出更多的细节<br>在右侧的 全局调整 中进行微调（平滑|5 对比度|20% 移动边缘-|12%）<br>最后在 输出设置 里勾选 净化颜色，输出到 新建带有图层蒙版的图层</p><p><a href="https://www.bilibili.com/video/BV1iq4y1W7Sb/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click&vd_source=dde32bebfaef8d434caff0e95a159459">参考-哔哩哔哩</a></p><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2>]]></content>
     
     
     <categories>
@@ -733,11 +790,11 @@
   
   
   <entry>
-    <title>速成</title>
-    <link href="/2023/01/14/Photoshop-%E9%80%9F%E6%88%90/"/>
-    <url>/2023/01/14/Photoshop-%E9%80%9F%E6%88%90/</url>
+    <title>调色</title>
+    <link href="/2023/01/14/Photoshop-%E8%B0%83%E8%89%B2/"/>
+    <url>/2023/01/14/Photoshop-%E8%B0%83%E8%89%B2/</url>
     
-    <content type="html"><![CDATA[<h1 id="速成"><a href="#速成" class="headerlink" title="速成"></a>速成</h1><h2 id="去朦胧-去除薄雾"><a href="#去朦胧-去除薄雾" class="headerlink" title="去朦胧/去除薄雾"></a>去朦胧/去除薄雾</h2><p>滤镜-Camera Raw滤镜-fx</p><h2 id="证件照换底色"><a href="#证件照换底色" class="headerlink" title="证件照换底色"></a>证件照换底色</h2><p>选择-选择并遮住<br>右上角的视图模式中，将视图切换为 洋葱皮<br>左侧的画笔中，选择 快速选择工具，粗略选择人像范围<br>再次切换其他明显的视图，以便观察更多细节<br>使用 调整画笔边缘工具，涂抹人物与背景的交界处，抠出更多的细节<br>在右侧的 全局调整 中进行微调（平滑|5 对比度|20% 移动边缘-|12%）<br>最后在 输出设置 里勾选 净化颜色，输出到 新建带有图层蒙版的图层</p><p><a href="https://www.bilibili.com/video/BV1iq4y1W7Sb/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click&vd_source=dde32bebfaef8d434caff0e95a159459">参考-哔哩哔哩</a></p><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2>]]></content>
+    <content type="html"><![CDATA[<h1 id="调色"><a href="#调色" class="headerlink" title="调色"></a>调色</h1><p>HSL<br>RGB</p><p>分离色调<br>曲线工具</p><h2 id="相关教程"><a href="#相关教程" class="headerlink" title="相关教程"></a>相关教程</h2><p>摄影师泰罗<br><a href="https://www.bilibili.com/video/BV1R7411N7uM/?spm_id_from=333.788&vd_source=dde32bebfaef8d434caff0e95a159459">LR系统教程 - bilibili</a></p><p><a href="https://www.bilibili.com/video/BV1YT411v7WE/?spm_id_from=333.999.0.0&vd_source=dde32bebfaef8d434caff0e95a159459">透彻理解PS调色的底层原理与框架（上） - bilibili</a></p><p><a href="https://www.bilibili.com/video/BV1MM411s7Ab/?spm_id_from=333.788&vd_source=dde32bebfaef8d434caff0e95a159459">透彻理解PS调色的底层原理与框架（下 ） - bilibili</a></p><p>其他<br><a href="https://www.bilibili.com/video/BV1544y137e6/?spm_id_from=333.999.0.0&vd_source=dde32bebfaef8d434caff0e95a159459">全网最易懂的PS调色教程！ - bilibili</a></p>]]></content>
     
     
     <categories>
@@ -828,11 +885,11 @@
   
   
   <entry>
-    <title>构图</title>
-    <link href="/2023/01/14/Photography%E6%91%84%E5%BD%B1-%E6%9E%84%E5%9B%BE/"/>
-    <url>/2023/01/14/Photography%E6%91%84%E5%BD%B1-%E6%9E%84%E5%9B%BE/</url>
+    <title>选购相机</title>
+    <link href="/2023/01/14/Photography%E6%91%84%E5%BD%B1-%E9%80%89%E8%B4%AD%E7%9B%B8%E6%9C%BA/"/>
+    <url>/2023/01/14/Photography%E6%91%84%E5%BD%B1-%E9%80%89%E8%B4%AD%E7%9B%B8%E6%9C%BA/</url>
     
-    <content type="html"><![CDATA[<h1 id="构图"><a href="#构图" class="headerlink" title="构图"></a>构图</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="选购相机"><a href="#选购相机" class="headerlink" title="选购相机"></a>选购相机</h1><h2 id="相机种类"><a href="#相机种类" class="headerlink" title="相机种类"></a>相机种类</h2><p>单反 微单 卡片</p><h2 id="相机参数"><a href="#相机参数" class="headerlink" title="相机参数"></a>相机参数</h2><h3 id="画质"><a href="#画质" class="headerlink" title="画质"></a>画质</h3><h4 id="画幅尺寸"><a href="#画幅尺寸" class="headerlink" title="画幅尺寸"></a>画幅尺寸</h4><p>一英寸 M43 APS-C半画幅 全画幅 中画幅</p><p><a href="https://www.dxomark.cn/">DXOMARK 官方网站</a></p><h4 id="宽容度"><a href="#宽容度" class="headerlink" title="宽容度"></a>宽容度</h4><p>亮度信息</p><h4 id="信噪比"><a href="#信噪比" class="headerlink" title="信噪比"></a>信噪比</h4><h4 id="像素"><a href="#像素" class="headerlink" title="像素"></a>像素</h4><h3 id="便携程度"><a href="#便携程度" class="headerlink" title="便携程度"></a>便携程度</h3><h4 id="屏幕"><a href="#屏幕" class="headerlink" title="屏幕"></a>屏幕</h4><h4 id="直出效果"><a href="#直出效果" class="headerlink" title="直出效果"></a>直出效果</h4><p>JPG RAW</p><h4 id="对焦"><a href="#对焦" class="headerlink" title="对焦"></a>对焦</h4><h4 id="防抖"><a href="#防抖" class="headerlink" title="防抖"></a>防抖</h4><h4 id="连拍"><a href="#连拍" class="headerlink" title="连拍"></a>连拍</h4><h4 id="续航"><a href="#续航" class="headerlink" title="续航"></a>续航</h4><h3 id="拓展延伸"><a href="#拓展延伸" class="headerlink" title="拓展延伸"></a>拓展延伸</h3><h4 id="镜头群"><a href="#镜头群" class="headerlink" title="镜头群"></a>镜头群</h4><h4 id="手柄"><a href="#手柄" class="headerlink" title="手柄"></a>手柄</h4>]]></content>
     
     
     <categories>
@@ -847,11 +904,11 @@
   
   
   <entry>
-    <title>选购相机</title>
-    <link href="/2023/01/14/Photography%E6%91%84%E5%BD%B1-%E9%80%89%E8%B4%AD%E7%9B%B8%E6%9C%BA/"/>
-    <url>/2023/01/14/Photography%E6%91%84%E5%BD%B1-%E9%80%89%E8%B4%AD%E7%9B%B8%E6%9C%BA/</url>
+    <title>构图</title>
+    <link href="/2023/01/14/Photography%E6%91%84%E5%BD%B1-%E6%9E%84%E5%9B%BE/"/>
+    <url>/2023/01/14/Photography%E6%91%84%E5%BD%B1-%E6%9E%84%E5%9B%BE/</url>
     
-    <content type="html"><![CDATA[<h1 id="选购相机"><a href="#选购相机" class="headerlink" title="选购相机"></a>选购相机</h1><h2 id="相机种类"><a href="#相机种类" class="headerlink" title="相机种类"></a>相机种类</h2><p>单反 微单 卡片</p><h2 id="相机参数"><a href="#相机参数" class="headerlink" title="相机参数"></a>相机参数</h2><h3 id="画质"><a href="#画质" class="headerlink" title="画质"></a>画质</h3><h4 id="画幅尺寸"><a href="#画幅尺寸" class="headerlink" title="画幅尺寸"></a>画幅尺寸</h4><p>一英寸 M43 APS-C半画幅 全画幅 中画幅</p><p><a href="https://www.dxomark.cn/">DXOMARK 官方网站</a></p><h4 id="宽容度"><a href="#宽容度" class="headerlink" title="宽容度"></a>宽容度</h4><p>亮度信息</p><h4 id="信噪比"><a href="#信噪比" class="headerlink" title="信噪比"></a>信噪比</h4><h4 id="像素"><a href="#像素" class="headerlink" title="像素"></a>像素</h4><h3 id="便携程度"><a href="#便携程度" class="headerlink" title="便携程度"></a>便携程度</h3><h4 id="屏幕"><a href="#屏幕" class="headerlink" title="屏幕"></a>屏幕</h4><h4 id="直出效果"><a href="#直出效果" class="headerlink" title="直出效果"></a>直出效果</h4><p>JPG RAW</p><h4 id="对焦"><a href="#对焦" class="headerlink" title="对焦"></a>对焦</h4><h4 id="防抖"><a href="#防抖" class="headerlink" title="防抖"></a>防抖</h4><h4 id="连拍"><a href="#连拍" class="headerlink" title="连拍"></a>连拍</h4><h4 id="续航"><a href="#续航" class="headerlink" title="续航"></a>续航</h4><h3 id="拓展延伸"><a href="#拓展延伸" class="headerlink" title="拓展延伸"></a>拓展延伸</h3><h4 id="镜头群"><a href="#镜头群" class="headerlink" title="镜头群"></a>镜头群</h4><h4 id="手柄"><a href="#手柄" class="headerlink" title="手柄"></a>手柄</h4>]]></content>
+    <content type="html"><![CDATA[<h1 id="构图"><a href="#构图" class="headerlink" title="构图"></a>构图</h1>]]></content>
     
     
     <categories>
@@ -1322,11 +1379,11 @@
   
   
   <entry>
-    <title>3）共享WiFi-电脑也是路由器</title>
-    <link href="/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-3)%E5%85%B1%E4%BA%ABWiFi-%E7%94%B5%E8%84%91%E4%B9%9F%E6%98%AF%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
-    <url>/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-3)%E5%85%B1%E4%BA%ABWiFi-%E7%94%B5%E8%84%91%E4%B9%9F%E6%98%AF%E8%B7%AF%E7%94%B1%E5%99%A8/</url>
+    <title>2）USB网络共享-手机成为上网卡</title>
+    <link href="/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-2)USB%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB-%E6%89%8B%E6%9C%BA%E6%88%90%E4%B8%BA%E4%B8%8A%E7%BD%91%E5%8D%A1/"/>
+    <url>/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-2)USB%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB-%E6%89%8B%E6%9C%BA%E6%88%90%E4%B8%BA%E4%B8%8A%E7%BD%91%E5%8D%A1/</url>
     
-    <content type="html"><![CDATA[<h1 id="3）共享WiFi-电脑也是路由器"><a href="#3）共享WiFi-电脑也是路由器" class="headerlink" title="3）共享WiFi-电脑也是路由器"></a>3）共享WiFi-电脑也是路由器</h1><p>当你的电脑连接上有线网络之后，便可以愉快地进行网上冲浪了，可你的手机并不方便和网络进行有线的连接，此时，你的电脑也可以发挥路由器的作用，发射WiFi信号，让你的手机能够无线上网，愉快冲浪。</p><p>不同的操作系统步骤有所差异。</p><p><strong>Win7</strong><br><a href="https://blog.csdn.net/chicken_h/article/details/127259037">Win7通过无线网卡共享本地网络-CSDN</a></p><p><strong>win10</strong><br><a href="https://jingyan.baidu.com/article/4853e1e5b2d8a51908f72654.html">win10如何开启热点共享网络-百度经验</a></p><p><strong>win11</strong><br>设置-网络和Internet-移动热点</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="2）USB网络共享-手机成为上网卡"><a href="#2）USB网络共享-手机成为上网卡" class="headerlink" title="2）USB网络共享-手机成为上网卡"></a>2）USB网络共享-手机成为上网卡</h1><p>我们使用电脑连接上手机开放的热点时，你的手机相当于是移动WiFi（随身WiFi）。</p><p><strong>移动WiFi</strong><br>提供电源即可发射WiFi信号，与SIM卡搭配使用，不需要线的连接。</p><p>没有线的连接，你的网速会受到一定的限制，我们可以通过数据线连接电脑和手机，打开手机中的USB网络共享功能，让手机成为无线上网卡，提升网速。</p><p><strong>无线上网卡</strong><br>相当于移动WIFI，但需要与电脑连接（一般是通过USB口），连接无线广域网，与SIM卡搭配使用，当然也有免插卡的版本。</p><p>不同品牌的手机设置有所差异。<br><strong>小米</strong> 设置-个人热点-USB网络共享<br><strong>华为</strong> </p><p>无线上网卡和无线网卡又有所区别。<br><strong>无线网卡</strong><br>帮助电脑收发信号，连接无线局域网，是电脑与无线网络连接的介质。有内置网卡也有外置网卡（一般通过USB口连接）</p><p><strong>广域网WAN(Wide Area Network)</strong><br>是连接不同地区局域网或城域网计算机通信的远程网。</p><p><strong>局域网LAN(Local Area Network)</strong><br>是局部地区形成的一个区域网络，分布地区范围有限。</p>]]></content>
     
     
     <categories>
@@ -1341,11 +1398,11 @@
   
   
   <entry>
-    <title>2）USB网络共享-手机成为上网卡</title>
-    <link href="/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-2)USB%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB-%E6%89%8B%E6%9C%BA%E6%88%90%E4%B8%BA%E4%B8%8A%E7%BD%91%E5%8D%A1/"/>
-    <url>/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-2)USB%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB-%E6%89%8B%E6%9C%BA%E6%88%90%E4%B8%BA%E4%B8%8A%E7%BD%91%E5%8D%A1/</url>
+    <title>3）共享WiFi-电脑也是路由器</title>
+    <link href="/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-3)%E5%85%B1%E4%BA%ABWiFi-%E7%94%B5%E8%84%91%E4%B9%9F%E6%98%AF%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
+    <url>/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-3)%E5%85%B1%E4%BA%ABWiFi-%E7%94%B5%E8%84%91%E4%B9%9F%E6%98%AF%E8%B7%AF%E7%94%B1%E5%99%A8/</url>
     
-    <content type="html"><![CDATA[<h1 id="2）USB网络共享-手机成为上网卡"><a href="#2）USB网络共享-手机成为上网卡" class="headerlink" title="2）USB网络共享-手机成为上网卡"></a>2）USB网络共享-手机成为上网卡</h1><p>我们使用电脑连接上手机开放的热点时，你的手机相当于是移动WiFi（随身WiFi）。</p><p><strong>移动WiFi</strong><br>提供电源即可发射WiFi信号，与SIM卡搭配使用，不需要线的连接。</p><p>没有线的连接，你的网速会受到一定的限制，我们可以通过数据线连接电脑和手机，打开手机中的USB网络共享功能，让手机成为无线上网卡，提升网速。</p><p><strong>无线上网卡</strong><br>相当于移动WIFI，但需要与电脑连接（一般是通过USB口），连接无线广域网，与SIM卡搭配使用，当然也有免插卡的版本。</p><p>不同品牌的手机设置有所差异。<br><strong>小米</strong> 设置-个人热点-USB网络共享<br><strong>华为</strong> </p><p>无线上网卡和无线网卡又有所区别。<br><strong>无线网卡</strong><br>帮助电脑收发信号，连接无线局域网，是电脑与无线网络连接的介质。有内置网卡也有外置网卡（一般通过USB口连接）</p><p><strong>广域网WAN(Wide Area Network)</strong><br>是连接不同地区局域网或城域网计算机通信的远程网。</p><p><strong>局域网LAN(Local Area Network)</strong><br>是局部地区形成的一个区域网络，分布地区范围有限。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="3）共享WiFi-电脑也是路由器"><a href="#3）共享WiFi-电脑也是路由器" class="headerlink" title="3）共享WiFi-电脑也是路由器"></a>3）共享WiFi-电脑也是路由器</h1><p>当你的电脑连接上有线网络之后，便可以愉快地进行网上冲浪了，可你的手机并不方便和网络进行有线的连接，此时，你的电脑也可以发挥路由器的作用，发射WiFi信号，让你的手机能够无线上网，愉快冲浪。</p><p>不同的操作系统步骤有所差异。</p><p><strong>Win7</strong><br><a href="https://blog.csdn.net/chicken_h/article/details/127259037">Win7通过无线网卡共享本地网络-CSDN</a></p><p><strong>win10</strong><br><a href="https://jingyan.baidu.com/article/4853e1e5b2d8a51908f72654.html">win10如何开启热点共享网络-百度经验</a></p><p><strong>win11</strong><br>设置-网络和Internet-移动热点</p>]]></content>
     
     
     <categories>
@@ -1759,19 +1816,6 @@
   
   
   <entry>
-    <title>2A506</title>
-    <link href="/2023/01/14/2A506/"/>
-    <url>/2023/01/14/2A506/</url>
-    
-    <content type="html"><![CDATA[<h1 id="2A506"><a href="#2A506" class="headerlink" title="2A506"></a>2A506</h1><h2 id="校园网"><a href="#校园网" class="headerlink" title="校园网"></a>校园网</h2><h3 id="GDPC"><a href="#GDPC" class="headerlink" title="GDPC"></a>GDPC</h3><p><a href="http://172.19.2.20:8900/l">校园网自服务平台</a><br><strong>用户名</strong> 20223502140130<br><strong>密码</strong> 050011</p><p>I P地址               172.18.15.46<br>子网掩码             255.255.255.0<br>默认网关             172.18.15.254<br>首选DNS服务器  172.16.36.36<br>备用DNS服务器  172.16.35.101</p><h2 id="联系"><a href="#联系" class="headerlink" title="联系"></a>联系</h2><p><strong>队助</strong> 张霖 2a706 13376595850<br><strong>指导员</strong> 周海桐  9b407 15015961500<br><strong>中队长</strong> 纪家亮 15360631618</p><h2 id="选课"><a href="#选课" class="headerlink" title="选课"></a>选课</h2><p>公选2 专业2 网络2</p><h3 id="√"><a href="#√" class="headerlink" title="√"></a>√</h3><p>美学<br>多媒体<br>逻辑学<br>警察法学<br>被害人学概论<br>电影鉴赏<br>审讯心理<br>摄影艺术鉴赏<br>法律语言</p><p>詹笑红 人美无作业<br>胡彤婴<br>黎聪 人帅幽默<br>张鹏飞<br>容缨<br>张进</p><h3 id="×"><a href="#×" class="headerlink" title="×"></a>×</h3><p>文化鉴赏<br>公务员面试<br>网络侦查犯罪<br>大学英语六级<br>沟通与技巧<br>形式逻辑<br>危机谈判</p><p>范智星<br>王正仓<br>秦总根<br>宋晓明 考试容易 作业多<br>刘迪莎<br>曾祥星<br>郑璀宇<br>陈涛 地方口音重</p><h2 id="热水"><a href="#热水" class="headerlink" title="热水"></a>热水</h2><p>06:00-08:00<br>11:00-13:30<br>16:30-22:30</p>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>HC-05蓝牙模块</title>
     <link href="/2023/01/14/Arduino-HC-05%E8%93%9D%E7%89%99%E6%A8%A1%E5%9D%97/"/>
     <url>/2023/01/14/Arduino-HC-05%E8%93%9D%E7%89%99%E6%A8%A1%E5%9D%97/</url>
@@ -1784,6 +1828,19 @@
       <category>Arduino</category>
       
     </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>2A506</title>
+    <link href="/2023/01/14/2A506/"/>
+    <url>/2023/01/14/2A506/</url>
+    
+    <content type="html"><![CDATA[<h1 id="2A506"><a href="#2A506" class="headerlink" title="2A506"></a>2A506</h1><h2 id="校园网"><a href="#校园网" class="headerlink" title="校园网"></a>校园网</h2><h3 id="GDPC"><a href="#GDPC" class="headerlink" title="GDPC"></a>GDPC</h3><p><a href="http://172.19.2.20:8900/l">校园网自服务平台</a><br><strong>用户名</strong> 20223502140130<br><strong>密码</strong> 050011</p><p>I P地址               172.18.15.46<br>子网掩码             255.255.255.0<br>默认网关             172.18.15.254<br>首选DNS服务器  172.16.36.36<br>备用DNS服务器  172.16.35.101</p><h2 id="联系"><a href="#联系" class="headerlink" title="联系"></a>联系</h2><p><strong>队助</strong> 张霖 2a706 13376595850<br><strong>指导员</strong> 周海桐  9b407 15015961500<br><strong>中队长</strong> 纪家亮 15360631618</p><h2 id="选课"><a href="#选课" class="headerlink" title="选课"></a>选课</h2><p>公选2 专业2 网络2</p><h3 id="√"><a href="#√" class="headerlink" title="√"></a>√</h3><p>美学<br>多媒体<br>逻辑学<br>警察法学<br>被害人学概论<br>电影鉴赏<br>审讯心理<br>摄影艺术鉴赏<br>法律语言</p><p>詹笑红 人美无作业<br>胡彤婴<br>黎聪 人帅幽默<br>张鹏飞<br>容缨<br>张进</p><h3 id="×"><a href="#×" class="headerlink" title="×"></a>×</h3><p>文化鉴赏<br>公务员面试<br>网络侦查犯罪<br>大学英语六级<br>沟通与技巧<br>形式逻辑<br>危机谈判</p><p>范智星<br>王正仓<br>秦总根<br>宋晓明 考试容易 作业多<br>刘迪莎<br>曾祥星<br>郑璀宇<br>陈涛 地方口音重</p><h2 id="热水"><a href="#热水" class="headerlink" title="热水"></a>热水</h2><p>06:00-08:00<br>11:00-13:30<br>16:30-22:30</p>]]></content>
+    
     
     
   </entry>
