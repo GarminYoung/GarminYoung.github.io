@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>Minecraft</title>
+    <link href="/2023/12/23/Minecraft-%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <url>/2023/12/23/Minecraft-%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    
+    <content type="html"><![CDATA[<h1 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h1><p>本教程为腾讯云ECS搭建基岩版服务器的方案。</p><h2 id="购买服务器"><a href="#购买服务器" class="headerlink" title="购买服务器"></a>购买服务器</h2><p>购买合适的云服务器，在此我使用了腾讯云的云+校园特惠套餐。<br><a href="https://cloud.tencent.com/act/campus">学生云服务器 - 腾讯云</a></p><h2 id="配置服务器"><a href="#配置服务器" class="headerlink" title="配置服务器"></a>配置服务器</h2><p>预装Ubantu系统，这里选择了Ubantu 18.04.1 LTS<br>在服务器的防火墙中放行端口 UDP 19132</p><h2 id="登录服务器"><a href="#登录服务器" class="headerlink" title="登录服务器"></a>登录服务器</h2><p>可以使用SSH软件远程连接服务器，如Xsheel、PuTTY等。<br>在此直接使用在服务器的管理后台页面进行登录</p><h2 id="安装游戏服务端核心"><a href="#安装游戏服务端核心" class="headerlink" title="安装游戏服务端核心"></a>安装游戏服务端核心</h2><p><a href="https://www.minecraft.net/en-us/download/server/bedrock">Minecraft Bedrock Server Download | Minecraft</a><br>可以在官网下载最新版的戏服务端核心</p><p><a href="https://meteormc.cn/threads/minecraft-bds-windows-ubuntu-1-18-1-20.49/">Minecraft 基岩版服务端 BDS 下载 | MeteorMC</a><br>在此想要下载其他版本的游戏服务端核心，可以使用第三方平台</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo -i <span class="hljs-comment">#更改权限</span><br><span class="hljs-built_in">mkdir</span> /mc <span class="hljs-comment">#创建目录</span><br><span class="hljs-built_in">cd</span> /mc <span class="hljs-comment">#进入目录</span><br>wget https://dl.meteormc.cn/bds-linux/bedrock-server-1.19.11.01.zip <span class="hljs-comment">#下载文件</span><br>unzip bedrock-server-1.19.11.01.zip <span class="hljs-comment">#解压文件</span><br></code></pre></td></tr></table></figure><h2 id="运行游戏服务器"><a href="#运行游戏服务器" class="headerlink" title="运行游戏服务器"></a>运行游戏服务器</h2><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">LD_LIBRARY_PATH</span>=. ./bedrock_server<br></code></pre></td></tr></table></figure><h2 id="关闭游戏服务器"><a href="#关闭游戏服务器" class="headerlink" title="关闭游戏服务器"></a>关闭游戏服务器</h2><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs arduino">stop<br></code></pre></td></tr></table></figure><h2 id="更改游戏服务器配置文件"><a href="#更改游戏服务器配置文件" class="headerlink" title="更改游戏服务器配置文件"></a>更改游戏服务器配置文件</h2><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs axapta">ls <span class="hljs-meta">#查看文件目录</span><br>cat <span class="hljs-keyword">server</span>.properties <span class="hljs-meta">#查看文件</span><br>vim <span class="hljs-keyword">server</span>.properties <span class="hljs-meta">#编辑文件，这里是使用vim工具进行编辑</span><br><br></code></pre></td></tr></table></figure><h2 id="挂载后台"><a href="#挂载后台" class="headerlink" title="挂载后台"></a>挂载后台</h2><p>可以使用screen来挂Linux后台</p><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">sudo apt <span class="hljs-keyword">install </span><span class="hljs-keyword">screen </span><span class="hljs-comment">#安装screen</span><br><span class="hljs-keyword">screen </span>-S name <span class="hljs-comment">#创建窗口</span><br></code></pre></td></tr></table></figure><p>退出当前窗口 Ctrl+a d</p><figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs gauss"><span class="hljs-keyword">screen</span> -ls <span class="hljs-meta">#窗口列表</span><br><span class="hljs-keyword">screen</span> -r name <span class="hljs-meta">#进入名为name的窗口</span><br><span class="hljs-keyword">screen</span> -D -r name <span class="hljs-meta">#远程连接进入screen窗口后突然掉线，重连遇到进不去窗口时可以通过以下命令踢掉上一个进入窗口的进程，然后进入窗口</span><br><span class="hljs-keyword">screen</span> -X -S name quit <span class="hljs-meta">#删除窗口</span><br></code></pre></td></tr></table></figure><h2 id="删除存档"><a href="#删除存档" class="headerlink" title="删除存档"></a>删除存档</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> worlds <span class="hljs-comment">#进入worlds目录</span><br><span class="hljs-built_in">rm</span> -rf <span class="hljs-string">&#x27;Bedrock level&#x27;</span> <span class="hljs-comment">#删除Bedrock level文件夹以及其下所有文件、文件夹</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>服务器</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>前端</title>
     <link href="/2023/12/12/Other-%E5%89%8D%E7%AB%AF/"/>
     <url>/2023/12/12/Other-%E5%89%8D%E7%AB%AF/</url>
@@ -1854,6 +1873,19 @@
   
   
   <entry>
+    <title>2A506</title>
+    <link href="/2023/01/14/2A506/"/>
+    <url>/2023/01/14/2A506/</url>
+    
+    <content type="html"><![CDATA[<h1 id="2A506"><a href="#2A506" class="headerlink" title="2A506"></a>2A506</h1><h2 id="校园网"><a href="#校园网" class="headerlink" title="校园网"></a>校园网</h2><h3 id="GDPC"><a href="#GDPC" class="headerlink" title="GDPC"></a>GDPC</h3><p><a href="http://172.19.2.20:8900/l">校园网自服务平台</a><br><strong>用户名</strong> 20223502140130<br><strong>密码</strong> 050011</p><p>I P地址               172.18.15.46<br>子网掩码             255.255.255.0<br>默认网关             172.18.15.254<br>首选DNS服务器  172.16.36.36<br>备用DNS服务器  172.16.35.101</p><h2 id="联系"><a href="#联系" class="headerlink" title="联系"></a>联系</h2><p><strong>队助</strong> 张霖 2a706 13376595850<br><strong>指导员</strong> 周海桐  9b407 15015961500<br><strong>中队长</strong> 纪家亮 15360631618</p><h2 id="选课"><a href="#选课" class="headerlink" title="选课"></a>选课</h2><p>公选2 专业2 网络2</p><h3 id="√"><a href="#√" class="headerlink" title="√"></a>√</h3><p>美学<br>多媒体<br>逻辑学<br>警察法学<br>被害人学概论<br>电影鉴赏<br>审讯心理<br>摄影艺术鉴赏<br>法律语言</p><p>詹笑红 人美无作业<br>胡彤婴<br>黎聪 人帅幽默<br>张鹏飞<br>容缨<br>张进</p><h3 id="×"><a href="#×" class="headerlink" title="×"></a>×</h3><p>文化鉴赏<br>公务员面试<br>网络侦查犯罪<br>大学英语六级<br>沟通与技巧<br>形式逻辑<br>危机谈判</p><p>范智星<br>王正仓<br>秦总根<br>宋晓明 考试容易 作业多<br>刘迪莎<br>曾祥星<br>郑璀宇<br>陈涛 地方口音重</p><h2 id="热水"><a href="#热水" class="headerlink" title="热水"></a>热水</h2><p>06:00-08:00<br>11:00-13:30<br>16:30-22:30</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>HC-05蓝牙模块</title>
     <link href="/2023/01/14/Arduino-HC-05%E8%93%9D%E7%89%99%E6%A8%A1%E5%9D%97/"/>
     <url>/2023/01/14/Arduino-HC-05%E8%93%9D%E7%89%99%E6%A8%A1%E5%9D%97/</url>
@@ -1866,19 +1898,6 @@
       <category>Arduino</category>
       
     </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>2A506</title>
-    <link href="/2023/01/14/2A506/"/>
-    <url>/2023/01/14/2A506/</url>
-    
-    <content type="html"><![CDATA[<h1 id="2A506"><a href="#2A506" class="headerlink" title="2A506"></a>2A506</h1><h2 id="校园网"><a href="#校园网" class="headerlink" title="校园网"></a>校园网</h2><h3 id="GDPC"><a href="#GDPC" class="headerlink" title="GDPC"></a>GDPC</h3><p><a href="http://172.19.2.20:8900/l">校园网自服务平台</a><br><strong>用户名</strong> 20223502140130<br><strong>密码</strong> 050011</p><p>I P地址               172.18.15.46<br>子网掩码             255.255.255.0<br>默认网关             172.18.15.254<br>首选DNS服务器  172.16.36.36<br>备用DNS服务器  172.16.35.101</p><h2 id="联系"><a href="#联系" class="headerlink" title="联系"></a>联系</h2><p><strong>队助</strong> 张霖 2a706 13376595850<br><strong>指导员</strong> 周海桐  9b407 15015961500<br><strong>中队长</strong> 纪家亮 15360631618</p><h2 id="选课"><a href="#选课" class="headerlink" title="选课"></a>选课</h2><p>公选2 专业2 网络2</p><h3 id="√"><a href="#√" class="headerlink" title="√"></a>√</h3><p>美学<br>多媒体<br>逻辑学<br>警察法学<br>被害人学概论<br>电影鉴赏<br>审讯心理<br>摄影艺术鉴赏<br>法律语言</p><p>詹笑红 人美无作业<br>胡彤婴<br>黎聪 人帅幽默<br>张鹏飞<br>容缨<br>张进</p><h3 id="×"><a href="#×" class="headerlink" title="×"></a>×</h3><p>文化鉴赏<br>公务员面试<br>网络侦查犯罪<br>大学英语六级<br>沟通与技巧<br>形式逻辑<br>危机谈判</p><p>范智星<br>王正仓<br>秦总根<br>宋晓明 考试容易 作业多<br>刘迪莎<br>曾祥星<br>郑璀宇<br>陈涛 地方口音重</p><h2 id="热水"><a href="#热水" class="headerlink" title="热水"></a>热水</h2><p>06:00-08:00<br>11:00-13:30<br>16:30-22:30</p>]]></content>
-    
     
     
   </entry>
