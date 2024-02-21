@@ -25,6 +25,8 @@
 <meta name="twitter:card" content="summary_large_image">
   
   
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
   
   <title>Garmin</title>
 
@@ -58,7 +60,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -84,7 +86,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Garmin_Blog</strong>
+      <strong>Garmin&#39;s Blog</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -104,7 +106,19 @@
             <li class="nav-item">
               <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-books"></i>
-                doc
+                Document
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Stack
               </a>
             </li>
           
@@ -116,7 +130,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
-                me
+                Me
               </a>
             </li>
           
@@ -166,6 +180,7 @@
   </header>
 
   <main>
+
     
       <div class="container nopadding-x-md">
         <div id="board"
@@ -176,22 +191,24 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
+<!--
 
+  
   <div class="row mx-auto index-card">
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2023/01/14/Arduino-L298N%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97/" target="_self">
-          L298N电机驱动模块
+        <a href="/2023/01/14/Arduino-HC-SR04%E8%B6%85%E5%A3%B0%E6%B3%A2%E4%BC%A0%E6%84%9F%E5%99%A8%E6%A8%A1%E5%9D%97/" target="_self">
+          HC-SR04超声波传感器模块
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/01/14/Arduino-L298N%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/01/14/Arduino-HC-SR04%E8%B6%85%E5%A3%B0%E6%B3%A2%E4%BC%A0%E6%84%9F%E5%99%A8%E6%A8%A1%E5%9D%97/" target="_self">
         <div>
-          L298N电机驱动模块参数VCC 模块供电12VGND 接地5V 模块对外输出5V，当板载5V使能端断开时为模块输入ENA1 ENA2 使能端 控制电机输出IN1 IN2 IN3 IN4 逻辑输入OUT1 OUT2电机输出 此处仅讨论控制单个电机    ENA IN1 IN2 直流电机状态    0 0 0 停止   1 0 0 制动   1 0 1 正转   1 1 0 反转   1 1 1 制
+          HC-SR04超声波传感器模块参数量程 2-400cmVCC 模块供电5VGND 接地Trig 触发信号输入Echo 回响信号输入 接线Trig–2Echo–3 代码112345678910111213141516171819202122float checkdistance_2_3() &#123;  digitalWrite(2, LOW); //给Trig发送一个低电平  delayMicr
         </div>
       </a>
 
@@ -230,16 +247,18 @@
       </div>
     </article>
   </div>
+  
 
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/102/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/101/#board">101</a><a class="page-number" href="/page/102/#board">102</a><span class="page-number current">103</span><a class="page-number" href="/page/104/#board">104</a><a class="page-number" href="/page/105/#board">105</a><span class="space">&hellip;</span><a class="page-number" href="/page/108/#board">108</a><a class="extend next" rel="next" href="/page/104/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/102/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/101/#board">101</a><a class="page-number" href="/page/102/#board">102</a><span class="page-number current">103</span><a class="page-number" href="/page/104/#board">104</a><a class="page-number" href="/page/105/#board">105</a><span class="space">&hellip;</span><a class="page-number" href="/page/110/#board">110</a><a class="extend next" rel="next" href="/page/104/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
 
+-->
 
               </div>
             </div>
@@ -285,6 +304,30 @@
        <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> & <a href="https://hexo.fluid-dev.com/docs/" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>Rowe</span> <i class="iconfont icon-love"></i> <a href="https://www.silentwolf.top/" target="_blank" rel="nofollow noopener"><span>Young</span></a> 
     </div>
   
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
   
   
   
@@ -341,6 +384,8 @@
 
 
   <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 

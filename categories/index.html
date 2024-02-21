@@ -25,6 +25,8 @@
 <meta name="twitter:card" content="summary_large_image">
   
   
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
   
   <title>分类 - Garmin</title>
 
@@ -58,7 +60,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -84,7 +86,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Garmin_Blog</strong>
+      <strong>Garmin&#39;s Blog</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -104,7 +106,19 @@
             <li class="nav-item">
               <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-books"></i>
-                doc
+                Document
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Stack
               </a>
             </li>
           
@@ -116,7 +130,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
-                me
+                Me
               </a>
             </li>
           
@@ -166,6 +180,7 @@
   </header>
 
   <main>
+
     
       <div class="container nopadding-x-md">
         <div id="board"
@@ -199,7 +214,7 @@
       
         <a href="/categories/Arduino/" class="category-count col-2 col-md-1 col-xm-1">
           <i class="iconfont icon-articles"></i>
-          <span>9</span>
+          <span>8</span>
         </a>
       
       <div class="category-collapse collapse " id="collapse-ee5bced252ab77ec8d633c1afda7c5da"
@@ -257,40 +272,10 @@
     
       
       
-        <a href="/2023/02/09/Arduino-RFID/" title="RFID"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">RFID</span>
+        <a href="/categories/Arduino/" class="list-group-item list-group-item-action">
+          <span class="category-post">More...</span>
         </a>
-      
-    
-      
-      
-        <a href="/2023/01/14/Arduino-ULN2003%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97/" title="ULN2003电机驱动模块"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">ULN2003电机驱动模块</span>
-        </a>
-      
-    
-      
-      
-        <a href="/2023/01/14/Arduino-%E5%85%A5%E9%97%A8%E6%B8%A0%E9%81%93/" title="入门渠道"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">入门渠道</span>
-        </a>
-      
-    
-      
-      
-        <a href="/2023/01/14/Arduino-%20%E7%8E%A9%E8%BD%ACLED/" title="玩转LED"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">玩转LED</span>
-        </a>
-      
-    
+        
   </div>
 
         
@@ -371,51 +356,6 @@
     
       
       
-        <a href="/2023/01/14/Blog%E5%8D%9A%E5%AE%A2-6)%E4%B8%BB%E9%A2%98%E5%BA%94%E7%94%A8/" title="6）主题应用"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">6）主题应用</span>
-        </a>
-      
-    
-      
-      
-        <a href="/2023/01/14/Blog%E5%8D%9A%E5%AE%A2-7)Netlify%E5%8A%A0%E9%80%9F%E9%83%A8%E7%BD%B2/" title="7）Netlify加速部署"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">7）Netlify加速部署</span>
-        </a>
-      
-    
-      
-      
-        <a href="/2023/01/14/Blog%E5%8D%9A%E5%AE%A2-8)%E4%BD%BF%E7%94%A8Typora%E6%92%B0%E5%86%99%E5%8D%9A%E6%96%87/" title="8）使用Typora撰写博文"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">8）使用Typora撰写博文</span>
-        </a>
-      
-    
-      
-      
-        <a href="/2023/01/14/Blog%E5%8D%9A%E5%AE%A2-9)%E8%87%AA%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/" title="9）自建博客图床"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">9）自建博客图床</span>
-        </a>
-      
-    
-      
-      
-        <a href="/2023/01/14/Blog%E5%8D%9A%E5%AE%A2-%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88%E5%92%8C%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" title="优化方案和问题解决"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">优化方案和问题解决</span>
-        </a>
-      
-    
-      
-      
         <a href="/categories/Blog/" class="list-group-item list-group-item-action">
           <span class="category-post">More...</span>
         </a>
@@ -431,6 +371,38 @@
     
     <div class="category row nomargin-x">
       <a class="category-item collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="CS"
+        id="heading-8d7e99c73cd5a10adaaf4c9f9a520368" role="tab" data-toggle="collapse" href="#collapse-8d7e99c73cd5a10adaaf4c9f9a520368"
+        aria-expanded="false"
+      >
+        CS
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/CS/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>3</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-8d7e99c73cd5a10adaaf4c9f9a520368"
+           role="tabpanel" aria-labelledby="heading-8d7e99c73cd5a10adaaf4c9f9a520368">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="C"
         id="heading-0d61f8370cad1d412f80b84d143e1257" role="tab" data-toggle="collapse" href="#collapse-0d61f8370cad1d412f80b84d143e1257"
         aria-expanded="false"
@@ -440,9 +412,9 @@
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-        <a href="/categories/C/" class="category-count col-2 col-md-1 col-xm-1">
+        <a href="/categories/CS/C/" class="category-count col-2 col-md-1 col-xm-1">
           <i class="iconfont icon-articles"></i>
-          <span>4</span>
+          <span>3</span>
         </a>
       
       <div class="category-collapse collapse " id="collapse-0d61f8370cad1d412f80b84d143e1257"
@@ -455,7 +427,7 @@
     
       
       
-        <a href="/2023/01/14/C-exe%E6%89%93%E5%8C%85/" title="exe打包"
+        <a href="/2023/01/14/CS-C-exe%E6%89%93%E5%8C%85/" title="exe打包"
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">exe打包</span>
@@ -464,7 +436,7 @@
     
       
       
-        <a href="/2023/01/14/C-%E3%80%8AC%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%AC%AC%E4%BA%94%E7%89%88%EF%BC%89%E3%80%8B/" title="《C程序设计（第五版）》"
+        <a href="/2023/01/14/CS-C-%E3%80%8AC%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%AC%AC%E4%BA%94%E7%89%88%EF%BC%89%E3%80%8B/" title="《C程序设计（第五版）》"
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">《C程序设计（第五版）》</span>
@@ -473,16 +445,7 @@
     
       
       
-        <a href="/2023/01/14/C-%E4%B8%87%E7%94%A8%E6%89%8B%E5%86%8C/" title="万用手册"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">万用手册</span>
-        </a>
-      
-    
-      
-      
-        <a href="/2023/01/14/C-%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95/" title="经典算法"
+        <a href="/2023/01/14/CS-C-%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95/" title="经典算法"
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">经典算法</span>
@@ -491,6 +454,10 @@
     
   </div>
 
+        
+      </div>
+    </div>
+  
         
       </div>
     </div>
@@ -569,13 +536,10 @@
     
       
       
-        <a href="/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-6)%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9-%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%20%E4%BC%A0%E8%BE%93%E6%97%A0%E9%98%BB/" title="6）共享文件夹-局域网内 传输无阻"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">6）共享文件夹-局域网内 传输无阻</span>
+        <a href="/categories/Campus-Network/" class="list-group-item list-group-item-action">
+          <span class="category-post">More...</span>
         </a>
-      
-    
+        
   </div>
 
         
@@ -587,99 +551,65 @@
     
     <div class="category row nomargin-x">
       <a class="category-item collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="JAVA"
-        id="heading-c71e8d17d41c21de0d260881d69662ff" role="tab" data-toggle="collapse" href="#collapse-c71e8d17d41c21de0d260881d69662ff"
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Game"
+        id="heading-63d72051e901c069f8aa1b32aa0c43bb" role="tab" data-toggle="collapse" href="#collapse-63d72051e901c069f8aa1b32aa0c43bb"
         aria-expanded="false"
       >
-        JAVA
+        Game
         <span class="list-group-count"></span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-        <a href="/categories/JAVA/" class="category-count col-2 col-md-1 col-xm-1">
+        <a href="/categories/Game/" class="category-count col-2 col-md-1 col-xm-1">
           <i class="iconfont icon-articles"></i>
-          <span>1</span>
+          <span>10</span>
         </a>
       
-      <div class="category-collapse collapse " id="collapse-c71e8d17d41c21de0d260881d69662ff"
-           role="tabpanel" aria-labelledby="heading-c71e8d17d41c21de0d260881d69662ff">
+      <div class="category-collapse collapse " id="collapse-63d72051e901c069f8aa1b32aa0c43bb"
+           role="tabpanel" aria-labelledby="heading-63d72051e901c069f8aa1b32aa0c43bb">
         
         
+          
           
   <div class="category-post-list">
     
     
       
       
-        <a href="/2023/02/14/JAVA-%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/" title="准备工作"
+        <a href="/2023/01/14/Game-Arma3/" title="Arma3"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">准备工作</span>
+          <span class="category-post">Arma3</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/01/14/Game-CSGO/" title="CS:GO"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">CS:GO</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/09/09/Game-GTAOL/" title="GTAOL"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">GTAOL</span>
         </a>
       
     
   </div>
 
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Learn"
-        id="heading-2f1a3e62508d88ddc31f1aa72a8334d4" role="tab" data-toggle="collapse" href="#collapse-2f1a3e62508d88ddc31f1aa72a8334d4"
-        aria-expanded="false"
-      >
-        Learn
-        <span class="list-group-count"></span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-        <a href="/categories/Learn/" class="category-count col-2 col-md-1 col-xm-1">
-          <i class="iconfont icon-articles"></i>
-          <span>2</span>
-        </a>
-      
-      <div class="category-collapse collapse " id="collapse-2f1a3e62508d88ddc31f1aa72a8334d4"
-           role="tabpanel" aria-labelledby="heading-2f1a3e62508d88ddc31f1aa72a8334d4">
-        
-        
           
-  <div class="category-post-list">
-    
-    
-      
-      
-        <a href="/2023/01/14/Learn-CET-4/" title="CET-4"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">CET-4</span>
-        </a>
-      
-    
-      
-      
-        <a href="/2023/03/27/Learn-%E4%B9%B1/" title="乱"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">乱</span>
-        </a>
-      
-    
-  </div>
-
-        
-      </div>
-    </div>
   
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Minecraft"
         id="heading-e3416675e3a20772d0b78f45f4ce995d" role="tab" data-toggle="collapse" href="#collapse-e3416675e3a20772d0b78f45f4ce995d"
         aria-expanded="false"
@@ -689,7 +619,7 @@
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-        <a href="/categories/Minecraft/" class="category-count col-2 col-md-1 col-xm-1">
+        <a href="/categories/Game/Minecraft/" class="category-count col-2 col-md-1 col-xm-1">
           <i class="iconfont icon-articles"></i>
           <span>5</span>
         </a>
@@ -704,7 +634,7 @@
     
       
       
-        <a href="/2023/04/09/Minecraft-Minecraft/" title="Minecraft"
+        <a href="/2023/04/09/Game-Minecraft-Minecraft/" title="Minecraft"
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">Minecraft</span>
@@ -713,7 +643,7 @@
     
       
       
-        <a href="/2023/04/09/Minecraft-%E5%9F%BA%E5%B2%A9%E7%89%88+%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="基岩版+云服务器"
+        <a href="/2023/04/09/Game-Minecraft-%E5%9F%BA%E5%B2%A9%E7%89%88+%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="基岩版+云服务器"
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">基岩版+云服务器</span>
@@ -722,7 +652,7 @@
     
       
       
-        <a href="/2023/05/12/Minecraft-%E5%9F%BA%E5%B2%A9%E7%89%88+%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="基岩版+本地服务器"
+        <a href="/2023/05/12/Game-Minecraft-%E5%9F%BA%E5%B2%A9%E7%89%88+%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="基岩版+本地服务器"
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">基岩版+本地服务器</span>
@@ -731,24 +661,79 @@
     
       
       
-        <a href="/2023/06/18/Minecraft-%E6%8B%93%E5%B1%95/" title="拓展"
+        <a href="/2023/12/23/Game-Minecraft-%E5%BC%80%E6%9C%8D/" title="开服"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">开服</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/06/18/Game-Minecraft-%E6%8B%93%E5%B1%95/" title="拓展"
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">拓展</span>
         </a>
       
     
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="The Forest"
+        id="heading-76350b55ad2e3e7cb2c29b23a6d4d6b6" role="tab" data-toggle="collapse" href="#collapse-76350b55ad2e3e7cb2c29b23a6d4d6b6"
+        aria-expanded="false"
+      >
+        The Forest
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/Game/The-Forest/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>2</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-76350b55ad2e3e7cb2c29b23a6d4d6b6"
+           role="tabpanel" aria-labelledby="heading-76350b55ad2e3e7cb2c29b23a6d4d6b6">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
       
       
-        <a href="/2023/12/23/Minecraft-%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="服务器"
+        <a href="/2023/10/28/Game-The%20Forest-%E5%BC%80%E6%9C%8D/" title="开服"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">服务器</span>
+          <span class="category-post">开服</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/10/30/Game-The%20Forest-%E6%89%8B%E5%8A%A8%E5%AD%98%E6%A1%A3/" title="手动存档"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">手动存档</span>
         </a>
       
     
   </div>
 
+        
+      </div>
+    </div>
+  
         
       </div>
     </div>
@@ -769,13 +754,14 @@
       
         <a href="/categories/Other/" class="category-count col-2 col-md-1 col-xm-1">
           <i class="iconfont icon-articles"></i>
-          <span>33</span>
+          <span>29</span>
         </a>
       
       <div class="category-collapse collapse " id="collapse-6311ae17c1ee52b36e68aaf4ad066387"
            role="tabpanel" aria-labelledby="heading-6311ae17c1ee52b36e68aaf4ad066387">
         
         
+          
           
   <div class="category-post-list">
     
@@ -800,55 +786,10 @@
     
       
       
-        <a href="/2023/01/14/Other-Arma3/" title="Arma3"
+        <a href="/2023/01/14/Other-CET-4/" title="CET-4"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">Arma3</span>
-        </a>
-      
-    
-      
-      
-        <a href="/2023/01/14/Other-CSGO/" title="CS:GO"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">CS:GO</span>
-        </a>
-      
-    
-      
-      
-        <a href="/2023/02/03/Other-FTP/" title="FTP"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">FTP</span>
-        </a>
-      
-    
-      
-      
-        <a href="/2023/09/09/Other-GTAOL/" title="GTAOL"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">GTAOL</span>
-        </a>
-      
-    
-      
-      
-        <a href="/2023/08/13/Other-Linux/" title="Linux"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Linux</span>
-        </a>
-      
-    
-      
-      
-        <a href="/2023/02/26/Other-Matlab/" title="Matlab"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Matlab</span>
+          <span class="category-post">CET-4</span>
         </a>
       
     
@@ -878,6 +819,59 @@
         
   </div>
 
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Tips"
+        id="heading-a0d4cc0f54602c3f247c72f15a7d2dbf" role="tab" data-toggle="collapse" href="#collapse-a0d4cc0f54602c3f247c72f15a7d2dbf"
+        aria-expanded="false"
+      >
+        Tips
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/Other/Tips/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>2</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-a0d4cc0f54602c3f247c72f15a7d2dbf"
+           role="tabpanel" aria-labelledby="heading-a0d4cc0f54602c3f247c72f15a7d2dbf">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2023/02/03/Other-FTP/" title="FTP"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">FTP</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/01/14/Other-Unicode/" title="Unicode"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Unicode</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
         
       </div>
     </div>
@@ -898,7 +892,7 @@
       
         <a href="/categories/Photography/" class="category-count col-2 col-md-1 col-xm-1">
           <i class="iconfont icon-articles"></i>
-          <span>5</span>
+          <span>4</span>
         </a>
       
       <div class="category-collapse collapse " id="collapse-a2a5c33eda9046576764de2400b1aa50"
@@ -908,15 +902,6 @@
           
   <div class="category-post-list">
     
-    
-      
-      
-        <a href="/2023/01/14/Photography%E6%91%84%E5%BD%B1-%E5%85%A5%E9%97%A8%E6%B8%A0%E9%81%93/" title="入门渠道"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">入门渠道</span>
-        </a>
-      
     
       
       
@@ -976,7 +961,7 @@
       
         <a href="/categories/Photoshop/" class="category-count col-2 col-md-1 col-xm-1">
           <i class="iconfont icon-articles"></i>
-          <span>5</span>
+          <span>4</span>
         </a>
       
       <div class="category-collapse collapse " id="collapse-b54639d99cf1d38dd97e8904e94bc63e"
@@ -986,15 +971,6 @@
           
   <div class="category-post-list">
     
-    
-      
-      
-        <a href="/2023/01/14/Photoshop-%E5%85%A5%E9%97%A8%E6%B8%A0%E9%81%93/" title="入门渠道"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">入门渠道</span>
-        </a>
-      
     
       
       
@@ -1029,48 +1005,6 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">速成</span>
-        </a>
-      
-    
-  </div>
-
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Premiere"
-        id="heading-3ae5cd686076ec42d902f2e874008a9d" role="tab" data-toggle="collapse" href="#collapse-3ae5cd686076ec42d902f2e874008a9d"
-        aria-expanded="false"
-      >
-        Premiere
-        <span class="list-group-count"></span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-        <a href="/categories/Premiere/" class="category-count col-2 col-md-1 col-xm-1">
-          <i class="iconfont icon-articles"></i>
-          <span>1</span>
-        </a>
-      
-      <div class="category-collapse collapse " id="collapse-3ae5cd686076ec42d902f2e874008a9d"
-           role="tabpanel" aria-labelledby="heading-3ae5cd686076ec42d902f2e874008a9d">
-        
-        
-          
-  <div class="category-post-list">
-    
-    
-      
-      
-        <a href="/2023/01/14/Premiere-%E5%85%A5%E9%97%A8%E6%B8%A0%E9%81%93/" title="入门渠道"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">入门渠道</span>
         </a>
       
     
@@ -1165,7 +1099,7 @@
       
         <a href="/categories/Python/" class="category-count col-2 col-md-1 col-xm-1">
           <i class="iconfont icon-articles"></i>
-          <span>3</span>
+          <span>2</span>
         </a>
       
       <div class="category-collapse collapse " id="collapse-a7f5f35426b927411fc9231b56382173"
@@ -1187,70 +1121,10 @@
     
       
       
-        <a href="/2023/01/14/Python-%E5%85%A5%E9%97%A8%E6%B8%A0%E9%81%93/" title="入门渠道"
+        <a href="/2023/12/09/Python-%E7%88%AC%E8%99%AB/" title="爬虫"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">入门渠道</span>
-        </a>
-      
-    
-      
-      
-        <a href="/2023/12/09/Python-%E7%88%AC%E8%99%AB%E5%85%A5%E9%97%A8/" title="爬虫入门"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">爬虫入门</span>
-        </a>
-      
-    
-  </div>
-
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="The Forest"
-        id="heading-76350b55ad2e3e7cb2c29b23a6d4d6b6" role="tab" data-toggle="collapse" href="#collapse-76350b55ad2e3e7cb2c29b23a6d4d6b6"
-        aria-expanded="false"
-      >
-        The Forest
-        <span class="list-group-count"></span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-        <a href="/categories/The-Forest/" class="category-count col-2 col-md-1 col-xm-1">
-          <i class="iconfont icon-articles"></i>
-          <span>2</span>
-        </a>
-      
-      <div class="category-collapse collapse " id="collapse-76350b55ad2e3e7cb2c29b23a6d4d6b6"
-           role="tabpanel" aria-labelledby="heading-76350b55ad2e3e7cb2c29b23a6d4d6b6">
-        
-        
-          
-  <div class="category-post-list">
-    
-    
-      
-      
-        <a href="/2023/10/28/The%20Forest-The%20Forest%E5%BC%80%E6%9C%8D/" title="The Forest开服"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">The Forest开服</span>
-        </a>
-      
-    
-      
-      
-        <a href="/2023/10/30/The%20Forest-%E6%89%8B%E5%8A%A8%E5%AD%98%E6%A1%A3/" title="手动存档"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">手动存档</span>
+          <span class="category-post">爬虫</span>
         </a>
       
     
@@ -1276,7 +1150,7 @@
       
         <a href="/categories/UserScript/" class="category-count col-2 col-md-1 col-xm-1">
           <i class="iconfont icon-articles"></i>
-          <span>9</span>
+          <span>8</span>
         </a>
       
       <div class="category-collapse collapse " id="collapse-72e1bb98b2c20ea5e0f90b8f6081c03c"
@@ -1334,40 +1208,10 @@
     
       
       
-        <a href="/2023/05/25/UserScript-%E7%99%BE%E5%BA%A6%E6%96%87%E5%BA%93%E8%87%AA%E7%94%B1%E5%A4%8D%E5%88%B6/" title="百度文库自由复制"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">百度文库自由复制</span>
+        <a href="/categories/UserScript/" class="list-group-item list-group-item-action">
+          <span class="category-post">More...</span>
         </a>
-      
-    
-      
-      
-        <a href="/2023/05/25/UserScript-%E7%99%BE%E5%BA%A6%E7%AE%80%E5%8C%96/" title="百度简化"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">百度简化</span>
-        </a>
-      
-    
-      
-      
-        <a href="/2023/05/25/UserScript-%E7%99%BE%E5%BA%A6%E8%87%AA%E5%8A%A8%E6%90%9C%E7%B4%A2/" title="百度自动搜索"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">百度自动搜索</span>
-        </a>
-      
-    
-      
-      
-        <a href="/2023/05/28/UserScript-%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91/" title="脚本开发"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">脚本开发</span>
-        </a>
-      
-    
+        
   </div>
 
         
@@ -1533,6 +1377,30 @@
     </div>
   
   
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
   
   
 
@@ -1588,6 +1456,8 @@
 
 
   <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 

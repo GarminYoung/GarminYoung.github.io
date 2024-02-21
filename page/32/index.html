@@ -25,6 +25,8 @@
 <meta name="twitter:card" content="summary_large_image">
   
   
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
   
   <title>Garmin</title>
 
@@ -58,7 +60,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -84,7 +86,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Garmin_Blog</strong>
+      <strong>Garmin&#39;s Blog</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -104,7 +106,19 @@
             <li class="nav-item">
               <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-books"></i>
-                doc
+                Document
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Stack
               </a>
             </li>
           
@@ -116,7 +130,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
-                me
+                Me
               </a>
             </li>
           
@@ -166,6 +180,7 @@
   </header>
 
   <main>
+
     
       <div class="container nopadding-x-md">
         <div id="board"
@@ -176,22 +191,24 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
+<!--
 
+  
   <div class="row mx-auto index-card">
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2023/04/10/Other-%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%AF%94%E8%B5%9B/" target="_self">
-          数学建模比赛
+        <a href="/2023/05/25/UserScript-%E7%99%BE%E5%BA%A6%E6%96%87%E5%BA%93%E8%87%AA%E7%94%B1%E5%A4%8D%E5%88%B6/" target="_self">
+          百度文库自由复制
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/04/10/Other-%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%AF%94%E8%B5%9B/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/05/25/UserScript-%E7%99%BE%E5%BA%A6%E6%96%87%E5%BA%93%E8%87%AA%E7%94%B1%E5%A4%8D%E5%88%B6/" target="_self">
         <div>
-          数学建模比赛数学建模 - 中国大学生在线什么是「数学建模」？ - 知乎数学建模比赛都有哪些？ - 知乎 MathorCupMathorCup高校数学建模挑战赛官网 OtherSPSSPRO-免费专业的在线数据分析平台 数阔八爪鱼采集器 - 免费网络爬虫软件 在线LaTeX公式编辑器 CodeInWord|在word中优雅展现的代码 PythonAnacondaAnacondaAnaconda介绍、
+          百度文库自由复制1234567891011121314151617181920212223242526272829303132333435363738394041// ==UserScript==// @name         百度文库自由复制// @version      0.0.1// @description  百度文库免vip自由复制// @match        *://wenku
         </div>
       </a>
 
@@ -199,8 +216,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-04-10 18:16" pubdate>
-              2023-04-10
+            <time datetime="2023-05-25 18:23" pubdate>
+              2023-05-25
             </time>
           </div>
         
@@ -215,7 +232,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Other/" class="category-chain-item">Other</a>
+  <a href="/categories/UserScript/" class="category-chain-item">UserScript</a>
   
   
 
@@ -230,16 +247,18 @@
       </div>
     </article>
   </div>
+  
 
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/31/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/#board">30</a><a class="page-number" href="/page/31/#board">31</a><span class="page-number current">32</span><a class="page-number" href="/page/33/#board">33</a><a class="page-number" href="/page/34/#board">34</a><span class="space">&hellip;</span><a class="page-number" href="/page/108/#board">108</a><a class="extend next" rel="next" href="/page/33/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/31/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/#board">30</a><a class="page-number" href="/page/31/#board">31</a><span class="page-number current">32</span><a class="page-number" href="/page/33/#board">33</a><a class="page-number" href="/page/34/#board">34</a><span class="space">&hellip;</span><a class="page-number" href="/page/110/#board">110</a><a class="extend next" rel="next" href="/page/33/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
 
+-->
 
               </div>
             </div>
@@ -285,6 +304,30 @@
        <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> & <a href="https://hexo.fluid-dev.com/docs/" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>Rowe</span> <i class="iconfont icon-love"></i> <a href="https://www.silentwolf.top/" target="_blank" rel="nofollow noopener"><span>Young</span></a> 
     </div>
   
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
   
   
   
@@ -341,6 +384,8 @@
 
 
   <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 

@@ -25,6 +25,8 @@
 <meta name="twitter:card" content="summary_large_image">
   
   
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
   
   <title>Garmin</title>
 
@@ -58,7 +60,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -84,7 +86,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Garmin_Blog</strong>
+      <strong>Garmin&#39;s Blog</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -104,7 +106,19 @@
             <li class="nav-item">
               <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-books"></i>
-                doc
+                Document
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Stack
               </a>
             </li>
           
@@ -116,7 +130,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
-                me
+                Me
               </a>
             </li>
           
@@ -166,6 +180,7 @@
   </header>
 
   <main>
+
     
       <div class="container nopadding-x-md">
         <div id="board"
@@ -176,22 +191,24 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
+<!--
 
+  
   <div class="row mx-auto index-card">
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2023/01/14/Arduino-ULN2003%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97/" target="_self">
-          ULN2003电机驱动模块
+        <a href="/2023/01/14/Blog%E5%8D%9A%E5%AE%A2-2)GitHub%E8%BF%9C%E7%AB%AF%E9%83%A8%E7%BD%B2/" target="_self">
+          2）使用GitHub远端部署
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/01/14/Arduino-ULN2003%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/01/14/Blog%E5%8D%9A%E5%AE%A2-2)GitHub%E8%BF%9C%E7%AB%AF%E9%83%A8%E7%BD%B2/" target="_self">
         <div>
-          ULN2003电机驱动模块参数28BYJ-48步进电机 外径28毫米四相八拍式永磁减速型步进电机VCC 模块供电5VGND 接地 接线IN–8IN2–9IN3–10IN4–11VCC–VCCIGBD–GND 代码12345678910111213141516171819202122232425//使用arduino IDE自带的Stepper.h库文件#include &lt;Stepper.h&
+          2）GitHub远端部署使用GitHub远端部署在GitHub建立个人仓库在Repository name一栏中填写仓库名YourGithubName.github.io（YourGithubName为你的GitHub名称）点击Create repository创建个人仓库 安装部署插件在blog目录下打开Git Bush（右击文件夹）进行安装 cnpm install --save hexo-d
         </div>
       </a>
 
@@ -215,7 +232,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Arduino/" class="category-chain-item">Arduino</a>
+  <a href="/categories/Blog/" class="category-chain-item">Blog</a>
   
   
 
@@ -230,16 +247,18 @@
       </div>
     </article>
   </div>
+  
 
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/98/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/97/#board">97</a><a class="page-number" href="/page/98/#board">98</a><span class="page-number current">99</span><a class="page-number" href="/page/100/#board">100</a><a class="page-number" href="/page/101/#board">101</a><span class="space">&hellip;</span><a class="page-number" href="/page/108/#board">108</a><a class="extend next" rel="next" href="/page/100/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/98/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/97/#board">97</a><a class="page-number" href="/page/98/#board">98</a><span class="page-number current">99</span><a class="page-number" href="/page/100/#board">100</a><a class="page-number" href="/page/101/#board">101</a><span class="space">&hellip;</span><a class="page-number" href="/page/110/#board">110</a><a class="extend next" rel="next" href="/page/100/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
 
+-->
 
               </div>
             </div>
@@ -285,6 +304,30 @@
        <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> & <a href="https://hexo.fluid-dev.com/docs/" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>Rowe</span> <i class="iconfont icon-love"></i> <a href="https://www.silentwolf.top/" target="_blank" rel="nofollow noopener"><span>Young</span></a> 
     </div>
   
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
   
   
   
@@ -341,6 +384,8 @@
 
 
   <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 

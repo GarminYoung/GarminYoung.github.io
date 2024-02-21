@@ -29,6 +29,8 @@
 <meta name="twitter:card" content="summary_large_image">
   
   
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
   
   <title>3）Markdown语法 - Garmin</title>
 
@@ -68,7 +70,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -94,7 +96,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Garmin_Blog</strong>
+      <strong>Garmin&#39;s Blog</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -114,7 +116,19 @@
             <li class="nav-item">
               <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-books"></i>
-                doc
+                Document
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Stack
               </a>
             </li>
           
@@ -126,7 +140,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
-                me
+                Me
               </a>
             </li>
           
@@ -193,6 +207,7 @@
   </header>
 
   <main>
+
     
       
 
@@ -200,7 +215,155 @@
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
       
-  <aside class="sidebar category-bar" style="margin-right: -1rem">
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">3）Markdown语法</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="3）Markdown语法"><a href="#3）Markdown语法" class="headerlink" title="3）Markdown语法"></a>3）Markdown语法</h1><p>写博文使用的语言是Markdown语法.</p>
+<p><a target="_blank" rel="noopener" href="https://markdown.com.cn/">Markdown</a>是一种轻量级的「标记语言」，通常为程序员群体所用，目前它已是全球最大的技术分享网站 GitHub 和技术问答网站 StackOverFlow 的御用书写格式.</p>
+<h2 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h2><p>md文件中最上方的内容.</p>
+<p>被—分隔开，用于指定个别文件的变量.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">Hello</span> <span class="hljs-string">World</span> <span class="hljs-comment"># 标题就是我们上面创建的时候指定的名字</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2021</span><span class="hljs-string">/1/1</span> <span class="hljs-number">00</span><span class="hljs-string">:00:00</span> <span class="hljs-comment"># 文件创建的时间</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure>
+<h3 id="其他预定义参数"><a href="#其他预定义参数" class="headerlink" title="其他预定义参数"></a>其他预定义参数</h3><p>layout 布局 默认为true</p>
+<p>title 标题 显示在最上方居中位置</p>
+<p>date 建立日期 如果不指定则为默认值-文件创建日期，可自定义.</p>
+<p>update 更新日期 如果不指定则为默认值-文件修改后重新生成静态文件的日期.</p>
+<p>comments 文章的评论功能 默认值为true</p>
+<p>tags 标签 不适用于页面page布局</p>
+<p>categories 分类 不适用于页面page布局</p>
+<p>permalink 覆盖文章网址</p>
+<p>keywords 仅用于 meta 标签和 Open Graph 的关键词（不推荐使用）</p>
+<h3 id="分类层级关系"><a href="#分类层级关系" class="headerlink" title="分类层级关系"></a>分类层级关系</h3><figure class="highlight ldif"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs ldif"><span class="hljs-attribute">categories</span>:<br><span class="hljs-literal">-</span> first<br><span class="hljs-literal">-</span> second<br></code></pre></td></tr></table></figure>
+<h3 id="多个分类和标签"><a href="#多个分类和标签" class="headerlink" title="多个分类和标签"></a>多个分类和标签</h3><figure class="highlight ldif"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ldif"><span class="hljs-attribute">categories</span>:<br><span class="hljs-literal">-</span> [one, two]<br></code></pre></td></tr></table></figure>
+<h2 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h2><h3 id="嵌入哔哩哔哩视频"><a href="#嵌入哔哩哔哩视频" class="headerlink" title="嵌入哔哩哔哩视频"></a>嵌入哔哩哔哩视频</h3><p><strong>获取视频嵌入代码</strong></p>
+<p>在哔哩哔哩网站上对应的视频分享功能中获得代码.</p>
+<p><strong>添加视频外链</strong></p>
+<p>为防止其他因素干扰，Hexo中将使用raw标签来插入 html 代码.</p>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs abnf">&#123;% raw %&#125;<br><br>&lt;div style<span class="hljs-operator">=</span><span class="hljs-string">&quot;position: relative; width: 100%; height: 0; padding-bottom: 75%;&quot;</span>&gt;<br>    &lt;iframe src<span class="hljs-operator">=</span><span class="hljs-string">&quot;//player.bilibili.com/player.html?aid=245348856&amp;bvid=BV1dv411r7EW&amp;cid=258193178&amp;page=1&quot;</span> scrolling<span class="hljs-operator">=</span><span class="hljs-string">&quot;no&quot;</span> border<span class="hljs-operator">=</span><span class="hljs-string">&quot;0&quot;</span> frameborder<span class="hljs-operator">=</span><span class="hljs-string">&quot;no&quot;</span> framespacing<span class="hljs-operator">=</span><span class="hljs-string">&quot;0&quot;</span> allowfullscreen<span class="hljs-operator">=</span><span class="hljs-string">&quot;true&quot;</span> style<span class="hljs-operator">=</span><span class="hljs-string">&quot;position: absolute; width: 100%; height: 100%; left: 0; top: 0;&quot;</span>&gt;<br>    &lt;/iframe&gt;<br>&lt;/div&gt;<br><br>&#123;% endraw %&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="嵌入网页"><a href="#嵌入网页" class="headerlink" title="嵌入网页"></a>嵌入网页</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">&lt;iframe <span class="hljs-attribute">src</span>=<span class="hljs-string">&quot;https://www.silentwolf.top&quot;</span> <span class="hljs-attribute">frameBorder</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attribute">width</span>=<span class="hljs-string">&quot;800&quot;</span> <span class="hljs-attribute">scrolling</span>=<span class="hljs-string">&quot;auto&quot;</span> <span class="hljs-attribute">height</span>=<span class="hljs-string">&quot;500&quot;</span>&gt;&lt;/iframe&gt;<br></code></pre></td></tr></table></figure>
+
+<h3 id="上下标"><a href="#上下标" class="headerlink" title="上下标"></a>上下标</h3><p>使用HTML标签进行上下标的编辑.</p>
+<p><strong>下标</strong></p>
+<p><code>θ&lt;sub&gt;1&lt;/sub&gt;</code></p>
+<p>θ<sub>1</sub></p>
+<p><strong>上标</strong></p>
+<p><code>θ&lt;sup&gt;2&lt;/sup&gt;</code></p>
+<p>θ<sup>2</sup></p>
+<h3 id="引入音乐"><a href="#引入音乐" class="headerlink" title="引入音乐"></a>引入音乐</h3><p><a target="_blank" rel="noopener" href="https://zhuxinfeng.cn/archives/markdown%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90">https://zhuxinfeng.cn/archives/markdown%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90</a></p>
+<h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/110602456"> Markdown痛点「图片」专题-知乎</a></p>
+<h3 id="图片排版"><a href="#图片排版" class="headerlink" title="图片排版"></a>图片排版</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_41010198/article/details/86639739">Markdwon中多张图片的并排显示-CSDN</a></p>
+<h2 id="发表文章"><a href="#发表文章" class="headerlink" title="发表文章"></a>发表文章</h2><p>发布文章或者修改博客后需Hexo三连.</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">hexo</span> clean <span class="hljs-comment"># 清楚缓存</span><br>hexo g <span class="hljs-comment"># 生成静态文件</span><br>hexo d <span class="hljs-comment"># 远程部署</span><br></code></pre></td></tr></table></figure>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Blog/" class="category-chain-item">Blog</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>3）Markdown语法</div>
+      <div>http://example.com/2023/01/14/Blog博客-3)Markdown语法/</div>
+    </div>
+    <div class="license-meta">
+      
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
+                    <i class="iconfont icon-sa"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-left: -1rem">
     
 
 
@@ -344,154 +507,6 @@
 
 
     </div>
-
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div id="board">
-          <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">3）Markdown语法</h1>
-            
-            
-              <div class="markdown-body">
-                
-                <h1 id="3）Markdown语法"><a href="#3）Markdown语法" class="headerlink" title="3）Markdown语法"></a>3）Markdown语法</h1><p>写博文使用的语言是Markdown语法.</p>
-<p><a target="_blank" rel="noopener" href="https://markdown.com.cn/">Markdown</a>是一种轻量级的「标记语言」，通常为程序员群体所用，目前它已是全球最大的技术分享网站 GitHub 和技术问答网站 StackOverFlow 的御用书写格式.</p>
-<h2 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h2><p>md文件中最上方的内容.</p>
-<p>被—分隔开，用于指定个别文件的变量.</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">Hello</span> <span class="hljs-string">World</span> <span class="hljs-comment"># 标题就是我们上面创建的时候指定的名字</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2021</span><span class="hljs-string">/1/1</span> <span class="hljs-number">00</span><span class="hljs-string">:00:00</span> <span class="hljs-comment"># 文件创建的时间</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure>
-<h3 id="其他预定义参数"><a href="#其他预定义参数" class="headerlink" title="其他预定义参数"></a>其他预定义参数</h3><p>layout 布局 默认为true</p>
-<p>title 标题 显示在最上方居中位置</p>
-<p>date 建立日期 如果不指定则为默认值-文件创建日期，可自定义.</p>
-<p>update 更新日期 如果不指定则为默认值-文件修改后重新生成静态文件的日期.</p>
-<p>comments 文章的评论功能 默认值为true</p>
-<p>tags 标签 不适用于页面page布局</p>
-<p>categories 分类 不适用于页面page布局</p>
-<p>permalink 覆盖文章网址</p>
-<p>keywords 仅用于 meta 标签和 Open Graph 的关键词（不推荐使用）</p>
-<h3 id="分类层级关系"><a href="#分类层级关系" class="headerlink" title="分类层级关系"></a>分类层级关系</h3><figure class="highlight ldif"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs ldif"><span class="hljs-attribute">categories</span>:<br><span class="hljs-literal">-</span> first<br><span class="hljs-literal">-</span> second<br></code></pre></td></tr></table></figure>
-<h3 id="多个分类和标签"><a href="#多个分类和标签" class="headerlink" title="多个分类和标签"></a>多个分类和标签</h3><figure class="highlight ldif"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ldif"><span class="hljs-attribute">categories</span>:<br><span class="hljs-literal">-</span> [one, two]<br></code></pre></td></tr></table></figure>
-<h2 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h2><h3 id="嵌入哔哩哔哩视频"><a href="#嵌入哔哩哔哩视频" class="headerlink" title="嵌入哔哩哔哩视频"></a>嵌入哔哩哔哩视频</h3><p><strong>获取视频嵌入代码</strong></p>
-<p>在哔哩哔哩网站上对应的视频分享功能中获得代码.</p>
-<p><strong>添加视频外链</strong></p>
-<p>为防止其他因素干扰，Hexo中将使用raw标签来插入 html 代码.</p>
-<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs abnf">&#123;% raw %&#125;<br><br>&lt;div style<span class="hljs-operator">=</span><span class="hljs-string">&quot;position: relative; width: 100%; height: 0; padding-bottom: 75%;&quot;</span>&gt;<br>    &lt;iframe src<span class="hljs-operator">=</span><span class="hljs-string">&quot;//player.bilibili.com/player.html?aid=245348856&amp;bvid=BV1dv411r7EW&amp;cid=258193178&amp;page=1&quot;</span> scrolling<span class="hljs-operator">=</span><span class="hljs-string">&quot;no&quot;</span> border<span class="hljs-operator">=</span><span class="hljs-string">&quot;0&quot;</span> frameborder<span class="hljs-operator">=</span><span class="hljs-string">&quot;no&quot;</span> framespacing<span class="hljs-operator">=</span><span class="hljs-string">&quot;0&quot;</span> allowfullscreen<span class="hljs-operator">=</span><span class="hljs-string">&quot;true&quot;</span> style<span class="hljs-operator">=</span><span class="hljs-string">&quot;position: absolute; width: 100%; height: 100%; left: 0; top: 0;&quot;</span>&gt;<br>    &lt;/iframe&gt;<br>&lt;/div&gt;<br><br>&#123;% endraw %&#125;<br></code></pre></td></tr></table></figure>
-<h3 id="嵌入网页"><a href="#嵌入网页" class="headerlink" title="嵌入网页"></a>嵌入网页</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">&lt;iframe <span class="hljs-attribute">src</span>=<span class="hljs-string">&quot;https://www.silentwolf.top&quot;</span> <span class="hljs-attribute">frameBorder</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attribute">width</span>=<span class="hljs-string">&quot;800&quot;</span> <span class="hljs-attribute">scrolling</span>=<span class="hljs-string">&quot;auto&quot;</span> <span class="hljs-attribute">height</span>=<span class="hljs-string">&quot;500&quot;</span>&gt;&lt;/iframe&gt;<br></code></pre></td></tr></table></figure>
-
-<h3 id="上下标"><a href="#上下标" class="headerlink" title="上下标"></a>上下标</h3><p>使用HTML标签进行上下标的编辑.</p>
-<p><strong>下标</strong></p>
-<p><code>θ&lt;sub&gt;1&lt;/sub&gt;</code></p>
-<p>θ<sub>1</sub></p>
-<p><strong>上标</strong></p>
-<p><code>θ&lt;sup&gt;2&lt;/sup&gt;</code></p>
-<p>θ<sup>2</sup></p>
-<h3 id="引入音乐"><a href="#引入音乐" class="headerlink" title="引入音乐"></a>引入音乐</h3><p><a target="_blank" rel="noopener" href="https://zhuxinfeng.cn/archives/markdown%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90">https://zhuxinfeng.cn/archives/markdown%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90</a></p>
-<h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/110602456"> Markdown痛点「图片」专题-知乎</a></p>
-<h3 id="图片排版"><a href="#图片排版" class="headerlink" title="图片排版"></a>图片排版</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_41010198/article/details/86639739">Markdwon中多张图片的并排显示-CSDN</a></p>
-<h2 id="发表文章"><a href="#发表文章" class="headerlink" title="发表文章"></a>发表文章</h2><p>发布文章或者修改博客后需Hexo三连.</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">hexo</span> clean <span class="hljs-comment"># 清楚缓存</span><br>hexo g <span class="hljs-comment"># 生成静态文件</span><br>hexo d <span class="hljs-comment"># 远程部署</span><br></code></pre></td></tr></table></figure>
-                
-              </div>
-            
-            <hr/>
-            <div>
-              <div class="post-metas my-3">
-  
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Blog/" class="category-chain-item">Blog</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-</div>
-
-
-              
-  
-
-  <div class="license-box my-3">
-    <div class="license-title">
-      <div>3）Markdown语法</div>
-      <div>http://example.com/2023/01/14/Blog博客-3)Markdown语法/</div>
-    </div>
-    <div class="license-meta">
-      
-      
-      
-      
-        <div class="license-meta-item">
-          <div>许可协议</div>
-          <div>
-            
-              
-              
-                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                    <i class="iconfont icon-by"></i>
-                  </span>
-                </a>
-              
-                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
-                    <i class="iconfont icon-nc"></i>
-                  </span>
-                </a>
-              
-                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
-                    <i class="iconfont icon-sa"></i>
-                  </span>
-                </a>
-              
-            
-          </div>
-        </div>
-      
-    </div>
-    <div class="license-icon iconfont"></div>
-  </div>
-
-
-
-              
-            </div>
-
-            
-          </article>
-        </div>
-      </div>
-    </div>
-
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-  <aside class="sidebar" style="margin-left: -1rem">
-    <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-
-
-  </aside>
-
-
-    </div>
   </div>
 </div>
 
@@ -565,6 +580,30 @@
        <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> & <a href="https://hexo.fluid-dev.com/docs/" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>Rowe</span> <i class="iconfont icon-love"></i> <a href="https://www.silentwolf.top/" target="_blank" rel="nofollow noopener"><span>Young</span></a> 
     </div>
   
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
   
   
   
@@ -755,6 +794,8 @@
   <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 
