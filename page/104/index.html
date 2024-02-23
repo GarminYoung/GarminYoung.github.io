@@ -60,7 +60,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/garminyoung.github.io/garminyoung.github.io/search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -119,6 +119,18 @@
               <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 Stack
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/test/">
+                <i class="iconfont icon-link-fill"></i>
+                Test
               </a>
             </li>
           
@@ -200,15 +212,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2023/01/14/Arduino-HX711%E6%A8%A1%E5%9D%97/" target="_self">
-          HX711模块
+        <a href="/2023/01/14/Arduino-HC-SR04%E8%B6%85%E5%A3%B0%E6%B3%A2%E4%BC%A0%E6%84%9F%E5%99%A8%E6%A8%A1%E5%9D%97/" target="_self">
+          HC-SR04超声波传感器模块
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/01/14/Arduino-HX711%E6%A8%A1%E5%9D%97/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/01/14/Arduino-HC-SR04%E8%B6%85%E5%A3%B0%E6%B3%A2%E4%BC%A0%E6%84%9F%E5%99%A8%E6%A8%A1%E5%9D%97/" target="_self">
         <div>
-          HX711模块参数VCC 模块供电5VGND 接地DTSCKE+E-A+A-B+B- 接线DT–3SCK–2 代码1234567891011121314151617#include &lt;Q2HX711.h&gt; //引用HX711库const byte hx711_data_pin = 3; //data管脚3const byte hx711_clock_pin = 2; //时钟管脚2Q2
+          HC-SR04超声波传感器模块参数量程 2-400cmVCC 模块供电5VGND 接地Trig 触发信号输入Echo 回响信号输入 接线Trig–2Echo–3 代码112345678910111213141516171819202122float checkdistance_2_3() &#123;  digitalWrite(2, LOW); //给Trig发送一个低电平  delayMicr
         </div>
       </a>
 
@@ -253,7 +265,7 @@
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/103/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/102/#board">102</a><a class="page-number" href="/page/103/#board">103</a><span class="page-number current">104</span><a class="page-number" href="/page/105/#board">105</a><a class="page-number" href="/page/106/#board">106</a><span class="space">&hellip;</span><a class="page-number" href="/page/110/#board">110</a><a class="extend next" rel="next" href="/page/105/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/103/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/102/#board">102</a><a class="page-number" href="/page/103/#board">103</a><span class="page-number current">104</span><a class="page-number" href="/page/105/#board">105</a><a class="page-number" href="/page/106/#board">106</a><span class="space">&hellip;</span><a class="page-number" href="/page/111/#board">111</a><a class="extend next" rel="next" href="/page/105/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
