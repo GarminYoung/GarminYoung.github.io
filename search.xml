@@ -8,7 +8,7 @@
     <link href="/2024/04/06/Learn-BurpSuite/"/>
     <url>/2024/04/06/Learn-BurpSuite/</url>
     
-    <content type="html"><![CDATA[<h1 id="BurpSuite"><a href="#BurpSuite" class="headerlink" title="BurpSuite"></a>BurpSuite</h1><p>没学明白</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="BurpSuite"><a href="#BurpSuite" class="headerlink" title="BurpSuite"></a>BurpSuite</h1><p><a href="https://portswigger.net/burp">Burp Suite - Application Security Testing Software - PortSwigger</a></p><p><a href="https://portswigger.net/burp/documentation/desktop">Burp Suite 文档</a></p><p>没学明白</p>]]></content>
     
     
     <categories>
@@ -105,7 +105,7 @@
     <link href="/2024/03/24/Tags-CTF/"/>
     <url>/2024/03/24/Tags-CTF/</url>
     
-    <content type="html"><![CDATA[<h1 id="CTF"><a href="#CTF" class="headerlink" title="CTF"></a>CTF</h1><h2 id="学习-amp-刷题"><a href="#学习-amp-刷题" class="headerlink" title="学习&amp;刷题"></a>学习&amp;刷题</h2><p><a href="https://www.nssctf.cn/index">NSSCTF</a><br><a href="https://www.nssctf.cn/explore">星辰大海 | NSSCTF</a></p><p><a href="https://hello-ctf.com/">Hello CTF</a></p><p><a href="https://ctf-wiki.org/">CTF Wiki</a><br><a href="https://ctf-wiki.github.io/ctf-tools/">CTF Tools</a></p><p><a href="https://www.ctfhub.com/#/index">CTFHub</a><br><a href="https://www.wolai.com/ctfhub/mx8kc7g4asd98bs8N2nk7F">CTFHub知识库</a></p><p><a href="https://buuoj.cn/">BUUCTF</a></p><p><a href="https://adworld.xctf.org.cn/home/index">攻防世界</a><br><a href="https://adworld.xctf.org.cn/challenges/problem-set-index?id=25">攻防世界 Web入门题</a><br><a href="https://www.bilibili.com/video/BV1rz4y137dF/">攻防世界 Web入门题 讲解 - bilibili</a><br><a href="https://adworld.xctf.org.cn/challenges/problem-set-index?id=1&rwNmOdr=1712475097686">攻防世界 MISC入门题</a><br><a href="https://zhuanlan.zhihu.com/p/127269755">最详细攻防世界MISC新手区小白解法 - 知乎</a></p><p><a href="https://ctf.show/">CTF秀</a></p><p><a href="https://zhuanlan.zhihu.com/p/631613398">2023最全CTF入门指南  - 知乎</a></p><h2 id="比赛"><a href="#比赛" class="headerlink" title="比赛"></a>比赛</h2><h3 id="全国大学生信息安全竞赛"><a href="#全国大学生信息安全竞赛" class="headerlink" title="全国大学生信息安全竞赛"></a><a href="http://www.ciscn.cn/">全国大学生信息安全竞赛</a></h3><p>创新实践能力大赛</p><h3 id="X-NUCA全国高校网安联赛"><a href="#X-NUCA全国高校网安联赛" class="headerlink" title="X-NUCA全国高校网安联赛"></a>X-NUCA全国高校网安联赛</h3><h3 id="ISG信息安全技能竞赛"><a href="#ISG信息安全技能竞赛" class="headerlink" title="ISG信息安全技能竞赛"></a>ISG信息安全技能竞赛</h3><h3 id="蓝帽杯"><a href="#蓝帽杯" class="headerlink" title="蓝帽杯"></a>蓝帽杯</h3><p><a href="https://www.qianxin.com/bluehatcup/2023">第七届蓝帽杯全国大学生网络安全技能大赛</a></p><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p><a href="https://www.cmd5.com/">md5在线解密破解</a></p><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://www.bilibili.com/read/cv17159157?spm_id_from=444.41.list.card_article.click">基于B站的网络安全学习线路 - 哔哩哔哩</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="CTF"><a href="#CTF" class="headerlink" title="CTF"></a>CTF</h1><h2 id="学习-amp-刷题"><a href="#学习-amp-刷题" class="headerlink" title="学习&amp;刷题"></a>学习&amp;刷题</h2><p><a href="https://www.nssctf.cn/index">NSSCTF</a><br><a href="https://www.nssctf.cn/explore">星辰大海 | NSSCTF</a></p><p><a href="https://hello-ctf.com/">Hello CTF</a></p><p><a href="https://ctf-wiki.org/">CTF Wiki</a><br><a href="https://ctf-wiki.github.io/ctf-tools/">CTF Tools</a></p><p><a href="https://www.ctfhub.com/#/index">CTFHub</a><br><a href="https://www.wolai.com/ctfhub/mx8kc7g4asd98bs8N2nk7F">CTFHub知识库</a></p><p><a href="https://buuoj.cn/">BUUCTF</a></p><p><a href="https://ctf.bugku.com/">Bugku CTF</a></p><p><a href="https://adworld.xctf.org.cn/home/index">攻防世界</a><br><a href="https://adworld.xctf.org.cn/challenges/problem-set-index?id=25">攻防世界 Web入门题</a><br><a href="https://www.bilibili.com/video/BV1rz4y137dF/">攻防世界 Web入门题 讲解 - bilibili</a><br><a href="https://adworld.xctf.org.cn/challenges/problem-set-index?id=1&rwNmOdr=1712475097686">攻防世界 MISC入门题</a><br><a href="https://zhuanlan.zhihu.com/p/127269755">最详细攻防世界MISC新手区小白解法 - 知乎</a></p><p><a href="https://ctf.show/">CTF秀</a></p><p><a href="https://zhuanlan.zhihu.com/p/631613398">2023最全CTF入门指南  - 知乎</a></p><h2 id="比赛"><a href="#比赛" class="headerlink" title="比赛"></a>比赛</h2><h3 id="全国大学生信息安全竞赛"><a href="#全国大学生信息安全竞赛" class="headerlink" title="全国大学生信息安全竞赛"></a><a href="http://www.ciscn.cn/">全国大学生信息安全竞赛</a></h3><p>创新实践能力大赛</p><h3 id="X-NUCA全国高校网安联赛"><a href="#X-NUCA全国高校网安联赛" class="headerlink" title="X-NUCA全国高校网安联赛"></a>X-NUCA全国高校网安联赛</h3><h3 id="ISG信息安全技能竞赛"><a href="#ISG信息安全技能竞赛" class="headerlink" title="ISG信息安全技能竞赛"></a>ISG信息安全技能竞赛</h3><h3 id="蓝帽杯"><a href="#蓝帽杯" class="headerlink" title="蓝帽杯"></a>蓝帽杯</h3><p><a href="https://www.qianxin.com/bluehatcup/2023">第七届蓝帽杯全国大学生网络安全技能大赛</a></p><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p><a href="https://www.cmd5.com/">md5在线解密破解</a></p><p><a href="https://www.cnblogs.com/bflw/p/12938013.html">常见网络安全设备弱口令(默认口令) - 博客园</a></p><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://www.bilibili.com/read/cv17159157?spm_id_from=444.41.list.card_article.click">基于B站的网络安全学习线路 - 哔哩哔哩</a></p>]]></content>
     
     
     
@@ -1564,11 +1564,11 @@
   
   
   <entry>
-    <title>中国衔称</title>
-    <link href="/2023/01/14/Other-%E4%B8%AD%E5%9B%BD%E8%A1%94%E7%A7%B0/"/>
-    <url>/2023/01/14/Other-%E4%B8%AD%E5%9B%BD%E8%A1%94%E7%A7%B0/</url>
+    <title>Wargame</title>
+    <link href="/2023/01/14/Other-Wargame/"/>
+    <url>/2023/01/14/Other-Wargame/</url>
     
-    <content type="html"><![CDATA[<h1 id="中国衔称"><a href="#中国衔称" class="headerlink" title="中国衔称"></a>中国衔称</h1><h2 id="军衔"><a href="#军衔" class="headerlink" title="军衔"></a>军衔</h2><h3 id="军官军衔"><a href="#军官军衔" class="headerlink" title="军官军衔"></a>军官军衔</h3><p>共三等十级<br>将官 上将、中将、少将；<br>校官 大校、上校、中校、少校；<br>尉官 上尉、中尉、少尉。</p><h3 id="士兵军衔"><a href="#士兵军衔" class="headerlink" title="士兵军衔"></a>士兵军衔</h3><p>按照军衔等级划分<br>高级士官 一级军士长、二级军士长、三级军士长<br>中级士官 四级军士长、上士<br>初级士官 中士、下士<br>兵 上等兵、列兵</p><h2 id="警衔"><a href="#警衔" class="headerlink" title="警衔"></a>警衔</h2><p>共两类<br>行政警衔（肩章底板藏青色，同警服颜色）<br>专业技术警衔（肩章底板青灰色，同大檐帽帽带颜色）</p><p>共五等十三级<br>总警监、副总警监<br>一级、二级、三级警监<br>一级、二级、三级警督<br>一级、二级、三级警司<br>一级、二级警员</p><p><a href="https://zhuanlan.zhihu.com/p/47249929">警校师兄教你弄清楚警衔和警察对应的级别-知乎</a></p><h2 id="外交衔"><a href="#外交衔" class="headerlink" title="外交衔"></a>外交衔</h2><p>设七级<br>大使衔、公使衔、参赞衔<br>一等秘书衔、二等秘书衔、三等秘书衔<br>随员衔</p><h2 id="消防救援衔"><a href="#消防救援衔" class="headerlink" title="消防救援衔"></a>消防救援衔</h2><h3 id="管理指挥人员"><a href="#管理指挥人员" class="headerlink" title="管理指挥人员"></a>管理指挥人员</h3><p>共三等十一级<br>总监 副总监 助理总监<br>高级、一级、二级、三级指挥长<br>一级、二级、三级、四级指挥员</p><h3 id="专业技术人员"><a href="#专业技术人员" class="headerlink" title="专业技术人员"></a>专业技术人员</h3><p>共二等八级<br>专业技术高级指挥长和一级、二级、三级指挥长<br>专业技术一级、二级、三级、四级指挥员</p><h3 id="消防员"><a href="#消防员" class="headerlink" title="消防员"></a>消防员</h3><p>一级、二级、三级消防长<br>一级、二级、三级、四级消防士<br>预备消防士</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Wargame"><a href="#Wargame" class="headerlink" title="Wargame"></a>Wargame</h1><p><a href="https://www.bilibili.com/read/cv13910105/">Wargame从入门到入土（进阶篇）-哔哩哔哩</a></p><p><a href="https://zhuanlan.zhihu.com/p/44629069">水弹基础知识/下场规则/比赛模式-知乎</a></p><p><a href="https://zhuanlan.zhihu.com/p/257436641">小明杂谈|水弹枪真的违法么？-知乎</a></p><p><a href="https://www.66law.cn/question/answer/15762868.html#:~:text=%E5%85%AC%E5%AE%89%E9%83%A8%E5%AF%B9%E6%B0%B4%E5%BC%B9%E6%9E%AA%E6%B2%A1,%EF%BC%8C%E9%83%BD%E7%AE%97%E8%BF%9D%E6%B3%95%E6%9E%AA%E6%94%AF%E3%80%82">公安部对水弹枪的规定-华律网</a></p>]]></content>
     
     
     <categories>
@@ -1583,11 +1583,11 @@
   
   
   <entry>
-    <title>Wargame</title>
-    <link href="/2023/01/14/Other-Wargame/"/>
-    <url>/2023/01/14/Other-Wargame/</url>
+    <title>中国衔称</title>
+    <link href="/2023/01/14/Other-%E4%B8%AD%E5%9B%BD%E8%A1%94%E7%A7%B0/"/>
+    <url>/2023/01/14/Other-%E4%B8%AD%E5%9B%BD%E8%A1%94%E7%A7%B0/</url>
     
-    <content type="html"><![CDATA[<h1 id="Wargame"><a href="#Wargame" class="headerlink" title="Wargame"></a>Wargame</h1><p><a href="https://www.bilibili.com/read/cv13910105/">Wargame从入门到入土（进阶篇）-哔哩哔哩</a></p><p><a href="https://zhuanlan.zhihu.com/p/44629069">水弹基础知识/下场规则/比赛模式-知乎</a></p><p><a href="https://zhuanlan.zhihu.com/p/257436641">小明杂谈|水弹枪真的违法么？-知乎</a></p><p><a href="https://www.66law.cn/question/answer/15762868.html#:~:text=%E5%85%AC%E5%AE%89%E9%83%A8%E5%AF%B9%E6%B0%B4%E5%BC%B9%E6%9E%AA%E6%B2%A1,%EF%BC%8C%E9%83%BD%E7%AE%97%E8%BF%9D%E6%B3%95%E6%9E%AA%E6%94%AF%E3%80%82">公安部对水弹枪的规定-华律网</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="中国衔称"><a href="#中国衔称" class="headerlink" title="中国衔称"></a>中国衔称</h1><h2 id="军衔"><a href="#军衔" class="headerlink" title="军衔"></a>军衔</h2><h3 id="军官军衔"><a href="#军官军衔" class="headerlink" title="军官军衔"></a>军官军衔</h3><p>共三等十级<br>将官 上将、中将、少将；<br>校官 大校、上校、中校、少校；<br>尉官 上尉、中尉、少尉。</p><h3 id="士兵军衔"><a href="#士兵军衔" class="headerlink" title="士兵军衔"></a>士兵军衔</h3><p>按照军衔等级划分<br>高级士官 一级军士长、二级军士长、三级军士长<br>中级士官 四级军士长、上士<br>初级士官 中士、下士<br>兵 上等兵、列兵</p><h2 id="警衔"><a href="#警衔" class="headerlink" title="警衔"></a>警衔</h2><p>共两类<br>行政警衔（肩章底板藏青色，同警服颜色）<br>专业技术警衔（肩章底板青灰色，同大檐帽帽带颜色）</p><p>共五等十三级<br>总警监、副总警监<br>一级、二级、三级警监<br>一级、二级、三级警督<br>一级、二级、三级警司<br>一级、二级警员</p><p><a href="https://zhuanlan.zhihu.com/p/47249929">警校师兄教你弄清楚警衔和警察对应的级别-知乎</a></p><h2 id="外交衔"><a href="#外交衔" class="headerlink" title="外交衔"></a>外交衔</h2><p>设七级<br>大使衔、公使衔、参赞衔<br>一等秘书衔、二等秘书衔、三等秘书衔<br>随员衔</p><h2 id="消防救援衔"><a href="#消防救援衔" class="headerlink" title="消防救援衔"></a>消防救援衔</h2><h3 id="管理指挥人员"><a href="#管理指挥人员" class="headerlink" title="管理指挥人员"></a>管理指挥人员</h3><p>共三等十一级<br>总监 副总监 助理总监<br>高级、一级、二级、三级指挥长<br>一级、二级、三级、四级指挥员</p><h3 id="专业技术人员"><a href="#专业技术人员" class="headerlink" title="专业技术人员"></a>专业技术人员</h3><p>共二等八级<br>专业技术高级指挥长和一级、二级、三级指挥长<br>专业技术一级、二级、三级、四级指挥员</p><h3 id="消防员"><a href="#消防员" class="headerlink" title="消防员"></a>消防员</h3><p>一级、二级、三级消防长<br>一级、二级、三级、四级消防士<br>预备消防士</p>]]></content>
     
     
     <categories>
@@ -1680,11 +1680,11 @@
   
   
   <entry>
-    <title>Arma3</title>
-    <link href="/2023/01/14/Game-Arma3/"/>
-    <url>/2023/01/14/Game-Arma3/</url>
+    <title>CS:GO</title>
+    <link href="/2023/01/14/Game-CSGO/"/>
+    <url>/2023/01/14/Game-CSGO/</url>
     
-    <content type="html"><![CDATA[<h1 id="Arma3"><a href="#Arma3" class="headerlink" title="Arma3"></a>Arma3</h1><p>k指南针<br>i库存<br>Ctrl加右键 切换瞄具<br>x蹲下<br>z趴下<br>shift加速<br>m地图<br>空格 默认操作<br>地图坐标 073-123 先下后左<br>G投掷<br>B望远镜<br>c脚架<br>v翻越障碍</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="CS-GO"><a href="#CS-GO" class="headerlink" title="CS:GO"></a>CS:GO</h1><p><a href="https://csgo.wanmei.com/5th-anniversary">《反恐精英:全球攻势》CS:GO</a>是一款热门的第一人称射击游戏。</p><h2 id="竞技平台"><a href="#竞技平台" class="headerlink" title="竞技平台"></a>竞技平台</h2><p><a href="https://pvp.wanmei.com/">完美世界竞技平台</a>|<a href="https://www.5eplay.com/">5EPlay</a>|<a href="https://www.b5csgo.plus/">B5对战平台官网</a></p><h2 id="适当优化"><a href="#适当优化" class="headerlink" title="适当优化"></a>适当优化</h2><p>修改设置,画质全面降低<br>Steam–右键csgo–属性–通用–取消勾选”在游戏中启用Steam界面”<br>Steam–右键csgo–打开文件位置–右键csgo.exe–属性–兼容性–禁用全屏优化<br>游戏内设置–各项异性优化–三线性</p><h2 id="启动项"><a href="#启动项" class="headerlink" title="启动项"></a>启动项</h2><p>Steam–右键csgo–属性–通用–启动选项</p><p>-nojoy   关闭摇杆<br>-high   将CSGO进程优先级设置为高<br>-d3d9ex   提升性能<br>-disable_d3d9ex   禁用DirectX 9Ex<br>-novid   关闭开场CS:GO动画(仅适用于国际服)<br>-worldwide   国际服启动项<br>-perfectworld    国服启动项<br>-preload  预加载纹理和建模<br>-processheap   缓解内存引起的卡顿<br>-threads n   多线程处理(n为设备的最大线程数量)</p><h2 id="控制台命令"><a href="#控制台命令" class="headerlink" title="控制台命令"></a>控制台命令</h2><p>net_graph 1/0   开启/关闭查看你的fps、ping、loss、choke、tick等主要参数<br>net_graphpos 0/1/2   参数显示位置左/中/右<br>net_graphheight n   显示位置高度n<br>net_graphproportionalfont 1/0.9   显示字体大/小</p><p>cl_righthand 0/1   左/右手持枪<br>fps_max n   锁定帧数(n为需要锁定的帧数)<br>fps_max 0   解除锁帧</p><p>bot_add_ct/t   增加ct/t<br>bot_kick   踢出所有机器人<br>mp_autoteambalance 1   自动平衡<br>mp_limitteams 0   关闭双方人数差异值<br>bot_difficulty 0/1/2/3   BOT 难度，0最难，3最简单 (默认最难)</p><p>sv_cheats 0/1   关闭/开启作弊模式<br>sv_showimpacts 1   显示弹痕<br>nocli   穿墙模式<br>bind v “noclip”   绑定按键，按v键开启穿墙模式<br>sv_infinite_ammo 1   无限武器弹药<br>sv_grenade_trajectory 1   手雷轨迹<br>weapon_accuracy_nospread 1 跑打不扩散<br>后座力 weapon_accuracy_nospread 1;weapon_recoil_scale 0-1<br>枪口抖动 weapon_recoil_view_punch_extra 0-1<br>模型透视 r_drawothermodels 0/1/2 隐身/正常/网格<br>骨骼透视 cl_countbones 1<br>穿墙透视 mat_fillrate 1<br>锁头<br>mp_damage_scale_t/ct_body<br>ent_fire !picker addoutput “ModelScale 0”<br>移速 ent_fire player_speedmod ModifySpeed 3<br>无敌<br>healthshot_healthboost_damage_multiplier 0<br>healthshot_healthboost_time 10000<br>重型装甲快速切枪<br>mp_heavyassaultsuit_speed 360<br>mp_heavyassaultsuit_deploy_timescale 100<br>修改重力 ent_fire !self addoutput “gravity X”<br>武器发光<br>glow_outline_effect_enable 1<br>mp_weapons_glow_on_ground 1<br>方框 r_drawrenderboxes 1<br>关闭光影 mat_fullbright 1<br>隐藏烟雾 r_drawparticles 0</p><p>give weapon_smokegrenade   获取烟雾弹<br>give weapon_hegrenade   获取手雷<br>give weapon_flashbang   获取闪光弹<br>获得治疗剂 give weapon_healthshot</p><p>mp_roundtime_defuse 60   每回合时长为60min</p><p>viewmodel_fov 60<br>viewmodel_offset_x -2.5<del>2.5<br>viewmodel_offset_y -2</del>2<br>viewmodel_offset_z -2~2</p><p><a href="https://mbsifu.com/library/game/csgo/command/">CS:GO控制台指令</a></p><p><a href="https://bubaigei.com/trivia/2076">CS2控制台实用指令</a></p><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>y 全局聊天<br>u 队伍聊天<br>k 开麦</p><h2 id="局域网联机"><a href="#局域网联机" class="headerlink" title="局域网联机"></a>局域网联机</h2><p>多台电脑连接同一局域网并打开CS:GO<br>都输入控制台指令 sv_lan 1 打开局域网联机模式<br>其中主机开好房间输入控制台指令 status 配置主机<br>其他机器输入控制台指令 connect IP 连接主机(其中的IP在主机status时可以看到,例connect 192.168.0.xxx:27015/192.168.0.xxx)</p><p>disconnect   退出正在连接中的服务器<br>retry   重连最近一次进过的服务器<br>exit/quit   退出游戏</p><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>枪法 灵敏度 准星 压枪 预瞄<br>策略 思路 进攻 防守 意识<br>点位 地图 熟悉<br>道具<br>身法 蹲跳<br>优化 帧数 启动项<br>机制 伤害 经济</p><p><a href="https://www.csgo.com.cn/">https://www.csgo.com.cn/</a></p><p>300$为手枪、步枪击杀奖励<br>600$为微冲击杀奖励<br>900$为重型武器击杀奖励<br>1500$为刀杀奖励</p><p>CZ75击杀奖励就被降至100$<br>微冲系列中的P90击杀奖励被降至300$<br>步枪系列中的AWP击杀奖励被降至100$</p>]]></content>
     
     
     <categories>
@@ -1699,11 +1699,11 @@
   
   
   <entry>
-    <title>CS:GO</title>
-    <link href="/2023/01/14/Game-CSGO/"/>
-    <url>/2023/01/14/Game-CSGO/</url>
+    <title>Arma3</title>
+    <link href="/2023/01/14/Game-Arma3/"/>
+    <url>/2023/01/14/Game-Arma3/</url>
     
-    <content type="html"><![CDATA[<h1 id="CS-GO"><a href="#CS-GO" class="headerlink" title="CS:GO"></a>CS:GO</h1><p><a href="https://csgo.wanmei.com/5th-anniversary">《反恐精英:全球攻势》CS:GO</a>是一款热门的第一人称射击游戏。</p><h2 id="竞技平台"><a href="#竞技平台" class="headerlink" title="竞技平台"></a>竞技平台</h2><p><a href="https://pvp.wanmei.com/">完美世界竞技平台</a>|<a href="https://www.5eplay.com/">5EPlay</a>|<a href="https://www.b5csgo.plus/">B5对战平台官网</a></p><h2 id="适当优化"><a href="#适当优化" class="headerlink" title="适当优化"></a>适当优化</h2><p>修改设置,画质全面降低<br>Steam–右键csgo–属性–通用–取消勾选”在游戏中启用Steam界面”<br>Steam–右键csgo–打开文件位置–右键csgo.exe–属性–兼容性–禁用全屏优化<br>游戏内设置–各项异性优化–三线性</p><h2 id="启动项"><a href="#启动项" class="headerlink" title="启动项"></a>启动项</h2><p>Steam–右键csgo–属性–通用–启动选项</p><p>-nojoy   关闭摇杆<br>-high   将CSGO进程优先级设置为高<br>-d3d9ex   提升性能<br>-disable_d3d9ex   禁用DirectX 9Ex<br>-novid   关闭开场CS:GO动画(仅适用于国际服)<br>-worldwide   国际服启动项<br>-perfectworld    国服启动项<br>-preload  预加载纹理和建模<br>-processheap   缓解内存引起的卡顿<br>-threads n   多线程处理(n为设备的最大线程数量)</p><h2 id="控制台命令"><a href="#控制台命令" class="headerlink" title="控制台命令"></a>控制台命令</h2><p>net_graph 1/0   开启/关闭查看你的fps、ping、loss、choke、tick等主要参数<br>net_graphpos 0/1/2   参数显示位置左/中/右<br>net_graphheight n   显示位置高度n<br>net_graphproportionalfont 1/0.9   显示字体大/小</p><p>cl_righthand 0/1   左/右手持枪<br>fps_max n   锁定帧数(n为需要锁定的帧数)<br>fps_max 0   解除锁帧</p><p>bot_add_ct/t   增加ct/t<br>bot_kick   踢出所有机器人<br>mp_autoteambalance 1   自动平衡<br>mp_limitteams 0   关闭双方人数差异值<br>bot_difficulty 0/1/2/3   BOT 难度，0最难，3最简单 (默认最难)</p><p>sv_cheats 0/1   关闭/开启作弊模式<br>sv_showimpacts 1   显示弹痕<br>nocli   穿墙模式<br>bind v “noclip”   绑定按键，按v键开启穿墙模式<br>sv_infinite_ammo 1   无限武器弹药<br>sv_grenade_trajectory 1   手雷轨迹<br>weapon_accuracy_nospread 1 跑打不扩散<br>后座力 weapon_accuracy_nospread 1;weapon_recoil_scale 0-1<br>枪口抖动 weapon_recoil_view_punch_extra 0-1<br>模型透视 r_drawothermodels 0/1/2 隐身/正常/网格<br>骨骼透视 cl_countbones 1<br>穿墙透视 mat_fillrate 1<br>锁头<br>mp_damage_scale_t/ct_body<br>ent_fire !picker addoutput “ModelScale 0”<br>移速 ent_fire player_speedmod ModifySpeed 3<br>无敌<br>healthshot_healthboost_damage_multiplier 0<br>healthshot_healthboost_time 10000<br>重型装甲快速切枪<br>mp_heavyassaultsuit_speed 360<br>mp_heavyassaultsuit_deploy_timescale 100<br>修改重力 ent_fire !self addoutput “gravity X”<br>武器发光<br>glow_outline_effect_enable 1<br>mp_weapons_glow_on_ground 1<br>方框 r_drawrenderboxes 1<br>关闭光影 mat_fullbright 1<br>隐藏烟雾 r_drawparticles 0</p><p>give weapon_smokegrenade   获取烟雾弹<br>give weapon_hegrenade   获取手雷<br>give weapon_flashbang   获取闪光弹<br>获得治疗剂 give weapon_healthshot</p><p>mp_roundtime_defuse 60   每回合时长为60min</p><p>viewmodel_fov 60<br>viewmodel_offset_x -2.5<del>2.5<br>viewmodel_offset_y -2</del>2<br>viewmodel_offset_z -2~2</p><p><a href="https://mbsifu.com/library/game/csgo/command/">CS:GO控制台指令</a></p><p><a href="https://bubaigei.com/trivia/2076">CS2控制台实用指令</a></p><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>y 全局聊天<br>u 队伍聊天<br>k 开麦</p><h2 id="局域网联机"><a href="#局域网联机" class="headerlink" title="局域网联机"></a>局域网联机</h2><p>多台电脑连接同一局域网并打开CS:GO<br>都输入控制台指令 sv_lan 1 打开局域网联机模式<br>其中主机开好房间输入控制台指令 status 配置主机<br>其他机器输入控制台指令 connect IP 连接主机(其中的IP在主机status时可以看到,例connect 192.168.0.xxx:27015/192.168.0.xxx)</p><p>disconnect   退出正在连接中的服务器<br>retry   重连最近一次进过的服务器<br>exit/quit   退出游戏</p><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>枪法 灵敏度 准星 压枪 预瞄<br>策略 思路 进攻 防守 意识<br>点位 地图 熟悉<br>道具<br>身法 蹲跳<br>优化 帧数 启动项<br>机制 伤害 经济</p><p><a href="https://www.csgo.com.cn/">https://www.csgo.com.cn/</a></p><p>300$为手枪、步枪击杀奖励<br>600$为微冲击杀奖励<br>900$为重型武器击杀奖励<br>1500$为刀杀奖励</p><p>CZ75击杀奖励就被降至100$<br>微冲系列中的P90击杀奖励被降至300$<br>步枪系列中的AWP击杀奖励被降至100$</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Arma3"><a href="#Arma3" class="headerlink" title="Arma3"></a>Arma3</h1><p>k指南针<br>i库存<br>Ctrl加右键 切换瞄具<br>x蹲下<br>z趴下<br>shift加速<br>m地图<br>空格 默认操作<br>地图坐标 073-123 先下后左<br>G投掷<br>B望远镜<br>c脚架<br>v翻越障碍</p>]]></content>
     
     
     <categories>
@@ -1832,11 +1832,11 @@
   
   
   <entry>
-    <title>3）共享WiFi-电脑也是路由器</title>
-    <link href="/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-3)%E5%85%B1%E4%BA%ABWiFi-%E7%94%B5%E8%84%91%E4%B9%9F%E6%98%AF%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
-    <url>/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-3)%E5%85%B1%E4%BA%ABWiFi-%E7%94%B5%E8%84%91%E4%B9%9F%E6%98%AF%E8%B7%AF%E7%94%B1%E5%99%A8/</url>
+    <title>2）USB网络共享-手机成为上网卡</title>
+    <link href="/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-2)USB%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB-%E6%89%8B%E6%9C%BA%E6%88%90%E4%B8%BA%E4%B8%8A%E7%BD%91%E5%8D%A1/"/>
+    <url>/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-2)USB%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB-%E6%89%8B%E6%9C%BA%E6%88%90%E4%B8%BA%E4%B8%8A%E7%BD%91%E5%8D%A1/</url>
     
-    <content type="html"><![CDATA[<h1 id="3）共享WiFi-电脑也是路由器"><a href="#3）共享WiFi-电脑也是路由器" class="headerlink" title="3）共享WiFi-电脑也是路由器"></a>3）共享WiFi-电脑也是路由器</h1><p>当你的电脑连接上有线网络之后，便可以愉快地进行网上冲浪了，可你的手机并不方便和网络进行有线的连接，此时，你的电脑也可以发挥路由器的作用，发射WiFi信号，让你的手机能够无线上网，愉快冲浪。</p><p>不同的操作系统步骤有所差异。</p><p><strong>Win7</strong><br><a href="https://blog.csdn.net/chicken_h/article/details/127259037">Win7通过无线网卡共享本地网络-CSDN</a></p><p><strong>win10</strong><br><a href="https://jingyan.baidu.com/article/4853e1e5b2d8a51908f72654.html">win10如何开启热点共享网络-百度经验</a></p><p><strong>win11</strong><br>设置-网络和Internet-移动热点</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="2）USB网络共享-手机成为上网卡"><a href="#2）USB网络共享-手机成为上网卡" class="headerlink" title="2）USB网络共享-手机成为上网卡"></a>2）USB网络共享-手机成为上网卡</h1><p>我们使用电脑连接上手机开放的热点时，你的手机相当于是移动WiFi（随身WiFi）。</p><p><strong>移动WiFi</strong><br>提供电源即可发射WiFi信号，与SIM卡搭配使用，不需要线的连接。</p><p>没有线的连接，你的网速会受到一定的限制，我们可以通过数据线连接电脑和手机，打开手机中的USB网络共享功能，让手机成为无线上网卡，提升网速。</p><p><strong>无线上网卡</strong><br>相当于移动WIFI，但需要与电脑连接（一般是通过USB口），连接无线广域网，与SIM卡搭配使用，当然也有免插卡的版本。</p><p>不同品牌的手机设置有所差异。<br><strong>小米</strong> 设置-个人热点-USB网络共享<br><strong>华为</strong> </p><p>无线上网卡和无线网卡又有所区别。<br><strong>无线网卡</strong><br>帮助电脑收发信号，连接无线局域网，是电脑与无线网络连接的介质。有内置网卡也有外置网卡（一般通过USB口连接）</p><p><strong>广域网WAN(Wide Area Network)</strong><br>是连接不同地区局域网或城域网计算机通信的远程网。</p><p><strong>局域网LAN(Local Area Network)</strong><br>是局部地区形成的一个区域网络，分布地区范围有限。</p>]]></content>
     
     
     <categories>
@@ -1851,11 +1851,11 @@
   
   
   <entry>
-    <title>2）USB网络共享-手机成为上网卡</title>
-    <link href="/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-2)USB%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB-%E6%89%8B%E6%9C%BA%E6%88%90%E4%B8%BA%E4%B8%8A%E7%BD%91%E5%8D%A1/"/>
-    <url>/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-2)USB%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB-%E6%89%8B%E6%9C%BA%E6%88%90%E4%B8%BA%E4%B8%8A%E7%BD%91%E5%8D%A1/</url>
+    <title>3）共享WiFi-电脑也是路由器</title>
+    <link href="/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-3)%E5%85%B1%E4%BA%ABWiFi-%E7%94%B5%E8%84%91%E4%B9%9F%E6%98%AF%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
+    <url>/2023/01/14/Campus%20Network%E6%A0%A1%E5%9B%AD%E7%BD%91-3)%E5%85%B1%E4%BA%ABWiFi-%E7%94%B5%E8%84%91%E4%B9%9F%E6%98%AF%E8%B7%AF%E7%94%B1%E5%99%A8/</url>
     
-    <content type="html"><![CDATA[<h1 id="2）USB网络共享-手机成为上网卡"><a href="#2）USB网络共享-手机成为上网卡" class="headerlink" title="2）USB网络共享-手机成为上网卡"></a>2）USB网络共享-手机成为上网卡</h1><p>我们使用电脑连接上手机开放的热点时，你的手机相当于是移动WiFi（随身WiFi）。</p><p><strong>移动WiFi</strong><br>提供电源即可发射WiFi信号，与SIM卡搭配使用，不需要线的连接。</p><p>没有线的连接，你的网速会受到一定的限制，我们可以通过数据线连接电脑和手机，打开手机中的USB网络共享功能，让手机成为无线上网卡，提升网速。</p><p><strong>无线上网卡</strong><br>相当于移动WIFI，但需要与电脑连接（一般是通过USB口），连接无线广域网，与SIM卡搭配使用，当然也有免插卡的版本。</p><p>不同品牌的手机设置有所差异。<br><strong>小米</strong> 设置-个人热点-USB网络共享<br><strong>华为</strong> </p><p>无线上网卡和无线网卡又有所区别。<br><strong>无线网卡</strong><br>帮助电脑收发信号，连接无线局域网，是电脑与无线网络连接的介质。有内置网卡也有外置网卡（一般通过USB口连接）</p><p><strong>广域网WAN(Wide Area Network)</strong><br>是连接不同地区局域网或城域网计算机通信的远程网。</p><p><strong>局域网LAN(Local Area Network)</strong><br>是局部地区形成的一个区域网络，分布地区范围有限。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="3）共享WiFi-电脑也是路由器"><a href="#3）共享WiFi-电脑也是路由器" class="headerlink" title="3）共享WiFi-电脑也是路由器"></a>3）共享WiFi-电脑也是路由器</h1><p>当你的电脑连接上有线网络之后，便可以愉快地进行网上冲浪了，可你的手机并不方便和网络进行有线的连接，此时，你的电脑也可以发挥路由器的作用，发射WiFi信号，让你的手机能够无线上网，愉快冲浪。</p><p>不同的操作系统步骤有所差异。</p><p><strong>Win7</strong><br><a href="https://blog.csdn.net/chicken_h/article/details/127259037">Win7通过无线网卡共享本地网络-CSDN</a></p><p><strong>win10</strong><br><a href="https://jingyan.baidu.com/article/4853e1e5b2d8a51908f72654.html">win10如何开启热点共享网络-百度经验</a></p><p><strong>win11</strong><br>设置-网络和Internet-移动热点</p>]]></content>
     
     
     <categories>
@@ -2273,6 +2273,19 @@
   
   
   <entry>
+    <title>2A506</title>
+    <link href="/2023/01/14/2A506/"/>
+    <url>/2023/01/14/2A506/</url>
+    
+    <content type="html"><![CDATA[<h1 id="2A506"><a href="#2A506" class="headerlink" title="2A506"></a>2A506</h1><h2 id="校园网"><a href="#校园网" class="headerlink" title="校园网"></a>校园网</h2><h3 id="GDPC"><a href="#GDPC" class="headerlink" title="GDPC"></a>GDPC</h3><p><a href="http://172.19.2.20:8900/l">校园网自服务平台</a><br><strong>用户名</strong> 20223502140130<br><strong>密码</strong> 050011</p><p>I P地址               172.18.15.46<br>子网掩码             255.255.255.0<br>默认网关             172.18.15.254<br>首选DNS服务器  172.16.36.36<br>备用DNS服务器  172.16.35.101</p><h2 id="联系"><a href="#联系" class="headerlink" title="联系"></a>联系</h2><p><strong>队助</strong> 张霖 2a706 13376595850<br><strong>指导员</strong> 周海桐  9b407 15015961500<br><strong>中队长</strong> 纪家亮 15360631618</p><h2 id="选课"><a href="#选课" class="headerlink" title="选课"></a>选课</h2><p>公选2 专业2 网络2</p><h3 id="√"><a href="#√" class="headerlink" title="√"></a>√</h3><p>美学<br>多媒体<br>逻辑学<br>警察法学<br>被害人学概论<br>电影鉴赏<br>审讯心理<br>摄影艺术鉴赏<br>法律语言</p><p>詹笑红 人美无作业<br>胡彤婴<br>黎聪 人帅幽默<br>张鹏飞<br>容缨<br>张进</p><h3 id="×"><a href="#×" class="headerlink" title="×"></a>×</h3><p>文化鉴赏<br>公务员面试<br>网络侦查犯罪<br>大学英语六级<br>沟通与技巧<br>形式逻辑<br>危机谈判</p><p>范智星<br>王正仓<br>秦总根<br>宋晓明 考试容易 作业多<br>刘迪莎<br>曾祥星<br>郑璀宇<br>陈涛 地方口音重</p><h2 id="热水"><a href="#热水" class="headerlink" title="热水"></a>热水</h2><p>06:00-08:00<br>11:00-13:30<br>16:30-22:30</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>HC-05蓝牙模块</title>
     <link href="/2023/01/14/Arduino-HC-05%E8%93%9D%E7%89%99%E6%A8%A1%E5%9D%97/"/>
     <url>/2023/01/14/Arduino-HC-05%E8%93%9D%E7%89%99%E6%A8%A1%E5%9D%97/</url>
@@ -2285,19 +2298,6 @@
       <category>Arduino</category>
       
     </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>2A506</title>
-    <link href="/2023/01/14/2A506/"/>
-    <url>/2023/01/14/2A506/</url>
-    
-    <content type="html"><![CDATA[<h1 id="2A506"><a href="#2A506" class="headerlink" title="2A506"></a>2A506</h1><h2 id="校园网"><a href="#校园网" class="headerlink" title="校园网"></a>校园网</h2><h3 id="GDPC"><a href="#GDPC" class="headerlink" title="GDPC"></a>GDPC</h3><p><a href="http://172.19.2.20:8900/l">校园网自服务平台</a><br><strong>用户名</strong> 20223502140130<br><strong>密码</strong> 050011</p><p>I P地址               172.18.15.46<br>子网掩码             255.255.255.0<br>默认网关             172.18.15.254<br>首选DNS服务器  172.16.36.36<br>备用DNS服务器  172.16.35.101</p><h2 id="联系"><a href="#联系" class="headerlink" title="联系"></a>联系</h2><p><strong>队助</strong> 张霖 2a706 13376595850<br><strong>指导员</strong> 周海桐  9b407 15015961500<br><strong>中队长</strong> 纪家亮 15360631618</p><h2 id="选课"><a href="#选课" class="headerlink" title="选课"></a>选课</h2><p>公选2 专业2 网络2</p><h3 id="√"><a href="#√" class="headerlink" title="√"></a>√</h3><p>美学<br>多媒体<br>逻辑学<br>警察法学<br>被害人学概论<br>电影鉴赏<br>审讯心理<br>摄影艺术鉴赏<br>法律语言</p><p>詹笑红 人美无作业<br>胡彤婴<br>黎聪 人帅幽默<br>张鹏飞<br>容缨<br>张进</p><h3 id="×"><a href="#×" class="headerlink" title="×"></a>×</h3><p>文化鉴赏<br>公务员面试<br>网络侦查犯罪<br>大学英语六级<br>沟通与技巧<br>形式逻辑<br>危机谈判</p><p>范智星<br>王正仓<br>秦总根<br>宋晓明 考试容易 作业多<br>刘迪莎<br>曾祥星<br>郑璀宇<br>陈涛 地方口音重</p><h2 id="热水"><a href="#热水" class="headerlink" title="热水"></a>热水</h2><p>06:00-08:00<br>11:00-13:30<br>16:30-22:30</p>]]></content>
-    
     
     
   </entry>
