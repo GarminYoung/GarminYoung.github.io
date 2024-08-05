@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+
+
+<link rel="canonical" href="http://example.com/Python-%E7%88%AC%E8%99%AB/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/Python-%E7%88%AC%E8%99%AB/","path":"Python-爬虫/","title":"爬虫"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>爬虫 | 94RM1n</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">94RM1n</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section">Home</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section">Categories</a></li><li class="menu-item menu-item-ctf"><a href="/ctf/" rel="section">CTF</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section">About</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger">搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%88%AC%E8%99%AB"><span class="nav-number">1.</span> <span class="nav-text">爬虫</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E6%98%93%E7%9A%84%E7%88%AC%E8%99%AB%E7%A8%8B%E5%BA%8F"><span class="nav-number">1.1.</span> <span class="nav-text">简易的爬虫程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%98%B2%E5%8F%8D%E7%88%AC%E6%8E%AA%E6%96%BD1"><span class="nav-number">1.2.</span> <span class="nav-text">防反爬措施1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%98%B2%E5%8F%8D%E7%88%AC%E6%8E%AA%E6%96%BD2"><span class="nav-number">1.3.</span> <span class="nav-text">防反爬措施2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%98%B2%E5%8F%8D%E7%88%AC%E6%8E%AA%E6%96%BD3"><span class="nav-number">1.4.</span> <span class="nav-text">防反爬措施3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Requests%E5%BA%93"><span class="nav-number">1.5.</span> <span class="nav-text">Requests库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#re%E5%BA%93"><span class="nav-number">1.6.</span> <span class="nav-text">re库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Beautiful-Soup%E5%BA%93"><span class="nav-number">1.7.</span> <span class="nav-text">Beautiful Soup库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%88%AC%E8%99%AB%E7%BC%96%E5%86%99%E6%80%9D%E8%B7%AF"><span class="nav-number">1.8.</span> <span class="nav-text">爬虫编写思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B%E5%AD%A6%E4%B9%A0"><span class="nav-number">1.9.</span> <span class="nav-text">实例学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">1.10.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Garmin"
+      src="/uploads/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Garmin</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/GarminYoung" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;GarminYoung" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Python-%E7%88%AC%E8%99%AB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Garmin">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="94RM1n">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="爬虫 | 94RM1n">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          爬虫
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="爬虫"><a href="#爬虫" class="headerlink" title="爬虫"></a>爬虫</h1><p>  网络爬虫又称网络蜘蛛、网络机器人，它是一种按照一定的规则自动浏览、检索网页信息的程序或者脚本。网络爬虫能够自动请求网页，并将所需要的数据抓取下来。通过对抓取的数据进行处理，从而提取出有价值的信息。</p>
+<h2 id="简易的爬虫程序"><a href="#简易的爬虫程序" class="headerlink" title="简易的爬虫程序"></a>简易的爬虫程序</h2><p>  下面使用 Python 内置的 urllib 库获取网页的 html 信息。注意，urllib 库属于 Python 的标准库模块，无须单独安装，它是 Python 爬虫的常用模块。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"></span><br><span class="line"><span class="comment"># 发送请求，获取响应对象</span></span><br><span class="line">response = request.urlopen(<span class="string">&#x27;http://www.baidu.com/&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(response)</span><br><span class="line"><span class="comment"># 提取响应内容，再将字节码解码成字符串</span></span><br><span class="line">html = response.read().decode(<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"><span class="comment"># 打印响应内容</span></span><br><span class="line"><span class="built_in">print</span>(html)</span><br></pre></td></tr></table></figure>
+
+<h2 id="防反爬措施1"><a href="#防反爬措施1" class="headerlink" title="防反爬措施1"></a>防反爬措施1</h2><p>  绝大多数网站都具备一定的反爬能力，禁止爬虫大量地访问网站，以免给网站服务器带来压力。<br>  网站通过识别请求头中 User-Agent 信息来判断是否是爬虫访问网站。如果是，网站首先对该 IP 进行预警，对其进行重点监控，当发现该 IP 超过规定时间内的访问次数， 将在一段时间内禁止其再次访问网站。<br>  下面我们通过修改 User-Agent 信息来防反爬。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导包</span></span><br><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"></span><br><span class="line"><span class="comment"># 目标url</span></span><br><span class="line">url = <span class="string">&#x27;https://tieba.baidu.com/f/search/res?ie=utf-8&amp;qw=python&#x27;</span></span><br><span class="line"><span class="comment"># 重构请求头</span></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763&#x27;</span>&#125;</span><br><span class="line"><span class="comment"># 创建请求对象，包装ua信息</span></span><br><span class="line">req = request.Request(url=url, headers=headers)</span><br><span class="line"><span class="comment"># 发送请求，获取响应对象</span></span><br><span class="line">res = request.urlopen(req)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回响应对象的URL地址</span></span><br><span class="line">url = res.geturl()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\n目标url：&quot;</span>, url)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回请求时的HTTP响应码</span></span><br><span class="line">code = res.getcode()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;状态码：&quot;</span>, code)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 提取响应内容，再将字节码解码成字符串</span></span><br><span class="line">html = res.read().decode(<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(html)</span><br></pre></td></tr></table></figure>
+
+<h2 id="防反爬措施2"><a href="#防反爬措施2" class="headerlink" title="防反爬措施2"></a>防反爬措施2</h2><p>  通过调用自定义UA池的UA标识来修改 User-Agent 信息防反爬。<br>main.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> ua_info <span class="keyword">import</span> ua_list  <span class="comment"># 使用自定义的ua池</span></span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line">headers=&#123;<span class="string">&#x27;User-Agent&#x27;</span>: random.choice(ua_list)&#125;</span><br></pre></td></tr></table></figure>
+
+<p>ua_info.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">ua_list = [</span><br><span class="line">    <span class="string">&#x27;Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Maxthon 2.0&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.56 Safari/535.11&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;User-Agent:Opera/9.80 (Windows NT 6.1; U; en) Presto/2.8.131 Version/11.11&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Mozilla/5.0 (Windows NT 6.1; rv:2.0.1) Gecko/20100101 Firefox/4.0.1&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Mozilla/5.0 (Windows; U; Windows NT 6.1; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27; Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27; Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:2.0.1) Gecko/20100101 Firefox/4.0.1&#x27;</span>,</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<h2 id="防反爬措施3"><a href="#防反爬措施3" class="headerlink" title="防反爬措施3"></a>防反爬措施3</h2><p>  爬虫程序访问网站会非常快，这与正常人类的点击行为非常不符。因此，通过随机休眠可以使爬虫程序模仿成人类的样子点击网站，从而让网站不易察觉是爬虫访问网站，但这样做的代价就是影响程序的执行效率。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 每爬取一个页面随机休眠1-2秒钟的时间</span></span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line">time.sleep(random.randint(<span class="number">1</span>, <span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+
+<h2 id="Requests库"><a href="#Requests库" class="headerlink" title="Requests库"></a>Requests库</h2><p>  Requests 库是在 urllib 的基础上开发而来，它使用 Python 语言编写，并且采用了 Apache2 Licensed（一种开源协议）的 HTTP 库。与 urllib 相比，Requests 更加方便、快捷，因此在编写爬虫程序时 Requests 库使用较多。<br>  每次调用 requests 请求之后，会返回一个 response 对象，该对象包含了具体的响应信息。</p>
+<p>  下面使用 requests 的 GET 请求并查看返回对象部分的响应信息。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入 requests 包</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="comment"># 目标url</span></span><br><span class="line">url = <span class="string">&#x27;http://baidu.com&#x27;</span></span><br><span class="line"><span class="comment"># 发送请求，返回一个响应对象response</span></span><br><span class="line">response = requests.get(url)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 响应对象</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\n响应对象：&quot;</span>, response)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 响应对象的状态码</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;状态码：&quot;</span>, response.status_code)</span><br><span class="line"><span class="comment"># 响应对象的响应状态描述</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;响应状态描述：&quot;</span>, response.reason)</span><br><span class="line"><span class="comment"># 响应对象的编码</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;编码：&quot;</span>, response.apparent_encoding)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用响应对象text属性，获取文本信息</span></span><br><span class="line"><span class="built_in">print</span>(response.text)</span><br></pre></td></tr></table></figure>
+
+<p>  下面使用 requests 的 GET 请求爬取百度搜索的页面。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">headers=&#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Mobile Safari/537.36&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">url=<span class="string">&#x27;https://www.baidu.com/s&#x27;</span></span><br><span class="line">content = <span class="built_in">input</span>(<span class="string">&#x27;请输入您想查询的词：&#x27;</span>)</span><br><span class="line"><span class="comment"># 通过字典赋予get请求参数</span></span><br><span class="line">param = &#123;</span><br><span class="line">    <span class="string">&#x27;wd&#x27;</span>:content,</span><br><span class="line">    <span class="string">&#x27;pn&#x27;</span>:<span class="number">0</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># 此get()方法使用了三个参数</span></span><br><span class="line">response = requests.get(url=url, params=param, headers=headers)</span><br><span class="line">html = response.text</span><br><span class="line"> </span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;百度.html&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> df:</span><br><span class="line">    df.write(html)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;保存成功&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>requests中的  post() 方法还可以发送 POST 请求到指定 url</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">requests.post(url, data=&#123;key: value&#125;, json=&#123;key: value&#125;, args)</span><br></pre></td></tr></table></figure>
+
+<h2 id="re库"><a href="#re库" class="headerlink" title="re库"></a>re库</h2><p>  见参考</p>
+<h2 id="Beautiful-Soup库"><a href="#Beautiful-Soup库" class="headerlink" title="Beautiful Soup库"></a>Beautiful Soup库</h2><p>  见参考</p>
+<h2 id="爬虫编写思路"><a href="#爬虫编写思路" class="headerlink" title="爬虫编写思路"></a>爬虫编写思路</h2><p>1.确定页面类型<br>查看页面源码，确定要抓取的数据是否存在于页面内。通过浏览得知要抓取的信息全部存在于源码内，因此该页面输属于静态页面。<br>2.确定url规律<br>想要确定 url 规律，需要您多浏览几个页面，然后才可以总结出 url 规律。<br>3.发送测试请求<br>向目标网址发送测试请求，查看返回对象的状态码，确定该页码是否可爬，下面以百度为例</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入 requests 包</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="comment"># 目标url</span></span><br><span class="line">url = <span class="string">&#x27;http://baidu.com&#x27;</span></span><br><span class="line"><span class="comment"># 发送请求，返回一个响应对象response</span></span><br><span class="line">response = requests.get(url)</span><br><span class="line"><span class="comment"># 响应对象的状态码</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\n状态码：&quot;</span>, response.status_code)</span><br></pre></td></tr></table></figure>
+
+<p>4.编写爬虫程序</p>
+<h2 id="实例学习"><a href="#实例学习" class="headerlink" title="实例学习"></a>实例学习</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40147863/article/details/81590849">Python爬虫教程-05-python爬虫实现百度翻译_python爬虫百度翻译 - CSDN博客</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/ChenBinBini/article/details/109739116">Python爬虫史上超详细讲解（零基础入门，老年人都看的懂）- CSDN博客</a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1] <a target="_blank" rel="noopener" href="https://c.biancheng.net/python_spider/">Python爬虫教程（从入门到精通）- C语言中文网</a><br>[2] <a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/python-spider-intro.html">Python 爬虫介绍 | 菜鸟教程</a><br>[3] <a target="_blank" rel="noopener" href="https://www.runoob.com/python3/python-urllib.html">Python urllib | 菜鸟教程</a><br>[4] <a target="_blank" rel="noopener" href="https://requests.readthedocs.io/projects/cn/zh-cn/latest/">Requests: 让 HTTP 服务人类 — Requests 2.18.1 文档</a><br>[5] <a target="_blank" rel="noopener" href="https://www.runoob.com/python3/python-requests.html">Python requests 模块 | 菜鸟教程</a><br>[6] <a target="_blank" rel="noopener" href="https://c.biancheng.net/python_spider/requests.html">Python Requests库安装和使用 - C语言中文网</a><br>[7] <a target="_blank" rel="noopener" href="https://c.biancheng.net/python_spider/re-module.html">Python re模块用法详解 - C语言中文网</a><br>[8] <a target="_blank" rel="noopener" href="https://www.runoob.com/python/python-reg-expressions.html">Python 正则表达式 | 菜鸟教程</a><br>[9] <a target="_blank" rel="noopener" href="https://beautifulsoup.cn/">Beautiful Soup 中文文档</a><br>[10] <a target="_blank" rel="noopener" href="https://c.biancheng.net/python_spider/bs4.html">Python BS4解析库用法详解 - C语言中文网</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

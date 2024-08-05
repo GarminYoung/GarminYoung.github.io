@@ -29,7 +29,7 @@
 <script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"default-index/index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Garmin's Blog</title>
+<title>94RM1n</title>
   
 
 
@@ -62,7 +62,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Garmin's Blog</h1>
+      <h1 class="site-title">94RM1n</h1>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -77,9 +77,9 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section">Home</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section">Categories</a></li><li class="menu-item menu-item-ctf"><a href="/ctf/" rel="section">CTF</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section">About</a></li>
       <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        <a role="button" class="popup-trigger">搜索
         </a>
       </li>
   </ul>
@@ -167,7 +167,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/30/WriteUP-upload/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/WriteUP-%E4%BA%8C%E7%BB%B4%E7%A0%81/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -175,17 +175,196 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/30/WriteUP-upload/" class="post-title-link" itemprop="url">upload</a>
+          <a href="/WriteUP-%E4%BA%8C%E7%BB%B4%E7%A0%81/" class="post-title-link" itemprop="url">二维码</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/WriteUP/" itemprop="url" rel="index"><span itemprop="name">WriteUP</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a target="_blank" rel="noopener" href="https://buuoj.cn/challenges#%E4%BA%8C%E7%BB%B4%E7%A0%81">二维码 - BUUCTF</a></p>
+<p>题目附件给了一个压缩包，解压后得到一张名为“QR_code.png”的图片文件。</p>
+<p>用QR research（CQR）识别出二维码内容为<code>secret is here</code>。<br>使用<a target="_blank" rel="noopener" href="https://cli.im/deqr/other">草料二维码解码器</a>也可以得到二维码内容。</p>
+<p>使用Kali中的工具binwalk对文件进行检测。<br><code>binwalk QR_code.png</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">DECIMAL       HEXADECIMAL     DESCRIPTION</span><br><span class="line">--------------------------------------------------------------------------------</span><br><span class="line">0             0x0             PNG image, 280 x 280, 1-bit colormap, non-interlaced</span><br><span class="line">471           0x1D7           Zip archive data, encrypted at least v2.0 to extract, compressed size: 29, uncompressed size: 15, name: 4number.txt</span><br><span class="line">650           0x28A           End of Zip archive, footer length: 22</span><br></pre></td></tr></table></figure>
+<p>可以发现该png文件下还隐藏着一个zip文件。</p>
+<p>我们也可以使用 010Editor 进行手动分析。<br>png的文件尾是AE 42 60 82，正常来说在文件尾之后就应该结束，在这里却发现png的文件尾后还跟着50 4B 03 04，这是zip的文件头，说明在该png文件下还隐藏着一个zip文件。</p>
+<p>可以继续使用binwalk对文件进行拆分。<br><code>binwalk -e QR_code.png</code></p>
+<p>也可以使用Linux中的工具foremost对文件进行拆分。<br><code>foremost QR_code.png</code></p>
+<p>拆分后对zip文件进行解压发现需要密码，使用<a target="_blank" rel="noopener" href="https://www.winrar.com.cn/">WinRAR</a>对压缩包内文件进行预览发现里面是一个名为“4number.txt”的文本文件，这可能提示我们该压缩包解压密码是一个四位数字。</p>
+<p>使用Ziperello对压缩包密码进行暴力破解即可，密码是7639，和预想的一样。</p>
+<p>解压压缩包后发现其中文本文件的内容即为flag。</p>
+<p>当然此题在拆分文件那里也可以使用手动拆分的方式，在 010Editor 中对zip文件头前的内容删除后再修改文件后缀为.zip即可得到图片文件下隐藏的压缩包文件，不过直接修改后缀名也可以进行解压完成后续工作。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/WriteUP-easyIOT/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Garmin">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="94RM1n">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 94RM1n">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/WriteUP-easyIOT/" class="post-title-link" itemprop="url">easyIOT</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/WriteUP/" itemprop="url" rel="index"><span itemprop="name">WriteUP</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a target="_blank" rel="noopener" href="https://ctf.bugku.com/challenges/detail/id/400.html">easyIOT - Bugku CTF</a><br>本题是一个典型的物联网题目。</p>
+<p>题目附件给出了一段用 <a target="_blank" rel="noopener" href="https://www.arduino.cc/">Arduino</a> 编写的程序，分析程序运行结果即可得到flag。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">// Set A-G, DP as OUTPUT pins, COM is 5V</span><br></pre></td></tr></table></figure>
+<p>第一句是注释，设置管脚 A 到 G，DP为输出管脚，COM引脚设置5V电压。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int data[] = &#123;0, 0, 0,2,4,5,6,7,8,0,2,3,5,6,8,0,2,3,4,0,2,4,5,7,8,0,2,4,5,6,7,8,0,2,3,4,0,2,4,5,6,7,8,0,4,5,6,7,8,0,2,3,4,0,2,4,5,7,8,0,2,3,4,0,4,5,6,7,8,0,2,4,5,6,7,8,0,2,3,4,5,6,7,8,0,2,4,5,6,7,8,0,3,4,0,2,3,4,0,2,3,5,6,8,0,2,4,5,6,7,8,0,3,4,7,8,0,2,3,4,0,2,3,4,0,2,4,5,6,7,8,0,3,4,0,2,3,4,0,2,3,5,6,8,0,2,4,5,6,7,8,0,2,4,5,7,8,0,2,4,5,7,8,0,2,6,7,8,0,2,4,5,6,7,8,0,2,3,4,5,7,8,0,2,3,4,0,2,3,4,5,8,0,2,4,5,7,8,0,2,6,7,8,0,2,3,4,0,2,3,4,5,8,0,2,4,5,6,7,8,0,2,6,7,8,0,2,4,5,7,8,0,2,6,7,8,0,2,4,5,6,7,8,0,2,4,5,7,8,0,2,4,5,6,7,8,0,3,4,0,2,3,4,0,2,3,4,5,8,0,2,3,4,0,2,3,4,5,7,8,0,2,3,4,0,3,4,5,6,8&#125;;</span><br></pre></td></tr></table></figure>
+<p>第二句定义了一个数组。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void setup() &#123; for(int i=2; i&lt;=9;i++) pinMode(i, OUTPUT); &#125;</span><br></pre></td></tr></table></figure>
+<p>第三句初始化引脚2到9为输出模式，共有七个管脚，猜测该程序用于驱动七段显示器。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void loop() &#123; for (int i=0; i&lt;sizeof(data) / 2; i++) data[i] == 0 ? clear() : digitalWrite(data[i], LOW); &#125;</span><br></pre></td></tr></table></figure>
+<p>第四句则根据数组内容控制相应管脚输出高低电平，当读取到数组中出现的数字0时则执行后续的 clear() 函数进行清屏。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void clear() &#123; delay(1000); for(int i=2; i&lt;=9;i++) digitalWrite(i, HIGH); delay(1000); &#125;</span><br></pre></td></tr></table></figure>
+<p>第五句将所有引脚（2到9）设置为高电平，并在每个状态之间延迟1秒。执行“清屏”或“重置”操作。</p>
+<p>七段显示器对于管脚控制图如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> ----2----</span><br><span class="line">|         |</span><br><span class="line">7         3</span><br><span class="line">|         |</span><br><span class="line"> ----8----</span><br><span class="line">|         |</span><br><span class="line">6         4</span><br><span class="line">|         |</span><br><span class="line"> ----5----</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>那么将数组中的内容以0作为分割，第一组数字2,4,5,6,7,8对应的管脚亮起显示为数字6，第二组数字2,3,5,6,8对应的管脚亮起显示为数字2。</p>
+<p>可以使用python对数组内容进行分割。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">&quot;0,0,0,2,4,5,6,7,8,0,2,3,5,6,8,0,2,3,4,0,2,4,5,7,8,0,2,4,5,6,7,8,0,2,3,4,0,2,4,5,6,7,8,0,4,5,6,7,8,0,2,3,4,0,2,4,5,7,8,0,2,3,4,0,4,5,6,7,8,0,2,4,5,6,7,8,0,2,3,4,5,6,7,8,0,2,4,5,6,7,8,0,3,4,0,2,3,4,0,2,3,5,6,8,0,2,4,5,6,7,8,0,3,4,7,8,0,2,3,4,0,2,3,4,0,2,4,5,6,7,8,0,3,4,0,2,3,4,0,2,3,5,6,8,0,2,4,5,6,7,8,0,2,4,5,7,8,0,2,4,5,7,8,0,2,6,7,8,0,2,4,5,6,7,8,0,2,3,4,5,7,8,0,2,3,4,0,2,3,4,5,8,0,2,4,5,7,8,0,2,6,7,8,0,2,3,4,0,2,3,4,5,8,0,2,4,5,6,7,8,0,2,6,7,8,0,2,4,5,7,8,0,2,6,7,8,0,2,4,5,6,7,8,0,2,4,5,7,8,0,2,4,5,6,7,8,0,3,4,0,2,3,4,0,2,3,4,5,8,0,2,3,4,0,2,3,4,5,7,8,0,2,3,4,0,3,4,5,6,8&quot;</span></span><br><span class="line">a = a.replace(<span class="string">&quot;,&quot;</span>,<span class="string">&quot;&quot;</span>)</span><br><span class="line">a = a.replace(<span class="string">&quot;0&quot;</span>,<span class="string">&quot; &quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">245678 23568 234 24578 245678 234 245678 45678 234 24578 234 45678 245678 2345678 245678 34 234 23568 245678 3478 234 234 245678 34 234 23568 245678 24578 24578 2678 245678 234578 234 23458 24578 2678 234 23458 245678 2678 24578 2678 245678 24578 245678 34 234 23458 234 234578 234 34568</span><br></pre></td></tr></table></figure>
+
+<p>以此类推，显示的字符串为16进制数。<br><code>6275676b757b68617264776172655f69735f736f5f656173797d</code></p>
+<p>使用python对字符串中每两个字符后插入空格进行分隔。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">text = <span class="string">&quot;6275676b757b68617264776172655f69735f736f5f656173797d&quot;</span></span><br><span class="line">text_list = re.findall(<span class="string">&quot;.&#123;2&#125;&quot;</span>,text)</span><br><span class="line">new_text = <span class="string">&quot; &quot;</span>.join(text_list)</span><br><span class="line"><span class="built_in">print</span>(new_text)</span><br></pre></td></tr></table></figure>
+
+<p><code>62 75 67 6b 75 7b 68 61 72 64 77 61 72 65 5f 69 73 5f 73 6f 5f 65 61 73 79 7d</code></p>
+<p><a target="_blank" rel="noopener" href="https://www.asciim.cn/m/tools/convert_ascii_to_string.html">ASCII码转字符串</a>得到最终flag。</p>
+<p><code>bugku&#123;hardware_is_so_easy&#125;</code></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/WriteUP-upload/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Garmin">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="94RM1n">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 94RM1n">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/WriteUP-upload/" class="post-title-link" itemprop="url">upload</a>
         </h2>
 
         <div class="post-meta-container">
@@ -257,7 +436,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/30/WriteUP-Upload%201/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/WriteUP-Upload%201/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -265,17 +444,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/30/WriteUP-Upload%201/" class="post-title-link" itemprop="url">Upload 1</a>
+          <a href="/WriteUP-Upload%201/" class="post-title-link" itemprop="url">Upload 1</a>
         </h2>
 
         <div class="post-meta-container">
@@ -341,7 +520,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/27/WriteUP-sqlmap_boy/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/WriteUP-sqlmap_boy/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -349,17 +528,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/27/WriteUP-sqlmap_boy/" class="post-title-link" itemprop="url">sqlmap_boy</a>
+          <a href="/WriteUP-sqlmap_boy/" class="post-title-link" itemprop="url">sqlmap_boy</a>
         </h2>
 
         <div class="post-meta-container">
@@ -420,7 +599,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/27/WriteUP-NotAnotherSQLi/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/WriteUP-NotAnotherSQLi/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -428,17 +607,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/27/WriteUP-NotAnotherSQLi/" class="post-title-link" itemprop="url">NotAnotherSQLi</a>
+          <a href="/WriteUP-NotAnotherSQLi/" class="post-title-link" itemprop="url">NotAnotherSQLi</a>
         </h2>
 
         <div class="post-meta-container">
@@ -499,7 +678,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/25/Other-%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Other-%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -507,17 +686,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/25/Other-%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/" class="post-title-link" itemprop="url">软件分享</a>
+          <a href="/Other-%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/" class="post-title-link" itemprop="url">软件分享</a>
         </h2>
 
         <div class="post-meta-container">
@@ -570,7 +749,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/16/Other-%E5%AE%9E%E7%94%A8%E6%B2%B9%E7%8C%B4%E8%84%9A%E6%9C%AC/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Other-%E5%AE%9E%E7%94%A8%E6%B2%B9%E7%8C%B4%E8%84%9A%E6%9C%AC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -578,17 +757,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/16/Other-%E5%AE%9E%E7%94%A8%E6%B2%B9%E7%8C%B4%E8%84%9A%E6%9C%AC/" class="post-title-link" itemprop="url">实用油猴脚本</a>
+          <a href="/Other-%E5%AE%9E%E7%94%A8%E6%B2%B9%E7%8C%B4%E8%84%9A%E6%9C%AC/" class="post-title-link" itemprop="url">实用油猴脚本</a>
         </h2>
 
         <div class="post-meta-container">
@@ -644,7 +823,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/14/UserScript-%E7%BB%8F%E5%85%B8%E9%AA%97%E8%87%AA%E5%B7%B1/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/UserScript-%E7%BB%8F%E5%85%B8%E9%AA%97%E8%87%AA%E5%B7%B1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -652,17 +831,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/14/UserScript-%E7%BB%8F%E5%85%B8%E9%AA%97%E8%87%AA%E5%B7%B1/" class="post-title-link" itemprop="url">经典骗自己</a>
+          <a href="/UserScript-%E7%BB%8F%E5%85%B8%E9%AA%97%E8%87%AA%E5%B7%B1/" class="post-title-link" itemprop="url">经典骗自己</a>
         </h2>
 
         <div class="post-meta-container">
@@ -713,7 +892,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/14/Other-%E8%AE%BE%E8%AE%A1%E6%9F%A5%E8%AF%A2%E6%89%8B%E5%86%8C/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Other-%E8%AE%BE%E8%AE%A1%E6%9F%A5%E8%AF%A2%E6%89%8B%E5%86%8C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -721,17 +900,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/14/Other-%E8%AE%BE%E8%AE%A1%E6%9F%A5%E8%AF%A2%E6%89%8B%E5%86%8C/" class="post-title-link" itemprop="url">设计查询手册</a>
+          <a href="/Other-%E8%AE%BE%E8%AE%A1%E6%9F%A5%E8%AF%A2%E6%89%8B%E5%86%8C/" class="post-title-link" itemprop="url">设计查询手册</a>
         </h2>
 
         <div class="post-meta-container">
@@ -802,7 +981,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/10/Other-%E9%BA%BB%E5%B0%86/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Other-%E9%BA%BB%E5%B0%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -810,17 +989,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/10/Other-%E9%BA%BB%E5%B0%86/" class="post-title-link" itemprop="url">麻将</a>
+          <a href="/Other-%E9%BA%BB%E5%B0%86/" class="post-title-link" itemprop="url">麻将</a>
         </h2>
 
         <div class="post-meta-container">
@@ -889,7 +1068,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/10/Other-Windows11%E7%9A%84%E5%9B%B0%E6%89%B0/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Other-Windows11%E7%9A%84%E5%9B%B0%E6%89%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -897,17 +1076,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/10/Other-Windows11%E7%9A%84%E5%9B%B0%E6%89%B0/" class="post-title-link" itemprop="url">Windows11的困扰</a>
+          <a href="/Other-Windows11%E7%9A%84%E5%9B%B0%E6%89%B0/" class="post-title-link" itemprop="url">Windows11的困扰</a>
         </h2>
 
         <div class="post-meta-container">
@@ -963,7 +1142,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/10/Other-Steam/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Other-Steam/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -971,17 +1150,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/10/Other-Steam/" class="post-title-link" itemprop="url">Steam</a>
+          <a href="/Other-Steam/" class="post-title-link" itemprop="url">Steam</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1039,7 +1218,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/Other-Hexo+GitHub%20Pages%E4%B8%80%E6%9D%A1%E9%BE%99/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Other-Hexo+GitHub%20Pages%E4%B8%80%E6%9D%A1%E9%BE%99/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1047,17 +1226,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/Other-Hexo+GitHub%20Pages%E4%B8%80%E6%9D%A1%E9%BE%99/" class="post-title-link" itemprop="url">Hexo+GitHub Pages一条龙</a>
+          <a href="/Other-Hexo+GitHub%20Pages%E4%B8%80%E6%9D%A1%E9%BE%99/" class="post-title-link" itemprop="url">Hexo+GitHub Pages一条龙</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1163,7 +1342,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/Arduino-HC-SR04%E8%B6%85%E5%A3%B0%E6%B3%A2%E4%BC%A0%E6%84%9F%E5%99%A8%E6%A8%A1%E5%9D%97/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Arduino-HC-SR04%E8%B6%85%E5%A3%B0%E6%B3%A2%E4%BC%A0%E6%84%9F%E5%99%A8%E6%A8%A1%E5%9D%97/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1171,17 +1350,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/Arduino-HC-SR04%E8%B6%85%E5%A3%B0%E6%B3%A2%E4%BC%A0%E6%84%9F%E5%99%A8%E6%A8%A1%E5%9D%97/" class="post-title-link" itemprop="url">HC-SR04超声波传感器模块</a>
+          <a href="/Arduino-HC-SR04%E8%B6%85%E5%A3%B0%E6%B3%A2%E4%BC%A0%E6%84%9F%E5%99%A8%E6%A8%A1%E5%9D%97/" class="post-title-link" itemprop="url">HC-SR04超声波传感器模块</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1240,7 +1419,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/Arduino-HC-05%E8%93%9D%E7%89%99%E6%A8%A1%E5%9D%97/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Arduino-HC-05%E8%93%9D%E7%89%99%E6%A8%A1%E5%9D%97/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1248,17 +1427,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/Arduino-HC-05%E8%93%9D%E7%89%99%E6%A8%A1%E5%9D%97/" class="post-title-link" itemprop="url">HC-05蓝牙模块</a>
+          <a href="/Arduino-HC-05%E8%93%9D%E7%89%99%E6%A8%A1%E5%9D%97/" class="post-title-link" itemprop="url">HC-05蓝牙模块</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1315,7 +1494,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/Arduino-%E7%8E%A9%E8%BD%ACLED/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Arduino-%E7%8E%A9%E8%BD%ACLED/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1323,17 +1502,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/Arduino-%E7%8E%A9%E8%BD%ACLED/" class="post-title-link" itemprop="url">玩转LED</a>
+          <a href="/Arduino-%E7%8E%A9%E8%BD%ACLED/" class="post-title-link" itemprop="url">玩转LED</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1401,7 +1580,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/UserScript-%E6%A8%B1%E8%8A%B1%E9%A3%98%E8%90%BD/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/UserScript-%E6%A8%B1%E8%8A%B1%E9%A3%98%E8%90%BD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1409,17 +1588,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/UserScript-%E6%A8%B1%E8%8A%B1%E9%A3%98%E8%90%BD/" class="post-title-link" itemprop="url">樱花飘落</a>
+          <a href="/UserScript-%E6%A8%B1%E8%8A%B1%E9%A3%98%E8%90%BD/" class="post-title-link" itemprop="url">樱花飘落</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1470,7 +1649,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/UserScript-%E5%AE%9E%E7%8E%B0%E5%A4%8D%E5%88%B6/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/UserScript-%E5%AE%9E%E7%8E%B0%E5%A4%8D%E5%88%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1478,17 +1657,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/UserScript-%E5%AE%9E%E7%8E%B0%E5%A4%8D%E5%88%B6/" class="post-title-link" itemprop="url">实现复制</a>
+          <a href="/UserScript-%E5%AE%9E%E7%8E%B0%E5%A4%8D%E5%88%B6/" class="post-title-link" itemprop="url">实现复制</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1539,7 +1718,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/UserScript-%E7%99%BE%E5%BA%A6%E8%87%AA%E5%8A%A8%E6%90%9C%E7%B4%A2/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/UserScript-%E7%99%BE%E5%BA%A6%E8%87%AA%E5%8A%A8%E6%90%9C%E7%B4%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1547,17 +1726,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/UserScript-%E7%99%BE%E5%BA%A6%E8%87%AA%E5%8A%A8%E6%90%9C%E7%B4%A2/" class="post-title-link" itemprop="url">百度自动搜索</a>
+          <a href="/UserScript-%E7%99%BE%E5%BA%A6%E8%87%AA%E5%8A%A8%E6%90%9C%E7%B4%A2/" class="post-title-link" itemprop="url">百度自动搜索</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1611,7 +1790,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/UserScript-%E7%99%BE%E5%BA%A6%E6%96%87%E5%BA%93%E8%87%AA%E7%94%B1%E5%A4%8D%E5%88%B6/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/UserScript-%E7%99%BE%E5%BA%A6%E6%96%87%E5%BA%93%E8%87%AA%E7%94%B1%E5%A4%8D%E5%88%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1619,17 +1798,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/UserScript-%E7%99%BE%E5%BA%A6%E6%96%87%E5%BA%93%E8%87%AA%E7%94%B1%E5%A4%8D%E5%88%B6/" class="post-title-link" itemprop="url">百度文库自由复制</a>
+          <a href="/UserScript-%E7%99%BE%E5%BA%A6%E6%96%87%E5%BA%93%E8%87%AA%E7%94%B1%E5%A4%8D%E5%88%B6/" class="post-title-link" itemprop="url">百度文库自由复制</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1683,7 +1862,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/UserScript-%E7%99%BE%E5%BA%A6%E7%AE%80%E5%8C%96/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/UserScript-%E7%99%BE%E5%BA%A6%E7%AE%80%E5%8C%96/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1691,17 +1870,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/UserScript-%E7%99%BE%E5%BA%A6%E7%AE%80%E5%8C%96/" class="post-title-link" itemprop="url">百度简化</a>
+          <a href="/UserScript-%E7%99%BE%E5%BA%A6%E7%AE%80%E5%8C%96/" class="post-title-link" itemprop="url">百度简化</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1752,7 +1931,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/Other-Tampermonkey%E6%B2%B9%E7%8C%B4/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Other-Tampermonkey%E6%B2%B9%E7%8C%B4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1760,17 +1939,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/Other-Tampermonkey%E6%B2%B9%E7%8C%B4/" class="post-title-link" itemprop="url">Tampermonkey油猴</a>
+          <a href="/Other-Tampermonkey%E6%B2%B9%E7%8C%B4/" class="post-title-link" itemprop="url">Tampermonkey油猴</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1830,7 +2009,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/UserScript-CSDN%E4%B8%80%E9%94%AE%E7%82%B9%E8%B5%9E%E8%AF%84%E8%AE%BA/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/UserScript-CSDN%E4%B8%80%E9%94%AE%E7%82%B9%E8%B5%9E%E8%AF%84%E8%AE%BA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1838,17 +2017,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/UserScript-CSDN%E4%B8%80%E9%94%AE%E7%82%B9%E8%B5%9E%E8%AF%84%E8%AE%BA/" class="post-title-link" itemprop="url">CSDN一键点赞评论</a>
+          <a href="/UserScript-CSDN%E4%B8%80%E9%94%AE%E7%82%B9%E8%B5%9E%E8%AF%84%E8%AE%BA/" class="post-title-link" itemprop="url">CSDN一键点赞评论</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1902,7 +2081,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/UserScript-B%E7%AB%99%E5%A4%B1%E6%95%88%E8%A7%86%E9%A2%91%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%A0%E9%99%A4/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/UserScript-B%E7%AB%99%E5%A4%B1%E6%95%88%E8%A7%86%E9%A2%91%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%A0%E9%99%A4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1910,17 +2089,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/UserScript-B%E7%AB%99%E5%A4%B1%E6%95%88%E8%A7%86%E9%A2%91%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%A0%E9%99%A4/" class="post-title-link" itemprop="url">B站失效视频自动化删除</a>
+          <a href="/UserScript-B%E7%AB%99%E5%A4%B1%E6%95%88%E8%A7%86%E9%A2%91%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%A0%E9%99%A4/" class="post-title-link" itemprop="url">B站失效视频自动化删除</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1974,7 +2153,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/Tags-CTF/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Arduino-Arduino%E5%AF%BC%E8%88%AA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1982,97 +2161,30 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/Tags-CTF/" class="post-title-link" itemprop="url">CTF</a>
+          <a href="/Arduino-Arduino%E5%AF%BC%E8%88%AA/" class="post-title-link" itemprop="url">Arduino导航</a>
         </h2>
 
         <div class="post-meta-container">
           <div class="post-meta">
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="CTF"><a href="#CTF" class="headerlink" title="CTF"></a>CTF</h1><h2 id="学习-刷题"><a href="#学习-刷题" class="headerlink" title="学习&amp;刷题"></a>学习&amp;刷题</h2><p><a target="_blank" rel="noopener" href="https://www.nssctf.cn/index">NSSCTF</a><br><a target="_blank" rel="noopener" href="https://www.nssctf.cn/explore">星辰大海 | NSSCTF</a></p>
-<p><a target="_blank" rel="noopener" href="https://hello-ctf.com/">Hello CTF</a></p>
-<p><a target="_blank" rel="noopener" href="https://ctf-wiki.org/">CTF Wiki</a><br><a target="_blank" rel="noopener" href="https://ctf-wiki.github.io/ctf-tools/">CTF Tools</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.ctfhub.com/#/index">CTFHub</a><br><a target="_blank" rel="noopener" href="https://www.wolai.com/ctfhub/mx8kc7g4asd98bs8N2nk7F">CTFHub知识库</a></p>
-<p><a target="_blank" rel="noopener" href="https://buuoj.cn/">BUUCTF</a></p>
-<p><a target="_blank" rel="noopener" href="https://ctf.bugku.com/">Bugku CTF</a></p>
-<p><a target="_blank" rel="noopener" href="https://adworld.xctf.org.cn/home/index">攻防世界</a><br><a target="_blank" rel="noopener" href="https://adworld.xctf.org.cn/challenges/problem-set-index?id=25">攻防世界 Web入门题</a><br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1rz4y137dF/">攻防世界 Web入门题 讲解 - bilibili</a><br><a target="_blank" rel="noopener" href="https://adworld.xctf.org.cn/challenges/problem-set-index?id=1&rwNmOdr=1712475097686">攻防世界 MISC入门题</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/127269755">最详细攻防世界MISC新手区小白解法 - 知乎</a></p>
-<p><a target="_blank" rel="noopener" href="https://ctf.show/">CTF秀</a></p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/631613398">2023最全CTF入门指南  - 知乎</a></p>
-<h2 id="比赛"><a href="#比赛" class="headerlink" title="比赛"></a>比赛</h2><h3 id="全国大学生信息安全竞赛"><a href="#全国大学生信息安全竞赛" class="headerlink" title="全国大学生信息安全竞赛"></a><a target="_blank" rel="noopener" href="http://www.ciscn.cn/">全国大学生信息安全竞赛</a></h3><p>创新实践能力大赛</p>
-<h3 id="X-NUCA全国高校网安联赛"><a href="#X-NUCA全国高校网安联赛" class="headerlink" title="X-NUCA全国高校网安联赛"></a>X-NUCA全国高校网安联赛</h3><h3 id="ISG信息安全技能竞赛"><a href="#ISG信息安全技能竞赛" class="headerlink" title="ISG信息安全技能竞赛"></a>ISG信息安全技能竞赛</h3><h3 id="蓝帽杯"><a href="#蓝帽杯" class="headerlink" title="蓝帽杯"></a>蓝帽杯</h3><p><a target="_blank" rel="noopener" href="https://www.qianxin.com/bluehatcup/2023">第七届蓝帽杯全国大学生网络安全技能大赛</a></p>
-<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p><a target="_blank" rel="noopener" href="https://www.cmd5.com/">md5在线解密破解</a></p>
-<p><a target="_blank" rel="noopener" href="http://quipqiup.com/">quipqiup - cryptoquip and cryptogram solver</a></p>
-<p><a target="_blank" rel="noopener" href="https://ctf.bugku.com/tool/sojson4">Sojson v4 解密 - Bugku CTF</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/bflw/p/12938013.html">常见网络安全设备弱口令(默认口令) - 博客园</a></p>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv17159157?spm_id_from=444.41.list.card_article.click">基于B站的网络安全学习线路 - 哔哩哔哩</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/Tags-Arduino/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-      <meta itemprop="name" content="Garmin">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Arduino/" itemprop="url" rel="index"><span itemprop="name">Arduino</span></a>
+        </span>
     </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/Tags-Arduino/" class="post-title-link" itemprop="url">Arduino</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
 
   
 </div>
@@ -2122,7 +2234,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/Python-%E7%88%AC%E8%99%AB/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Python-%E7%88%AC%E8%99%AB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -2130,17 +2242,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/Python-%E7%88%AC%E8%99%AB/" class="post-title-link" itemprop="url">爬虫</a>
+          <a href="/Python-%E7%88%AC%E8%99%AB/" class="post-title-link" itemprop="url">爬虫</a>
         </h2>
 
         <div class="post-meta-container">
@@ -2225,7 +2337,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/Other-%E4%B8%9A%E4%BD%99%E6%97%A0%E7%BA%BF%E7%94%B5/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Other-%E4%B8%9A%E4%BD%99%E6%97%A0%E7%BA%BF%E7%94%B5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -2233,17 +2345,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/Other-%E4%B8%9A%E4%BD%99%E6%97%A0%E7%BA%BF%E7%94%B5/" class="post-title-link" itemprop="url">业余无线电</a>
+          <a href="/Other-%E4%B8%9A%E4%BD%99%E6%97%A0%E7%BA%BF%E7%94%B5/" class="post-title-link" itemprop="url">业余无线电</a>
         </h2>
 
         <div class="post-meta-container">
@@ -2301,7 +2413,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/Other-%E5%AE%9E%E7%94%A8%E7%BD%91%E7%AB%99/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Other-%E5%AE%9E%E7%94%A8%E7%BD%91%E7%AB%99/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -2309,17 +2421,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/Other-%E5%AE%9E%E7%94%A8%E7%BD%91%E7%AB%99/" class="post-title-link" itemprop="url">实用网站</a>
+          <a href="/Other-%E5%AE%9E%E7%94%A8%E7%BD%91%E7%AB%99/" class="post-title-link" itemprop="url">实用网站</a>
         </h2>
 
         <div class="post-meta-container">
@@ -2397,7 +2509,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/Other-%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E5%AF%BC%E8%88%AA/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Other-%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E5%AF%BC%E8%88%AA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -2405,17 +2517,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/Other-%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E5%AF%BC%E8%88%AA/" class="post-title-link" itemprop="url">科学上网导航</a>
+          <a href="/Other-%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E5%AF%BC%E8%88%AA/" class="post-title-link" itemprop="url">科学上网导航</a>
         </h2>
 
         <div class="post-meta-container">
@@ -2468,7 +2580,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/Other-%E5%AE%89%E8%A3%85%E7%94%B5%E8%84%91%E7%B3%BB%E7%BB%9F/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Other-%E5%AE%89%E8%A3%85%E7%94%B5%E8%84%91%E7%B3%BB%E7%BB%9F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -2476,17 +2588,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/Other-%E5%AE%89%E8%A3%85%E7%94%B5%E8%84%91%E7%B3%BB%E7%BB%9F/" class="post-title-link" itemprop="url">安装电脑系统</a>
+          <a href="/Other-%E5%AE%89%E8%A3%85%E7%94%B5%E8%84%91%E7%B3%BB%E7%BB%9F/" class="post-title-link" itemprop="url">安装电脑系统</a>
         </h2>
 
         <div class="post-meta-container">
@@ -2552,7 +2664,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/Other-Microsoft%20Office/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Other-Microsoft%20Office/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -2560,17 +2672,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/Other-Microsoft%20Office/" class="post-title-link" itemprop="url">Microsoft Office</a>
+          <a href="/Other-Microsoft%20Office/" class="post-title-link" itemprop="url">Microsoft Office</a>
         </h2>
 
         <div class="post-meta-container">
@@ -2641,7 +2753,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/GDPC%E7%BD%91%E5%9D%80%E5%AF%BC%E8%88%AA/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/GDPC%E7%BD%91%E5%9D%80%E5%AF%BC%E8%88%AA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -2649,17 +2761,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/GDPC%E7%BD%91%E5%9D%80%E5%AF%BC%E8%88%AA/" class="post-title-link" itemprop="url">GDPC网址导航</a>
+          <a href="/GDPC%E7%BD%91%E5%9D%80%E5%AF%BC%E8%88%AA/" class="post-title-link" itemprop="url">GDPC网址导航</a>
         </h2>
 
         <div class="post-meta-container">
@@ -2718,7 +2830,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/Other-Minecraft%E5%BC%80%E6%9C%8D%E6%95%99%E7%A8%8B/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Other-Minecraft%E5%BC%80%E6%9C%8D%E6%95%99%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -2726,17 +2838,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/Other-Minecraft%E5%BC%80%E6%9C%8D%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">Minecraft开服教程</a>
+          <a href="/Other-Minecraft%E5%BC%80%E6%9C%8D%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">Minecraft开服教程</a>
         </h2>
 
         <div class="post-meta-container">
@@ -2829,7 +2941,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/Arduino-ULN2003%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Arduino-ULN2003%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -2837,17 +2949,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/Arduino-ULN2003%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97/" class="post-title-link" itemprop="url">ULN2003电机驱动模块</a>
+          <a href="/Arduino-ULN2003%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97/" class="post-title-link" itemprop="url">ULN2003电机驱动模块</a>
         </h2>
 
         <div class="post-meta-container">
@@ -2905,7 +3017,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/Arduino-RFID/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Arduino-RFID/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -2913,17 +3025,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/Arduino-RFID/" class="post-title-link" itemprop="url">RFID</a>
+          <a href="/Arduino-RFID/" class="post-title-link" itemprop="url">RFID</a>
         </h2>
 
         <div class="post-meta-container">
@@ -2979,7 +3091,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/Arduino-LCD1602%E6%A8%A1%E5%9D%97%EF%BC%88%E5%B8%A6PCF8574T%E8%BD%AC%E6%8E%A5%E6%9D%BF%EF%BC%89/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Arduino-LCD1602%E6%A8%A1%E5%9D%97%EF%BC%88%E5%B8%A6PCF8574T%E8%BD%AC%E6%8E%A5%E6%9D%BF%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -2987,17 +3099,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/Arduino-LCD1602%E6%A8%A1%E5%9D%97%EF%BC%88%E5%B8%A6PCF8574T%E8%BD%AC%E6%8E%A5%E6%9D%BF%EF%BC%89/" class="post-title-link" itemprop="url">LCD1602模块（带PCF8574T转接板）</a>
+          <a href="/Arduino-LCD1602%E6%A8%A1%E5%9D%97%EF%BC%88%E5%B8%A6PCF8574T%E8%BD%AC%E6%8E%A5%E6%9D%BF%EF%BC%89/" class="post-title-link" itemprop="url">LCD1602模块（带PCF8574T转接板）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -3053,7 +3165,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/Arduino-L298N%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Arduino-L298N%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -3061,17 +3173,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/Arduino-L298N%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97/" class="post-title-link" itemprop="url">L298N电机驱动模块</a>
+          <a href="/Arduino-L298N%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97/" class="post-title-link" itemprop="url">L298N电机驱动模块</a>
         </h2>
 
         <div class="post-meta-container">
@@ -3171,7 +3283,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/08/Arduino-HX711%E6%A8%A1%E5%9D%97/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Arduino-HX711%E6%A8%A1%E5%9D%97/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -3179,17 +3291,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Garmin's Blog">
+      <meta itemprop="name" content="94RM1n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Garmin's Blog">
+      <meta itemprop="name" content="undefined | 94RM1n">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/08/Arduino-HX711%E6%A8%A1%E5%9D%97/" class="post-title-link" itemprop="url">HX711模块</a>
+          <a href="/Arduino-HX711%E6%A8%A1%E5%9D%97/" class="post-title-link" itemprop="url">HX711模块</a>
         </h2>
 
         <div class="post-meta-container">
