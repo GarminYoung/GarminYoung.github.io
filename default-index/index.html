@@ -167,6 +167,180 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/WriteUP-MISC%E6%96%B0%E6%89%8B%E7%BB%83%E4%B9%A0%E9%A2%98%E9%9B%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Garmin">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="94RM1n">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 94RM1n">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/WriteUP-MISC%E6%96%B0%E6%89%8B%E7%BB%83%E4%B9%A0%E9%A2%98%E9%9B%86/" class="post-title-link" itemprop="url">MISC新手练习题集</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/WriteUP/" itemprop="url" rel="index"><span itemprop="name">WriteUP</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a target="_blank" rel="noopener" href="https://adworld.xctf.org.cn/challenges/problem-set-index?id=1">MISC新手练习题集 - 攻防世界</a></p>
+<h2 id="Banmabanma"><a href="#Banmabanma" class="headerlink" title="Banmabanma"></a>Banmabanma</h2><p>用在线网站工具 <a target="_blank" rel="noopener" href="https://online-barcode-reader.inliteresearch.com/">Barcode Reader</a> 识别图片二维码内容即可。</p>
+<p>内容为“FLAG IS TENSHINE”，格式化为<code>flag&#123;TENSHINE&#125;</code>。</p>
+<h2 id="low"><a href="#low" class="headerlink" title="low"></a>low</h2><p>可以使用python对图片进行lsb隐写解析。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import PIL.Image as Image</span><br><span class="line">img = Image.open(&#x27;low.bmp&#x27;)</span><br><span class="line">img_tmp = img.copy()</span><br><span class="line">pix = img_tmp.load()</span><br><span class="line">width,height = img_tmp.size</span><br><span class="line">for w in range(width):</span><br><span class="line">   for h in range(height):</span><br><span class="line">      if pix[w,h]&amp;1 == 0:</span><br><span class="line">         pix[w,h] = 0</span><br><span class="line">      else:</span><br><span class="line">         pix[w,h] = 255</span><br><span class="line">img_tmp.show()</span><br></pre></td></tr></table></figure>
+
+<p>也可以使用<a target="_blank" rel="noopener" href="http://www.caesum.com/handbook/Stegsolve.jar">stegsolve</a>对图片进行解析，但需要先打开该bmp图片，将其另存为png格式再进行解析，可以在 Red plane 0 时发现二维码。</p>
+<p>最后使用QR research（CQR）识别出二维码内容即可。<br><code>flag&#123;139711e8e9ed545e&#125;</code></p>
+<h2 id="适合作为桌面"><a href="#适合作为桌面" class="headerlink" title="适合作为桌面"></a>适合作为桌面</h2><p>使用Stegsolve对图片进行解析，在 Red plane 1 时发现二维码，扫描得到十六进制信息。<br><code>03F30D0A79CB05586300000000000000000100000040000000730D0000006400008400005A000064010053280200000063000000000300000016000000430000007378000000640100640200640300640400640500640600640700640300640800640900640A00640600640B00640A00640700640800640C00640C00640D00640E00640900640F006716007D00006410007D0100781E007C0000445D16007D02007C01007400007C0200830100377D0100715500577C010047486400005328110000004E6966000000696C00000069610000006967000000697B000000693300000069380000006935000000693700000069300000006932000000693400000069310000006965000000697D000000740000000028010000007403000000636872280300000074030000007374727404000000666C6167740100000069280000000028000000007304000000312E7079520300000001000000730A0000000001480106010D0114014E280100000052030000002800000000280000000028000000007304000000312E707974080000003C6D6F64756C653E010000007300000000</code></p>
+<p>03 F3 0D 0A是pyc文件的文件头，是python编译后的字节码文件。</p>
+<p>使用在线网站工具<a target="_blank" rel="noopener" href="https://hexed.it/">HexEd.it</a>对十六进制数据进行分析也可以发现是…，另存为pyc文件。</p>
+<p>使用在线网站工具<a target="_blank" rel="noopener" href="https://tool.lu/pyc/">python反编译</a>对该pyc文件进行反编译，得到python源码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">flag</span>():</span><br><span class="line">    <span class="built_in">str</span> = [</span><br><span class="line">        <span class="number">102</span>,</span><br><span class="line">        <span class="number">108</span>,</span><br><span class="line">        <span class="number">97</span>,</span><br><span class="line">        <span class="number">103</span>,</span><br><span class="line">        <span class="number">123</span>,</span><br><span class="line">        <span class="number">51</span>,</span><br><span class="line">        <span class="number">56</span>,</span><br><span class="line">        <span class="number">97</span>,</span><br><span class="line">        <span class="number">53</span>,</span><br><span class="line">        <span class="number">55</span>,</span><br><span class="line">        <span class="number">48</span>,</span><br><span class="line">        <span class="number">51</span>,</span><br><span class="line">        <span class="number">50</span>,</span><br><span class="line">        <span class="number">48</span>,</span><br><span class="line">        <span class="number">56</span>,</span><br><span class="line">        <span class="number">53</span>,</span><br><span class="line">        <span class="number">52</span>,</span><br><span class="line">        <span class="number">52</span>,</span><br><span class="line">        <span class="number">49</span>,</span><br><span class="line">        <span class="number">101</span>,</span><br><span class="line">        <span class="number">55</span>,</span><br><span class="line">        <span class="number">125</span>]</span><br><span class="line">    flag = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">str</span>:</span><br><span class="line">        flag += <span class="built_in">chr</span>(i)</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">print</span> flag</span><br></pre></td></tr></table></figure>
+
+<p>注意这段源码是python2的语法，如果使用python3运行需要修改部分语法，而且这段源码并不完整，只是自定义了一个 flag() 函数，需要补齐执行函数语句<code>flag()</code>才可以输出最终结果。<br><code>flag&#123;38a57032085441e7&#125;</code></p>
+<h2 id="心仪的公司"><a href="#心仪的公司" class="headerlink" title="心仪的公司"></a>心仪的公司</h2><p>题目附件是一个名为“webshell.pcapng”的抓包文件，使用<a target="_blank" rel="noopener" href="https://www.wireshark.org/">Wireshark</a>打开，根据文件名提示进行过滤筛选<code>http contains &quot;webshell&quot;</code>,发现一个照片文件，追踪其http流在 Expert Info (Chat&#x2F;Sequence) 中即可发现flag隐藏其中。<br><code>fl4g:&#123;ftop_Is_Waiting_4_y&#125;</code></p>
+<p>当然这题使用 010Editor 打开文件搜索文本内容“fl4g”也可以找到答案，此类题目可以多尝试去搜索文件中的 flag 关键词。</p>
+<h2 id="4433"><a href="#4433" class="headerlink" title="4433"></a>4433</h2><p>老样子使用Stegsolve对图片进行解析，在 Red plane 1 时发现二维码，使用QR research扫描得到一串神秘字符，很明显是摩尔斯电码。<br><code>...--.----...--..</code></p>
+<p>观察<a target="_blank" rel="noopener" href="https://morsecode.bmcx.com/">摩尔斯电码对照表</a>，每一个字母是对应1到4个摩尔斯电码字符的，那题目4433是否意味着划分的位置，来尝试一下，使用<a target="_blank" rel="noopener" href="https://www.lddgo.net/encrypt/morse">在线摩斯密码翻译器</a>进行解码，得到内容。<br><code>VYGUD</code></p>
+<p>内容是电码的缩写内容，原文为“VERY GOOD”，那么flag如下。<br><code>flag&#123;VERYGOOD&#125;</code></p>
+<h2 id="traffic-待写"><a href="#traffic-待写" class="headerlink" title="traffic 待写"></a>traffic 待写</h2><p>使用 010Editor 搜索 flag 相关关键词没有得到有效信息，使用Wireshark对该文件进行流量分析，</p>
+<h2 id="第四扩展FS"><a href="#第四扩展FS" class="headerlink" title="第四扩展FS"></a>第四扩展FS</h2><p>使用Stegsolve对图片进行解析，无果。</p>
+<p>使用Kali中的工具binwalk对文件进行检测，发现该jpg文件下还隐藏着一个zip文件<br><code>binwalk 99828589220e46d08092cc3fe7d09fbb.jpg</code></p>
+<p>继续使用binwalk对文件进行拆分。<br><code>binwalk -e 99828589220e46d08092cc3fe7d09fbb.jpg --run-as=root</code></p>
+<p>拆分后是一个名为“file.zip”的压缩包文件，解压需要密码，回到题目最初给的图片，发现其属性中有个备注信息“Pactera”，将其作为密码进行尝试，解压成功，里面有一个文本文件，内容是一大段的字符串，再根据题目信息提示，对该文件进行字频分析，按照字频高低依次排序得到flag。<br><code>DCTF&#123;ka1f4NgxlntAi&#125;</code></p>
+<p>在此可以使用python对文件进行字频分析。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">analyze_text</span>(<span class="params">filename</span>):</span><br><span class="line">    <span class="comment"># 初始化计数器</span></span><br><span class="line">    counter = Counter()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(filename, <span class="string">&quot;r&quot;</span>, encoding=<span class="string">&quot;utf-8&quot;</span>) <span class="keyword">as</span> file:</span><br><span class="line">            <span class="comment"># 读取文件内容</span></span><br><span class="line">            content = file.read()</span><br><span class="line"></span><br><span class="line">            <span class="comment"># 遍历文件内容的每个字符</span></span><br><span class="line">            <span class="keyword">for</span> char <span class="keyword">in</span> content:</span><br><span class="line">                counter[char] += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">            <span class="comment"># 输出结果</span></span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;字频分析结果：&quot;</span>)</span><br><span class="line">            <span class="keyword">for</span> char, freq <span class="keyword">in</span> counter.most_common():</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">f&quot;&#x27;<span class="subst">&#123;char&#125;</span>&#x27;: <span class="subst">&#123;freq&#125;</span>次&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">except</span> FileNotFoundError:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;文件 <span class="subst">&#123;filename&#125;</span> 未找到。&quot;</span>)</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;读取文件时发生错误：<span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">filename = <span class="string">&quot;file.txt&quot;</span></span><br><span class="line">analyze_text(filename)</span><br></pre></td></tr></table></figure>
+
+<h2 id="misc1"><a href="#misc1" class="headerlink" title="misc1"></a>misc1</h2><p>题目给出一段字符串，观察发现似乎是十六进制数，猜测为ASCII码，但其大小并不符合ASCII码的字母范围，在十六进制字符串转ASCII字符串时，对每个字符减去128后再进行转换，即可得到答案。<br><code>d4e8e1f4a0f7e1f3a0e6e1f3f4a1a0d4e8e5a0e6ece1e7a0e9f3baa0c4c4c3d4c6fbb9e1e6b3e3b9e4b3b7b7e2b6b1e4b2b6b9e2b1b1b3b3b7e6b3b3b0e3b9b3b5e6fd</code></p>
+<p>在此使用python进行处理。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">&quot;d4e8e1f4a0f7e1f3a0e6e1f3f4a1a0d4e8e5a0e6ece1e7a0e9f3baa0c4c4c3d4c6fbb9e1e6b3e3b9e4b3b7b7e2b6b1e4b2b6b9e2b1b1b3b3b7e6b3b3b0e3b9b3b5e6fd&quot;</span></span><br><span class="line">flag = <span class="string">&quot;&quot;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="built_in">len</span>(s),<span class="number">2</span>):</span><br><span class="line">    flag+=<span class="built_in">chr</span>(<span class="built_in">int</span>(s[i:i+<span class="number">2</span>],<span class="number">16</span>)-<span class="number">128</span>)</span><br><span class="line"><span class="built_in">print</span>(flag)</span><br></pre></td></tr></table></figure>
+<p><code>That was fast! The flag is: DDCTF&#123;9af3c9d377b61d269b11337f330c935f&#125;</code></p>
+<h2 id="pure-color"><a href="#pure-color" class="headerlink" title="pure_color"></a>pure_color</h2><p>使用Stegsolve对图片进行解析，在 Blue plane 0 时发现 flag 。<br><code>flag&#123;true_steganographers_doesnt_need_any_tools&#125;</code></p>
+<h2 id="2017-Dating-in-Singapore"><a href="#2017-Dating-in-Singapore" class="headerlink" title="2017_Dating_in_Singapore"></a>2017_Dating_in_Singapore</h2><p>附件给到一个2017年新加坡的日历，题目提示信息给出一大堆数字。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">01081522291516170310172431-050607132027262728-0102030209162330-02091623020310090910172423-02010814222930-0605041118252627-0203040310172431-0102030108152229151617-04050604111825181920-0108152229303124171003-261912052028211407-04051213192625</span><br></pre></td></tr></table></figure>
+
+<p>仔细观察发现数字内容为日期，用连字符作为月份的分隔，第一月份的日期为01 08 15 22 29 15 16 17 03 10 17 24 31，第二月份的日期为05 06 07 13 20 27 26 27 28，以此类推，在日历上对应的日期处做标记，连接标记即可得到 flag 。<br><code>HITB&#123;CTFFUN&#125;</code></p>
+<h2 id="simple-transfer"><a href="#simple-transfer" class="headerlink" title="simple_transfer"></a>simple_transfer</h2><p>使用 010Editor 搜索 flag 相关关键词没有得到有效信息，使用Wireshark对该文件进行流量分析，无果。</p>
+<p>参考 <a href="#%E7%AC%AC%E5%9B%9B%E6%89%A9%E5%B1%95FS">第四扩展FS</a>，分解得到一个pdf文件，文件内容即为 flag 。<br><code>HITB&#123;b3d0e380e9c39352c667307d010775ca&#125;</code></p>
+<h2 id="Training-Stegano-1"><a href="#Training-Stegano-1" class="headerlink" title="Training-Stegano-1"></a>Training-Stegano-1</h2><p>使用Stegsolve对图片进行解析，在多个通道中发现一些黑白块，刚开始以为是破碎的二维码，想是否需要多通道导出后进行图形拼接得到完整二维码，但是没有明显的二维码标识形状，况且题目提示简单，思路有误，停止尝试。</p>
+<p>使用 010Editor 打开该文件后发现里面有一个passwd字段，其内容就是答案。<br><code>steganoI</code></p>
+<h2 id="can-has-stdio"><a href="#can-has-stdio" class="headerlink" title="can_has_stdio?"></a>can_has_stdio?</h2><p>附件是一个没有后缀名的文件，用记事本打开，像一个星星，上网查找发现是Brainfuck编码，使用在线网站工具解码即可。<br><code>flag&#123;esolangs_for_fun_and_profit&#125;</code></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.splitbrain.org/services/ook">Brainfuck&#x2F;Ook! Obfuscation&#x2F;Encoding - splitbrain</a></li>
+<li><a target="_blank" rel="noopener" href="https://ctf.bugku.com/tool/brainfuck">Brainfuck&#x2F;OoK加密解密 - Bugku CTF</a></li>
+</ul>
+<h2 id="Erik-Baleog-and-Olaf"><a href="#Erik-Baleog-and-Olaf" class="headerlink" title="Erik-Baleog-and-Olaf"></a>Erik-Baleog-and-Olaf</h2><p>用 010Editor 打开文件发现png文件头和文件尾，在文件尾前面还发现一个网址信息。<br><code>http://i.imgur.com/22kUrzm.png</code></p>
+<p>打开此网址是一张图片，下载并保存为“22kUrzm.pn”。</p>
+<p>为题目所给文件加上.png后缀也得到一张图片“stego100.png”。</p>
+<p>这里下载的那张图片是原图片，题目给出的图片是处理之后的图片，将两张图片的每个像素点进行比较，如果不同则标记该像素点为白色，使用python对两种图片进行比较从而得到二维码，扫码内容即为答案。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line">exp = Image.<span class="built_in">open</span>(<span class="string">&quot;22kurzm.png&quot;</span>) <span class="comment"># 网站下载的图片</span></span><br><span class="line">cipher = Image.<span class="built_in">open</span>(<span class="string">&quot;stego100.png&quot;</span>) <span class="comment"># 题目给的图片</span></span><br><span class="line">new = Image.new(<span class="string">&quot;RGBA&quot;</span>, size=exp.size)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">640</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">480</span>):</span><br><span class="line">        y_p = exp.getpixel((i, j))</span><br><span class="line">        c_p = cipher.getpixel((i, j))</span><br><span class="line">        <span class="keyword">if</span> y_p == c_p:</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            new.putpixel((i,j), (<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>))</span><br><span class="line">new.save(<span class="string">&quot;result.png&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><code>flag&#123;#justdiffit&#125;</code></p>
+<p>在这之前使用Stegsolve对图片进行解析，在 Blue plane1 中发现残缺的二维码，可惜难以识别，在Radom color map通道中多试几次，找到尽量识别度高的二维码图片，进行PS的处理，似乎也可以识别二维码内容。</p>
+<h2 id="Janos-the-Ripper"><a href="#Janos-the-Ripper" class="headerlink" title="János-the-Ripper"></a>János-the-Ripper</h2><p>用 010Editor 打开文件发现zip文件头和文件尾，加上.zip后缀尝试解压发现需要密码。</p>
+<p>预览发现里面的文件是 flag.txt ，没有发现任何提示，直接使用 Ziperello 进行暴力破解得到密码“fish”。</p>
+<p>文件内容即为 flag 。<br><code>flag&#123;ev3n::y0u::bru7us?!&#125;</code></p>
+<h2 id="Test-flag-please-ignore"><a href="#Test-flag-please-ignore" class="headerlink" title="Test-flag-please-ignore"></a>Test-flag-please-ignore</h2><p>用 010Editor 打开文件内容如下。<br><code>666c61677b68656c6c6f5f776f726c647d</code></p>
+<p>很明显是十六进制数，使用python进行十六进制字符串转ASCII字符串拿下。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">&quot;666c61677b68656c6c6f5f776f726c647d&quot;</span></span><br><span class="line">flag = <span class="string">&quot;&quot;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="built_in">len</span>(s),<span class="number">2</span>):</span><br><span class="line">    flag+=<span class="built_in">chr</span>(<span class="built_in">int</span>(s[i:i+<span class="number">2</span>],<span class="number">16</span>))</span><br><span class="line"><span class="built_in">print</span>(flag)</span><br></pre></td></tr></table></figure>
+
+<p><code>flag&#123;hello_world&#125;</code></p>
+<h2 id="misc-pic-again"><a href="#misc-pic-again" class="headerlink" title="misc_pic_again"></a>misc_pic_again</h2><p>使用Stegsolve对图片进行解析，切换通道无果，那进行数据提取，选中RGB三层的0号位平面进行Preview，发现50 4b文件头，是zip文件，Save Bin保存为zip文件进行解压，里面有一个名为“1”的无后缀文件，用 010Editor 按照题目提示搜寻“hctf”关键词即可找到答案。<br><code>hctf&#123;scxdc3tok3yb0ard4g41n~~~&#125;</code></p>
+<p><del>用binwalk检测文件发现还隐藏着一个Zlib文件。</del><br><del><code>Zlib compressed data, default compression</code></del></p>
+<p><del>再使用binwalk对文件进行分离，得到两个文件，“29.zlib”和“29”。</del></p>
+<p><del>而 Zlib 不同的压缩方式有不同的文件头，那这个默认压缩方式的文件头是78 9C。</del></p>
+<table>
+<thead>
+<tr>
+<th>文件头</th>
+<th>压缩方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>78 01</td>
+<td>No Compression&#x2F;low</td>
+</tr>
+<tr>
+<td>78 9C</td>
+<td>Default Compression</td>
+</tr>
+<tr>
+<td>78 DA</td>
+<td>Best Compression</td>
+</tr>
+</tbody></table>
+<p><del>用 010Editor 对“29.zlib”进行分析发现确实如此，但是“29”却并不是以 78 DA 作为文件头，搜索 78 DA 可以发现其中包含一个 zlib 文件。</del></p>
+<h2 id="reverseMe"><a href="#reverseMe" class="headerlink" title="reverseMe"></a>reverseMe</h2><p>题目名称显而易见，水平翻转图片就可以看出图片内容了。<br><code>flag&#123;4f7548f93c7bef1dc6a0542cf04e796e&#125;</code></p>
+<h2 id="Hear-with-your-Eyes"><a href="#Hear-with-your-Eyes" class="headerlink" title="Hear-with-your-Eyes"></a>Hear-with-your-Eyes</h2><p>是一个gz压缩包，解压得到文件，使用<a target="_blank" rel="noopener" href="https://www.audacityteam.org/">Audacity</a>进行音频分析，这个软件在微软商店中也有上架，将文件作为原始数据导入软件中，打开该音频的频谱图，发现flag。<br><code>e5353bb7b57578bd4da1c898a8e2d767</code></p>
+<h2 id="What-is-this"><a href="#What-is-this" class="headerlink" title="What-is-this"></a>What-is-this</h2><p>识别文件、分解文件不再赘述，分解后得到两张图片文件，使用Stegsolve合并图片即可得到答案。<br><code>AZADI TOWER</code></p>
+<h2 id="hit-the-core"><a href="#hit-the-core" class="headerlink" title="hit-the-core"></a>hit-the-core</h2><p>题目附件给出一个 core 文件，这是 Linux 在程序异常崩溃时会生成的文件，Linux 的文件就用 Linux 的方法来治，使用 Kali 中的 strings 命令对文件进行打印输出，这个命令用于从二进制文件中提取 ASCII字符串，非常好用。<br><code>strings 8deb5f0c2cd84143807b6175f58d6f3f.core -n 6</code></p>
+<p>在上面这个命令语句中，-n 参数表示至少输出长度为6的字符串，减少了非 flag 信息字符串的干扰。</p>
+<p>在输出中发现一长串字符，观察发现规律，前面一段每隔四个小写字母均出现大写字母，组合正好为比赛名“ALEXCTF”，用python进行提取，得到 flag 。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">&quot;cvqAeqacLtqazEigwiXobxrCrtuiTzahfFreqc&#123;bnjrKwgk83kgd43j85ePgb_e_rwqr7fvbmHjklo3tews_hmkogooyf0vbnk0ii87Drfgh_n kiwutfb0ghk9ro987k5tfb_hjiouo087ptfcv&#125;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(s[<span class="number">3</span>::<span class="number">5</span>])</span><br></pre></td></tr></table></figure>
+
+<p><code>ALEXCTF&#123;K33P_7H3_g00D_w0rk_up&#125;</code></p>
+<h2 id="glance-50"><a href="#glance-50" class="headerlink" title="glance-50"></a>glance-50</h2><p>题目给了一个gif文件，打开发现是一个很细长的动图，那么应该是将这些细长的每一帧拼接起来，用<a target="_blank" rel="noopener" href="https://tu.sioe.cn/gj/fenjie/">GIF动态图片分解</a>即可得到答案。<br><code>TWCTF&#123;Bliss by Charles O&#39;Rear&#125;</code></p>
+<h2 id="something-in-image"><a href="#something-in-image" class="headerlink" title="something_in_image"></a>something_in_image</h2><p>使用 010Editor 搜索 flag 相关关键词得到答案。<br><code>Flag&#123;yc4pl0fvjs2k1t7T&#125;</code></p>
+<h2 id="Aesop-secret"><a href="#Aesop-secret" class="headerlink" title="Aesop_secret"></a>Aesop_secret</h2><p>题目给到gif文件，上动态分解发现“ISCC”，使用 010Editor 分析，发现文件末尾有一长串编码。<br><code>U2FsdGVkX19QwGkcgD0fTjZxgijRzQOGbCWALh4sRDec2w6xsY/ux53Vuj/AMZBDJ87qyZL5kAf1fmAH4Oe13Iu435bfRBuZgHpnRjTBn5+xsDHONiR3t0+Oa8yG/tOKJMNUauedvMyN4v4QKiFunw==</code></p>
+<p>看上去像base64编码，但直接解码无果，而且也没有用上动态分解给到的信息，用ISCC作为密钥，使用AES二次解密得到答案。</p>
+<p><code>flag&#123;DugUpADiamondADeepDarkMine&#125;</code></p>
+<h2 id="a-good-idea"><a href="#a-good-idea" class="headerlink" title="a_good_idea"></a>a_good_idea</h2><p>分解文件得到两张图片和提示，使用Stegsolve合并图片，先放入“to_do.png”，再叠加“to.png”在sub运算中得到二维码，识别二维码内容即可。<br><code>NCTF&#123;m1sc_1s_very_funny!!!&#125;</code></p>
+<h2 id="Ditf"><a href="#Ditf" class="headerlink" title="Ditf"></a>Ditf</h2><p>使用 010Editor 修改图片宽高，将04 4C改为05 4C后保存，出现<code>StRe1izia</code>。<br>分离文件得到一个加密压缩包，用上面的字符串解密成功，得到抓包文件。</p>
+<p>搜索抓包文件中的关键词“png”，追踪http流找到一串字符。<br><code>ZmxhZ3tPel80bmRfSGlyMF9sb3YzX0ZvcjN2ZXJ9</code></p>
+<p>base64解码得到 flag 。<br><code>flag&#123;Oz_4nd_Hir0_lov3_For3ver&#125;</code></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://example.com/WriteUP-%E4%BA%8C%E7%BB%B4%E7%A0%81/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
