@@ -22,15 +22,14 @@
 
 
 
-<link rel="canonical" href="http://example.com/categories/">
+<link rel="canonical" href="http://example.com/CTF-%E6%B5%85%E8%B0%88php%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":true,"permalink":"http://example.com/categories/index.html","path":"categories/index.html","title":"Categories"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/CTF-%E6%B5%85%E8%B0%88php%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/","path":"CTF-浅谈php反序列化/","title":"浅谈php反序列化"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Categories | 94RM1n
-</title>
+<title>浅谈php反序列化 | 94RM1n</title>
   
 
 
@@ -116,7 +115,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -129,6 +128,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#pop%E9%93%BE%E7%9A%84%E6%9E%84%E9%80%A0%E6%80%9D%E8%B7%AF"><span class="nav-number">1.</span> <span class="nav-text">pop链的构造思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E4%B8%8D%E5%90%8C%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%B1%9E%E6%80%A7%E8%B5%8B%E5%80%BC"><span class="nav-number">2.</span> <span class="nav-text">对不同类型的属性赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%BE%E5%88%B0pop%E9%93%BE%E7%9A%84%E7%BB%88%E7%82%B9"><span class="nav-number">3.</span> <span class="nav-text">找到pop链的终点</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -158,42 +158,90 @@
 
     </div>
 
-    <div class="main-inner page posts-expand">
+    <div class="main-inner post posts-expand">
 
 
-    
-    
-    
-    <div class="post-block" lang="zh-CN"><header class="post-header">
+  
 
-<h1 class="post-title" itemprop="name headline">Categories
-</h1>
 
-<div class="post-meta-container">
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/CTF-%E6%B5%85%E8%B0%88php%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Garmin">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="94RM1n">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="浅谈php反序列化 | 94RM1n">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          浅谈php反序列化
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CTF/" itemprop="url" rel="index"><span itemprop="name">CTF</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CTF/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a>
+        </span>
+    </span>
+
+  
 </div>
 
-</header>
+        </div>
+      </header>
 
-      
-      
-      
-      <div class="post-body"><div class="category-all-page">
-  <div class="category-all-title">
-    目前共计 8 个分类
-  </div>
-  <div class="category-all">
-    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Arduino/">Arduino</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/CTF/">CTF</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CTF/Misc/">Misc</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/CTF/Web/">Web</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/UserScript/">UserScript</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/WriteUP/">WriteUP</a><span class="category-list-count">9</span></li></ul>
-  </div>
-</div>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>新手可以先看这篇了解php反序列化。<br><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2348156">PHP的反序列化和POP链利用 - 腾讯云</a></p>
+<h2 id="pop链的构造思路"><a href="#pop链的构造思路" class="headerlink" title="pop链的构造思路"></a>pop链的构造思路</h2><p>针对于php魔术方法的触发条件而言，入口点通常会是wakeup，destruct，construct。</p>
+<p>至于如何构造完整的pop链，可以从正向和反向两种思路进行处理。</p>
+<p>可以看这篇博文感受反向推导的快感。<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/oyf3085227433/article/details/135455351">php反序列化学习 pop链构造 - CSDN</a></p>
+<p>魔术方法的触发要点可以看这篇<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/377676274">PHP反序列化研究 - 知乎</a></p>
+<p>触发某对象中的魔术方法，通常是基于对该对象的操作。</p>
+<h2 id="对不同类型的属性赋值"><a href="#对不同类型的属性赋值" class="headerlink" title="对不同类型的属性赋值"></a>对不同类型的属性赋值</h2><p>构造pop链中，对非public类型的属性赋值时，可以使用构造函数<code>__construct()</code>进行赋值，并且序列化后存有非public类型的属性是会产生不可见字符的，在<a target="_blank" rel="noopener" href="https://www.jyshare.com/compile/1/">PHP 在线工具 | 菜鸟工具</a>能够观察到，可以使用 urlencode() 直接进行编码操作。</p>
+<h2 id="找到pop链的终点"><a href="#找到pop链的终点" class="headerlink" title="找到pop链的终点"></a>找到pop链的终点</h2><p>终点通常是获取flag或者是执行命令。</p>
+<p>当没有发现明显的终点时，要注意构造出命令执行等操作的形式。</p>
 
-      </div>
-      
-      
-      
     </div>
 
     
     
+    
+
+    <footer class="post-footer">
+
+        
+
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 
 </div>

