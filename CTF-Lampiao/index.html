@@ -215,7 +215,7 @@
     
     
     <div class="post-body" itemprop="articleBody"><p><a target="_blank" rel="noopener" href="https://www.vulnhub.com/">VulnHub</a>是一个提供各种漏洞环境的靶场平台，供安全爱好者学习渗透使用，大部分环境是做好的虚拟机镜像文件，镜像预先设计了多种漏洞，需要使用VMware或者VirtualBox运行。</p>
-<p>本次我们对Lampiao靶机进行渗透学习。</p>
+<p>本次我们对其中Lampiao靶机进行渗透学习。</p>
 <p>由于目标靶机是在本地部署进行测试的，所以直接对C段进行扫描即可。</p>
 <p>探测靶机的 IP 地址<br>arp-scan –interface&#x3D;eth0 –localnet<br>netdiscover -i eth0 -r 192.168.184.0&#x2F;24<br>nmap -sP 192.168.184.0&#x2F;24</p>
 <p>获取靶机端口服务等详细信息<br>nmap -p- -A 192.168.184.132</p>
