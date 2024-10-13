@@ -22,14 +22,14 @@
 
 
 
-<link rel="canonical" href="http://example.com/categories/CTF/Web/">
+<link rel="canonical" href="http://example.com/CTF-git%E6%B3%84%E9%9C%B2%E6%BC%8F%E6%B4%9E/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"categories/CTF/Web/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/CTF-git%E6%B3%84%E9%9C%B2%E6%BC%8F%E6%B4%9E/","path":"CTF-git泄露漏洞/","title":"git泄露漏洞"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>分类: Web | 94RM1n</title>
+<title>git泄露漏洞 | 94RM1n</title>
   
 
 
@@ -115,7 +115,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -128,6 +128,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BC%8F%E6%B4%9E%E6%A6%82%E5%BF%B5%E5%8F%8A%E6%88%90%E5%9B%A0"><span class="nav-number">1.</span> <span class="nav-text">漏洞概念及成因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A1%AE%E5%AE%9A%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E6%B3%84%E6%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">确定是否存在泄漏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E6%B3%84%E9%9C%B2%E7%9A%84%E6%BA%90%E7%A0%81"><span class="nav-number">3.</span> <span class="nav-text">获取泄露的源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E8%A6%81-git-%E5%91%BD%E4%BB%A4"><span class="nav-number">4.</span> <span class="nav-text">简要 git 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E4%BF%A1%E6%81%AF"><span class="nav-number">4.1.</span> <span class="nav-text">查看提交信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9E%E6%BB%9A%E5%88%B0%E6%8C%87%E5%AE%9A%E7%89%88%E6%9C%AC"><span class="nav-number">4.2.</span> <span class="nav-text">回滚到指定版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E6%AF%94%E4%B8%A4%E6%AC%A1%E6%8F%90%E4%BA%A4%E5%B7%AE%E5%BC%82"><span class="nav-number">4.3.</span> <span class="nav-text">对比两次提交差异</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8Dstash"><span class="nav-number">4.4.</span> <span class="nav-text">查看当前stash</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%81%A2%E5%A4%8Dstash%E5%86%85%E5%AE%B9"><span class="nav-number">4.5.</span> <span class="nav-text">恢复stash内容</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -157,190 +158,92 @@
 
     </div>
 
-    <div class="main-inner category posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">Web
-          <small>分类</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/CTF-git%E6%B3%84%E9%9C%B2%E6%BC%8F%E6%B4%9E/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Garmin">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="94RM1n">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="git泄露漏洞 | 94RM1n">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          git泄露漏洞
         </h1>
-      </div>
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2024</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CTF/" itemprop="url" rel="index"><span itemprop="name">CTF</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CTF/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="漏洞概念及成因"><a href="#漏洞概念及成因" class="headerlink" title="漏洞概念及成因"></a>漏洞概念及成因</h2><p>Git 是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理。在协同开发过程中，工程师每次保存工作时，Git 都会创建一个提交，提交是某个时间点所有文件的快照。如果文件在一次提交到下一次提交之间没有更改，Git 将使用以前存储的文件。<br>文件夹 .git 是 Git 初始化后在当前目录生成的一个管理 Git 仓库的文件夹，这里包含所有Git 操作所需要的东西。<br>如果开发人员配置不当，可能会将 .git 文件夹直接部署到线上环境，这就引起了 git 泄露漏洞，我们可以利用这个漏洞直接获得网页源码等信息。</p>
+<h2 id="确定是否存在泄漏"><a href="#确定是否存在泄漏" class="headerlink" title="确定是否存在泄漏"></a>确定是否存在泄漏</h2><p>可以通过各种目录爆破扫描工具扫描出目标网站存有 &#x2F;.git 路径，当然也可以直接通过网页访问 &#x2F;.git 目录，如果能访问就说明存在，也可以试着访问 &#x2F;.git&#x2F;head 文件，如果能下载也能推断存在 git 泄露漏洞。</p>
+<h2 id="获取泄露的源码"><a href="#获取泄露的源码" class="headerlink" title="获取泄露的源码"></a>获取泄露的源码</h2><p>可以使用 GitHack 工具获取目标网站泄露的源码，<a target="_blank" rel="noopener" href="https://github.com/BugScanTeam/GitHack">GitHack</a> 是一个 .git 泄露利用脚本，通过泄露的 .git 文件夹下的文件重建还原工程源代码。</p>
+<p>使用GitHack进行扫描。<br><code>python GitHack.py+目标url+.git/</code></p>
+<p>扫描完成之后，会回显生成的结果存储于哪个目录下，默认时 GitHack 的 dist 目录下，进入对应的目录，可以使用 git 命令执行相应的操作。</p>
+<h2 id="简要-git-命令"><a href="#简要-git-命令" class="headerlink" title="简要 git 命令"></a>简要 git 命令</h2><h3 id="查看提交信息"><a href="#查看提交信息" class="headerlink" title="查看提交信息"></a>查看提交信息</h3><p><code>git log</code></p>
+<h3 id="回滚到指定版本"><a href="#回滚到指定版本" class="headerlink" title="回滚到指定版本"></a>回滚到指定版本</h3><p><code>git reset --hard 对应版本的commit</code></p>
+<h3 id="对比两次提交差异"><a href="#对比两次提交差异" class="headerlink" title="对比两次提交差异"></a>对比两次提交差异</h3><p><code>git diff 版本名1 版本名2</code></p>
+<h3 id="查看当前stash"><a href="#查看当前stash" class="headerlink" title="查看当前stash"></a>查看当前stash</h3><p><code>git stash list</code></p>
+<h3 id="恢复stash内容"><a href="#恢复stash内容" class="headerlink" title="恢复stash内容"></a>恢复stash内容</h3><p><code>git stash pop</code></p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-10-13T14:35:38+08:00"
-              content="2024-10-13">
-          10-13
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/CTF-git%E6%B3%84%E9%9C%B2%E6%BC%8F%E6%B4%9E/" itemprop="url">
-            <span itemprop="name">git泄露漏洞</span>
-          </a>
-      </div>
+    <footer class="post-footer">
 
-      
-    </header>
+        
+
+    </footer>
   </article>
+</div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-10-13T09:49:41+08:00"
-              content="2024-10-13">
-          10-13
-        </time>
-      </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/CTF-md5%E7%BB%95%E8%BF%87%E6%B1%87%E6%80%BB/" itemprop="url">
-            <span itemprop="name">md5绕过汇总</span>
-          </a>
-      </div>
 
-      
-    </header>
-  </article>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-09-23T10:39:34+08:00"
-              content="2024-09-23">
-          09-23
-        </time>
-      </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/CTF-djinn/" itemprop="url">
-            <span itemprop="name">djinn</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-09-09T07:49:33+08:00"
-              content="2024-09-09">
-          09-09
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/CTF-Lampiao/" itemprop="url">
-            <span itemprop="name">Lampiao</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-09-05T07:25:02+08:00"
-              content="2024-09-05">
-          09-05
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/CTF-%E6%B5%85%E8%B0%88php%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" itemprop="url">
-            <span itemprop="name">浅谈php反序列化</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-08-10T16:04:53+08:00"
-              content="2024-08-10">
-          08-10
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/CTF-upload%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/" itemprop="url">
-            <span itemprop="name">upload文件上传漏洞</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-08-09T22:48:02+08:00"
-              content="2024-08-09">
-          08-09
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/CTF-Ping%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E7%AA%97%E5%8F%A3%E7%9A%84%E5%88%A9%E7%94%A8/" itemprop="url">
-            <span itemprop="name">Ping命令执行窗口的利用</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-08-09T22:20:30+08:00"
-              content="2024-08-09">
-          08-09
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/CTF-%E7%AE%80%E6%98%93XSS%E6%95%B0%E6%8D%AE%E6%8E%A5%E6%94%B6%E5%B9%B3%E5%8F%B0%E5%AE%9E%E7%8E%B0/" itemprop="url">
-            <span itemprop="name">简易XSS数据接收平台实现</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-    </div>
-  </div>
-  
-  
-  
 
 </div>
   </main>
