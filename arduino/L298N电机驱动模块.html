@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>L298N电机驱动模块 - H4ckVortex</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": false, "update": [], "ts": 0, "author": "", "brief": "", "cover": "", "categories": "Arduino"}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                
+                    <h2>H4ckVortex</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class="active"><a  href="/arduino/">Arduino</a></li>
+<li class=""><a  href="/web/">Web</a></li>
+<li class=""><a  href="/misc/">Misc</a></li>
+<li class=""><a  href="/forensics/">Forensics</a></li>
+<li class=""><a  href="/userscript/">UserScript</a></li>
+<li class=""><a  href="/other/">Other</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active with_link"><a href="/arduino/Arduino导航.html"><span class="label">Arduino导航</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/arduino/玩转LED.html"><span class="label">玩转LED</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/arduino/ULN2003电机驱动模块.html"><span class="label">ULN2003电机驱动模块</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/arduino/L298N电机驱动模块.html"><span class="label">L298N电机驱动模块</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/arduino/LCD1602模块（带PCF8574T转接板）.html"><span class="label">LCD1602模块（带PCF8574T转接板）</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/arduino/HC-05蓝牙模块.html"><span class="label">HC-05蓝牙模块</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/arduino/HC-SR04超声波传感器模块.html"><span class="label">HC-SR04超声波传感器模块</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/arduino/HX711模块.html"><span class="label">HX711模块</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/arduino/RFID.html"><span class="label">RFID</span><span class=""></span></a></li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>L298N电机驱动模块</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <h1 id="L298N%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97">L298N电机驱动模块</h1>
+<h2 id="%E5%8F%82%E6%95%B0">参数</h2>
+<p>VCC 模块供电12V<br />
+GND 接地<br />
+5V 模块对外输出5V，当板载5V使能端断开时为模块输入<br />
+ENA1 ENA2 使能端 控制电机输出<br />
+IN1 IN2 IN3 IN4 逻辑输入<br />
+OUT1 OUT2电机输出</p>
+<p>此处仅讨论控制单个电机</p>
+<table>
+<thead>
+<tr>
+  <th>ENA</th>
+  <th>IN1</th>
+  <th>IN2</th>
+  <th>直流电机状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>0</td>
+  <td>0</td>
+  <td>0</td>
+  <td>停止</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>0</td>
+  <td>0</td>
+  <td>制动</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>0</td>
+  <td>1</td>
+  <td>正转</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>1</td>
+  <td>0</td>
+  <td>反转</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>1</td>
+  <td>1</td>
+  <td>制动</td>
+</tr>
+</tbody>
+</table>
+<h2 id="%E6%8E%A5%E7%BA%BF">接线</h2>
+<h3 id="%E5%85%A8%E9%80%9F%E8%BE%93%E5%87%BA">全速输出</h3>
+<p>IN1--2<br />
+IN2--3</p>
+<h3 id="PWN%E8%B0%83%E9%80%9F%E8%BE%93%E5%87%BA">PWN调速输出</h3>
+<p>IN1--2<br />
+IN2--3<br />
+ENA1--5</p>
+<h2 id="%E4%BB%A3%E7%A0%81">代码</h2>
+<h3 id="%E7%9B%B4%E6%B5%81%E7%94%B5%E6%9C%BA">直流电机</h3>
+<h4 id="%E5%85%A8%E9%80%9F%E8%BE%93%E5%87%BA">全速输出</h4>
+
+<pre class="language-c"><code class="language-c">//定义IO
+int input1 = 2;
+int input2 = 3;
+
+void setup() {
+
+//初始化各IO
+pinMode(input1,OUTPUT);
+pinMode(input2,OUTPUT);
+}
+void loop() {
+  //forward 前进 
+  digitalWrite(input1,HIGH);
+  digitalWrite(input2,LOW);
+  delay(1000);
+
+ //stop 停止
+ digitalWrite(input1,LOW);
+ digitalWrite(input2,LOW);   
+ delay(500);
+
+
+  //back 后退
+  digitalWrite(input1,LOW);
+  digitalWrite(input2,HIGH);  
+  delay(1000);    
+}
+</code></pre>
+<h4 id="PWN%E8%B0%83%E9%80%9F%E8%BE%93%E5%87%BA">PWN调速输出</h4>
+
+<pre class="language-c"><code class="language-c">int IN1 = 2;
+int IN2 = 3; 
+int ENA = 5; 
+
+unsigned long time = 1200;
+//PWM调速 0-255
+int value = 128;
+
+void setup(){
+    //初始化各IO
+    pinMode(IN1, OUTPUT);
+    pinMode(IN2, OUTPUT);
+
+    //电机方向 逻辑输入
+    digitalWrite(IN1, HIGH);
+    digitalWrite(IN2, LOW);
+}
+
+void loop(){
+    analogWrite(ENA, value);
+    delay(500);
+}
+</code></pre>
+<h3 id="%E6%AD%A5%E8%BF%9B%E7%94%B5%E6%9C%BA">步进电机</h3>
+<p>博主手上没有，所以没试。。。</p>
+<h2 id="%E5%8A%9F%E8%83%BD">功能</h2>
+<p>驱动直流电机和步进电机</p>
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+<p>[1]</p>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/arduino/ULN2003电机驱动模块.html">
+                            <span class="icon"></span>
+                            <span class="label">ULN2003电机驱动模块</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                        <a href="/arduino/LCD1602模块（带PCF8574T转接板）.html">
+                            <span class="label">LCD1602模块（带PCF8574T转接板）</span>
+                            <span class="icon"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a></a><ul><li><a target="_blank" href="/#"></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://github.com/teedoc/teedoc">Generated by teedoc</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+        <script type="text/javascript" src="/static/js/live.js"></script>
+    
+</body>
+
+</html>

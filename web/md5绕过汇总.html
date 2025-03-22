@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>md5绕过汇总 - H4ckVortex</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": false, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                
+                    <h2>H4ckVortex</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class=""><a  href="/arduino/">Arduino</a></li>
+<li class="active"><a  href="/web/">Web</a></li>
+<li class=""><a  href="/misc/">Misc</a></li>
+<li class=""><a  href="/forensics/">Forensics</a></li>
+<li class=""><a  href="/userscript/">UserScript</a></li>
+<li class=""><a  href="/other/">Other</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active with_link"><a href="/web/CTF导航.html"><span class="label">CTF导航</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/web/Flask_PIN码伪造.html"><span class="label">Flask_PIN码伪造</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/web/Flask_session伪造.html"><span class="label">Flask_session伪造</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/web/2019-技能树-Web-布尔盲注/布尔盲注.html"><span class="label">布尔盲注</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/web/md5绕过汇总.html"><span class="label">md5绕过汇总</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/web/PHP小特性.html"><span class="label">PHP小特性</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/web/SQL注入漏洞.html"><span class="label">SQL注入漏洞</span><span class=""></span></a></li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>md5绕过汇总</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <h2 id="%E5%87%BD%E6%95%B0%E4%BB%8B%E7%BB%8D">函数介绍</h2>
+<p>在php语言中，md5() 函数用于计算字符串的 MD5 散列。例如：</p>
+
+<pre class="language-php"><code class="language-php">&lt;?php
+$str = &quot;Hello World!&quot;;
+echo md5($str); //默认输出 32 字符十六进制数
+echo &quot;&lt;br&gt;&quot;;
+echo md5($str,TRUE); //输出原始 16 字符二进制格式
+?&gt;
+</code></pre>
+<h2 id="%E7%9B%B8%E5%85%B3%E6%BC%8F%E6%B4%9E">相关漏洞</h2>
+<h3 id="php%E5%BC%B1%E6%AF%94%E8%BE%83">php弱比较</h3>
+
+<pre class="language-php"><code class="language-php">&lt;?php
+$a = $_GET['a'];
+$b = $_GET['b'];
+
+if ($a != $b &amp;&amp; md5($a) == md5($b)) {
+    die(&quot;Success!&quot;);
+} else{
+    die(&quot;Failed!&quot;);
+}
+?&gt;
+</code></pre>
+<p>若两个字符经过MD5加密后的值为 0e 开头的字符串，在php弱比较中会被认为是科学计数法，表示为0*10的若干次方，结果为零，判定为相等。</p>
+<p>下列字符串在经过MD5加密后形成值为 0e 开头的字符串。</p>
+
+<pre class="language-none"><code class="language-none">QNKCDZO
+240610708
+s878926199a
+s155964671a
+s214587387a
+s1091221200a
+</code></pre>
+<p>下列字符串在经过MD5和二次MD5加密后均形成值为 0e 开头的字符串。</p>
+
+<pre class="language-none"><code class="language-none">CbDLytmyGm2xQyaLNhWn
+770hQgrBOjrcqftrlaZk
+7r4lGXCH2Ksu2JNT3BYM
+</code></pre>
+<p>检验代码</p>
+
+<pre class="language-php"><code class="language-php">&lt;?php
+$str = &quot;CbDLytmyGm2xQyaLNhWn&quot;;
+echo md5($str);
+echo &quot;&lt;br&gt;&quot;;
+echo md5(md5($str));
+?&gt;
+</code></pre>
+<p>下列本身为 0e 开头字符串在经过MD5加密后可以再次形成值为 0e 开头的字符串。<br />
+0e215962017（验证有误？）</p>
+<h3 id="php%E5%BC%BA%E6%AF%94%E8%BE%83">php强比较</h3>
+
+<pre class="language-php"><code class="language-php">&lt;?php
+$a = $_GET['a'];
+$b = $_GET['b'];
+
+if ($a !== $b &amp;&amp; md5($a) === md5($b)) {
+    die(&quot;Success!&quot;);
+} else{
+    die(&quot;Failed!&quot;);
+}
+?&gt;
+</code></pre>
+<p>md5()函数无法处理数组，如果传入的为数组，虽然会产生报错，但仍会返回NULL，所以两个数组经过加密后得到的均为NULL，在php强比较中判断为相等。</p>
+<h3 id="MD5%E7%A2%B0%E6%92%9E">MD5碰撞</h3>
+
+<pre class="language-php"><code class="language-php">&lt;?php
+$a = (string)$_GET['a'];
+$b = (string)$_GET['b'];
+
+if ($a !== $b &amp;&amp; md5($a) === md5($b)) {
+    die(&quot;Success!&quot;);
+} else{
+    die(&quot;Failed!&quot;);
+}
+?&gt;
+</code></pre>
+<p>由于增加了一个转为字符串的强制类型转换，传数组的方法将不可行，这里就需要进行MD5碰撞，使用 Fastcoll 可以生成指定前缀的两个内容不同但是MD5值相同的文件。</p>
+<p>新建一个head.txt写入指定前缀内容并保存，将这个文件拖到fastcoll.exe上，相当于使用fastcoll打开它，fastcoll会自动在同一目录下生成两个二进制文件，这两个文件内容不同但是MD5值相同。</p>
+<p>也可以使用命令运行该程序。<br />
+<code>fastcoll.exe -p head.txt -o 1.txt 2.txt</code></p>
+<p>写程序读取文件内容并转化为url编码，转化编码的目的是生成的文件中存有不可见字符，以便于进行后续的传参工作。</p>
+
+<pre class="language-php"><code class="language-php">&lt;?php 
+function  readmyfile($path){
+    $fh = fopen($path, &quot;rb&quot;);
+    $data = fread($fh, filesize($path));
+    fclose($fh);
+    return $data;
+}
+echo '二进制md5加密 '. md5( (readmyfile(&quot;1_msg1.txt&quot;)));
+echo &quot;&lt;/br&gt;&quot;;
+echo  'url编码 '. urlencode(readmyfile(&quot;1_msg1.txt&quot;));
+echo &quot;&lt;/br&gt;&quot;;
+echo '二进制md5加密 '.md5( (readmyfile(&quot;1_msg2.txt&quot;)));
+echo &quot;&lt;/br&gt;&quot;;
+echo  'url编码 '.  urlencode(readmyfile(&quot;1_msg2.txt&quot;));
+echo &quot;&lt;/br&gt;&quot;;
+?&gt;
+</code></pre>
+<h3 id="%E6%9E%84%E9%80%A0sql%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB%E8%AF%AD%E5%8F%A5">构造sql注入攻击语句</h3>
+<p>当目标网站使用如下查询语句时，可以通过特殊字符串进行MD5加密后形成万能密码从而产生注入攻击。<br />
+<code>select * from 'admin' where password=md5($pass,true)</code></p>
+<p>这个特殊字符串就是 ffifdyop ，在进行MD5加密后的值为<code>276f722736c95d99e921722cf9ed621c</code>， 对应的ascii字符串为 <code>'or'6�]��!r,��b</code>，这个字符串前几位刚好是<code>' or '6</code>，<br />
+而 Mysql 会将 hex 转成 ascii 解释，因此拼接之后的形式是<code>select * from 'admin' where password='' or '6&lt;乱码&gt;</code>，相当于<code>select * from 'admin' where password='' or 1</code>，即sql万能密码，能够绕过 md5() 函数。</p>
+<h3 id="%E5%85%B6%E5%AE%83">其它</h3>
+<p>对于题目的更多要求，可以自行编写 php 或者 python 脚本将特殊字符串的内容跑出来。</p>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/web/2019-技能树-Web-布尔盲注/布尔盲注.html">
+                            <span class="icon"></span>
+                            <span class="label">布尔盲注</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                        <a href="/web/PHP小特性.html">
+                            <span class="label">PHP小特性</span>
+                            <span class="icon"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a></a><ul><li><a target="_blank" href="/#"></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://github.com/teedoc/teedoc">Generated by teedoc</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+        <script type="text/javascript" src="/static/js/live.js"></script>
+    
+</body>
+
+</html>

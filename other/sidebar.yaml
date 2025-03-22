@@ -1,0 +1,13 @@
+items:
+-   label: Website
+    file: Website.md
+-   label: Software
+    file: Software.md
+-   label: 一些有趣的项目
+    file: 一些有趣的项目.md
+-   label: 小米手机刷机
+    file: 小米手机刷机.md
+-   label: GPT
+    file: GPT.md
+-   label: 推币机
+    file: 推币机.md

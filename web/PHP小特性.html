@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>PHP小特性 - H4ckVortex</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": false, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                
+                    <h2>H4ckVortex</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class=""><a  href="/arduino/">Arduino</a></li>
+<li class="active"><a  href="/web/">Web</a></li>
+<li class=""><a  href="/misc/">Misc</a></li>
+<li class=""><a  href="/forensics/">Forensics</a></li>
+<li class=""><a  href="/userscript/">UserScript</a></li>
+<li class=""><a  href="/other/">Other</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active with_link"><a href="/web/CTF导航.html"><span class="label">CTF导航</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/web/Flask_PIN码伪造.html"><span class="label">Flask_PIN码伪造</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/web/Flask_session伪造.html"><span class="label">Flask_session伪造</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/web/2019-技能树-Web-布尔盲注/布尔盲注.html"><span class="label">布尔盲注</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/web/md5绕过汇总.html"><span class="label">md5绕过汇总</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/web/PHP小特性.html"><span class="label">PHP小特性</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/web/SQL注入漏洞.html"><span class="label">SQL注入漏洞</span><span class=""></span></a></li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>PHP小特性</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <h2 id="is_numeric%28%29">is_numeric()</h2>
+<h3 id="%E7%AE%80%E4%BB%8B">简介</h3>
+<p>is_numeric() 函数用于检测变量是否为数字或数字字符串。<br />
+PHP 版本要求：PHP 4, PHP 5, PHP 7</p>
+<h3 id="%E8%AF%AD%E6%B3%95">语法</h3>
+
+<pre class="language-php"><code class="language-php">bool is_numeric ( mixed $var )
+</code></pre>
+<h3 id="%E7%89%B9%E6%80%A7">特性</h3>
+<p>在这个函数看来，<code>1234a</code>和<code>a1234</code>这类变量都不是数字，会输出 false 。</p>
+<h2 id="%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2">强制类型转换</h2>
+<p>当字符串变量与数字变量进行弱比较时，字符串变量会被转换成数字，转换的方法是从左到右逐位转换，遇到不能转换的字符会停止转换，保留前面的转换结果。</p>
+<p>例如，<code>1234a</code>会转换为<code>1234</code>，<code>a1234</code>会转换成<code>0</code>。</p>
+<p>这个转换可以让 PHP 中的弱比较判断成立，例如，<code>1234a==1234a</code>。</p>
+<h2 id="%E5%AD%97%E7%AC%A6%E7%9A%84%E9%9D%9E%E6%AD%A3%E7%A1%AE%E6%9B%BF%E6%8D%A2%E6%BC%8F%E6%B4%9E">字符的非正确替换漏洞</h2>
+<p>在 PHP 7 中，可以使用<code>[</code>字符的非正确替换漏洞。当传入的参数名中出现<code>[</code>且之后没有<code>]</code>时，PHP 会将<code>[</code>替换为<code>_</code>，但此之后就不会继续替换后面的特殊字符了。</p>
+<p>以<code>NewStar_CTF.2024</code>中的特殊字符<code>.</code>为例，PHP 默认会将其解析为<code>NewStar_CTF_2024</code>，也就是说第一个特殊字符（特殊字符包括点和空格）会被转替换成下划线。</p>
+<p>当PHP版本小于8时，如果参数中出现中括号<code>[</code>，中括号会被转换成下划线<code>_</code>，但是会出现转换错误导致接下来如果该参数名中还有非法字符并不会继续转换成下划线<code>_</code>，也就是说如果中括号<code>[</code>出现在前面，那么中括号[还是会被转换成下划线<code>_</code>，但是因为出错导致接下来的非法字符并不会被转换成下划线<code>_</code>。</p>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/web/md5绕过汇总.html">
+                            <span class="icon"></span>
+                            <span class="label">md5绕过汇总</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                        <a href="/web/SQL注入漏洞.html">
+                            <span class="label">SQL注入漏洞</span>
+                            <span class="icon"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a></a><ul><li><a target="_blank" href="/#"></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://github.com/teedoc/teedoc">Generated by teedoc</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+        <script type="text/javascript" src="/static/js/live.js"></script>
+    
+</body>
+
+</html>

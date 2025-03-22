@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>推币机 - H4ckVortex</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": false, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                
+                    <h2>H4ckVortex</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class=""><a  href="/arduino/">Arduino</a></li>
+<li class=""><a  href="/web/">Web</a></li>
+<li class=""><a  href="/misc/">Misc</a></li>
+<li class=""><a  href="/forensics/">Forensics</a></li>
+<li class=""><a  href="/userscript/">UserScript</a></li>
+<li class="active"><a  href="/other/">Other</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active with_link"><a href="/other/Website.html"><span class="label">Website</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/other/Software.html"><span class="label">Software</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/other/一些有趣的项目.html"><span class="label">一些有趣的项目</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/other/小米手机刷机.html"><span class="label">小米手机刷机</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/other/GPT.html"><span class="label">GPT</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/other/推币机.html"><span class="label">推币机</span><span class=""></span></a></li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>推币机</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <h2 id="%E5%9F%BA%E6%9C%AC%E8%A7%84%E5%88%99">基本规则</h2>
+<p>在此以超级魔术师为例，一组机有三台机（该三台机共享一个奖池，奖池记录JP奖和全盘奖的奖励值），每个机台设有停止和开始两个按键，往机台投入一枚代币开始游戏。</p>
+<p>游戏开始后，可以通过停止键启停机台上方落币处的摆臂（雨刷），以此控制落币方向，投入代币，若击中跑灯（spin）则获得一次摇奖，会刷新机台中的动画；若落入下方亮灯的相应通道内，相应的图案分+1。</p>
+<p>若出现出局图标时，落入对应图案会使对应图案分数重置为初始值（1或10）。</p>
+<p>摇奖出现不同的图案连线，有对应的奖项设置。</p>
+<h2 id="%E5%A5%96%E9%A1%B9%E8%AE%BE%E7%BD%AE">奖项设置</h2>
+<h3 id="%E8%BF%9E%E7%BA%BF%E5%A5%96">连线奖</h3>
+<p>任意图案连成一条横线或者对角线，将获得对应图案分数的奖励，其中一条横线一倍，对角线翻倍。<br />
+例如出现通图案连成一条横线和两条对角线，先计算翻倍，即<code>1*2*2=4</code>倍，再计算横线往上叠加，即<code>4+1=5</code>倍。</p>
+<h3 id="%E5%B0%8F%E6%B8%B8%E6%88%8F">小游戏</h3>
+<p>小游戏分为两种，小丑图案（在此以超级魔术师为例，下同，不同的机子所表示的图案不同，但规则相同）连成斜向下的对角线，获得小玛丽奖励；小丑图案连成斜向上的对角线，获得的叠叠乐奖励。</p>
+<p>小玛丽：奖励值一般在100-300之间，不会超过400。</p>
+<p>叠叠乐：奖励值不固定，最高可叠 30 倍，奖励值为3000。对应通道落入次数与倍数关系为，第一次1倍，第二次3倍，第三次6倍，第四次10倍，第五次20倍，第六次30倍，这是唯一靠技术决定出币量的奖项</p>
+<h3 id="JP%E5%A5%96">JP奖</h3>
+<p>JP奖分为三种，分别是JP1、JP2和JP3。</p>
+<p>JP1：第二排小丑图案连线，获得 JP1 奖励，奖励初始值为 500，每投入 100 个币，增加 1 分奖励值。</p>
+<p>JP2：第一排小丑图案连线，获得 JP2 奖励，奖励初始值为 1000，每投入 100 个币，增加 1 分奖励值。</p>
+<p>JP3：第三排小丑图案连线，获得 JP3 奖励，奖励初始值为 2000，每投入 100 个币，增加 1 分奖励值。</p>
+<h3 id="%E5%85%A8%E7%9B%98%E5%A5%96">全盘奖</h3>
+<p>九宫格出现全部相同图案，获得 全盘奖 奖励，是机台的最大奖项，奖励初始值为 3000，每投入 100 个币，增加 1 分奖励值。</p>
+<p>奖励值是机台里面雨刷处落下币的数量，但实际并不会吐出来那么多币，有一部分币从机台两边的暗槽收进机器内了，实际出币比例在30%-40%之间，例如你中了JP1获得500分，实际出币到手数量为150-200之间。</p>
+<p>观察也可发现机台内有三个分值：总分、得分和获得。</p>
+<p>总分：当机台处于插卡模式时，该值记录你拥有的代币数量；处于投币模式时，每投入1币该值会加1，然后掉落马上减1。</p>
+<p>得分：获得的对应奖项的奖励值。</p>
+<p>获得：推币机实际推出的币的数量。</p>
+<p>JP奖和全盘奖出了之后，相应的奖励值会回到初始值。</p>
+<h2 id="%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90">原理分析</h2>
+<h3 id="%E8%BF%94%E5%A5%96%E7%8E%87">返奖率</h3>
+<p>返奖率通常由92%、94%、96%、98%几档划分，不同的机台有不同的档次划分，在此以92%为例，理论上投入100 币，机台会返回 92 币。</p>
+<p>所以一直玩一台机器是必输无疑的，我们赢取的是之前玩家填坑的币，而不是机器本身的币。</p>
+<h3 id="%E5%85%AC%E5%BC%8F">公式</h3>
+<p><code>IN*返奖率-OUT＝差</code></p>
+<p>仍以92%的返奖率为例，投入（IN）500币，返回（OUT）400币，此时差为60，理论上差要回归为0，即和前面返奖率中描述的相同，理论上投入100 币，机台会返回 92 币。</p>
+<p>机台设有参数余，余值通常在400-2000之间，机台恢复为初始状态时生成。</p>
+<p>机台在初始状态时，IN为0，OUT为0，差为0，余不为0。</p>
+<p>每次投入1币，IN+1，若没有掉落代币，则OUT不变，差+1，余-1；每掉落1币，则OUT+1。</p>
+<p>当余减为0时，机台状态根据当前差值改变，此时余不再改变，保持为0。</p>
+<p>除此之外，真机程序中还有若干参数，如“用”、SPIN率、PASS率等等，尚待解析。</p>
+<h2 id="%E6%9C%BA%E5%8F%B0%E7%8A%B6%E6%80%81">机台状态</h2>
+<p>机台分为三种状态：正常、送奖和扣奖。</p>
+<p>当余减为0时，当前差值为负数，机台状态改为扣奖状态；当前差值为正数，机台状态改为送奖状态；当前差值为0，机台状态改为正常状态。</p>
+<p>当余为0，机台处于扣奖状态时，差由负转非负，机台回归正常状态；<br />
+当余为0，机台处于出奖状态时，差由正转非正，机台回归正常状态。</p>
+<h3 id="%E6%AD%A3%E5%B8%B8">正常</h3>
+<p>正常状态下会出一些连线奖，出币数50以内，你会一直亏。</p>
+<p>正常状态下会出现吃币状态，此时无论你怎么投入，就是不出奖，当你连续击中跑灯四五十次，机器都不出奖的时候，机器就是在吃币状态。如果你投入的币不多，及时收手，换机器，如果已经投入四五百币，此时可以继续尝试一些，收回差不多币以后，换机器。</p>
+<p>在吃600币左右，进入送奖状态，第一个送奖是JP2或者JP3，但是仍需要大概 50 次抽奖后出奖。</p>
+<h3 id="%E9%80%81%E5%A5%96">送奖</h3>
+<p>送奖状态会在抽奖10-50（随机值）次之间必出小玛丽、叠叠乐、JP1和JP2。</p>
+<p>基本上每10次抽奖出一次奖，每次出币在300-3000之间。</p>
+<p>此时只要看机器吐出来的币不超过500，此时一定还是出奖状态，技巧就是补分，预计这一轮中奖出币数量后会超过500，此时可以适量往机器里面投入一些币，维持差值不要为负，这样还能中一次奖，中奖后机器进入正常状态或者扣奖状态，补分时可以选择灌币，以便于迅速积累差值。</p>
+<p>当处于大周期周期内的送奖状态时，会出叠叠乐、JP奖和全盘奖，后续进入正常状态或者扣奖状态。</p>
+<h3 id="%E6%89%A3%E5%A5%96">扣奖</h3>
+<p>在扣奖状态机台会一直吃你的币，很小概率出奖，由于此时差为负数，需要不断的积累差，直到差为0改变为正常状态，相关数值恢复成机台初始状态，余则重新生成。</p>
+<h2 id="%E6%B8%B8%E7%8E%A9%E7%AD%96%E7%95%A5">游玩策略</h2>
+<p>同一组机中的三个机台处于联机状态，分别是老大机、老二机和老三机，其中老大出多吃少，老二用于平账，老三吃多出少，老大、老二和老三的位置分配也会不定期发生改变。</p>
+<p>在别人垫了大量的代币，但机台并未出大奖（JP奖或全盘奖），可考虑接手机台，机台内游戏币厚度越厚，说明玩家越多，或者最近出过大的奖项。</p>
+<p>以自己的填币情况判断机台状态，决定是否继续投入。</p>
+<p>......</p>
+<h2 id="tips">tips</h2>
+<ul>
+<li>一台机器，最多赢得 1500 左右的币，不要死磕。</li>
+<li>每一个机台是单独计算的，一组机中的三台机只是共享JP奖和全盘奖的奖池。</li>
+<li>打灯（spin）率和出奖没有太大的关系。</li>
+<li>出大奖后机台总是会出局水果分。</li>
+<li>小玛丽奖项出币在100-130之间离开，在130-250之间继续，在250以上直接灌币。</li>
+<li>刚出完全盘可能还会有一些小奖。</li>
+<li>机台断电后重启，状态不会改变。</li>
+<li>正常机台全盘奖在3500以内。</li>
+<li>全盘之前出JP。</li>
+</ul>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/other/GPT.html">
+                            <span class="icon"></span>
+                            <span class="label">GPT</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a></a><ul><li><a target="_blank" href="/#"></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://github.com/teedoc/teedoc">Generated by teedoc</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+        <script type="text/javascript" src="/static/js/live.js"></script>
+    
+</body>
+
+</html>

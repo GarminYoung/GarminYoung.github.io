@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>MiscNote - H4ckVortex</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": false, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                
+                    <h2>H4ckVortex</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class=""><a  href="/arduino/">Arduino</a></li>
+<li class=""><a  href="/web/">Web</a></li>
+<li class="active"><a  href="/misc/">Misc</a></li>
+<li class=""><a  href="/forensics/">Forensics</a></li>
+<li class=""><a  href="/userscript/">UserScript</a></li>
+<li class=""><a  href="/other/">Other</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="active with_link"><a href="/misc/MiscNote.html"><span class="label">MiscNote</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/misc/压缩包多层嵌套解压.html"><span class="label">压缩包多层嵌套解压</span><span class=""></span></a></li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>MiscNote</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <h2 id="%E7%AE%80%E4%BB%8B">简介</h2>
+<p><strong>杂项（Miscellaneous）</strong>，即Misc，是CTF比赛中的一个题目类别。顾名思义，除开CTF比赛的其他主要题目大类，剩下的、难以分类的题目都将归于杂项之下。对于新手而言，这类题目的低门槛和趣味性很适合作为入门题目去了解CTF比赛，当然，它同样很适合作为CTFer的副方向去选择。</p>
+<h2 id="%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86">信息搜集</h2>
+<p><strong>信息搜集（Recon）</strong>需要你的搜集和推理能力，通常使用<strong>开源情报获取（OSINT）</strong>手段来进行解题。</p>
+<p>网络迷踪<br />
+百度识图等搜素引擎识图<br />
+高德导航等导航系统</p>
+<p>Google全球街景<br />
+<a href="https://www.google.com/maps/"  target="_blank">Google Maps</a></p>
+<h2 id="%E7%BC%96%E7%A0%81%E8%BD%AC%E6%8D%A2">编码转换</h2>
+<p>编码转换（Encode）</p>
+<p>要了解一些基本的奇奇怪怪的编码，才能辨识编码方式。</p>
+<p>CyberChef 随波逐流</p>
+<p>Base2048<br />
+<a href="https://nerdmosis.com/tools/encode-and-decode-base2048"  target="_blank">Base2048 Encoder And Decoder (nerdmosis.com)</a></p>
+<p>与佛论禅<br />
+<a href="https://www.keyfc.net/bbs/tools/tudoucode.aspx"  target="_blank">与佛论禅</a></p>
+<p>摩斯密码<br />
+<a href="https://www.lddgo.net/encrypt/morse"  target="_blank">在线摩斯密码翻译器</a></p>
+<p>base家族<br />
+<a href="https://www.wqtool.com/basecode"  target="_blank">base编码解码 - 在线工具</a></p>
+<p>Emoji表情符号</p>
+<h2 id="%E6%95%B0%E5%AD%97%E5%8F%96%E8%AF%81">数字取证</h2>
+<p>数字取证（Forensic）</p>
+<h2 id="%E9%9A%90%E5%86%99%E5%88%86%E6%9E%90">隐写分析</h2>
+<p>隐写分析（Stego）</p>
+<h3 id="%E6%96%87%E4%BB%B6%E5%88%86%E7%A6%BB">文件分离</h3>
+<p>010editor手动分离，跑模板识别文件头文件尾<br />
+binwalk、foremost自动分离</p>
+<h3 id="%E6%96%87%E4%BB%B6%E8%AF%86%E5%88%AB">文件识别</h3>
+<p>010editor跑模板</p>
+<p>基本操作<br />
+010按字节异或</p>
+<h3 id="%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%99">图片隐写</h3>
+<p>StegSolve LSB隐写 猫映射 F5隐写 IDAT块隐写</p>
+<h3 id="GIF">GIF</h3>
+<p><a href="https://tool.lu/gifsplitter/"  target="_blank">gif分割 - 在线工具</a></p>
+<p>万能图片隐写分析网站<br />
+<a href="https://aperisolve.fr/"  target="_blank">Aperi'Solve (aperisolve.fr)</a></p>
+<p>光栅图<br />
+<a href="https://blog.zgsec.cn/archives/504.html"  target="_blank">2023浙江省大学生网络与信息安全决赛-Misc篇 - AabyssZG's Blog (zgsec.cn)</a></p>
+<p>盲水印<br />
+<a href="https://www.cnblogs.com/Flat-White/p/13517001.html"  target="_blank">【CTF】图片隐写术 · 盲水印 - 双份浓缩馥芮白 - 博客园 (cnblogs.com)</a></p>
+<h3 id="%E6%96%87%E6%9C%AC%E9%9A%90%E5%86%99">文本隐写</h3>
+<p>word隐写 白色字体or压缩包本质<br />
+<a href="https://blog.csdn.net/qq_63522833/article/details/128628121"  target="_blank">【CTF-MISC-1】 Word隐写&amp;零宽字符隐写-CSDN博客</a></p>
+<p>snow隐写<br />
+<a href="https://hasegawaazusa.github.io/snow-note.html"  target="_blank">snow隐写笔记 | 独奏の小屋</a></p>
+<p>txt零宽隐写<br />
+<a href="https://blog.csdn.net/Hardworking666/article/details/122278638"  target="_blank">零宽度字符隐写（CTF）_零宽字符-CSDN博客</a><br />
+<a href="https://yuanfux.github.io/zero-width-web/"  target="_blank">Zero Width Lib (yuanfux.github.io)</a><br />
+<a href="https://330k.github.io/misc_tools/unicode_steganography.html"  target="_blank">Unicode Steganography with Zero-Width Characters (330k.github.io)</a><br />
+<a href="https://www.mzy0.com/ctftools/zerowidth1/"  target="_blank">Unicode Steganography with Zero-Width Characters</a></p>
+<h3 id="%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99">音频隐写</h3>
+<p>波形 频谱 Audacity<br />
+mp3stego工具</p>
+<p>按键音<a href="https://dtmf.netlify.app/"  target="_blank">DTMF Decoder</a></p>
+<h3 id="%E8%A7%86%E9%A2%91%E9%9A%90%E5%86%99">视频隐写</h3>
+<p><a href="https://blog.csdn.net/weixin_54977781/article/details/130643959"  target="_blank">MISC：音频隐写的破解方法._misc音频-CSDN博客</a></p>
+<h2 id="%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90">流量分析</h2>
+<p>流量分析（Traffic）</p>
+<p>Wireshark 追踪http流<br />
+<a href="https://www.cnblogs.com/loopkep/p/13167281.html"  target="_blank">wireshark网络安全流量分析基础 - 请叫我阿毛 - 博客园 (cnblogs.com)</a></p>
+<p>wifi密码抓取<br />
+<a href="https://blog.csdn.net/Waffle666/article/details/109354830"  target="_blank">BugkuCTF-Misc：想蹭网先解开密码_bugku 想蹭网先解开密码-CSDN博客</a><br />
+aircrack-ng爆破<br />
+<code>aircrack-ng file -w output</code></p>
+<h2 id="%E5%85%B6%E5%AE%83">其它</h2>
+<h3 id="%E5%8E%8B%E7%BC%A9%E5%8C%85">压缩包</h3>
+<p>暴力破解ARCHPR<br />
+rockyou字典</p>
+<p>伪加密<br />
+<a href="https://blog.csdn.net/asaotomo/article/details/132005223"  target="_blank">Zip伪加密破解神器——ZipCracker-CSDN博客</a></p>
+<p>已知明文攻击<br />
+<a href="https://www.freebuf.com/articles/network/255145.html"  target="_blank">ZIP已知明文攻击深入利用 - FreeBuf网络安全行业门户</a></p>
+<p>CRC碰撞<br />
+[<a href="https://www.cnblogs.com/GGbomb/p/17794179.html"  target="_blank">MoeCTF 2022]cccrrc --crc32爆破 - GGBomb</a></p>
+<p><a href="https://github.com/Dr34nn/CRC_Cracker"  target="_blank">Dr34nn/CRC_Cracker: 自动爆破crc32值并输出，支持中文crc32爆破 (github.com)</a></p>
+<p><a href="https://github.com/asaotomo/ZipCracker"  target="_blank">asaotomo/ZipCracker: ZipCracker是一款由Hx0战队开发的高性能多并发破解工具，专为破解密码保护的Zip文件而设计。它采用CRC32碰撞和字典攻击方式猜测Zip文件的明文或密码，并能成功提取其中的内容。这款工具具备识别&quot;伪加密&quot;Zip文件的能力，并能自动进行修复。因此，它非常适合在CTF比赛中使用。（ZipCracker by Hx0 team is a tool for cracking passwords on Zip files, great for CTF competitions.） (github.com)</a></p>
+<p><a href="https://github.com/AabyssZG/CRC32-Tools"  target="_blank">AabyssZG/CRC32-Tools: Easy CRC32 Tools，so easy！！！ (github.com)</a></p>
+<p><a href="https://blog.csdn.net/q20010619/article/details/109425270"  target="_blank">CTF-misc-压缩包解题思路_ctf的misc题中中压缩包解压后得到一个文本文件,打开是一长串英文,请问有什么见解-CSDN博客</a></p>
+<h3 id="%E6%9D%A1%E5%BD%A2%E7%A0%81">条形码</h3>
+<p><a href="https://products.aspose.app/barcode/zh-hans/recognize#/recognized"  target="_blank">在线阅读条形码</a></p>
+<p>二值化脚本</p>
+
+<pre class="language-python"><code class="language-python">from PIL import Image
+
+
+def binary_threshold(image_path, output_path, threshold=128):
+    &quot;&quot;&quot;
+    对图片进行二值化处理并保存为新图片。
+
+    参数:
+    image_path (str): 输入图片的路径。
+    output_path (str): 输出图片的路径。
+    threshold (int): 二值化的阈值，默认为128。
+    &quot;&quot;&quot;
+    try:
+        # 打开图片
+        with Image.open(image_path) as img:
+            # 转换为灰度图
+            img_gray = img.convert(&quot;L&quot;)
+            # 应用阈值进行二值化
+            img_binary = img_gray.point(lambda x: 255 if x &gt; threshold else 0, &quot;1&quot;)
+            # 保存二值化后的图片
+            img_binary.save(output_path)
+            print(f&quot;Binary image saved as {output_path}&quot;)
+    except IOError as e:
+        print(f&quot;Error processing image: {e}&quot;)
+
+
+if __name__ == &quot;__main__&quot;:
+    image_path = &quot;key.png&quot;  # 输入图片路径
+    output_path = &quot;new.png&quot;  # 输出图片路径
+    binary_threshold(image_path, output_path)
+</code></pre>
+<h3 id="%E4%BA%8C%E7%BB%B4%E7%A0%81">二维码</h3>
+<p>QR Research（CQR）作识别</p>
+<p>汉信码<br />
+<a href="https://tuzim.net/hxdecode/"  target="_blank">在线汉信码识别,汉信码解码 - 兔子二维码</a></p>
+<p>Aztec条码<br />
+<a href="https://products.aspose.app/barcode/zh-hans/recognize/aztec"  target="_blank">在线阅读Aztec条码</a></p>
+<h3 id="%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F">文件系统</h3>
+<p>ntfs隐藏数据流，使用NtfsStreamsEditor</p>
+<p>手绘二维码<br />
+<a href="https://merri.cx/qrazybox/"  target="_blank">QRazyBox - QR Code Analysis and Recovery Toolkit (merri.cx)</a></p>
+<h2 id="tips">tips</h2>
+<p><a href="https://blog.csdn.net/m0_47643893/article/details/113867849"  target="_blank">CTF工具 -CSDN博客</a></p>
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+<p><a href="https://ctf-wiki.org/misc/introduction/"  target="_blank">杂项简介 - CTF Wiki (ctf-wiki.org)</a><br />
+<a href="https://hello-ctf.com/HC_MISC/"  target="_blank">MISC | 杂项 - Hello CTF (hello-ctf.com)</a></p>
+<p><a href="https://goodlunatic.github.io/posts/1ad9200/"  target="_blank">CTF-Misc Guide - ⚡Lunatic BLOG⚡ (goodlunatic.github.io)</a></p>
+<p><a href="https://www.dr0n.top/posts/b9152a17/"  target="_blank">misc总结(隐写篇) - Dr0n's blog</a></p>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                    </div>
+                    <div id="next">
+                        
+                        <a href="/misc/压缩包多层嵌套解压.html">
+                            <span class="label">压缩包多层嵌套解压</span>
+                            <span class="icon"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a></a><ul><li><a target="_blank" href="/#"></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://github.com/teedoc/teedoc">Generated by teedoc</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+        <script type="text/javascript" src="/static/js/live.js"></script>
+    
+</body>
+
+</html>
