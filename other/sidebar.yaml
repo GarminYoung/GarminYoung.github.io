@@ -3,6 +3,8 @@ items:
     file: Website.md
 -   label: Software
     file: Software.md
+-   label: Hexo+GitHub Pages一条龙
+    file: Hexo+GitHub Pages一条龙.md
 -   label: 一些有趣的项目
     file: 一些有趣的项目.md
 -   label: 小米手机刷机
